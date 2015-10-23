@@ -1,6 +1,6 @@
 <?php
 
-namespace SpedPHP;
+namespace Sped\EFD;
 
 class Bloco
 {

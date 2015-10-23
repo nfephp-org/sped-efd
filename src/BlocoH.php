@@ -1,15 +1,12 @@
 <?php
 
-namespace SpedPHP;
+namespace Sped\EFD;
 
-/**
- * 
- */
+use Sped\EFD\Bloco;
 
-use SpedPHP\Bloco;
-
-class BlocoH extends Bloco
+class BlocoH extends \Sped\EFD\Bloco
 {
+
     public $bloco = 'H';
     public $H001 = ''; //ABERTURA DO BLOCO H
     public $aH005 = array(); //TOTAIS DO INVENTÁRIO
