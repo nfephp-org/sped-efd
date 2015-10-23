@@ -1,7 +1,8 @@
 {
     "name": "nfephp-org/sped-efd",
-    "type": "library",
+    "version": "0.0.1-dev",
     "description": "API para geração dos arquivos para SPED EFD.",
+    "type": "library",
     "keywords": [
         "efd",
         "sped",
@@ -48,8 +49,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev",
-            "dev-develop": "1.1-dev"
+            "dev-master": "0.0.1-dev"
         }
     },
     "minimum-stability": "dev",
