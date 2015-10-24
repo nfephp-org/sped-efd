@@ -13,3 +13,4 @@ local
 /build
 /phpunit.xml
 /tests/folder
+composer.lock
