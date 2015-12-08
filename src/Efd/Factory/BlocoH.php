@@ -1,10 +1,10 @@
 <?php
 
-namespace Sped\EFD;
+namespace NFePHP\Efd\Factory;
 
-use Sped\EFD\Bloco;
+use NFePHP\Efd\Factory\Bloco;
 
-class BlocoH extends \Sped\EFD\Bloco
+class BlocoH extends Bloco
 {
 
     public $bloco = 'H';
