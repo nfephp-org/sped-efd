@@ -11,19 +11,31 @@ tools:
         timeout: 300
         filter:
             excluded_paths:
+                - 'test/*'
+                - 'vendor/*'
                 - 'doc/*'
                 - 'examples/*'
-                - 'tests/*'
-                - 'vendor/*'
+                - 'certs/*'
+                - 'local/*'
+                - 'schemes/*'
+                - 'templates/*'
+                - 'config/*'
+                - 'storage/*'
 
     php_code_coverage:
         enabled: true
         filter:
             excluded_paths:
+                - 'test/*'
+                - 'vendor/*'
                 - 'doc/*'
                 - 'examples/*'
-                - 'tests/*'
-                - 'vendor/*'
+                - 'certs/*'
+                - 'local/*'
+                - 'schemes/*'
+                - 'templates/*'
+                - 'config/*'
+                - 'storage/*'
 
     php_code_sniffer:
         enabled: true
@@ -35,19 +47,31 @@ tools:
                         one_class_per_file_sniff: false
         filter:
             excluded_paths:
+                - 'test/*'
+                - 'vendor/*'
                 - 'doc/*'
                 - 'examples/*'
-                - 'tests/*'
-                - 'vendor/*'
+                - 'certs/*'
+                - 'local/*'
+                - 'schemes/*'
+                - 'templates/*'
+                - 'config/*'
+                - 'storage/*'
 
     # Copy/Paste Detector
     php_cpd:
         enabled: true
         excluded_dirs:
+            - test
+            - vendor
             - doc
             - examples
-            - tests
-            - vendor
+            - certs
+            - local
+            - schemes
+            - templates
+            - config
+            - storage
 
     # PHP CS Fixer (http://http://cs.sensiolabs.org/).
     php_cs_fixer:
@@ -56,19 +80,31 @@ tools:
             level: psr2
         filter:
             excluded_paths:
+                - 'test/*'
+                - 'vendor/*'
                 - 'doc/*'
                 - 'examples/*'
-                - 'tests/*'
-                - 'vendor/*'
+                - 'certs/*'
+                - 'local/*'
+                - 'schemes/*'
+                - 'templates/*'
+                - 'config/*'
+                - 'storage/*'
 
     # Analyzes the size and structure of a PHP project.
     php_loc:
         enabled: true
         excluded_dirs:
+            - test
+            - vendor
             - doc
             - examples
-            - tests
-            - vendor
+            - certs
+            - local
+            - schemes
+            - templates
+            - config
+            - storage
 
     # PHP Mess Detector (http://phpmd.org).
     php_mess_detector:
@@ -83,19 +119,31 @@ tools:
                 short_variable: { minimum: 2 }
         filter:
             excluded_paths:
+                - 'test/*'
+                - 'vendor/*'
                 - 'doc/*'
                 - 'examples/*'
-                - 'tests/*'
-                - 'vendor/*'
+                - 'certs/*'
+                - 'local/*'
+                - 'schemes/*'
+                - 'templates/*'
+                - 'config/*'
+                - 'storage/*'
 
     # Analyzes the size and structure of a PHP project.
     php_pdepend:
         enabled: true
         excluded_dirs:
+            - test
+            - vendor
             - doc
             - examples
-            - tests
-            - vendor
+            - certs
+            - local
+            - schemes
+            - templates
+            - config
+            - storage
 
     # Runs Scrutinizer's PHP Analyzer Tool
     # https://scrutinizer-ci.com/docs/tools/php/php-analyzer/config_reference
@@ -114,10 +162,16 @@ tools:
                     isser_method_name: ^(?:[_a-zA-Z]|__)[a-zA-Z0-9]*$ #Allow underscores & caps
         filter:
             excluded_paths:
+                - 'test/*'
+                - 'vendor/*'
                 - 'doc/*'
                 - 'examples/*'
-                - 'tests/*'
-                - 'vendor/*'
+                - 'certs/*'
+                - 'local/*'
+                - 'schemes/*'
+                - 'templates/*'
+                - 'config/*'
+                - 'storage/*'
 
     # Security Advisory Checker
     sensiolabs_security_checker: true

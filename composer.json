@@ -44,7 +44,7 @@
     },
     "autoload": {
         "psr-4": {
-          "Sped\\EFD\\": "src/" 
+          "NFePHP\\EFD\\": "src/"
         } 
     },
     "extra": {
@@ -56,7 +56,7 @@
     "prefer-stable": true,
     "autoload-dev": {
         "psr-4": {
-            "SpedTest\\EFD\\": "test"
+            "NFePHPTest\\EFD\\": "test"
         }
     }
 }

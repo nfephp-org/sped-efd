@@ -11,7 +11,7 @@
          verbose="false"
          bootstrap="./bootstrap.php">
     <testsuites>
-        <testsuite name="SpedTest EFD Test Suite">
+        <testsuite name="NFePHPTest EFD Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
