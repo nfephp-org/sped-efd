@@ -6,7 +6,7 @@
  * Time: 16:16
  */
 
-namespace NFePHP\Efd;
+namespace NFePHP\EFD;
 
 
 class Make

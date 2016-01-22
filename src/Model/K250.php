@@ -6,7 +6,7 @@
  * Time: 16:31
  */
 
-namespace NFePHP\Efd\Model;
+namespace NFePHP\EFD\Model;
 
 
 class K250
