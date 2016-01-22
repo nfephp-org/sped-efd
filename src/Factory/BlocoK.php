@@ -1,6 +1,6 @@
 <?php
 
-namespace NFePHP\Efd\Factory;
+namespace NFePHP\EFD\Factory;
 
 /**
  *  BLOCO K – CONTROLE DA PRODUÇÃO E DO ESTOQUE
@@ -12,7 +12,7 @@ namespace NFePHP\Efd\Factory;
  *  Conforme Guia Prático EFD-ICMS/IPI – Versão 2.0.16 Atualização: 13/03/2015
  */
 
-use NFePHP\Efd\Factory\Bloco;
+use NFePHP\EFD\Factory\Bloco;
 
 class BlocoK extends Bloco
 {

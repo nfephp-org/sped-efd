@@ -1,6 +1,6 @@
 # sped-efd
 
-Classes para a geração do SPED EFD (fiscal)
+Classes para a geração do SPED EFD (fiscal) EM DESENVOLVIMENTO !!!
 
 
 Todos os campos "C" strings apenas com caracteres ASCII, não são permitidos outro charsets, preferencialmente em "MAIUSCULAS"

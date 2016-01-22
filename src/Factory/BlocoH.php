@@ -1,8 +1,8 @@
 <?php
 
-namespace NFePHP\Efd\Factory;
+namespace NFePHP\EFD\Factory;
 
-use NFePHP\Efd\Factory\Bloco;
+use NFePHP\EFD\Factory\Bloco;
 
 class BlocoH extends Bloco
 {
