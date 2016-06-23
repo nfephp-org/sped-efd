@@ -1,15 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: administrador
- * Date: 08/12/15
- * Time: 16:16
- */
 
 namespace NFePHP\EFD;
 
+use NFePHP\EFD\Blocos\Producao;
 
 class Make
 {
-
+    public $producao;
+    
+    public function __construct()
+    {
+        $this->producao = new Producao();
+    }
 }

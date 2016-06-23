@@ -1,0 +1,15 @@
+<?php
+
+namespace NFePHP\EFD\Blocos;
+
+/*
+ * BLOCO 0: ABERTURA, IDENTIFICAÇÃO E REFERÊNCIAS.
+ * 
+ * REGISTRO 0001: ABERTURA DO BLOCO 0 
+ * REGISTRO 0990: ENCERRAMENTO DO BLOCO 0
+ */
+
+class Cadastro
+{
+    
+}
