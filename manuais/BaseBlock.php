@@ -1,6 +1,6 @@
 <?php
 
-namespace NFePHP\EFD\Blocks;
+namespace NFePHP\EFD\Blocos;
 
 /**
  * Esta classe abstrata estabelece o "contrait" para todas as

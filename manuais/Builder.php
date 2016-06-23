@@ -1,6 +1,6 @@
 <?php
 
-namespace NFePHP\EFD\Blocks;
+namespace NFePHP\EFD\Blocos;
 
 /**
  * Esta classe busca a classe referente a estrutura 
@@ -16,7 +16,7 @@ class Builder
      * Carrega os parametros da classe
      * 
      * @param array $params
-     * @return \NFePHP\EFD\Blocks\Builder
+     * @return \NFePHP\EFD\Blocos\Builder
      */
     public function params($params = null)
     {
@@ -32,7 +32,7 @@ class Builder
      */
     public function call($method)
     {
-        $object = 'NFePHP\EFD\Blocks\\'.ucfirst($method);
+        $object = 'NFePHP\EFD\Blocos\\'.ucfirst($method);
         return call_user_func_array([new $object, 'get'], [$this->params]);
     }
 }
