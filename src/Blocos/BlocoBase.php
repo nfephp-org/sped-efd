@@ -3,6 +3,7 @@
 namespace NFePHP\EFD\Blocos;
 
 use stdClass;
+use InvalidArgumentException;
 
 class BlocoBase
 {
@@ -19,7 +20,7 @@ class BlocoBase
     /**
      * @var array
      */
-    public $error = [];
+    public $errors = [];
     
     /**
      * Base Constructor
@@ -173,8 +174,7 @@ class BlocoBase
         $value = substr($value, 0, $max);
         if (!empty($content)) {
             if (!in_array($value, $content)) {
-                $this->error[] = $reg .
-                    "[$key] Valor informado difere dos esperados";
+                $this->erro($reg, $key, $value);
             }
         }
         return $value;
@@ -214,10 +214,16 @@ class BlocoBase
         $value = substr($value, 0, $max);
         if (!empty($content)) {
             if (!in_array($value, $content)) {
-                $this->error[] = $reg .
-                    "[$key] Valor informado difere dos esperados";
+                $this->erro($reg, $key, $value);
             }
         }
         return $value;
+    }
+    
+    protected function erro($reg, $key, $value)
+    {
+        $msg =  "Bloco $reg : " .
+            "[$key] = $value ! Valor informado difere dos esperados.";
+        $this->errors[] = $msg;
     }
 }
