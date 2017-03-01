@@ -36,22 +36,62 @@ class Bloco0 extends BlocoBase implements BlocoInterface
     const MIN = 1;
     const MAX = 1;
     
+    /**
+     * @var string
+     */
     public $codver;
+    /**
+     * @var string
+     */
     public $codfin;
+    /**
+     * @var string
+     */
     public $dtini;
+    /**
+     * @var string
+     */
     public $dtfin;
+    /**
+     * @var string
+     */
     public $name;
+    /**
+     * @var string
+     */
     public $cnpj;
+    /**
+     * @var string
+     */
     public $cpf;
+    /**
+     * @var string
+     */
     public $uf;
+    /**
+     * @var string
+     */
     public $ie;
+    /**
+     * @var string
+     */
     public $codmun;
+    /**
+     * @var string
+     */
     public $im;
+    /**
+     * @var string
+     */
     public $suframa;
+    /**
+     * @var string
+     */
     public $indperfil;
+    /**
+     * @var string
+     */
     public $indativ;
-    
-    public $register;
     
     //abaixo estão os critérios para validação dos dados passados para a classe
     //esses critérios serão usados para tratar, formatar ou apenas validar
@@ -65,7 +105,7 @@ class Bloco0 extends BlocoBase implements BlocoInterface
     //                       ]
     protected $parameters = [
         'codver'    => ['C', [3, 3], 0, true, []],
-        'codfin'    => ['N', [1, 1], 0, true, [0,1]],
+        'codfin'    => ['N', [1, 1], 0, true, [0, 1]],
         'dtini'     => ['N', [8, 8], 0, true, []],
         'dtfin'     => ['N', [8, 8], 0, true, []],
         'name'      => ['C', [1, 100], 0, true, []],
@@ -76,8 +116,8 @@ class Bloco0 extends BlocoBase implements BlocoInterface
         'codmun'    => ['N', [7, 7], 0, true, []],
         'im'        => ['C', [1, 99], 0, false, []],
         'suframa'   => ['C', [9, 9], 0, false, []],
-        'indperfil' => ['C', [1, 1], 0, true, ['A','B','C']],
-        'indativ'   => ['N', [1, 1], 0, true, [0,1]]
+        'indperfil' => ['C', [1, 1], 0, true, ['A', 'B', 'C']],
+        'indativ'   => ['N', [1, 1], 0, true, [0, 1]]
     ];
     
     /**
@@ -96,14 +136,5 @@ class Bloco0 extends BlocoBase implements BlocoInterface
     public function __toString()
     {
         return '|' . self::REG . '|' . $this->build();
-    }
-    
-    protected function build()
-    {
-        $register = '';
-        foreach ($this->parameters as $key => $format) {
-            $register .= $this->formatEFD($key, $this->$key, $format) . '|';
-        }
-        return $register;
     }
 }
