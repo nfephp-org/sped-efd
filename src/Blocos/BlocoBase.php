@@ -86,6 +86,26 @@ class BlocoBase
         return $clone;
     }
     
+    /**
+     * String builder block
+     * @return string
+     */
+    protected function build()
+    {
+        $register = '';
+        foreach ($this->parameters as $key => $format) {
+            $register .= $this->formatEFD($key, $this->$key, $format) . '|';
+        }
+        return $register;
+    }
+
+    /**
+     * Format, add, and valid
+     * @param string $key
+     * @param string $value
+     * @param array $format
+     * @return string
+     */
     protected function formatEFD($key, $value, $format)
     {
         $type = $format[0];
@@ -118,7 +138,7 @@ class BlocoBase
     }
     
     /**
-     *
+     * Format when value is Alphanumeric string
      * @param string $key
      * @param string $value
      * @param int $min
@@ -150,7 +170,7 @@ class BlocoBase
     }
     
     /**
-     *
+     * Format when value is numeric (int, float or numeric string)
      * @param string $key
      * @param string $value
      * @param int $min
