@@ -88,25 +88,32 @@ class BlocoBase
     
     /**
      * String builder block
+     * @param string $reg
      * @return string
      */
-    protected function build()
+    protected function build($reg)
     {
         $register = '';
         foreach ($this->parameters as $key => $format) {
-            $register .= $this->formatEFD($key, $this->$key, $format) . '|';
+            $register .= $this->formatEFD(
+                $reg,
+                $key,
+                $this->$key,
+                $format
+            ) . '|';
         }
         return $register;
     }
 
     /**
      * Format, add, and valid
+     * @param string $reg
      * @param string $key
      * @param string $value
      * @param array $format
      * @return string
      */
-    protected function formatEFD($key, $value, $format)
+    protected function formatEFD($reg, $key, $value, $format)
     {
         $type = $format[0];
         $min = $format[1][0];
@@ -116,6 +123,7 @@ class BlocoBase
         $content = $format[4];
         if ($type == 'C') {
             $value = $this->formatCharacter(
+                $reg,
                 $key,
                 $value,
                 $min,
@@ -125,6 +133,7 @@ class BlocoBase
             );
         } else {
             $value = $this->formatNumber(
+                $reg,
                 $key,
                 $value,
                 $min,
@@ -139,6 +148,7 @@ class BlocoBase
     
     /**
      * Format when value is Alphanumeric string
+     * @param string $reg
      * @param string $key
      * @param string $value
      * @param int $min
@@ -148,6 +158,7 @@ class BlocoBase
      * @return string
      */
     protected function formatCharacter(
+        $reg,
         $key,
         $value,
         $min,
@@ -162,7 +173,7 @@ class BlocoBase
         $value = substr($value, 0, $max);
         if (!empty($content)) {
             if (!in_array($value, $content)) {
-                $this->error[] = self::REG .
+                $this->error[] = $reg .
                     "[$key] Valor informado difere dos esperados";
             }
         }
@@ -171,6 +182,7 @@ class BlocoBase
     
     /**
      * Format when value is numeric (int, float or numeric string)
+     * @param string $reg
      * @param string $key
      * @param string $value
      * @param int $min
@@ -181,6 +193,7 @@ class BlocoBase
      * @return string
      */
     protected function formatNumber(
+        $reg,
         $key,
         $value,
         $min,
@@ -201,7 +214,7 @@ class BlocoBase
         $value = substr($value, 0, $max);
         if (!empty($content)) {
             if (!in_array($value, $content)) {
-                $this->error[] = self::REG .
+                $this->error[] = $reg .
                     "[$key] Valor informado difere dos esperados";
             }
         }
