@@ -135,6 +135,6 @@ class Bloco0 extends BlocoBase implements BlocoInterface
      */
     public function __toString()
     {
-        return '|' . self::REG . '|' . $this->build();
+        return '|' . self::REG . '|' . $this->build(self::REG);
     }
 }

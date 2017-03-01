@@ -20,7 +20,7 @@ $std->codmun = '3550308';
 $std->im = '';
 $std->suframa = '';
 $std->indperfil = 'B';
-$std->indativ = '0';
+$std->indativ = '9';
 
 $b0 = Bloco::B000($std);
 

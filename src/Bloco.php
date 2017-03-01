@@ -38,11 +38,11 @@ class Bloco
     /**
      * Call and load classes for each block
      * @param string $name
-     * @param stdClass $arguments
+     * @param array $arguments
      * @return \NFePHP\EFD\className
      * @throws InvalidArgumentException
      */
-    public static function __callStatic($name, stdClass $arguments)
+    public static function __callStatic($name, $arguments)
     {
         $className = self::$available[strtolower($name)];
         if (empty($className)) {
