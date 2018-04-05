@@ -32,9 +32,11 @@ class Bloco
         'c190'       => Blocos\BlocoC190::class,
         'c195'       => Blocos\BlocoC195::class,
         'c990'       => Blocos\BlocoC990::class,
-        
+        'k100'       => Blocos\BlocoK100::class,
+        'k200'       => Blocos\BlocoK200::class,
+        'k280'       => Blocos\BlocoK280::class,
     ];
-    
+
     /**
      * Call and load classes for each block
      * @param string $name
