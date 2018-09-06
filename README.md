@@ -9,6 +9,7 @@ Classes para a geração do SPED EFD (fiscal ICMS IPI) EM DESENVOLVIMENTO !!!
 - Para entender o processo de montagem dos arquivos de envio, é OBRIGATÓRIO o conhecimento sobre esses dados e o estudo da documentação da Receita Federal. 
 - Haverão centenas de classes !!! uma para cada elemento de um bloco, esses elementos poderão ser unicos, varios, obrigatórios ou não dependendo de uma série de condições, que não serão gerenciadas por esse construtor.
 - O processo de montagem dos blocos é complexo e irá requerer tempo de processamento e memória, tendo em vista o volume de dados que poderá existir.  
+- Após a geração do arquivo o mesmo deve ser validado pelo validador oficial da Receita e transmitido pelo Receitanet, não é possivel a validação automática nem o envio automatico por webservice
 
 
 ## Detalhes dos Campos
