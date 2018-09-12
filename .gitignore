@@ -1,4 +1,5 @@
 .idea
+.~lock*
 limpaTAB.php
 local
 vendor
