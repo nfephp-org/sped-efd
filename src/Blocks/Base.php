@@ -2,11 +2,12 @@
 
 namespace NFePHP\EFD\Blocks;
 
+/**
+ * Classe abstrata basica de onde cada bloco é cunstruido
+ */
 abstract class Base
 {
-    
-    protected $elements = [];
-
+    public $elements = [];
 
     /**
      * Call classes to build each element EFD

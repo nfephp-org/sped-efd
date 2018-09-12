@@ -2,6 +2,12 @@
 
 namespace NFePHP\EFD;
 
+/**
+ * Classe construtora do arquivo EFD Contribuições
+ * 
+ * Esta classe recebe as classes listadas com o metodo add() e 
+ * executa o processo de construção final do arquivo
+ */
 class EFDCont
 {
     protected $possible = [
@@ -19,7 +25,7 @@ class EFDCont
     
     public function __construct()
     {
-        
+        //todo
     }
     
     /**
@@ -28,7 +34,7 @@ class EFDCont
      */
     public function add(BlockInterface $block)
     {
-        
+        //todo
     }
     
     /**
@@ -36,6 +42,6 @@ class EFDCont
      */
     public function __toString()
     {
-        
+        //todo
     }
 }
