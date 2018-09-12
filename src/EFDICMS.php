@@ -4,6 +4,12 @@ namespace NFePHP\EFD;
 
 use NFePHP\EFD\Blocks\BlockInterface;
 
+/**
+ * Classe construtora do arquivo EFD ICMS/IPI
+ * 
+ * Esta classe recebe as classes listadas com o metodo add() e 
+ * executa o processo de construção final do arquivo
+ */
 class EFDICMS
 {
     protected $b0;
@@ -32,7 +38,7 @@ class EFDICMS
     
     public function __construct()
     {
-        
+        //todo
     }
     
     /**
@@ -41,7 +47,7 @@ class EFDICMS
      */
     public function add(BlockInterface $block)
     {
-        
+        //todo
     }
     
     /**
@@ -49,7 +55,7 @@ class EFDICMS
      */
     public function __toString()
     {
-        
+        //todo
     }
     
 }

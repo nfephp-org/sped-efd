@@ -8,6 +8,18 @@ use \stdClass;
 
 /**
  * Elemento 0000 do Bloco 0 
+ * REGISTRO 0000: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DA ENTIDADE
+ * Este Registro é obrigatório e corresponde ao primeiro registro do arquivo.
+ * Obs.:  Nos  casos  de  EFD-ICMS/IPI  apresentadas  por  estabelecimentos  
+ * situados  em  outra  UF  e  que  possuam  Inscrição Estadual  nos  termos  
+ * do  Convênio  ICMS  nº  113/04  (serviços  de  comunicação  definidos  
+ * pela  Anatel),  deve-se  observar  o seguinte procedimento para preenchimento
+ * do registro 0000:
+ *   1) Informar o campo UF da unidade federada do tomador de serviços;
+ *   2) Informar no campo IE a inscrição estadual na unidade federada do tomador
+ *      de serviços;
+ *   3) Informar no campo COD_MUN o código de município correspondente à capital
+ *      do estado do tomador de serviços.
  * 
  * https://www.confaz.fazenda.gov.br/legislacao/atos/2008/AC009_08
  */
@@ -20,7 +32,7 @@ class B0000 extends ElementBase implements ElementInterface
     protected $parameters = [
         'cod_ver' => [
             'type'     => 'string',
-            'regex'    => '^[0-9]{3}',
+            'regex'    => '^[0-9]{3}$',
             'required' => true,
             'info'     => 'Código da versão do leiaute conforme a tabela indicada no Ato COTEPE.',
             'format'   => ''
@@ -48,7 +60,7 @@ class B0000 extends ElementBase implements ElementInterface
         ],
         'nome'      => [
             'type'     => 'string',
-            'regex'    => '^.{2,100}',
+            'regex'    => '^.{2,100}$',
             'required' => true,
             'info'     => 'Nome empresarial da entidade.',
             'format'   => ''

@@ -7,7 +7,10 @@ use NFePHP\EFD\Blocks\ElementInterface;
 use \stdClass;
 
 /**
- * Elemento 0001 do Bloco 0 
+ * Elemento 0001 do Bloco 0
+ * REGISTRO 0001: ABERTURA DO BLOCO 0
+ * Este registro deve ser gerado para abertura do bloco 0 e indica as 
+ * informações previstas para este bloco.
  */
 class B0001 extends ElementBase implements ElementInterface
 {
