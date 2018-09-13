@@ -3,7 +3,7 @@
 namespace NFePHP\EFD;
 
 use NFePHP\EFD\EFD;
-use NFePHP\EFD\Blocks\BlockInterface;
+
 
 /**
  * Classe construtora do arquivo EFD Contribuições

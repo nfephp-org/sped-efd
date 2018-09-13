@@ -2,6 +2,7 @@
 
 namespace NFePHP\EFD;
 
+use NFePHP\EFD\Blocks\BlockInterface;
 
 abstract class EFD
 {
