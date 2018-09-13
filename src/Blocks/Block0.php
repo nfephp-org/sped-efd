@@ -36,8 +36,7 @@ class Block0 extends Base implements BlockInterface
         'b0450' => ['class' => Elements\B0450::class, 'level' => 2, 'type' => 'multiple'],
         'b0460' => ['class' => Elements\B0460::class, 'level' => 2, 'type' => 'multiple'],
         'b0500' => ['class' => Elements\B0500::class, 'level' => 2, 'type' => 'multiple'],
-        'b0600' => ['class' => Elements\B0600::class, 'level' => 2, 'type' => 'multiple'],
-        'b0990' => ['class' => Elements\B0990::class, 'level' => 1, 'type' => 'single'],
+        'b0600' => ['class' => Elements\B0600::class, 'level' => 2, 'type' => 'multiple']
     ];
     
     public function __construct()

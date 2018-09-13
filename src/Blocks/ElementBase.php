@@ -10,16 +10,18 @@ abstract class ElementBase
     
     protected $parameters;
 
-
-    public function __construct()
+    private $reg;
+    
+    public function __construct($reg)
     {
+        $this->reg = $reg;
     }
     
     /**
      * Valida e ajusta os dados de entrada para os padões estabelecidos
      * @param \stdClass $std
      */
-    protected function standarize(\stdClass $std, $reg)
+    protected function standarize(\stdClass $std)
     {
         if (empty($this->parameters)) {
             throw new Exception('Parametros não estabelecidos na classe');
@@ -40,7 +42,7 @@ abstract class ElementBase
                 $newstd->$key = null;
             } else {
                 //se o valor para o parametro foi passado, então validar 
-                if ($resp = $this->isFieldInError($std->$key, $stdParam->$key, strtoupper($key), $reg)) {
+                if ($resp = $this->isFieldInError($std->$key, $stdParam->$key, strtoupper($key), $this->reg)) {
                    $errors[] = $resp; 
                 }
                 //e formatar o dado passado 
@@ -158,5 +160,14 @@ abstract class ElementBase
             $register .= $this->std->$key . '|';
         }
         return $register;
+    }
+    
+    /**
+     * Retorna o elemento formatado em uma string
+     * @return string
+     */
+    public function __toString()
+    {
+        return '|' . $this->reg . '|' . $this->build();
     }
 }

@@ -119,16 +119,7 @@ class B0100 extends ElementBase implements ElementInterface
      */
     public function __construct(\stdClass $std)
     {
-        parent::__construct();
-        $this->std = $this->standarize($std, self::REG);
-    }
-    
-    /**
-     * Retorna o elemento formatado em uma string
-     * @return string
-     */
-    public function __toString()
-    {
-        return '|' . self::REG . '|' . $this->build();
+        parent::__construct(self::REG);
+        $this->std = $this->standarize($std);
     }
 }

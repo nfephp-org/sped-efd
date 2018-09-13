@@ -8,9 +8,15 @@ namespace NFePHP\EFD\Blocks;
 abstract class Base
 {
     public $elements = [];
-
+    protected $bloco = '';
+    
+    public function __construct()
+    {
+        
+    }
+    
     /**
-     * Call classes to build each element EFD
+     * Call classes to build each EFD element
      * @param string $name
      * @param array $arguments [std]
      * @return object|array
@@ -27,26 +33,25 @@ abstract class Base
         if (empty($arguments[0])) {
             throw new \Exception("Sem dados passados para o método [$name].");
         }
-        $propname = str_replace('tag', '', $name);
-        if ($this->elements[$realname]['type'] == 'multiple') {
-            if (!isset($this->$propname)) {
-                $this->createProperty($propname, []);
-            }
-            $c = new $className($arguments[0]);
-            array_push($this->$propname, $c);
-        } else {
-            $this->createProperty($propname, new $className($arguments[0]));
-        }
-        return $this->$propname;
+        
+        $elclass = new $className($arguments[0]);
+        //aqui deve ser feita a construção do bloco
+        //para fazer a montagem verificar o elemento pai
+        //se não existir elemento pai no bloco disparar um exception
+        
+        $this->bloco .= "{$elclass}\n";
     }
-
+    
     /**
-     * Create properties
-     * @param string $name
-     * @param NFePHP\NFe\Tags\TagInterface $value
+     * Totalizes the elements of the block and returns the complete block
+     * in a string adding element 0990
+     * @return string
      */
-    protected function createProperty($name, $value)
+    public function get()
     {
-        $this->{$name} = $value;
+        //fazer a montagem do elemento 0990 Totalizador
+        $n = count(explode("\n", $this->bloco));
+        $this->bloco .= "|0990|$n|\n";
+        return $this->bloco;
     }
 }
