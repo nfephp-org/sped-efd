@@ -77,13 +77,14 @@ class EFDICMS
                 }    
             }
         }
+        $n = 0;
         foreach ($keys as $key => $value) {
-            $n = 0;
             if (!empty($key)) {
                 $tot .= "|9900|$key|$value|\n";
                 $n++;
             }
         }
+        $n++;
         $tot .= "|9900|9900|$n|\n" . "|9990|". ($n+2) ."|\n";
         $efd .= $tot;
         $n = count(explode("\n", $efd));
