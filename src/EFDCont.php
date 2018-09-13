@@ -2,46 +2,26 @@
 
 namespace NFePHP\EFD;
 
+use NFePHP\EFD\EFD;
+
+
 /**
  * Classe construtora do arquivo EFD Contribuições
  * 
  * Esta classe recebe as classes listadas com o metodo add() e 
  * executa o processo de construção final do arquivo
  */
-class EFDCont
+final class EFDCont extends EFD
 {
     protected $possible = [
-        'BO' => Blocks\Cont0::class,
-        'BA' => Blocks\ContA::class,
-        'BC' => Blocks\ContC::class,
-        'BD' => Blocks\ContD::class,
-        'BF' => Blocks\ContF::class,
-        'BI' => Blocks\ContI::class,
-        'BM' => Blocks\ContM::class,
-        'BP' => Blocks\ContP::class,
-        'B1' => Blocks\Cont1::class,
-        'B9' => Blocks\Cont9::class, //totalizador
+        'cont0' => ['class' =>Blocks\Cont0::class, 'order' => 1],
+        'conta' => ['class' =>Blocks\ContA::class, 'order' => 2],
+        'contc' => ['class' =>Blocks\ContC::class, 'order' => 3],
+        'contd' => ['class' =>Blocks\ContD::class, 'order' => 4],
+        'contf' => ['class' =>Blocks\ContF::class, 'order' => 5],
+        'conti' => ['class' =>Blocks\ContI::class, 'order' => 6],
+        'contm' => ['class' =>Blocks\ContM::class, 'order' => 7],
+        'contp' => ['class' =>Blocks\ContP::class, 'order' => 8],
+        'cont1' => ['class' =>Blocks\Cont1::class, 'order' => 9]
     ];
-    
-    public function __construct()
-    {
-        //todo
-    }
-    
-    /**
-     * Add 
-     * @param BlockInterface $block
-     */
-    public function add(BlockInterface $block)
-    {
-        //todo
-    }
-    
-    /**
-     * Create a EFD string
-     */
-    public function __toString()
-    {
-        //todo
-    }
 }
