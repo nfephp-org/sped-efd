@@ -21,8 +21,7 @@ class EFDICMS
         'blocke' => ['class' => Blocks\BlockE::class, 'order' => 6],
         'blockg' => ['class' => Blocks\BlockG::class, 'order' => 7],
         'blockh' => ['class' => Blocks\BlockH::class, 'order' => 8],
-        'blockk' => ['class' => Blocks\BlockK::class, 'order' => 9],
-        //'block9' => ['class' => Blocks\Block9::class, 'order' => 1], //totalizador
+        'blockk' => ['class' => Blocks\BlockK::class, 'order' => 9]
     ];
     
     public function __construct()
@@ -36,9 +35,7 @@ class EFDICMS
      */
     public function add(BlockInterface $block)
     {
-        //todo
         $name = strtolower((new \ReflectionClass($block))->getShortName());
-        //$name = strtolower(get_class($block));
         if (key_exists($name, $this->possibles)) {
             $this->{$name} = $block->get();
         }    
@@ -49,7 +46,6 @@ class EFDICMS
      */
     public function get()
     {
-        //todo
         $efd = '';
         $keys = array_keys($this->possibles);
         foreach($keys as $key) {
@@ -91,5 +87,4 @@ class EFDICMS
         $tot .= "|9999|$n|\n";
         return $tot;
     }
-    
 }
