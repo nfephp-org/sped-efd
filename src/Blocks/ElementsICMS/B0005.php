@@ -7,9 +7,9 @@ use NFePHP\EFD\Blocks\ElementInterface;
 use \stdClass;
 
 /**
- * Elemento 0005 do Bloco 0 
+ * Elemento 0005 do Bloco 0
  * REGISTRO 0005: DADOS COMPLEMENTARES DA ENTIDADE
- * Registro obrigatório utilizado para complementar as informações de 
+ * Registro obrigatório utilizado para complementar as informações de
  * identificação do informante do arquivo.
  */
 class B0005 extends ElementBase implements ElementInterface
@@ -93,5 +93,4 @@ class B0005 extends ElementBase implements ElementInterface
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
     }
-
 }

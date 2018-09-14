@@ -14,7 +14,7 @@ abstract class EFD
     }
     
     /**
-     * Add 
+     * Add
      * @param BlockInterface $block
      */
     public function add(BlockInterface $block)
@@ -22,7 +22,7 @@ abstract class EFD
         $name = strtolower((new \ReflectionClass($block))->getShortName());
         if (key_exists($name, $this->possibles)) {
             $this->{$name} = $block->get();
-        }    
+        }
     }
     
     /**
@@ -32,12 +32,12 @@ abstract class EFD
     {
         $efd = '';
         $keys = array_keys($this->possibles);
-        foreach($keys as $key) {
+        foreach ($keys as $key) {
             if (isset($this->$key)) {
                 $efd .= $this->$key;
             }
         }
-        $efd .= $this->totalize($efd); 
+        $efd .= $this->totalize($efd);
         return $efd;
     }
     
@@ -54,7 +54,7 @@ abstract class EFD
                     $keys[$key] += 1;
                 } else {
                     $keys[$key] = 1;
-                }    
+                }
             }
         }
         $n = 0;

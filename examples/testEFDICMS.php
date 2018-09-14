@@ -71,6 +71,22 @@ try {
     $std->COD_MUN = '0123456';
     $b0->b0100($std);
     
+    //0150
+    $std = new stdClass();
+    $std->COD_PART = '000123';
+    $std->NOME = 'Fundo de Quintal Ltda';
+    $std->COD_PAIS = '01058';
+    $std->CNPJ = '12345678901234';
+    $std->CPF = '12345678901';
+    $std->IE = '12345678901234';
+    $std->COD_MUN = '0123456';
+    //$std->SUFRAMA = null;
+    $std->END = 'Rua UM';
+    $std->NUM = 'N.1';
+    $std->COMPL = 'Sala 1';
+    $std->BAIRRO = 'Um de Dois';
+    $b0->b0150($std);
+    
     //adicionando o bloco 0 ao EFD
     $efd->add($b0);
     //recuperar os dados em tela

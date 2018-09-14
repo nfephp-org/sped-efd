@@ -6,17 +6,21 @@ use \stdClass;
 
 abstract class ElementBase
 {
-    public $std;
-    
-    protected $parameters;
 
+    public $std;
+    protected $parameters;
     private $reg;
-    
+
     public function __construct($reg)
     {
         $this->reg = $reg;
     }
-    
+
+    public function postValidation()
+    {
+        return true;
+    }
+
     /**
      * Valida e ajusta os dados de entrada para os padões estabelecidos
      * @param \stdClass $std
@@ -41,12 +45,22 @@ abstract class ElementBase
             if (!key_exists($key, $arr)) {
                 $newstd->$key = null;
             } else {
-                //se o valor para o parametro foi passado, então validar 
-                if ($resp = $this->isFieldInError($std->$key, $stdParam->$key, strtoupper($key), $this->reg)) {
-                   $errors[] = $resp; 
+                //se o valor para o parametro foi passado, então validar
+                $resp = $this->isFieldInError(
+                    $std->$key,
+                    $stdParam->$key,
+                    strtoupper($key),
+                    $this->reg
+                );
+                if ($resp) {
+                    $errors[] = $resp;
                 }
-                //e formatar o dado passado 
-                $formated = $this->formater($std->$key, $stdParam->$key->format, strtoupper($key));
+                //e formatar o dado passado
+                $formated = $this->formater(
+                    $std->$key,
+                    $stdParam->$key->format,
+                    strtoupper($key)
+                );
                 //Strings::replaceUnacceptableCharacters()
                 $newstd->$key = $formated;
             }
@@ -57,7 +71,7 @@ abstract class ElementBase
         }
         return $newstd;
     }
-    
+
     /**
      * Verifica os campos comrelação ao tipo e seu regex
      * @param string|integer\float $input
@@ -101,7 +115,7 @@ abstract class ElementBase
         }
         return false;
     }
-    
+
     /**
      * Formata os campos float
      * @param string|integer|float $value
@@ -109,7 +123,7 @@ abstract class ElementBase
      * @return string|integer
      * @throws \InvalidArgumentException
      */
-    protected function formater($value, $format = null, $fieldname)
+    protected function formater($value, $format = null, $fieldname = '')
     {
         if (empty($format) || empty($value)) {
             return $value;
@@ -120,10 +134,11 @@ abstract class ElementBase
         $n = explode('v', $format);
         $mdec = strpos($n[1], '-');
         $p = explode('.', $value);
-        $ndec = !empty($p[1]) ? strlen($p[1]) : 0;//decimal digits
-        $nint = strlen($p[0]);//integer digits
+        $ndec = !empty($p[1]) ? strlen($p[1]) : 0; //decimal digits
+        $nint = strlen($p[0]); //integer digits
         if ($nint > $n[0]) {
-            throw new \InvalidArgumentException("O [$fieldname] é maior que o permitido [$format].");
+            throw new \InvalidArgumentException("O [$fieldname] é maior "
+            . "que o permitido [$format].");
         }
         if ($mdec !== false) {
             //is multi decimal
@@ -147,7 +162,7 @@ abstract class ElementBase
         }
         return number_format($value, $n[1], '.', '');
     }
-    
+
     /**
      * Construtor do elemento
      * @param type $reg
@@ -161,7 +176,7 @@ abstract class ElementBase
         }
         return $register;
     }
-    
+
     /**
      * Retorna o elemento formatado em uma string
      * @return string

@@ -7,12 +7,12 @@ use NFePHP\EFD\Blocks\ElementInterface;
 use \stdClass;
 
 /**
- * Elemento 0000 do Bloco 0 
+ * Elemento 0000 do Bloco 0
  * REGISTRO 0000: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DA ENTIDADE
  * Este Registro é obrigatório e corresponde ao primeiro registro do arquivo.
- * Obs.:  Nos  casos  de  EFD-ICMS/IPI  apresentadas  por  estabelecimentos  
- * situados  em  outra  UF  e  que  possuam  Inscrição Estadual  nos  termos  
- * do  Convênio  ICMS  nº  113/04  (serviços  de  comunicação  definidos  
+ * Obs.:  Nos  casos  de  EFD-ICMS/IPI  apresentadas  por  estabelecimentos
+ * situados  em  outra  UF  e  que  possuam  Inscrição Estadual  nos  termos
+ * do  Convênio  ICMS  nº  113/04  (serviços  de  comunicação  definidos
  * pela  Anatel),  deve-se  observar  o seguinte procedimento para preenchimento
  * do registro 0000:
  *   1) Informar o campo UF da unidade federada do tomador de serviços;
@@ -20,7 +20,7 @@ use \stdClass;
  *      de serviços;
  *   3) Informar no campo COD_MUN o código de município correspondente à capital
  *      do estado do tomador de serviços.
- * 
+ *
  * https://www.confaz.fazenda.gov.br/legislacao/atos/2008/AC009_08
  */
 class B0000 extends ElementBase implements ElementInterface
@@ -34,14 +34,17 @@ class B0000 extends ElementBase implements ElementInterface
             'type'     => 'string',
             'regex'    => '^[0-9]{3}$',
             'required' => true,
-            'info'     => 'Código da versão do leiaute conforme a tabela indicada no Ato COTEPE.',
+            'info'     => 'Código da versão do leiaute conforme a tabela indicada '
+            . 'no Ato COTEPE.',
             'format'   => ''
         ],
         'cod_fin' => [
             'type'     => 'integer',
             'regex'    => '^[0-1]{1}$',
             'required' => true,
-            'info'     => 'Código da finalidade do arquivo: 0 - Remessa do arquivo original;  1 - Remessa do arquivo substituto.',
+            'info'     => 'Código da finalidade do arquivo: '
+            . '0 - Remessa do arquivo original;  '
+            . '1 - Remessa do arquivo substituto.',
             'format'   => ''
         ],
         'dt_ini'     => [
@@ -97,7 +100,8 @@ class B0000 extends ElementBase implements ElementInterface
             'type'     => 'integer',
             'regex'    => '^[0-9]{7}$',
             'required' => true,
-            'info'     => 'Código  do  município  do  domicílio  fiscal  da  entidade, conforme a tabela IBGE',
+            'info'     => 'Código  do  município  do  domicílio  fiscal  da  '
+            . 'entidade, conforme a tabela IBGE',
             'format'   => ''
         ],
         'im'        => [
@@ -118,14 +122,16 @@ class B0000 extends ElementBase implements ElementInterface
             'type'     => 'string',
             'regex'    => '^(A|B|C)',
             'required' => true,
-            'info'     => 'Perfil de apresentação do arquivo fiscal; A – Perfil A; B – Perfil B.; C – Perfil C.',
+            'info'     => 'Perfil de apresentação do arquivo fiscal; '
+            . 'A – Perfil A; B – Perfil B.; C – Perfil C.',
             'format'   => ''
         ],
         'ind_ativ'   => [
             'type'     => 'integer',
             'regex'    => '^[0-1]{1}$',
             'required' => true,
-            'info'     => 'Indicador de tipo de atividade: 0 – Industrial ou equiparado a industrial; 1 – Outros.',
+            'info'     => 'Indicador de tipo de atividade: '
+            . '0 – Industrial ou equiparado a industrial; 1 – Outros.',
             'format'   => ''
         ]
     ];

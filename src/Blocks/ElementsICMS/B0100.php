@@ -7,10 +7,10 @@ use NFePHP\EFD\Blocks\ElementInterface;
 use \stdClass;
 
 /**
- * Elemento 0100 do Bloco 0 
+ * Elemento 0100 do Bloco 0
  * REGISTRO 0100: DADOS DO CONTABILISTA
- * Registro utilizado para identificação do contabilista responsável pela 
- * escrituração fiscal do estabelecimento, mesmo que o contabilista seja 
+ * Registro utilizado para identificação do contabilista responsável pela
+ * escrituração fiscal do estabelecimento, mesmo que o contabilista seja
  * funcionário da empresa ou prestador de serviço.
  */
 class B0100 extends ElementBase implements ElementInterface

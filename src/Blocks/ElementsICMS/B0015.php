@@ -9,13 +9,13 @@ use \stdClass;
 /**
  * Elemento 0015 do Bloco 0
  * REGISTRO 0015: DADOS DO CONTRIBUINTE SUBSTITUTO OU RESPONSÁVEL PELO ICMS DESTINO
- * Registro obrigatório para todos os contribuintes substitutos tributários do 
- * ICMS, conforme definidos na legislação pertinente.  Deve  ser  gerado  um  
- * registro  para  cada  uma  das  inscrições  estaduais  cadastradas  nas  
- * unidades  federadas  dos contribuintes substituídos, ainda que não tenha 
+ * Registro obrigatório para todos os contribuintes substitutos tributários do
+ * ICMS, conforme definidos na legislação pertinente.  Deve  ser  gerado  um
+ * registro  para  cada  uma  das  inscrições  estaduais  cadastradas  nas
+ * unidades  federadas  dos contribuintes substituídos, ainda que não tenha
  * tido movimentação no período, ficando obrigado à apresentação dos registros
- * E200, E300 e respectivos filhos. 
- * 
+ * E200, E300 e respectivos filhos.
+ *
  */
 class B0015 extends ElementBase implements ElementInterface
 {
@@ -54,5 +54,4 @@ class B0015 extends ElementBase implements ElementInterface
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
     }
-
 }

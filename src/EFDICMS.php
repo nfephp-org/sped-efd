@@ -6,8 +6,8 @@ use NFePHP\EFD\EFD;
 
 /**
  * Classe construtora do arquivo EFD ICMS/IPI
- * 
- * Esta classe recebe as classes listadas com o metodo add() e 
+ *
+ * Esta classe recebe as classes listadas com o metodo add() e
  * executa o processo de construção final do arquivo
  */
 final class EFDICMS extends EFD
