@@ -2,7 +2,6 @@
 
 namespace NFePHP\EFD\Blocks;
 
-
 use NFePHP\EFD\Blocks\Base;
 use NFePHP\EFD\Blocks\BlockInterface;
 use NFePHP\EFD\Blocks\ElementsICMS as Elements;

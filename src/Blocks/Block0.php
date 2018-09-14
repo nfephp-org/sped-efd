@@ -8,13 +8,13 @@ use NFePHP\EFD\Blocks\BlockInterface;
 
 /**
  * Classe constutora do bloco 0 (inicial)
- * 
+ *
  * Esta classe irá usar um recurso para invocar as classes de cada um dos elementos
  * constituintes listados e criará uma propriedade para cada elemento e
  * fará a contagem (totalização de cada elemento) e montar o elemento de fachamento do bloco
  * podendo também construir e retornar o bloco isoladamente
  */
-class Block0 extends Base implements BlockInterface
+final class Block0 extends Base implements BlockInterface
 {
     public $elements = [
         'b0000' => ['class' => Elements\B0000::class, 'level' => 0, 'type' => 'single'],
@@ -38,11 +38,4 @@ class Block0 extends Base implements BlockInterface
         'b0500' => ['class' => Elements\B0500::class, 'level' => 2, 'type' => 'multiple'],
         'b0600' => ['class' => Elements\B0600::class, 'level' => 2, 'type' => 'multiple']
     ];
-    
-    public function __construct()
-    {
-        //todo Não alterem essa classe eu farei a codificação dela ROBERTO
-    }
-    
-    
 }
