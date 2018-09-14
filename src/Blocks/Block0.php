@@ -10,9 +10,7 @@ use NFePHP\EFD\Blocks\BlockInterface;
  * Classe constutora do bloco 0 (inicial)
  *
  * Esta classe irá usar um recurso para invocar as classes de cada um dos elementos
- * constituintes listados e criará uma propriedade para cada elemento e
- * fará a contagem (totalização de cada elemento) e montar o elemento de fachamento do bloco
- * podendo também construir e retornar o bloco isoladamente
+ * constituintes listados
  */
 final class Block0 extends Base implements BlockInterface
 {
