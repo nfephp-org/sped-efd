@@ -37,6 +37,11 @@ abstract class Base
         //aqui deve ser feita a construção do bloco
         //para fazer a montagem verificar o elemento pai
         //se não existir elemento pai no bloco disparar um exception
+        $parent = $elclass::PARENT;
+        //o parent pode ser um ou multipos separados por |
+        //se não existir o parent então apenas acrescentar sem necessidade
+        //de verificação
+        //TODO
         
         $this->bloco .= "{$elclass}\n";
     }
