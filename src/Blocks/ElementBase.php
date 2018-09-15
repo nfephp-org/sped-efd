@@ -3,6 +3,7 @@
 namespace NFePHP\EFD\Blocks;
 
 use \stdClass;
+use NFePHP\Common\Strings;
 
 abstract class ElementBase
 {
@@ -89,29 +90,29 @@ abstract class ElementBase
         switch ($type) {
             case 'integer':
                 if (!is_integer($input)) {
-                    return "$element campo: $fieldname deve ser um valor numérico inteiro.";
+                    return "[$this->reg] $element campo: $fieldname deve ser um valor numérico inteiro.";
                 }
                 break;
             case 'numeric':
                 if (!is_numeric($input)) {
-                    return "$element campo: $fieldname deve ser um numero.";
+                    return "[$this->reg] $element campo: $fieldname deve ser um numero.";
                 }
                 break;
             case 'string':
                 if (!is_string($input)) {
-                    return "$element campo: $fieldname deve ser uma string.";
+                    return "[$this->reg] $element campo: $fieldname deve ser uma string.";
                 }
                 break;
         }
         $input = (string) $input;
         if ($regex === 'email') {
             if (!filter_var($input, FILTER_VALIDATE_EMAIL)) {
-                return "$element campo: $fieldname Esse email [$input] está incorreto.";
+                return "[$this->reg] $element campo: $fieldname Esse email [$input] está incorreto.";
             }
             return false;
         }
         if (!preg_match("/$regex/", $input)) {
-            return "$element campo: $fieldname valor incorreto [$input]. (validação: $regex)";
+            return "[$this->reg] $element campo: $fieldname valor incorreto [$input]. (validação: $regex)";
         }
         return false;
     }
@@ -125,10 +126,14 @@ abstract class ElementBase
      */
     protected function formater($value, $format = null, $fieldname = '')
     {
-        if (empty($format) || empty($value)) {
+        if (empty($value)) {
             return $value;
         }
         if (!is_numeric($value)) {
+            //se não é numerico então permitir apenas ASCII
+            return Strings::toASCII($value);
+        }
+        if (empty($format)) {
             return $value;
         }
         $n = explode('v', $format);
@@ -137,7 +142,7 @@ abstract class ElementBase
         $ndec = !empty($p[1]) ? strlen($p[1]) : 0; //decimal digits
         $nint = strlen($p[0]); //integer digits
         if ($nint > $n[0]) {
-            throw new \InvalidArgumentException("O [$fieldname] é maior "
+            throw new \InvalidArgumentException("[$this->reg] O [$fieldname] é maior "
             . "que o permitido [$format].");
         }
         if ($mdec !== false) {

@@ -7,7 +7,7 @@ use NFePHP\EFD\Blocks\ElementInterface;
 use \stdClass;
 
 /**
- * Elemento 0000 do Bloco 0
+ * Elemento 0000 do Bloco 0 OBRIGATÓRIO [1:1]
  * REGISTRO 0000: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DA ENTIDADE
  * Este Registro é obrigatório e corresponde ao primeiro registro do arquivo.
  * Obs.:  Nos  casos  de  EFD-ICMS/IPI  apresentadas  por  estabelecimentos
@@ -143,6 +143,25 @@ class B0000 extends ElementBase implements ElementInterface
     public function __construct(\stdClass $std)
     {
         parent::__construct(self::REG);
-        $this->std = $this->standarize($std, self::REG);
+        $this->std = $this->standarize($std);
+        $this->postValidation();
+    }
+    
+    /**
+     * Aqui são colocadas validações adicionais que requerem mais logica
+     * e processamento
+     * Deve ser usado apenas quando necessário
+     * @throws \InvalidArgumentException
+     */
+    public function postValidation()
+    {
+        if (!$this->std->cnpj xor $this->std->cpf) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
+                . "informado apenas o CNPJ ou o CPF nunca os dois.");
+        }
+        if (!empty($this->std->cpf) && $this->std->ind_ativ == 0) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Como foi "
+                . "informado o CPF então IND_ATIV deve ser igual a 1.");
+        }
     }
 }

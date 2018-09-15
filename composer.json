@@ -18,7 +18,8 @@
         }
     ],
     "require": {
-        "php" : ">=7.0"
+        "php" : ">=7.0",
+        "nfephp-org/sped-common": "^5.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.10.3",
