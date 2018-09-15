@@ -143,7 +143,7 @@ class B0000 extends ElementBase implements ElementInterface
     public function __construct(\stdClass $std)
     {
         parent::__construct(self::REG);
-        $this->std = $this->standarize($std, self::REG);
+        $this->std = $this->standarize($std);
         $this->postValidation();
     }
     
@@ -158,6 +158,10 @@ class B0000 extends ElementBase implements ElementInterface
         if (!$this->std->cnpj xor $this->std->cpf) {
             throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
                 . "informado apenas o CNPJ ou o CPF nunca os dois.");
+        }
+        if (!empty($this->std->cpf) && $this->std->ind_ativ == 0) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Como foi "
+                . "informado o CPF então IND_ATIV deve ser igual a 1.");
         }
     }
 }
