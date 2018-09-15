@@ -2,11 +2,11 @@
 
 namespace NFePHP\EFD;
 
-use NFePHP\EFD\Blocks\BlockInterface;
+use NFePHP\EFD\Common\BlockInterface;
 
 abstract class EFD
 {
-    protected $possible = [];
+    protected $possibles = [];
     
     public function __construct()
     {
