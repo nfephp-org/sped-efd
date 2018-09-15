@@ -3,6 +3,7 @@
 namespace NFePHP\EFD\Blocks;
 
 use \stdClass;
+use NFePHP\Common\Strings;
 
 abstract class ElementBase
 {
@@ -125,10 +126,14 @@ abstract class ElementBase
      */
     protected function formater($value, $format = null, $fieldname = '')
     {
-        if (empty($format) || empty($value)) {
+        if (empty($value)) {
             return $value;
         }
         if (!is_numeric($value)) {
+            //se não é numerico então permitir apenas ASCII
+            return Strings::toASCII($value);
+        }
+        if (empty($format)) {
             return $value;
         }
         $n = explode('v', $format);

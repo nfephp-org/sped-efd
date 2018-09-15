@@ -11,17 +11,21 @@ try {
     
     $efd = new EFDICMS();
     
+    //Construção do Bloco 0 - Bloco Inicial
+    //IMPORTANTE: a ORDEM afeta o resultado portanto é muito importante 
+    //carregar os elementos na ordem correta
     $b0 = new Block0();
     
-    //0000
+    //0000 Obrigatório [1:1]
+    //Abertura do Arquivo Digital e Identificação da entidade
     $std = new stdClass();
     $std->cod_ver = '001'; 
     $std->cod_fin = 0;
     $std->dt_ini = '01062008';
     $std->dt_fin = '30062008';
     $std->nome = 'ARMSTRONG BRASIL EQUIPAMENTOS IND.LTDA';
-    $std->cnpj = '00258807000129';
-    //$std->cpf = '';
+    //$std->cnpj = '00258807000129';
+    $std->cpf = '12345678901';
     $std->uf = 'SP';
     $std->ie = '206084839119';
     $std->cod_mun = 3550308;
@@ -31,12 +35,14 @@ try {
     $std->ind_ativ = 0;
     $b0->b0000($std);
     
-    //0001
+    //0001 Obrigatório
+    //Abertura do Bloco 0
     $std = new stdClass();
     $std->ind_mov = 1; 
     $b0->b0001($std);
     
-    //0005
+    //0005 Obrigatório
+    //Dados Complementares da entidade
     $std = new stdClass();
     $std->FANTASIA = 'Fantasia';
     $std->CEP = '12345678';
@@ -49,12 +55,15 @@ try {
     $std->EMAIL = 'ciclano@mail.com';
     $b0->b0005($std);
     
-    //0015
+    //0015 Opcional deve ser incluso apenas se existir
+    //Dados do Contribuinte Substituto ou Responsável pelo ICMS Destino
     $std = new stdClass();
     $std->uf_st = 'PR';
     $std->ie_st = '12345678901234';
     $b0->b0015($std);
     
+    //0100 Obrigatório
+    //Dados do Contabilista
     $std = new stdClass();
     $std->NOME = 'Ciclano da Silva';
     $std->CPF = '00199745866';
@@ -71,13 +80,14 @@ try {
     $std->COD_MUN = '0123456';
     $b0->b0100($std);
     
-    //0150
+    //0150 Opcional
+    //Tabela de Cadastro do Participante
     $std = new stdClass();
     $std->COD_PART = '000123';
     $std->NOME = 'Fundo de Quintal Ltda';
     $std->COD_PAIS = '01058';
     $std->CNPJ = '12345678901234';
-    $std->CPF = '12345678901';
+    //$std->CPF = '12345678901';
     $std->IE = '12345678901234';
     $std->COD_MUN = '0123456';
     //$std->SUFRAMA = null;
