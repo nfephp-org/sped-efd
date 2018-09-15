@@ -4,7 +4,7 @@ ini_set('display_errors', 'On');
 require_once '../bootstrap.php';
 
 use \stdClass;
-use NFePHP\EFD\Blocks\ElementsICMS\B0000;
+use NFePHP\EFD\Elements\ICMSIPI\B0000;
 
 $std = new stdClass();
 $std->cod_ver = '001'; 

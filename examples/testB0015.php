@@ -4,7 +4,7 @@ ini_set('display_errors', 'On');
 require_once '../bootstrap.php';
 
 use \stdClass;
-use NFePHP\EFD\Blocks\ElementsICMS\B0015;
+use NFePHP\EFD\Blocks\Elements\ICMSIPI\B0015;
 
 $std = new stdClass();
 $std->uf_st = 'PR';

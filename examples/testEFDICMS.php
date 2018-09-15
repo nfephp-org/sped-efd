@@ -4,7 +4,7 @@ ini_set('display_errors', 'On');
 require_once '../bootstrap.php';
 
 use \stdClass;
-use NFePHP\EFD\Blocks\Block0;
+use NFePHP\EFD\Blocks\ICMSIPI\Block0;
 use NFePHP\EFD\EFDICMS;
 
 try {
@@ -24,8 +24,8 @@ try {
     $std->dt_ini = '01062008';
     $std->dt_fin = '30062008';
     $std->nome = 'ARMSTRONG BRASIL EQUIPAMENTOS IND.LTDA';
-    //$std->cnpj = '00258807000129';
-    $std->cpf = '12345678901';
+    $std->cnpj = '00258807000129';
+    //$std->cpf = '12345678901';
     $std->uf = 'SP';
     $std->ie = '206084839119';
     $std->cod_mun = 3550308;

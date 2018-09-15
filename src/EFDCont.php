@@ -12,15 +12,15 @@ use NFePHP\EFD\EFD;
  */
 final class EFDCont extends EFD
 {
-    protected $possible = [
-        'cont0' => ['class' =>Blocks\Cont0::class, 'order' => 1],
-        'conta' => ['class' =>Blocks\ContA::class, 'order' => 2],
-        'contc' => ['class' =>Blocks\ContC::class, 'order' => 3],
-        'contd' => ['class' =>Blocks\ContD::class, 'order' => 4],
-        'contf' => ['class' =>Blocks\ContF::class, 'order' => 5],
-        'conti' => ['class' =>Blocks\ContI::class, 'order' => 6],
-        'contm' => ['class' =>Blocks\ContM::class, 'order' => 7],
-        'contp' => ['class' =>Blocks\ContP::class, 'order' => 8],
-        'cont1' => ['class' =>Blocks\Cont1::class, 'order' => 9]
+    protected $possibles = [
+        'block0' => ['class' => Blocks\Contribuicoes\Block0::class, 'order' => 1],
+        'blocka' => ['class' => Blocks\Contribuicoes\BlockA::class, 'order' => 2],
+        'blockc' => ['class' => Blocks\Contribuicoes\BlockC::class, 'order' => 3],
+        'blockd' => ['class' => Blocks\Contribuicoes\BlockD::class, 'order' => 4],
+        'blockf' => ['class' => Blocks\Contribuicoes\BlockF::class, 'order' => 5],
+        'blocki' => ['class' => Blocks\Contribuicoes\BlockI::class, 'order' => 6],
+        'blockm' => ['class' => Blocks\Contribuicoes\BlockM::class, 'order' => 7],
+        'blockp' => ['class' => Blocks\Contribuicoes\BlockP::class, 'order' => 8],
+        'block1' => ['class' => Blocks\Contribuicoes\Block1::class, 'order' => 9]
     ];
 }
