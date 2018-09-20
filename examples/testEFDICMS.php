@@ -33,13 +33,13 @@ try {
     //$std->suframa = '';
     $std->ind_perfil = 'B';
     $std->ind_ativ = 0;
-    $b0->b0000($std);
+    $b0->z0000($std);
     
     //0001 Obrigatório
     //Abertura do Bloco 0
     $std = new stdClass();
     $std->ind_mov = 1; 
-    $b0->b0001($std);
+    $b0->z0001($std);
     
     //0005 Obrigatório
     //Dados Complementares da entidade
@@ -53,14 +53,14 @@ try {
     $std->FONE = '1155552222';
     $std->FAX = '1155552222';
     $std->EMAIL = 'ciclano@mail.com';
-    $b0->b0005($std);
+    $b0->z0005($std);
     
     //0015 Opcional deve ser incluso apenas se existir
     //Dados do Contribuinte Substituto ou Responsável pelo ICMS Destino
     $std = new stdClass();
     $std->uf_st = 'PR';
     $std->ie_st = '12345678901234';
-    $b0->b0015($std);
+    $b0->z0015($std);
     
     //0100 Obrigatório
     //Dados do Contabilista
@@ -78,7 +78,7 @@ try {
     $std->FAX = '3512345589';
     $std->EMAIL = 'ciclano@mail.com.br';
     $std->COD_MUN = '0123456';
-    $b0->b0100($std);
+    $b0->z0100($std);
     
     //0150 Opcional
     //Tabela de Cadastro do Participante
@@ -95,7 +95,7 @@ try {
     $std->NUM = 'N.1';
     $std->COMPL = 'Sala 1';
     $std->BAIRRO = 'Um de Dois';
-    $b0->b0150($std);
+    $b0->z0150($std);
     
     //adicionando o bloco 0 ao EFD
     $efd->add($b0);
