@@ -22,8 +22,8 @@ use \stdClass;
  *      do estado do tomador de serviços.
  *
  * https://www.confaz.fazenda.gov.br/legislacao/atos/2008/AC009_08
- * 
- * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente 
+ *
+ * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente
  * numeréricos e também para não confundir os com elementos do bloco B
  */
 class Z0000 extends Element implements ElementInterface

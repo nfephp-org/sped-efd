@@ -11,7 +11,7 @@ use NFePHP\EFD\Common\BlockInterface;
  *
  * Esta classe irá usar um recurso para invocar as classes de cada um dos elementos
  * constituintes listados.
- * NOTA: usada a letra z no inicio do elemento devido ao fato de não poder chamar classes 
+ * NOTA: usada a letra z no inicio do elemento devido ao fato de não poder chamar classes
  * apenas com numeros e também para não confundir com os elementos do bloco B
  */
 final class Block0 extends Block implements BlockInterface

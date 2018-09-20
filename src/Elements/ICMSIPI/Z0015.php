@@ -15,8 +15,8 @@ use \stdClass;
  * unidades  federadas  dos contribuintes substituídos, ainda que não tenha
  * tido movimentação no período, ficando obrigado à apresentação dos registros
  * E200, E300 e respectivos filhos.
- * 
- * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente 
+ *
+ * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente
  * numeréricos e também para não confundir os com elementos do bloco B
  */
 class Z0015 extends Element implements ElementInterface

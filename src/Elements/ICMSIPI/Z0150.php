@@ -28,8 +28,8 @@ use \stdClass;
  * Neste caso, deve ser usado um COD_PART para cada registro, alterando os demais dados.
  * As  informações  deste registro  representam  os  dados  atualizados  no  
  * último  evento  fiscal  (emissão/recebimento  de documento fiscal) da EFD-ICMS/IPI.
- * 
- * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente 
+ *
+ * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente
  * numeréricos e também para não confundir os com elementos do bloco B
  */
 class Z0150 extends Element implements ElementInterface

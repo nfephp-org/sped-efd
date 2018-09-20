@@ -8,8 +8,8 @@ use \stdClass;
 
 /**
  * Elemento 0600 do Bloco 0
- * 
- * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente 
+ *
+ * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente
  * numeréricos e também para não confundir os com elementos do bloco B
  */
 class Z0305 extends Element implements ElementInterface

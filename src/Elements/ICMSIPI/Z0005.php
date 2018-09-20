@@ -11,8 +11,8 @@ use \stdClass;
  * REGISTRO 0005: DADOS COMPLEMENTARES DA ENTIDADE
  * Registro obrigatório utilizado para complementar as informações de
  * identificação do informante do arquivo.
- * 
- * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente 
+ *
+ * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente
  * numeréricos e também para não confundir os com elementos do bloco B
  */
 class Z0005 extends Element implements ElementInterface

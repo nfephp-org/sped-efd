@@ -12,8 +12,8 @@ use \stdClass;
  * Registro utilizado para identificação do contabilista responsável pela
  * escrituração fiscal do estabelecimento, mesmo que o contabilista seja
  * funcionário da empresa ou prestador de serviço.
- * 
- * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente 
+ *
+ * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente
  * numeréricos e também para não confundir os com elementos do bloco B
  */
 class Z0100 extends Element implements ElementInterface
