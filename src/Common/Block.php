@@ -9,9 +9,11 @@ abstract class Block
 {
     public $elements = [];
     protected $bloco = '';
-    
-    public function __construct()
+    protected $elementTotal;
+
+    public function __construct($total)
     {
+        $this->elementTotal = $total;
     }
     
     /**
@@ -34,10 +36,13 @@ abstract class Block
         }
         
         $elclass = new $className($arguments[0]);
+        
+       
         //aqui deve ser feita a construção do bloco
         //para fazer a montagem verificar o elemento pai
         //se não existir elemento pai no bloco disparar um exception
         $parent = $elclass::PARENT;
+        
         //o parent pode ser um ou multipos separados por |
         //se não existir o parent então apenas acrescentar sem necessidade
         //de verificação
@@ -55,7 +60,7 @@ abstract class Block
     {
         //fazer a montagem do elemento 0990 Totalizador
         $n = count(explode("\n", $this->bloco));
-        $this->bloco .= "|0990|$n|\n";
+        $this->bloco .= "|" . $this->elementTotal . "|$n|\n";
         return $this->bloco;
     }
 }

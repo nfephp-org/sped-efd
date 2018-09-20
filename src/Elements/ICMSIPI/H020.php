@@ -8,11 +8,33 @@ use \stdClass;
 
 class H020 extends Element implements ElementInterface
 {
-    const REG = '020';
-    const LEVEL = 0;
-    const PARENT = '';
+    const REG = 'H020';
+    const LEVEL = 2;
+    const PARENT = 'H010';
     
-    protected $parameters = [];
+    protected $parameters = [
+        'CST_ICMS' => [
+            'type'     => '',
+            'regex'    => '',
+            'required' => true,
+            'info'     => '',
+            'format'   => ''
+        ],
+        'BC_ICMS' => [
+            'type'     => '',
+            'regex'    => '',
+            'required' => true,
+            'info'     => '',
+            'format'   => ''
+        ],
+        'VL_ICMS' => [
+            'type'     => '',
+            'regex'    => '',
+            'required' => true,
+            'info'     => '',
+            'format'   => ''
+        ]
+    ];
     
     /**
      * Constructor
