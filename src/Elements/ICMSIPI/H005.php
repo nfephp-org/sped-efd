@@ -34,7 +34,7 @@ class H005 extends Element implements ElementInterface
     
     protected $parameters = [
         'DT_INV' => [
-            'type'     => 'integer',
+            'type'     => 'string',
             'regex'    => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
             'required' => true,
             'info'     => 'Data do inventário',
@@ -42,14 +42,14 @@ class H005 extends Element implements ElementInterface
         ],
         'VL_INV' => [
             'type'     => 'numeric',
-            'regex'    => '^[0-9.]$',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info'     => 'Valor total do estoque',
             'format'   => '15v2'
         ],
         'MOT_INV' => [
             'type'     => 'string',
-            'regex'    => '^[0-5]{2}$',
+            'regex'    => '^(0[1-5]{1})$',
             'required' => true,
             'info'     => 'Informe o motivo do Inventário: '
             . '01 – No final no período; '

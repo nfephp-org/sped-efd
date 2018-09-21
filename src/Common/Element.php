@@ -158,14 +158,14 @@ abstract class Element
             }
             //se menor que o minimo, formata para o minimo
             if ($ndec < $decmin) {
-                return number_format($value, $decmin, '.', '');
+                return number_format($value, $decmin, ',', '');
             }
             //se maior que o maximo, formata para o maximo
             if ($ndec > $decmax) {
-                return number_format($value, $decmax, '.', '');
+                return number_format($value, $decmax, ',', '');
             }
         }
-        return number_format($value, $n[1], '.', '');
+        return number_format($value, $n[1], ',', '');
     }
 
     /**
