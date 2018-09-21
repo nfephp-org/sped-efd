@@ -14,5 +14,12 @@ use NFePHP\EFD\Common\BlockInterface;
  */
 final class BlockC extends Block implements BlockInterface
 {
+    const TOTAL = 'C990';
+    
     public $elements = [];
+    
+    public function __construct()
+    {
+        parent::__construct(self::TOTAL);
+    }
 }
