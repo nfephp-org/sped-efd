@@ -14,6 +14,8 @@ use NFePHP\EFD\Common\BlockInterface;
  */
 final class BlockE extends Block implements BlockInterface
 {
+    const TOTAL = 'E990';
+    
     public $elements = [
         'E001' => ['class' => Elements\E001::class, 'level' => 1, 'type' => 'single'],
         'E100' => ['class' => Elements\E100::class, 'level' => 2, 'type' => 'multiple'],
@@ -40,6 +42,10 @@ final class BlockE extends Block implements BlockInterface
         'E520' => ['class' => Elements\E520::class, 'level' => 3, 'type' => 'single'],
         'E530' => ['class' => Elements\E530::class, 'level' => 4, 'type' => 'multiple'],
         'E531' => ['class' => Elements\E531::class, 'level' => 5, 'type' => 'multiple'],
-        'E990' => ['class' => Elements\E200::class, 'level' => 1, 'type' => 'single'],
     ];
+    
+    public function __construct()
+    {
+        parent::__construct(self::TOTAL);
+    }
 }
