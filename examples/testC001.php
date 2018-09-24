@@ -15,4 +15,4 @@ try {
     echo $e->getMessage();
 }
 
-echo '|D001|0|<br>';
+echo '|C001|0|<br>';
