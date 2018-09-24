@@ -56,7 +56,7 @@ class D100 extends Element implements ElementInterface
         ],
         'COD_SIT' => [
             'type' => 'numeric',
-            'regex' => '^([1-9]{1})([0-9]{1,8})?$',
+            'regex' => '^(0)([0-9]{1})?$',
             'required' => true,
             'info' => 'Código da situação do documento fiscal',
             'format' => ''
@@ -174,7 +174,7 @@ class D100 extends Element implements ElementInterface
             'format' => ''
         ],
         'COD_CTA' => [
-            'type' => 'numeric',
+            'type' => 'string',
             'regex' => '(.*)',
             'required' => false,
             'info' => 'Código da conta analítica contábil debitada/creditada',
