@@ -220,7 +220,8 @@ class D100 extends Element implements ElementInterface
     {
         /*
          * Campo 07 (SER) – Validação: campo de preenchimento obrigatório com três posições para CT-e e CT-e OS, COD_MOD
-         * iguais a “57” e “67”, respectivamente, de emissão própria ou de terceiros. Se não existir Série para CT-e e CT-e OS, informar 000.
+         * iguais a “57” e “67”, respectivamente, de emissão própria ou de terceiros.
+         * Se não existir Série para CT-e e CT-e OS, informar 000.
          */
         if ($this->std->cod_mod == '57' or $this->std->cod_mod == '67') {
             if (strlen($this->std->ser) == 3) {
@@ -234,8 +235,8 @@ class D100 extends Element implements ElementInterface
 
         if ($this->std->cod_mod == '57' or $this->std->cod_mod == '63' or $this->std->cod_mod == '67') {
             /*
-             * Campo 13 (TP_CT-e) Preenchimento: informar o tipo de CT-e, BP-e ou CT-e OS, quando o modelo do documento for
-             * “57”, “63” ou “67”, respectivamente.
+             * Campo 13 (TP_CT-e) Preenchimento: informar o tipo de CT-e, BP-e ou CT-e OS,
+             * quando o modelo do documento for “57”, “63” ou “67”, respectivamente.
              */
             if (empty($this->std->tp_ct_e)) {
                 throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
@@ -266,17 +267,20 @@ class D100 extends Element implements ElementInterface
          */
         if (!Keys::isValid($this->std->chv_cte)) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " Dígito verificador incorreto no campo campo chave do conhecimento de transporte eletrônico (CHV_CTE)");
+                " Dígito verificador incorreto no campo campo chave do " .
+                "conhecimento de transporte eletrônico (CHV_CTE)");
         }
 
         /**
-         * Se o Campo COD_MOD for igual a 07, 08, 08B, 09, 10, 11, 26 ou 27, a DT_DOC informada deverá ser menor que 01/01/2018.
+         * Se o Campo COD_MOD for igual a 07, 08, 08B, 09, 10, 11, 26 ou 27
+         * a DT_DOC informada deverá ser menor que 01/01/2018.
          */
         if (in_array($this->std->cod_mod, ['07', '08', '08B', '09', '10', '11', '26', '27'])) {
             $year = (int)substr($this->std->dt_doc, -4);
             if ($year >= 2018) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
-                    " Se o Campo Código do modelo do documento fiscal (COD_MOD) for igual a 07, 08, 08B, 09, 10, 11, 26 ou 27," .
+                    " Se o Campo Código do modelo do documento fiscal (COD_MOD) " .
+                    "for igual a 07, 08, 08B, 09, 10, 11, 26 ou 27," .
                     " a Data da emissão do documento fiscal (DT_DOC) informada deverá ser menor que 01/01/2018.");
             }
         }

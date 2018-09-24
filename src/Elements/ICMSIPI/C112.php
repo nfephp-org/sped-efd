@@ -8,7 +8,8 @@ use \stdClass;
 
 /**
  * REGISTRO C112: DOCUMENTO DE ARRECADAÇÃO REFERENCIADO
- * Este registro deve ser apresentado, obrigatoriamente, quando no campo – “Informações Complementares” da nota
+ * Este registro deve ser apresentado, obrigatoriamente,
+ * quando no campo – “Informações Complementares” da nota
  * fiscal - constar a identificação de um documento de arrecadação.
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
@@ -65,7 +66,7 @@ class C112 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
             'required' => true,
-            'info' => 'Data de pagamento do documento de arrecadação, ou data do vencimento, no caso de ICMS antecipado a recolher.',
+            'info' => "Data de pagamento do documento de arrecadação, ou data do vencimento",
             'format' => ''
         ],
     ];
@@ -83,11 +84,11 @@ class C112 extends Element implements ElementInterface
 
     public function postValidation()
     {
-        if(!$this->std->num_da xor $this->std->cod_aut){
+        if (!$this->std->num_da xor $this->std->cod_aut) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 "Preencha o número da arrecadação (NUM_DA) ou o Código completo da autenticação bancária (COD_AUT");
         }
-        if($this->std->vl_da <= 0){
+        if ($this->std->vl_da <= 0) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 "O valor total da arrecadação (VAL_DA) deve ser maior do que zero '0' ");
         }

@@ -11,8 +11,8 @@ use \stdClass;
  * REGISTRO C113: DOCUMENTO FISCAL REFERENCIADO
  * Este registro tem por objetivo informar, detalhadamente, outros documentos fiscais que tenham sido mencionados
  * nas informações complementares do documento que está sendo escriturado no registro C100, exceto cupons fiscais, que
- * devem ser informados no registro C114. Exemplos: nota fiscal de remessa de mercadoria originária de venda para entrega
- * futura e nota fiscal de devolução de compras.
+ * devem ser informados no registro C114. Exemplos: nota fiscal de remessa
+ * de mercadoria originária de venda para entrega futura e nota fiscal de devolução de compras.
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
 class C113 extends Element implements ElementInterface
