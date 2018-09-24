@@ -23,7 +23,7 @@ class D100 extends Element implements ElementInterface
 {
     const REG = 'D100';
     const LEVEL = 2;
-    const PARENT = '';
+    const PARENT = 'D001';
 
     protected $parameters = [
         'IND_OPER' => [
