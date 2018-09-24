@@ -2,6 +2,7 @@
 
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
+use NFePHP\Common\Keys;
 use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
@@ -56,7 +57,7 @@ class D100 extends Element implements ElementInterface
         ],
         'COD_SIT' => [
             'type' => 'numeric',
-            'regex' => '^([1-9]{1})([0-9]{1,8})?$',
+            'regex' => '^(0)([0-9]{1})?$',
             'required' => true,
             'info' => 'Código da situação do documento fiscal',
             'format' => ''
@@ -174,7 +175,7 @@ class D100 extends Element implements ElementInterface
             'format' => ''
         ],
         'COD_CTA' => [
-            'type' => 'numeric',
+            'type' => 'string',
             'regex' => '(.*)',
             'required' => false,
             'info' => 'Código da conta analítica contábil debitada/creditada',
@@ -205,22 +206,7 @@ class D100 extends Element implements ElementInterface
     {
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
-    }
-
-    /**
-     * Retorna o d[igito verificador de chave do conhecimento de transporte eletrônico
-     * @param $key
-     * @return int
-     */
-    private function getDvCTE($key)
-    {
-        $arrMultiplers = [4,3, 2, 9, 8, 7, 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
-        $sum = 0;
-        foreach ($arrMultiplers as $k => $num) {
-            $numKey = $key[$k];
-            $sum += $numKey * $num;
-        }
-        return 11 - ($sum % 11);
+        $this->postValidation();
     }
 
 
@@ -260,7 +246,7 @@ class D100 extends Element implements ElementInterface
             /**
              * Campo 24 (COD_MUN_ORIG): Campo obrigatório se “COD_MOD” do registro D100 for “57”, “63” ou “67”.
              */
-            if(empty($this->cod_mun_origem)){
+            if (empty($this->cod_mun_origem)) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     "Deve ser informado o c[odigo do municiopio de origem (COD_MUN_ORIGEM) quando" .
                     "códihp do modelo for igual a “57”, “63” ou “67” ");
@@ -268,29 +254,25 @@ class D100 extends Element implements ElementInterface
             /**
              * Campo 25 (COD_MUN_DEST): Campo obrigatório se “COD_MOD” do registro D100 for “57”, “63” ou “67”.
              */
-            if(empty($this->cod_mun_dest)){
+            if (empty($this->cod_mun_dest)) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     "Deve ser informado o c[odigo do municiopio de destino (COD_MUN_DEST) quando" .
                     "códihp do modelo for igual a “57”, “63” ou “67” ");
             }
         }
 
-
         /*
          * Faz a verificação do digito verificador do campo
          */
-        if (strlen($this->std->chv_cte) == 44) {
-            $dv = $this->getDvCTE($this->std->chv_cte);
-            if ((int)substr($this->std->chv_cte, -1) !== $dv) {
-                throw new \InvalidArgumentException("[" . self::REG . "] " .
-                    " Dígito verificador incorreto no campo campo chave do conhecimento de transporte eletrônico (CHV_CTE)");
-            }
+        if (!Keys::isValid($this->std->chv_cte)) {
+            throw new \InvalidArgumentException("[" . self::REG . "] " .
+                " Dígito verificador incorreto no campo campo chave do conhecimento de transporte eletrônico (CHV_CTE)");
         }
 
         /**
          * Se o Campo COD_MOD for igual a 07, 08, 08B, 09, 10, 11, 26 ou 27, a DT_DOC informada deverá ser menor que 01/01/2018.
          */
-        if (in_array($this->std->cod_mod, [’07’, ’08’, ‘08B’, ’09’, ’10’, ’11’, ’26’, ’27’])) {
+        if (in_array($this->std->cod_mod, ['07', '08', '08B', '09', '10', '11', '26', '27'])) {
             $year = (int)substr($this->std->dt_doc, -4);
             if ($year >= 2018) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
