@@ -123,14 +123,14 @@ class D100 extends Element implements ElementInterface
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Valor total do documento fiscal',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_DESC' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor total do desconto',
-            'format' => ''
+            'format' => '15v2'
         ],
         'IND_FRT' => [
             'type' => 'numeric',
@@ -144,28 +144,28 @@ class D100 extends Element implements ElementInterface
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Valor total da prestação de serviço',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_BC_ICMS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor da base de cálculo do ICMS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_ICMS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor do ICMS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_NT' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor não-tributado',
-            'format' => ''
+            'format' => '15v2'
         ],
         'COD_INF' => [
             'type' => 'numeric',
