@@ -10,7 +10,7 @@ class C115 extends Element implements ElementInterface
 {
     const REG = 'C115';
     const LEVEL = 4;
-    const PARENT = '';
+    const PARENT = 'C110';
 
     protected $parameters = [
         'IND_CARGA' => [

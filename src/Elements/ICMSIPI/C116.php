@@ -11,7 +11,7 @@ class C116 extends Element implements ElementInterface
 {
     const REG = 'C116';
     const LEVEL = 4;
-    const PARENT = '';
+    const PARENT = 'C110';
 
     protected $parameters = [
         'COD_MOD' => [
