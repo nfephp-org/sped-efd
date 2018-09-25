@@ -96,7 +96,7 @@ class C100 extends Element implements ElementInterface
             'info' => 'Valor total do documento fiscal',
             'format' => ''
         ],
-        'ING_PGTO' => [
+        'IND_PGTO' => [
             'type' => 'string',
             'regex' => '^(0|1|2)',
             'required' => false,
@@ -136,84 +136,84 @@ class C100 extends Element implements ElementInterface
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor do frete indicado no documento fiscal',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_SEG' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor do seguro indicado no documento fiscal',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_OUT_DA' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor de outras despesas acessórias',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_BC_ICMS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor da base de cálculo do ICMS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_ICMS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor do ICMS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_BC_ICMS_ST' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor da base de cálculo do ICMS substituição tributária',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_ICMS_ST' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor do ICMS retido por substituição tributária',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_IPI' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor do ICMS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_PIS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor do PIS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_COFINS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor da COFINS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_PIS_ST' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor total do PIS retido por substituição tributária',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_COFINS_ST' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor total da COFINS retido por substituição tributária',
-            'format' => ''
+            'format' => '15v2'
         ]
     ];
 

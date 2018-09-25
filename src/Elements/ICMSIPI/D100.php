@@ -224,7 +224,7 @@ class D100 extends Element implements ElementInterface
          * Se não existir Série para CT-e e CT-e OS, informar 000.
          */
         if ($this->std->cod_mod == '57' or $this->std->cod_mod == '67') {
-            if (strlen($this->std->ser) == 3) {
+            if (strlen($this->std->ser) != 3) {
                 throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
                     . "informado 3 numeros para a Série do documento fiscal(SER) " .
                     "quanto o Código do modelo do documento fiscal(COD_MOD) for CT-e e CT-e OS (57 e 67)" .
@@ -238,7 +238,7 @@ class D100 extends Element implements ElementInterface
              * Campo 13 (TP_CT-e) Preenchimento: informar o tipo de CT-e, BP-e ou CT-e OS,
              * quando o modelo do documento for “57”, “63” ou “67”, respectivamente.
              */
-            if (empty($this->std->tp_ct_e)) {
+            if (empty($this->std->tp_ct_e) and (int)$this->std->tp_ct_e!==0) {
                 throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
                     . "informado o tipo de CT-e, BP-e ou CT-e OS, quando o modelo do documento for 
                     “57”, “63” ou “67”, respectivamente.");
@@ -247,15 +247,15 @@ class D100 extends Element implements ElementInterface
             /**
              * Campo 24 (COD_MUN_ORIG): Campo obrigatório se “COD_MOD” do registro D100 for “57”, “63” ou “67”.
              */
-            if (empty($this->cod_mun_origem)) {
+            if (empty($this->std->cod_mun_orig)) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
-                    "Deve ser informado o c[odigo do municiopio de origem (COD_MUN_ORIGEM) quando" .
+                    "Deve ser informado o c[odigo do município de origem (COD_MUN_ORIG) quando" .
                     "códihp do modelo for igual a “57”, “63” ou “67” ");
             }
             /**
              * Campo 25 (COD_MUN_DEST): Campo obrigatório se “COD_MOD” do registro D100 for “57”, “63” ou “67”.
              */
-            if (empty($this->cod_mun_dest)) {
+            if (empty($this->std->cod_mun_dest)) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     "Deve ser informado o c[odigo do municiopio de destino (COD_MUN_DEST) quando" .
                     "códihp do modelo for igual a “57”, “63” ou “67” ");
