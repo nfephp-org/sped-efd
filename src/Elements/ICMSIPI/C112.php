@@ -53,7 +53,7 @@ class C112 extends Element implements ElementInterface
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor do total do documento de arrecadação',
-            'format' => ''
+            'format' => '15v2'
         ],
         'DT_VCTO' => [
             'type' => 'string',

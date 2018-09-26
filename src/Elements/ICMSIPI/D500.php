@@ -88,56 +88,56 @@ class D500 extends Element implements ElementInterface
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Valor total do documento fiscal',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_DESC' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor total do desconto',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_SERV' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Valor total da prestação de serviço',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_SERV_NT' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor total dos serviços não-tributados pelo ICMS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_TERC' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valores cobrados em nome de terceiros',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_DA' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor de outras despesas indicadas no documento fiscal',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_BC_ICMS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor da base de cálculo do ICMS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_ICMS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor do ICMS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'COD_INF' => [
             'type' => 'numeric',
@@ -151,14 +151,14 @@ class D500 extends Element implements ElementInterface
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor do PIS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_COFINS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor da COFINS',
-            'format' => ''
+            'format' => '15v2'
         ],
         'COD_CTA' => [
             'type' => 'string',
