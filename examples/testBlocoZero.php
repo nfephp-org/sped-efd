@@ -123,7 +123,13 @@ try {
     $std->ALIQ_ICMS = 18;
     $std->CEST = '1234567';
     $b0->z0200($std);
-    
+        
+    $std = new stdClass();
+    $std->DESCR_ANT_ITEM = 'Produto anterior descrito na nota fiscal';
+    $std->DT_INI = '01012005';
+    $std->DT_FIM = '01052008';
+    $std->COD_ANT_ITEM = '654321';
+    $b0->z0205($std);
     
     $txt = str_replace("\n", "<br>", $b0->get());
     echo $txt.'<br>';
