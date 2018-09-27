@@ -41,11 +41,21 @@ abstract class Element
         $paramKeys = array_keys($this->parameters);
         //passa os paramatros com as chaves modificadas para um stdClass
         $stdParam = json_decode(json_encode($this->parameters));
+        //verifica se foram passados os dados obrigatórios
+        foreach ($std as $key => $value) {
+            if ($stdParam->$key->required && $std->$key === null) {
+                $errors[] = "$key é requerido.";
+            }
+        }
         $newstd = new \stdClass();
         foreach ($paramKeys as $key) {
             if (!key_exists($key, $arr)) {
                 $newstd->$key = null;
             } else {
+                if ($std->$key === null) {
+                    $newstd->$key = null;
+                    continue;
+                }
                 //se o valor para o parametro foi passado, então validar
                 $resp = $this->isFieldInError(
                     $std->$key,
