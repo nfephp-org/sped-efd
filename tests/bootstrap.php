@@ -1,6 +1,6 @@
 <?php
 /**
- * @link      http://github.com/nfephp-org/sped-cle for the canonical source repository
+ * @link      http://github.com/nfephp-org/sped-efd for the canonical source repository
  * @copyright Copyright (c) 2008-2015 NFePHP.org (http://www.nfephp.org)
  * @license   http://www.gnu.org/licenses/lgpl-3.0.html LGPL v3 License
  */
