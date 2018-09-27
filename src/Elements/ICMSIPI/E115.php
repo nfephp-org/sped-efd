@@ -9,10 +9,33 @@ use \stdClass;
 class E115 extends Element implements ElementInterface
 {
     const REG = 'E115';
-    const LEVEL = 0;
-    const PARENT = '';
+    const LEVEL = 4;
+    const PARENT = 'E110';
 
-    protected $parameters = [];
+    protected $parameters = [
+        'COD_INF_ADIC' => [
+            'type'     => 'string',
+            'regex'    => '^\d{8}$',
+            'required' => true,
+            'info'     => 'Código da informação adicional conforme tabela a ser'
+            .'definida pelas SEFAZ, conforme tabela definida no item 5.2.',
+            'format'   => ''
+        ],
+        'VL_INF_ADIC' => [
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'required' => true,
+            'info'     => 'Valor referente à informação adicional',
+            'format'   => '15v2'
+        ],
+        'DESCR_COMPL_AJ' => [
+            'type'     => 'string',
+            'regex'    => '^.*$',
+            'required' => false,
+            'info'     => 'Descrição complementar do ajuste',
+            'format'   => ''
+        ]
+    ];
 
     /**
      * Constructor
