@@ -12,7 +12,8 @@ use \stdClass;
  * houver ajustes nos documentos
  * fiscais, informações sobre diferencial de alíquota, antecipação de imposto e outras situações.
  * Estas informações equivalem às
- * observações que são lançadas na coluna “Observações” dos Livros Fiscais previstos no Convênio SN/70 – SINIEF, art. 63, I
+ * observações que são lançadas na coluna “Observações”
+ * dos Livros Fiscais previstos no Convênio SN/70 – SINIEF, art. 63, I
  * a IV.
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
