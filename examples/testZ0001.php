@@ -7,7 +7,7 @@ use \stdClass;
 use NFePHP\EFD\Elements\ICMSIPI\Z0001;
 
 $std = new stdClass();
-$std->ind_mov = 1; 
+$std->ind_mov = 1;
 
 
 try {
