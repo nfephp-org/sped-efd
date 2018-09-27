@@ -51,42 +51,49 @@ class C190 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor da base de cálculo do ICMS" referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.',
+            'info' => 'Parcela correspondente ao "Valor da base de cálculo do ICMS" referente à 
+            combinação de CST_ICMS, CFOP e alíquota do ICMS.',
             'format' => '15v2'
         ],
         'VL_ICMS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor do ICMS", incluindo o FCP, quando aplicável, referente à combinação de CST_ICMS, CFOP e alíquota doICMS.',
+            'info' => 'Parcela correspondente ao "Valor do ICMS", incluindo o FCP, quando aplicável, 
+            referente à combinação de CST_ICMS, CFOP e alíquota doICMS.',
             'format' => '15v2'
         ],
         'VL_BC_ICMS_ST' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor da base de cálculo do ICMS" da substituição tributária referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.',
+            'info' => 'Parcela correspondente ao "Valor da base de cálculo do ICMS" da substituição 
+            tributária referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.',
             'format' => '15v2'
         ],
         'VL_ICMS_ST' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao valor creditado/debitado do ICMS da substituição tributária, incluindo o FCP_ ST, quando aplicável, referente à combinação de CST_ICMS, CFOP, e alíquota do ICMS.',
+            'info' => 'Parcela correspondente ao valor creditado/debitado do ICMS da substituição 
+                        tributária, incluindo o FCP_ ST, quando aplicável, referente à 
+                        combinação de CST_ICMS, CFOP, e alíquota do ICMS.',
             'format' => '15v2'
         ],
         'VL_RED_BC' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Valor não tributado em função da redução da base de cálculo do ICMS, referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.',
+            'info' => 'Valor não tributado em função da redução da base de cálculo do ICMS, 
+            referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.',
             'format' => '15v2'
         ],
         'VL_IPI' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor do IPI" referente à combinação CST_ICMS, CFOP e alíquota do ICMS.',
+            'info' => 'Parcela correspondente ao "Valor do IPI" referente à combinação 
+            CST_ICMS, CFOP e alíquota do ICMS.',
             'format' => '15v2'
         ],
         'COD_OBS' => [
