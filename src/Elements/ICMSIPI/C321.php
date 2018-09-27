@@ -8,7 +8,8 @@ use \stdClass;
 
 /**
  * REGISTRO C321: ITENS DO RESUMO DIÁRIO DOS DOCUMENTOS (CÓDIGO 02).
- * Este registro é o detalhamento, por itens de mercadoria, da consolidação diária dos valores das notas fiscais de venda
+ * Este registro é o detalhamento, por itens de mercadoria,
+ * da consolidação diária dos valores das notas fiscais de venda
  * ao consumidor, não emitidas por ECF.
  * @package NFePHP\EFD\Elements\ICMSIPI
  */

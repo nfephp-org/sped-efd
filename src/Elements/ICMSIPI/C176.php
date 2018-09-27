@@ -217,6 +217,16 @@ class C176 extends Element implements ElementInterface
         $this->postValidation();
     }
 
+    /**
+     * Transforma o valor com virgula em float para poder fazer os calculos de verificacao
+     * @param $vlr
+     * @return mixed
+     */
+    private function strToFloat($vlr)
+    {
+        return (float)str_replace(',', '.', $this->std->$vlr);
+    }
+
 
     public function postValidation()
     {
