@@ -95,7 +95,7 @@ class C490 extends Element implements ElementInterface
         $vlIcms = $this->strToFloat('vl_icms');
 
         //pega o fim da string do CST_ICMS e faz a verificacao
-        $cstIcmsLast = (int)substr($this->std->cst_icms, -2);
+        $cstIcmsLast = (int)substr($this->std-> cst_icms, -2);
         if (in_array($cstIcmsLast, [30, 40, 41, 50, 60])) {
             if ($vlBcIcms != 0) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .

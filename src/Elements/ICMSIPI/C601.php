@@ -10,9 +10,18 @@ class C601 extends Element implements ElementInterface
 {
     const REG = 'C601';
     const LEVEL = 3;
-    const PARENT = '';
+    const PARENT = 'C600';
 
-    protected $parameters = [];
+    protected $parameters = [
+        'NUM_DOC_CANC' => [
+            'type' => 'numeric',
+            'regex' => '^([1-9]{1})(\d{1,8})?$',
+            'required' => true,
+            'info' => 'Número do documento fiscal cancelado',
+            'format' => ''
+        ],
+
+    ];
 
     /**
      * Constructor
