@@ -38,7 +38,8 @@ class C405 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^([1-9]{1})(\d{1,8})$',
             'required' => false,
-            'info' => 'Número do Contador de Ordem de Operação do último documento emitido no dia. (Número do COO na Redução Z)',
+            'info' => 'Número do Contador de Ordem de Operação do último documento 
+            emitido no dia. (Número do COO na Redução Z)',
             'format' => ''
         ],
         'GT_FIN' => [
@@ -67,6 +68,4 @@ class C405 extends Element implements ElementInterface
         $this->std = $this->standarize($std);
         $this->postValidation();
     }
-
-
 }

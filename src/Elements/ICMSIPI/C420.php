@@ -38,7 +38,8 @@ class C420 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^(.*)$',
             'required' => false,
-            'info' => 'Descrição da situação tributária relativa ao totalizador parcial, quando houver mais de um com a mesma carga tributária efetiva.',
+            'info' => 'Descrição da situação tributária relativa ao totalizador parcial, quando houver
+             mais de um com a mesma carga tributária efetiva.',
             'format' => ''
         ],
     ];

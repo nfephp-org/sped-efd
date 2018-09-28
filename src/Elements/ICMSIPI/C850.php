@@ -38,7 +38,8 @@ class C850 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => '“Valor total do CF-e” na combinação de CST_ICMS, CFOP e alíquota do ICMS, correspondente ao somatório do valor líquido dos itens.',
+            'info' => '“Valor total do CF-e” na combinação de CST_ICMS, CFOP e alíquota do ICMS, 
+            correspondente ao somatório do valor líquido dos itens.',
             'format' => '15v2'
         ],
         'VL_BC_ICMS' => [
@@ -52,7 +53,8 @@ class C850 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor do ICMS" referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.',
+            'info' => 'Parcela correspondente ao "Valor do ICMS" referente à 
+            combinação de CST_ICMS, CFOP e alíquota do ICMS.',
             'format' => '15v2'
         ],
         'COD_OBS' => [

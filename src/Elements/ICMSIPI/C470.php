@@ -124,6 +124,5 @@ class C470 extends Element implements ElementInterface
                 " Quantidade total do item" .
                 "(QTD) deve ser maior que 0");
         }
-
     }
 }

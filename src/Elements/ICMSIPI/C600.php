@@ -175,8 +175,8 @@ class C600 extends Element implements ElementInterface
 
     public function postValidation()
     {
-        if($this->std->cod_mod == '06' or $this->std->cod_mod == '28'){
-            if(!in_array($this->std->cod_cons,['01', '02', '03', '04', '05', '06', '07', '08'])){
+        if ($this->std->cod_mod == '06' or $this->std->cod_mod == '28') {
+            if (!in_array($this->std->cod_cons, ['01', '02', '03', '04', '05', '06', '07', '08'])) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     " Se o campo COD_MOD for igual a 06 ou 28, então o campo " .
                     "o campo COD_CONS deve ser igual a " .

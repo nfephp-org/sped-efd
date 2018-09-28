@@ -45,14 +45,16 @@ class C790 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor da base de cálculo do ICMS" referente à combinação CST_ICMS, CFOP, e alíquota do ICMS',
+            'info' => 'Parcela correspondente ao "Valor da base de cálculo do 
+            ICMS" referente à combinação CST_ICMS, CFOP, e alíquota do ICMS',
             'format' => '15v2'
         ],
         'VL_ICMS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor do ICMS" referente à combinação CST_ICMS, CFOP e alíquota do ICMS',
+            'info' => 'Parcela correspondente ao "Valor do ICMS" referente à 
+            combinação CST_ICMS, CFOP e alíquota do ICMS',
             'format' => '15v2'
         ],
         'VL_BC_ICMS_ST' => [
@@ -73,7 +75,8 @@ class C790 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Valor não tributado em função da redução da base de cálculo do ICMS, referente à combinação de CST_ICMS, CFOP e alíquota do ICMS..',
+            'info' => 'Valor não tributado em função da redução da base de cálculo do ICMS, 
+            referente à combinação de CST_ICMS, CFOP e alíquota do ICMS',
             'format' => '15v2'
         ],
         'COD_OBS' => [
