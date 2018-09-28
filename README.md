@@ -19,6 +19,7 @@ Classes para a geração do SPED EFD (fiscal ICMS IPI) e para o SPED EFD contrib
 [![Build Status][ico-travis]][link-travis]
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/nfephp-org/sped-efd/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 
 [![Latest Stable Version][ico-stable]][link-packagist]
 [![Latest Version on Packagist][ico-version]][link-packagist]
