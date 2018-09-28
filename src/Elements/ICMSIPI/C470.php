@@ -96,30 +96,14 @@ class C470 extends Element implements ElementInterface
         $this->postValidation();
     }
 
-
-
-    /**
-     * Transforma o valor com virgula em float para poder fazer os calculos de verificacao
-     * @param $vlr
-     * @return mixed
-     */
-    private function strToFloat($vlr)
-    {
-        return (float)str_replace(',', '.', $this->std->$vlr);
-    }
-
-
     public function postValidation()
     {
-        $vlItem = $this->strToFloat('vl_item');
-        if ($vlItem <= 0) {
+        if ($this->values->vl_item <= 0) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " O Valor total do item" .
                 "(VL_ITEM) deve ser maior que 0");
         }
-
-        $vlQtd = $this->strToFloat('qtd');
-        if ($vlQtd <= 0) {
+        if ($this->values->qtd <= 0) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " Quantidade total do item" .
                 "(QTD) deve ser maior que 0");

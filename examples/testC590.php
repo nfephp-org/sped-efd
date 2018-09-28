@@ -17,10 +17,10 @@ $std->VL_RED_BC = 20.11;
 $std->COD_OBS = 'NV0FCF';
 
 try {
-$c590 = new C590($std);
-echo "{$c590}".'<br>';
+    $c590 = new C590($std);
+    echo "{$c590}".'<br>';
+    echo '|C590|997|3140|907,40|21,30|98,56|7,55|74,39|20,11|NV0FCF|<br>';
 } catch (\Exception $e) {
-echo $e->getMessage();
+    echo $e->getMessage();
 }
 
-echo '|C590|<br>';

@@ -208,25 +208,13 @@ class C500 extends Element implements ElementInterface
         $this->std = $this->standarize($std);
     }
 
-    /**
-     * Transforma o valor com virgula em float para poder fazer os calculos de verificacao
-     * @param $vlr
-     * @return mixed
-     */
-    private function strToFloat($vlr)
-    {
-        return (float)str_replace(',', '.', $this->std->$vlr);
-    }
-
     public function postValidation()
     {
-        $vlDoc = $this->strToFloat('vl_doc');
-        if ($vlDoc <= 0) {
+        if ($this->values->vl_doc <= 0) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " O do campo VL_DOC deve ser maior do que 0");
         }
-        $vlForn = $this->strToFloat('vl_forn');
-        if ($vlDoc <= 0) {
+        if ($this->values->vl_forn <= 0) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " O do campo VL_FORN deve ser maior do que 0");
         }

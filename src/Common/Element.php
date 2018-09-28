@@ -9,19 +9,21 @@ abstract class Element
 {
 
     public $std;
+    public $values;
     protected $parameters;
     private $reg;
 
     public function __construct($reg)
     {
         $this->reg = $reg;
+        $this->values = new stdClass();
     }
 
     public function postValidation()
     {
         return true;
     }
-
+    
     /**
      * Valida e ajusta os dados de entrada para os padões estabelecidos
      * @param \stdClass $std
@@ -72,7 +74,6 @@ abstract class Element
                     $stdParam->$key->format,
                     strtoupper($key)
                 );
-                //Strings::replaceUnacceptableCharacters()
                 $newstd->$key = $formated;
             }
         }
@@ -131,12 +132,13 @@ abstract class Element
      * Formata os campos float
      * @param string|integer|float $value
      * @param string $format
+     * @param string $fieldname
      * @return string|integer
      * @throws \InvalidArgumentException
      */
     protected function formater($value, $format = null, $fieldname = '')
     {
-        if (empty($value)) {
+        if ($value === null) {
             return $value;
         }
         if (!is_numeric($value)) {
@@ -146,6 +148,10 @@ abstract class Element
         if (empty($format)) {
             return $value;
         }
+        //gravar os valores numericos para possivel posterior validação complexa
+        $name = strtolower($fieldname);
+        $this->values->$name = (float) $value;
+        
         $n = explode('v', $format);
         $mdec = strpos($n[1], '-');
         $p = explode('.', $value);
