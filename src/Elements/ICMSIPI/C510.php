@@ -152,50 +152,33 @@ class C510 extends Element implements ElementInterface
         $this->std = $this->standarize($std);
     }
 
-
-    /**
-     * Transforma o valor com virgula em float para poder fazer os calculos de verificacao
-     * @param $vlr
-     * @return mixed
-     */
-    private function strToFloat($vlr)
-    {
-        return (float)str_replace(',', '.', $this->std->$vlr);
-    }
-
-
     public function postValidation()
     {
-        //transforma os valores em float
-        $vlBcIcms = $this->strToFloat('vl_bc_icms');
-        $aliqIcms = $this->strToFloat('aliq_icms');
-        $vlIcms = $this->strToFloat('vl_icms');
-
         //pega o fim da string do CST_ICMS e faz a verificacao
         $cstIcmsLast = (int)substr($this->std-> cst_icms, -2);
         if (in_array($cstIcmsLast, [30, 40, 41, 50, 60])) {
-            if ($vlBcIcms != 0) {
+            if ($this->values->vl_br_icms != 0) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     " O do campo VL_BC_ICMS deve ser Igual 0");
             }
-            if ($aliqIcms != 0) {
+            if ($this->values->aliq_icms != 0) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     " O do campo VL_ICMS deve ser Igual 0");
             }
-            if ($vlIcms != 0) {
+            if ($this->values->vl_icms != 0) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     " O do campo ALIQ_ICMS deve ser Igual 0");
             }
         } elseif (!in_array($cstIcmsLast, [51, 90])) {
-            if ($vlBcIcms <= 0) {
+            if ($this->values->vl_bc_icms <= 0) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     " O do campo VL_BC_ICMS deve ser maior do que 0");
             }
-            if ($aliqIcms <= 0) {
+            if ($this->values->aliq_icms <= 0) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     " O do campo ALIQ_ICMS deve ser maior do que 0");
             }
-            if ($vlIcms <= 0) {
+            if ($this->values->vl_icms <= 0) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     " O do campo VL_ICMS deve ser maior do que 0");
             }

@@ -16,8 +16,7 @@ $std->VL_COFINS = 76.34;
 try {
     $c425 = new C425($std);
     echo "{$c425}".'<br>';
+    echo '|C425|2234343553256709|635,200|DRN969|21,82|62,61|76,34|<br>';
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
-
-echo '|C425|2234343553256709|635,200|DRN969|21,82|62,61|76,34|<br>';

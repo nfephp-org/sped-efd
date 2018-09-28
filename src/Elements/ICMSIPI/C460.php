@@ -88,22 +88,9 @@ class C460 extends Element implements ElementInterface
         $this->std = $this->standarize($std);
     }
 
-
-    /**
-     * Transforma o valor com virgula em float para poder fazer os calculos de verificacao
-     * @param $vlr
-     * @return mixed
-     */
-    private function strToFloat($vlr)
-    {
-        return (float)str_replace(',', '.', $this->std->$vlr);
-    }
-
-
     public function postValidation()
     {
-        $vlDoc = $this->strToFloat('vl_doc');
-        if ($vlDoc <= 0) {
+        if ($this->values->vl_doc <= 0) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " O Valor totao do documento fiscal " .
                 "(VL_DOC) deve ser maior que 0");

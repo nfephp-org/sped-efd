@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once '../bootstrap.php';
@@ -15,10 +16,9 @@ $std->VL_ICMS = 80.82;
 $std->COD_OBS = 'P2WQ94';
 
 try {
-$c850 = new C850($std);
-echo "{$c850}".'<br>';
+    $c850 = new C850($std);
+    echo "{$c850}" . '<br>';
+    echo '|C850|899|3318|583,30|63,21|24,00|80,82|P2WQ94|<br>';
 } catch (\Exception $e) {
-echo $e->getMessage();
+    echo $e->getMessage();
 }
-
-echo '|C850|899|3318|583,30|63,21|24|80,82|P2WQ94|<br>';
