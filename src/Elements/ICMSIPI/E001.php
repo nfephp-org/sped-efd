@@ -9,10 +9,20 @@ use \stdClass;
 class E001 extends Element implements ElementInterface
 {
     const REG = 'E001';
-    const LEVEL = 0;
+    const LEVEL = 1;
     const PARENT = '';
 
-    protected $parameters = [];
+    protected $parameters = [
+        'IND_MOV' => [
+            'type'     => 'string',
+            'regex'    => '^[0|1]{1}$',
+            'required' => true,
+            'info'     => 'Indicador de movimento:'
+            . '0- Bloco com dados informados;'
+            . '1- Bloco sem dados informados',
+            'format'   => ''
+        ]
+    ];
 
     /**
      * Constructor
