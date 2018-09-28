@@ -155,7 +155,7 @@ class C176 extends Element implements ElementInterface
             'info' => 'Número completo da chave da NF-e emitida pelo substituto',
             'format' => ''
         ],
-        'COD_PART_NFE_R ET' => [
+        'COD_PART_NFE_RET' => [
             'type' => 'string',
             'regex' => '^.{0,60}$',
             'required' => false,
@@ -224,7 +224,7 @@ class C176 extends Element implements ElementInterface
      */
     private function strToFloat($vlr)
     {
-        return str_replace(',', '.', $this->std->$vlr);
+        return (float)str_replace(',', '.', $this->std->$vlr);
     }
 
 

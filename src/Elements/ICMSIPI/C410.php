@@ -10,9 +10,24 @@ class C410 extends Element implements ElementInterface
 {
     const REG = 'C410';
     const LEVEL = 4;
-    const PARENT = '';
+    const PARENT = 'C400';
 
-    protected $parameters = [];
+    protected $parameters = [
+        'VL_PIS' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Valor total do PIS',
+            'format' => '15v2'
+        ],
+        'VL_COFINS' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Valor total da COFINS',
+            'format' => '15v2'
+        ],
+    ];
 
     /**
      * Constructor
