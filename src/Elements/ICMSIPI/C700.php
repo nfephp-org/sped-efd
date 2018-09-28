@@ -80,11 +80,12 @@ class C700 extends Element implements ElementInterface
     {
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 
     public function postValidation()
     {
-        if($this->std->nro_ord_ini>$this->std->nro_ord_fim){
+        if ($this->std->nro_ord_ini > $this->std->nro_ord_fin) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " O do campo NRO_ORD_INI deve ser menor ou igual ao campo " .
                 "NRO_ORD_FIN");

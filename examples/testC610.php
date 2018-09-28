@@ -6,8 +6,8 @@ require_once '../bootstrap.php';
 use NFePHP\EFD\Elements\ICMSIPI\C610;
 
 $std = new stdClass();
-$std->COD_CLASS = 'WKM2';
-$std->COD_ITEM = 'QXPR7N93155BX34W4E18P97219MTXKDL8R38PHISVY3DFJYTKKEWG07CSULC';
+$std->COD_CLASS = '2342';
+$std->COD_ITEM = '23849210';
 $std->QTD = 847;
 $std->UNID = 'XWIBIK';
 $std->VL_ITEM = 86.87;
@@ -30,4 +30,4 @@ echo "{$c610}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|C610|<br>';
+echo '|C610|2342|23849210|847,000|XWIBIK|86,87|34,89|748|9860|260,60|26,48|33,82|95,66|28,60|42,47|6,54|XR|<br>';
