@@ -257,7 +257,7 @@ class C176 extends Element implements ElementInterface
                 "campos VL_UNIT_BC_ST e VL_UNIT_BC_ICMS_ULT_E");
         }
         $multplicacao = round(
-            $this->values->aliq_icms_ult_e 
+            $this->values->aliq_icms_ult_e
             * $this->values->vl_unit_limite_bc_icms_ult_e,
             2
         );
@@ -272,8 +272,8 @@ class C176 extends Element implements ElementInterface
                 "O campo  ALIQ_ST_ULT_E deve ser maior que zero");
         }
         $calc = round(
-            $this->values->vl_unit_bc_st 
-            * $this->values->aliq_st_ult_e 
+            $this->values->vl_unit_bc_st
+            * $this->values->aliq_st_ult_e
             - $this->values->vl_unit_icms_ult_e,
             2
         );
