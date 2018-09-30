@@ -5,6 +5,7 @@ namespace NFePHP\EFD\Elements\ICMSIPI;
 use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
+use function Safe\substr;
 
 class C510 extends Element implements ElementInterface
 {
@@ -155,7 +156,7 @@ class C510 extends Element implements ElementInterface
     public function postValidation()
     {
         //pega o fim da string do CST_ICMS e faz a verificacao
-        $cstIcmsLast = (int)substr($this->std-> cst_icms, -2);
+        $cstIcmsLast = (int) substr($this->std-> cst_icms, -2);
         if (in_array($cstIcmsLast, [30, 40, 41, 50, 60])) {
             if ($this->values->vl_br_icms != 0) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .

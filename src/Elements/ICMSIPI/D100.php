@@ -6,6 +6,7 @@ use NFePHP\Common\Keys;
 use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
+use function Safe\substr;
 
 /**
  * Este registro deve ser apresentado por todos os contribuintes adquirentes ou prestadores dos serviços que utilizem os
@@ -276,7 +277,7 @@ class D100 extends Element implements ElementInterface
          * a DT_DOC informada deverá ser menor que 01/01/2018.
          */
         if (in_array($this->std->cod_mod, ['07', '08', '08B', '09', '10', '11', '26', '27'])) {
-            $year = (int)substr($this->std->dt_doc, -4);
+            $year = (int) substr($this->std->dt_doc, -4);
             if ($year >= 2018) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     " Se o Campo Código do modelo do documento fiscal (COD_MOD) " .

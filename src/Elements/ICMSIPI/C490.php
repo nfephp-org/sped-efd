@@ -5,6 +5,7 @@ namespace NFePHP\EFD\Elements\ICMSIPI;
 use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
+use function Safe\substr;
 
 class C490 extends Element implements ElementInterface
 {

@@ -14,6 +14,25 @@ use NFePHP\EFD\Common\BlockInterface;
  *
  * NOTA: usada a letra z no inicio do elemento devido ao fato de não poder chamar classes
  * apenas com numeros e também para não confundir os com elementos do bloco B
+ *
+ * @method Elements\Z0000 z0000(\stdClass $std) Constructor element 0000
+ * @method Elements\Z0001 z0001(\stdClass $std) Constructor element 0001
+ * @method Elements\Z0005 z0005(\stdClass $std) Constructor element 0005
+ * @method Elements\Z0100 z0100(\stdClass $std) Constructor element 0100
+ * @method Elements\Z0150 z0150(\stdClass $std) Constructor element 0150
+ * @method Elements\Z0175 z0175(\stdClass $std) Constructor element 0175
+ * @method Elements\Z0190 z0190(\stdClass $std) Constructor element 0190
+ * @method Elements\Z0200 z0200(\stdClass $std) Constructor element 0200
+ * @method Elements\Z0205 z0205(\stdClass $std) Constructor element 0205
+ * @method Elements\Z0206 z0206(\stdClass $std) Constructor element 0206
+ * @method Elements\Z0210 z0210(\stdClass $std) Constructor element 0210
+ * @method Elements\Z0220 z0220(\stdClass $std) Constructor element 0220
+ * @method Elements\Z0300 z0300(\stdClass $std) Constructor element 0300
+ * @method Elements\Z0305 z0305(\stdClass $std) Constructor element 0305
+ * @method Elements\Z0400 z0400(\stdClass $std) Constructor element 0400
+ * @method Elements\Z0450 z0450(\stdClass $std) Constructor element 0450
+ * @method Elements\Z0460 z0460(\stdClass $std) Constructor element 0460
+ * @method Elements\Z0600 z0600(\stdClass $std) Constructor element 0600
  */
 final class Block0 extends Block implements BlockInterface
 {

@@ -4,6 +4,10 @@ namespace NFePHP\EFD\Common;
 
 use \stdClass;
 use NFePHP\Common\Strings;
+use Exception;
+use function Safe\json_decode;
+use function Safe\json_encode;
+use function Safe\preg_match;
 
 abstract class Element
 {
@@ -12,7 +16,11 @@ abstract class Element
     public $values;
     protected $parameters;
     private $reg;
-
+    
+    /**
+     * Constructor
+     * @param string $reg
+     */
     public function __construct($reg)
     {
         $this->reg = $reg;
@@ -31,7 +39,7 @@ abstract class Element
     protected function standarize(\stdClass $std)
     {
         if (empty($this->parameters)) {
-            throw new \Exception('Parametros não estabelecidos na classe');
+            throw new Exception('Parametros não estabelecidos na classe');
         }
         $errors = [];
         //passa todos as variáveis do stdClass para minusculo
@@ -42,7 +50,13 @@ abstract class Element
         $this->parameters = array_change_key_case(get_object_vars($stdParam), CASE_LOWER);
         $paramKeys = array_keys($this->parameters);
         //passa os paramatros com as chaves modificadas para um stdClass
-        $stdParam = json_decode(json_encode($this->parameters));
+        if (!$json = json_encode($this->parameters)) {
+            throw new \RuntimeException("Falta definir os parametros ou existe erro no array");
+        }
+        $stdParam = json_decode($json);
+        if ($stdParam === null) {
+            throw new \RuntimeException("Houve uma falha na converção para stdClass");
+        }
         //verifica se foram passados os dados obrigatórios
         foreach ($std as $key => $value) {
             if ($stdParam->$key->required && $std->$key === null) {
@@ -87,7 +101,7 @@ abstract class Element
     /**
      * Verifica os campos comrelação ao tipo e seu regex
      * @param string|integer|float $input
-     * @param \stdClass $param
+     * @param stdClass $param
      * @param string $fieldname
      * @return string|boolean
      */
@@ -130,10 +144,10 @@ abstract class Element
 
     /**
      * Formata os campos float
-     * @param string|integer|float $value
+     * @param string|integer|float|null $value
      * @param string $format
      * @param string $fieldname
-     * @return string|integer
+     * @return int|string|float|null
      * @throws \InvalidArgumentException
      */
     protected function formater($value, $format = null, $fieldname = '')
@@ -152,25 +166,38 @@ abstract class Element
         $name = strtolower($fieldname);
         $this->values->$name = (float) $value;
         
+        return $this->numberFormat(floatval($value), $format, $fieldname);
+    }
+    
+    /**
+     * Format number
+     * @param float $value
+     * @param string $format
+     * @return string
+     * @throws \InvalidArgumentException
+     */
+    private function numberFormat($value, $format, $fieldname)
+    {
         $n = explode('v', $format);
         $mdec = strpos($n[1], '-');
-        $p = explode('.', $value);
+        $p = explode('.', "{$value}");
         $ndec = !empty($p[1]) ? strlen($p[1]) : 0; //decimal digits
         $nint = strlen($p[0]); //integer digits
-        if ($nint > $n[0]) {
+        $intdig = (int) $n[0];
+        if ($nint > $intdig) {
             throw new \InvalidArgumentException("[$this->reg] O [$fieldname] é maior "
             . "que o permitido [$format].");
         }
         if ($mdec !== false) {
             //is multi decimal
             $mm = explode('-', $n[1]);
-            $decmin = $mm[0];
-            $decmax = $mm[1];
+            $decmin = (int) $mm[0];
+            $decmax = (int) $mm[1];
             //verificar a quantidade de decimais informada
             //se maior ou igual ao minimo e menor ou igual ao maximo
             if ($ndec >= $decmin && $ndec <= $decmax) {
                 //deixa como está
-                return $value;
+                return number_format($value, $ndec, ',', '');
             }
             //se menor que o minimo, formata para o minimo
             if ($ndec < $decmin) {
@@ -181,12 +208,12 @@ abstract class Element
                 return number_format($value, $decmax, ',', '');
             }
         }
-        return number_format($value, $n[1], ',', '');
+        $decplaces = (int) $n[1];
+        return number_format($value, $decplaces, ',', '');
     }
 
     /**
      * Construtor do elemento
-     * @param type $reg
      * @return string
      */
     protected function build()
