@@ -9,8 +9,20 @@
         {
             "name": "Roberto L. Machado",
             "email": "linux.rlm@gmail.com.br",
-            "homepage": "http://www.nfephp.org",
-            "role": "Developer"
+            "homepage": "https://github.com/nfephp-org",
+            "role": "owner"
+        },
+        {
+            "name": "Eduardo Correia",
+            "email": "eduardo.correa@duobox.com.br",
+            "homepage": "https://www.duobox.com.br/novo",
+            "role": "developer"
+        },
+        {
+            "name": "Rauye Rogiski",
+            "email": "rauye.rogiski@duobox.com.br",
+            "homepage": "https://www.duobox.com.br/novo",
+            "role": "developer"
         },
         {
             "name": "Comunidade NFePHP",
@@ -43,12 +55,17 @@
         "phpunit": "phpunit",
         "phpcbf": "vendor/bin/phpcbf --standard=psr2 src/ ",
         "phpcs": "vendor/bin/phpcs --standard=psr2 src/",
-        "phpstan": "vendor/bin/phpstan analyse src/ --level 6"
+        "phpstan": "vendor/bin/phpstan analyse src/ --level 7",
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
     },
     "extra": {
         "branch-alias": {
             "dev-master": "0.1.0-dev"
         }
+    },
+    "config": {
+        "optimize-autoloader": true
     },
     "minimum-stability": "stable"
 }
