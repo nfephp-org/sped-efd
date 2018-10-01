@@ -6,8 +6,8 @@ require_once '../../bootstrap.php';
 use NFePHP\EFD\Elements\Contribuicoes\Z0400;
 
 $std = new stdClass();
-$std->COD_NAT = 'TVJVC327DZ';
-$std->DESCR_NAT = 'IBY143';
+$std->COD_NAT = '2223275';
+$std->DESCR_NAT = 'Descricao';
 
 try {
 $z0400 = new Z0400($std);
@@ -16,4 +16,4 @@ echo "{$z0400}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0400|<br>';
+echo '|Z0400|2223275|Descricao|<br>';

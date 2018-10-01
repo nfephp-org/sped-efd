@@ -16,4 +16,4 @@ echo "{$z0190}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0190|<br>';
+echo '|Z0190|JYTQBH|T537XN|<br>';

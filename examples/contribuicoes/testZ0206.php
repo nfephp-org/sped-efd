@@ -6,7 +6,7 @@ require_once '../../bootstrap.php';
 use NFePHP\EFD\Elements\Contribuicoes\Z0206;
 
 $std = new stdClass();
-$std->COD_COMB = 'AB';
+$std->COD_COMB = '23';
 
 try {
 $z0206 = new Z0206($std);
@@ -15,4 +15,4 @@ echo "{$z0206}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0206|<br>';
+echo '|Z0206|23|<br>';

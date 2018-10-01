@@ -6,9 +6,9 @@ require_once '../../bootstrap.php';
 use NFePHP\EFD\Elements\Contribuicoes\Z0208;
 
 $std = new stdClass();
-$std->COD_TAB = 'Q4';
+$std->COD_TAB = '04';
 $std->COD_GRU = 'PV';
-$std->MARCA_COM = 'RHAC2LZD88H3SVEH8JPCASKS14ZHNGZQDFVX9Q3MM401MFEMF1QSZ1AHSL6E';
+$std->MARCA_COM = 'Marca comercial';
 
 try {
 $z0208 = new Z0208($std);
@@ -17,4 +17,4 @@ echo "{$z0208}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0208|<br>';
+echo '|Z0208|04|PV|Marca comercial|<br>';

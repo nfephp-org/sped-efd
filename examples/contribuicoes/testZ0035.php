@@ -6,9 +6,9 @@ require_once '../../bootstrap.php';
 use NFePHP\EFD\Elements\Contribuicoes\Z0035;
 
 $std = new stdClass();
-$std->COD_SCP = 'LTH5MUBVKDC5CN';
-$std->DESC_SCP = '79PJWU';
-$std->INF_COMP = 'LEPPH0';
+$std->COD_SCP = '63402238000163';
+$std->DESC_SCP = 'Desricao teste';
+$std->INF_COMP = 'Informacao';
 
 try {
 $z0035 = new Z0035($std);
@@ -17,4 +17,4 @@ echo "{$z0035}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0035|<br>';
+echo '|Z0035|63402238000163|Desricao teste|Informacao|<br>';

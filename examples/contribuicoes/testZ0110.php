@@ -6,9 +6,9 @@ require_once '../../bootstrap.php';
 use NFePHP\EFD\Elements\Contribuicoes\Z0110;
 
 $std = new stdClass();
-$std->COD_INC_TRIB = 'W';
-$std->IND_APRO_CRED = '6';
-$std->COD_TIPO_CONT = 'B';
+$std->COD_INC_TRIB = '3';
+$std->IND_APRO_CRED = '1';
+$std->COD_TIPO_CONT = '2';
 $std->IND_REG_CUM = '1';
 
 try {
@@ -18,4 +18,4 @@ echo "{$z0110}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0110|<br>';
+echo '|Z0110|3|1|2|1|<br>';

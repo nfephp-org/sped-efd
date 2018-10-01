@@ -15,4 +15,4 @@ echo "{$z0001}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0001|<br>';
+echo '|Z0001|8|<br>';

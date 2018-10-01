@@ -6,19 +6,19 @@ require_once '../../bootstrap.php';
 use NFePHP\EFD\Elements\Contribuicoes\Z0100;
 
 $std = new stdClass();
-$std->NOME = 'RGXJJQNV6GUKW3A6PIV7WJXIZINUNI931LS0D6H6YF7RRVBFG13C8FA64OKSFJ5KLLUPW5S3TAJFM3PAA7GV10YTS090S2QBU5QX';
+$std->NOME = 'Nome de teste';
 $std->CPF = '52543658629';
 $std->CRC = '739W1MS3XAR0YFQ';
 $std->CNPJ = '40814340000170';
 $std->CEP = '26370963';
-$std->END = 'V4QMD9D5P0XQZ6BWQLFZNCGOC31R91A1BD6E4SRFT0MD94WI1BI3M8K85AIR';
-$std->NUM = 'NGLMMU';
-$std->COMPL = 'B0T7H7Q0PP9ERMFNUSPOOOLMC29GTJ7YZ47P1IQYQSPZ69Y46X2WVABRVM36';
-$std->BAIRRO = 'Z5MC1UZQKCIFRZ9O5ERRVQO1R7XNYTIR6DKRUOR72G4CCA3SS0C3V0XO29JW';
-$std->FONE = 'OMXZE16Z4FH';
-$std->FAX = 'GS9HG2ZWKR7';
-$std->EMAIL = 'PWCFCT';
-$std->COD_MUN = 'YJXN1LY';
+$std->END = 'Endereco de teste';
+$std->NUM = '2038';
+$std->COMPL = 'apt 202';
+$std->BAIRRO = 'Nome do bairro';
+$std->FONE = '11998444444';
+$std->FAX = '1133334444';
+$std->EMAIL = 'teste@teste,com';
+$std->COD_MUN = '1134564';
 
 try {
 $z0100 = new Z0100($std);
@@ -27,4 +27,4 @@ echo "{$z0100}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0100|<br>';
+echo '|Z0100|Nome de teste|52543658629|739W1MS3XAR0YFQ|40814340000170|26370963|Endereco de teste|2038|apt 202|Nome do bairro|11998444444|1133334444|teste@teste,com|1134564|<br>';

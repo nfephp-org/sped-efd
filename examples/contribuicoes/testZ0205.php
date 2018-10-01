@@ -9,7 +9,7 @@ $std = new stdClass();
 $std->DESCR_ANT_ITEM = '206R7J';
 $std->DT_INI = '01102018';
 $std->DT_FIM = '01102018';
-$std->COD_ANT_ITEM = 'JA9EY64FU3J07YA3ICM18PBOBXJQ5AIPYTF0YVUSZNIEE4H819BKGMXBOMI6';
+$std->COD_ANT_ITEM = '30935839';
 
 try {
 $z0205 = new Z0205($std);
@@ -18,4 +18,4 @@ echo "{$z0205}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0205|<br>';
+echo '|Z0205|206R7J|01102018|01102018|30935839|<br>';

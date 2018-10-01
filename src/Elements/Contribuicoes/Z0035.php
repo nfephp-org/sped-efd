@@ -8,12 +8,35 @@ use \stdClass;
 
 class Z0035 extends Element implements ElementInterface
 {
-    const REG = '0035';
+    const REG = 'Z0035';
     const LEVEL = 0;
-    const PARENT = '';
-    
-    protected $parameters = [];
-    
+    const PARENT = '2';
+
+    protected $parameters = [
+        'COD_SCP' => [
+            'type' => 'numeric',
+            'regex' => '^(\d{14})$',
+            'required' => false,
+            'info' => 'Identificação da SCP',
+            'format' => ''
+        ],
+        'DESC_SCP' => [
+            'type' => 'string',
+            'regex' => '^(.*)$',
+            'required' => false,
+            'info' => 'Descrição da SCP',
+            'format' => ''
+        ],
+        'INF_COMP' => [
+            'type' => 'string',
+            'regex' => '^(.*)$',
+            'required' => false,
+            'info' => 'Informação Complementar',
+            'format' => ''
+        ],
+
+    ];
+
     /**
      * Constructor
      * @param \stdClass $std
