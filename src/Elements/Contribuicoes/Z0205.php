@@ -38,7 +38,7 @@ class Z0205 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^.{0,60}$',
             'required' => false,
-            'info' => 'Código&nbsp;&nbsp; anterior&nbsp;&nbsp; do&nbsp;&nbsp; item&nbsp;&nbsp; com&nbsp;&nbsp; relação&nbsp;&nbsp; à&nbsp;&nbsp; última informação apresentada.',
+            'info' => 'Código anterior do item com relação à última informação apresentada.',
             'format' => ''
         ],
 

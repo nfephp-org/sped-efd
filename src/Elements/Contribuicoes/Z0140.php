@@ -45,14 +45,14 @@ class Z0140 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^[0-9]{2,14}$',
             'required' => false,
-            'info' => 'Inscrição&nbsp; Estadual&nbsp; do&nbsp; estabelecimento,&nbsp; se&nbsp; contribuinte&nbsp; de ICMS.',
+            'info' => 'Inscrição Estadual do estabelecimento, se contribuinte de ICMS.',
             'format' => ''
         ],
         'COD_MUN' => [
             'type' => 'numeric',
             'regex' => '^(\d{7})$',
             'required' => false,
-            'info' => 'Código&nbsp;&nbsp;&nbsp;&nbsp; do&nbsp;&nbsp;&nbsp;&nbsp; município&nbsp;&nbsp;&nbsp;&nbsp; do&nbsp;&nbsp;&nbsp;&nbsp; domicílio&nbsp;&nbsp;&nbsp;&nbsp; fiscal&nbsp;&nbsp;&nbsp;&nbsp; do estabelecimento, conforme a tabela IBGE',
+            'info' => 'Código do município do domicílio fiscal do estabelecimento, conforme a tabela IBGE',
             'format' => ''
         ],
         'IM' => [

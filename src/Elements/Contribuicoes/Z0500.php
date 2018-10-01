@@ -24,7 +24,9 @@ class Z0500 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^(01|02|03|04|05|09)$',
             'required' => false,
-            'info' => 'Código da natureza da conta/grupo de contas: 01 - Contas de ativo 02 - Contas de passivo; 03 - Patrimônio líquido; 04 - Contas de resultado; 05 - Contas de compensação; 09 - Outras.',
+            'info' => 'Código da natureza da conta/grupo de contas: 
+            01 - Contas de ativo 02 - Contas de passivo; 03 - Patrimônio líquido; 
+            04 - Contas de resultado; 05 - Contas de compensação; 09 - Outras.',
             'format' => ''
         ],
         'IND_CTA' => [
@@ -66,7 +68,8 @@ class Z0500 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^[0-9]{14}$',
             'required' => false,
-            'info' => 'CNPJ do estabelecimento, no caso da conta informada no campo COD_CTA ser específica de um estabelecimento.',
+            'info' => 'CNPJ do estabelecimento, no caso da conta informada no 
+            campo COD_CTA ser específica de um estabelecimento.',
             'format' => ''
         ],
 

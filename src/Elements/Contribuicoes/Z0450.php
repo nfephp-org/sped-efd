@@ -24,7 +24,9 @@ class Z0450 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^(.*)$',
             'required' => false,
-            'info' => 'Texto&nbsp;&nbsp; livre&nbsp;&nbsp; da&nbsp;&nbsp; informação&nbsp;&nbsp; complementar&nbsp;&nbsp; existente&nbsp;&nbsp; no documento&nbsp; fiscal,&nbsp; inclusive&nbsp; espécie&nbsp; de&nbsp; normas&nbsp; legais,&nbsp; poder normativo,&nbsp; número,&nbsp; capitulação,&nbsp; data&nbsp; e&nbsp; demais&nbsp; referências pertinentes com indicação referentes ao tributo.',
+            'info' => 'Texto livre da informação complementar existente no documento fiscal, 
+            inclusive espécie de normas legais, poder normativo, número, capitulação, data e 
+            demais referências pertinentes com indicação referentes ao tributo.',
             'format' => ''
         ],
 

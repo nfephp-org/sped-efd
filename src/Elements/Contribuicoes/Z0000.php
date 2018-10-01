@@ -31,14 +31,16 @@ class Z0000 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^([0-4]{1})$',
             'required' => false,
-            'info' => 'Indicador de situação especial: 0 - Abertura 1 - Cisão 2 - Fusão 3 - Incorporação 4 – Encerramento',
+            'info' => 'Indicador de situação especial: 0 - Abertura 1 - Cisão 
+            2 - Fusão 3 - Incorporação 4 – Encerramento',
             'format' => ''
         ],
         'NUM_REC_ANTERIOR' => [
             'type' => 'string',
             'regex' => '^.{41}$',
             'required' => false,
-            'info' => 'Número do Recibo da Escrituração anterior a ser retificada, utilizado quando TIPO_ESCRIT for igual a 1',
+            'info' => 'Número do Recibo da Escrituração anterior 
+            a ser retificada, utilizado quando TIPO_ESCRIT for igual a 1',
             'format' => ''
         ],
         'DT_INI' => [
@@ -94,14 +96,19 @@ class Z0000 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^(0)([0-5]{1})$',
             'required' => false,
-            'info' => 'Indicador da natureza da pessoa jurídica: 00 – Pessoa jurídica em geral 01 – Sociedade cooperativa 02 – Entidade sujeita ao PIS/Pasep exclusivamente com base na Folha de Salários',
+            'info' => 'Indicador da natureza da pessoa jurídica: 
+            00 – Pessoa jurídica em geral 01 – Sociedade cooperativa 02 – Entidade sujeita ao PIS/Pasep 
+            exclusivamente com base na Folha de Salários',
             'format' => ''
         ],
         'IND_ATIV' => [
             'type' => 'numeric',
             'regex' => '^(0|1|2|3|4|9)$',
             'required' => false,
-            'info' => 'Indicador de tipo de atividade preponderante: 0 – Industrial ou equiparado a industrial; 1 – Prestador de serviços; 2 - Atividade de comércio; 3 – Pessoas jurídicas referidas nos §§ 6º, 8º e 9º do art. 3º da Lei nº 9.718, de 1998; 4 – Atividade imobiliária; 9 – Outros.',
+            'info' => 'Indicador de tipo de atividade preponderante: 
+            0 – Industrial ou equiparado a industrial; 1 – Prestador de serviços; 2 - Atividade de comércio;
+             3 – Pessoas jurídicas referidas nos §§ 6º, 8º e 9º do art. 3º da Lei nº 9.718, de 1998;
+              4 – Atividade imobiliária; 9 – Outros.',
             'format' => ''
         ],
 

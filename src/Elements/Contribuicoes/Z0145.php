@@ -17,7 +17,10 @@ class Z0145 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^(1|2)$',
             'required' => false,
-            'info' => 'Código indicador da incidência tributária no período: 1 – Contribuição Previdenciária apurada no período, exclusivamente com base na Receita Bruta; 2 – Contribuição Previdenciária apurada no período, com base na Receita Bruta e com base nas Remunerações pagas, na forma dos nos incisos I e III do art. 22 da Lei no 8.212, de 1991.',
+            'info' => 'Código indicador da incidência tributária no período: 
+            1 – Contribuição Previdenciária apurada no período, exclusivamente com base na Receita Bruta; 
+            2 – Contribuição Previdenciária apurada no período, com base na Receita Bruta e com base nas 
+            Remunerações pagas, na forma dos nos incisos I e III do art. 22 da Lei no 8.212, de 1991.',
             'format' => ''
         ],
         'VL_REC_TOT' => [
@@ -31,14 +34,16 @@ class Z0145 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info' => 'Valor da Receita Bruta da(s) Atividade(s) Sujeita(s) à Contribuição Previdenciária sobre a Receita Bruta',
+            'info' => 'Valor da Receita Bruta da(s) Atividade(s) Sujeita(s) à
+             Contribuição Previdenciária sobre a Receita Bruta',
             'format' => '15v2'
         ],
         'VL_REC_DEMAIS_ATIV' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info' => 'Valor da Receita Bruta da(s) Atividade(s) não Sujeita(s) à Contribuição Previdenciária sobre a Receita Bruta',
+            'info' => 'Valor da Receita Bruta da(s) Atividade(s) não Sujeita(s) à 
+            Contribuição Previdenciária sobre a Receita Bruta',
             'format' => '15v2'
         ],
         'INFO_COMPL' => [

@@ -43,7 +43,7 @@ class Z0190 extends Element implements ElementInterface
 
     public function postValidation()
     {
-        if($this->std->unid == $this->std->descr){
+        if ($this->std->unid == $this->std->descr) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " Os campos UNID e DESCR ");
         }

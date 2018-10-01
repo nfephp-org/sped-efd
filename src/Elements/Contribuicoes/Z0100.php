@@ -31,14 +31,14 @@ class Z0100 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^.{0,15}$',
             'required' => false,
-            'info' => 'Número&nbsp;&nbsp;&nbsp; de&nbsp;&nbsp; inscrição&nbsp;&nbsp; do&nbsp;&nbsp;&nbsp; contabilista&nbsp;&nbsp; no&nbsp;&nbsp;&nbsp; Conselho Regional de Contabilidade.',
+            'info' => 'Número de inscrição do contabilista no Conselho Regional de Contabilidade.',
             'format' => ''
         ],
         'CNPJ' => [
             'type' => 'string',
             'regex' => '^[0-9]{14}$',
             'required' => false,
-            'info' => 'Número&nbsp; de&nbsp; inscrição&nbsp; do&nbsp; escritório&nbsp; de&nbsp; contabilidade&nbsp; no CNPJ, se houver.',
+            'info' => 'Número de inscrição do escritório de contabilidade no CNPJ, se houver.',
             'format' => ''
         ],
         'CEP' => [
