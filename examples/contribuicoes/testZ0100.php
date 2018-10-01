@@ -1,0 +1,30 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+require_once '../../bootstrap.php';
+
+use NFePHP\EFD\Elements\Contribuicoes\Z0100;
+
+$std = new stdClass();
+$std->NOME = 'RGXJJQNV6GUKW3A6PIV7WJXIZINUNI931LS0D6H6YF7RRVBFG13C8FA64OKSFJ5KLLUPW5S3TAJFM3PAA7GV10YTS090S2QBU5QX';
+$std->CPF = '52543658629';
+$std->CRC = '739W1MS3XAR0YFQ';
+$std->CNPJ = '40814340000170';
+$std->CEP = '26370963';
+$std->END = 'V4QMD9D5P0XQZ6BWQLFZNCGOC31R91A1BD6E4SRFT0MD94WI1BI3M8K85AIR';
+$std->NUM = 'NGLMMU';
+$std->COMPL = 'B0T7H7Q0PP9ERMFNUSPOOOLMC29GTJ7YZ47P1IQYQSPZ69Y46X2WVABRVM36';
+$std->BAIRRO = 'Z5MC1UZQKCIFRZ9O5ERRVQO1R7XNYTIR6DKRUOR72G4CCA3SS0C3V0XO29JW';
+$std->FONE = 'OMXZE16Z4FH';
+$std->FAX = 'GS9HG2ZWKR7';
+$std->EMAIL = 'PWCFCT';
+$std->COD_MUN = 'YJXN1LY';
+
+try {
+$z0100 = new Z0100($std);
+echo "{$z0100}".'<br>';
+} catch (\Exception $e) {
+echo $e->getMessage();
+}
+
+echo '|Z0100|<br>';
