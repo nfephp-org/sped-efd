@@ -10,7 +10,7 @@ class E230 extends Element implements ElementInterface
 {
     const REG = 'E230';
     const LEVEL = 5;
-    const PARENT = 'E111';
+    const PARENT = 'E220';
 
     protected $parameters = [
         'NUM_DA' => [

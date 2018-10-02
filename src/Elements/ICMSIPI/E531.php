@@ -10,7 +10,7 @@ class E531 extends Element implements ElementInterface
 {
     const REG = 'E531';
     const LEVEL = 5;
-    const PARENT = 'E111';
+    const PARENT = 'E530';
 
     protected $parameters = [
         'COD_PART' => [
@@ -24,7 +24,7 @@ class E531 extends Element implements ElementInterface
         ],
         'COD_MOD' => [
             'type'     => 'string',
-            'regex'    => '^.{2}$',
+            'regex'    => '^(0)(1)|55$',
             'required' => true,
             'info'     => 'Código do modelo do documento fiscal, conforme a Tabela 4.1.1',
             'format'   => ''
@@ -45,7 +45,7 @@ class E531 extends Element implements ElementInterface
         ],
         'NUM_DOC' => [
             'type'     => 'integer',
-            'regex'    => '^.{1,9}$',
+            'regex'    => '^([1-9])([0-9]{1,8}|)$',
             'required' => true,
             'info'     => 'Número do documento fiscal',
             'format'   => ''
@@ -88,5 +88,16 @@ class E531 extends Element implements ElementInterface
     {
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
+    }
+
+    public function postValidation()
+    {
+        /*
+         * Campo 10 (CHV_NFE) Validação: A informação da chave é obrigatória quando o COD_MOD = “55”.
+         */
+        if (empty($this->std->chv_nfe) && $this->std->cod_mod == '55') {
+            $this->std->ind_oper = 0;
+        }
     }
 }

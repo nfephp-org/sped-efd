@@ -10,7 +10,7 @@ class E312 extends Element implements ElementInterface
 {
     const REG = 'E312';
     const LEVEL = 5;
-    const PARENT = 'E111';
+    const PARENT = 'E311';
 
     protected $parameters = [
         'NUM_DA' => [

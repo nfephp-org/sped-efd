@@ -15,8 +15,7 @@ $std->TXT_COMPL = 'Descrição complementar';
 try {
     $b0 = new E230($std);
     echo "{$b0}".'<br>';
+    echo '|E230|3402862347|348597434|9|Descrição resumida do processo que embasou o lançamento|Descrição complementar|<br>';
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
-
-echo '|E230|3402862347|348597434|9|Descrição resumida do processo que embasou o lançamento|Descrição complementar|<br>';

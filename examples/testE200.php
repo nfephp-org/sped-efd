@@ -13,8 +13,7 @@ $std->DT_FIN = 26102018;
 try {
     $b0 = new E200($std);
     echo "{$b0}".'<br>';
+    echo '|E200|PR|26092018|26102018|<br>';
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
-
-echo '|E200|PR|26092018|26102018|<br>';

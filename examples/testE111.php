@@ -13,8 +13,7 @@ $std->VL_AJ_APUR = 34543;
 try {
     $b0 = new E111($std);
     echo "{$b0}".'<br>';
+    echo '|E111|12345678|3857|34543|<br>';
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
-
-echo '|E111|12345678|3857|34543|<br>';

@@ -15,8 +15,7 @@ $std->VL_IPI = 15.50;
 try {
     $b0 = new E510($std);
     echo "{$b0}".'<br>';
+    echo '|E510|7391|02|100.00|129.90|15.50|<br>';
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
-
-echo '|E510|7391|02|100.00|129.90|15.50|<br>';

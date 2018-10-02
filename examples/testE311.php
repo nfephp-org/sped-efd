@@ -13,8 +13,7 @@ $std->VL_AJ_APUR = 9.75;
 try {
     $b0 = new E311($std);
     echo "{$b0}".'<br>';
+    echo '|E311|XX209999|Descrição complementar do ajuste da apuração|9.75|<br>';
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
-
-echo '|E311|XX209999|Descrição complementar do ajuste da apuração|9.75|<br>';

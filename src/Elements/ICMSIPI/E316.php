@@ -10,12 +10,12 @@ class E316 extends Element implements ElementInterface
 {
     const REG = 'E316';
     const LEVEL = 4;
-    const PARENT = 'E110';
+    const PARENT = 'E310';
 
     protected $parameters = [
         'COD_OR' => [
             'type'     => 'string',
-            'regex'    => '^.{1,3}$',
+            'regex'    => '^\d{1,3}$',
             'required' => true,
             'info'     => 'Código da obrigação recolhida ou a recolher, conforme a Tabela 5.4',
             'format'   => ''
@@ -51,7 +51,7 @@ class E316 extends Element implements ElementInterface
         ],
         'IND_PROC' => [
             'type'     => 'string',
-            'regex'    => '^0|1|2|9]$',
+            'regex'    => '^[0|1|2|9]$',
             'required' => false,
             'info'     => 'Indicador da origem do processo: '
             .'0- SEFAZ; '
@@ -76,7 +76,7 @@ class E316 extends Element implements ElementInterface
         ],
         'MES_REF' => [
             'type'     => 'integer',
-            'regex'    => '^((?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
+            'regex'    => '^((?!(13^))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
             'required' => true,
             'info'     => 'Informe o mês de referência no formato “mmaaaa”',
             'format'   => ''
@@ -91,5 +91,23 @@ class E316 extends Element implements ElementInterface
     {
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
+    }
+
+    public function postValidation()
+    {
+        /*
+         * Campo 06 (NUM_PROC) Validação: se este campo estiver preenchido, os campos IND_PROC e PROC deverão
+         * estar preenchidos. Se este campo não estiver preenchido, os campos IND_PROC e PROC não deverão estar
+         * preenchidos.
+         */
+        if (!empty($this->std->num_proc) && (empty($this->std->ind_proc) || empty($this->std->proc))) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Se o campo NUM_PROC estiver preenchido, "
+            ."os campos IND_PROC e PROC deverão estar preenchidos.");
+        }
+        if (empty($this->std->num_proc) && (!empty($this->std->ind_proc) || !empty($this->std->proc))) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Se o campo NUM_PROC não estiver preenchido, "
+            ."os campos IND_PROC e PROC não deverão estar preenchidos.");
+        }
     }
 }

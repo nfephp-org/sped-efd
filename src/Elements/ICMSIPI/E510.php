@@ -10,7 +10,7 @@ class E510 extends Element implements ElementInterface
 {
     const REG = 'E510';
     const LEVEL = 3;
-    const PARENT = 'E100';
+    const PARENT = 'E500';
 
     protected $parameters = [
         'CFOP' => [
