@@ -8,12 +8,21 @@ use \stdClass;
 
 class Z0206 extends Element implements ElementInterface
 {
-    const REG = '0206';
-    const LEVEL = 0;
-    const PARENT = '';
-    
-    protected $parameters = [];
-    
+    const REG = 'Z0206';
+    const LEVEL = 4;
+    const PARENT = 'Z0200';
+
+    protected $parameters = [
+        'COD_COMB' => [
+            'type' => 'string',
+            'regex' => '^(.*)$',
+            'required' => false,
+            'info' => 'Código do combustível, conforme tabela publicada pela ANP',
+            'format' => ''
+        ],
+
+    ];
+
     /**
      * Constructor
      * @param \stdClass $std
