@@ -120,12 +120,12 @@ class C400 extends Element implements ElementInterface
 
     public function postValidation()
     {
-        $multiplicacao = $this->values->vl_bc_cofins*$this->values->aliq_cofins;
-        if($this->values->quant_bc_cofins>0){
-            $multiplicacao = $this->values->quant_bc_cofins*$this->values->aliq_cofins_quant;
+        $multiplicacao = $this->values->vl_bc_cofins * $this->values->aliq_cofins;
+        if ($this->values->quant_bc_cofins > 0) {
+            $multiplicacao = $this->values->quant_bc_cofins * $this->values->aliq_cofins_quant;
         }
 
-        if(number_format($this->values->vl_cofins,2)!=number_format($multiplicacao,2)){
+        if (number_format($this->values->vl_cofins, 2) != number_format($multiplicacao, 2)) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 "O campo VL_COFINS deve de ser o calculo da multiplicacao " .
                 "da base de calculo do cofins com a aliquota do cofins");

@@ -282,19 +282,19 @@ class C170 extends Element implements ElementInterface
 
     public function postValidation()
     {
-        $ultimosCaracteres = substr($this->std->cst_icms,2);
+        $ultimosCaracteres = substr($this->std->cst_icms, 2);
         if (in_array($ultimosCaracteres, ['00', '10', '20', '70']) and $this->values->aliq_icms <= 0) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " nas operações de saídas, se os dois últimos caracteres do CST_ICMS " .
                 "forem 00, 10, 20 ou 70, o campo ALIQ_ICMS deve ser maior que “0” (zero). ");
         }
 
-        $multiplicacao = $this->values->vl_bc_cofins*$this->values->aliq_cofins;
-        if($this->values->quant_bc_cofins>0){
-            $multiplicacao = $this->values->quant_bc_cofins*$this->values->aliq_cofins_quant;
+        $multiplicacao = $this->values->vl_bc_cofins * $this->values->aliq_cofins;
+        if ($this->values->quant_bc_cofins > 0) {
+            $multiplicacao = $this->values->quant_bc_cofins * $this->values->aliq_cofins_quant;
         }
 
-        if(number_format($this->values->vl_cofins,2)!=number_format($multiplicacao,2)){
+        if (number_format($this->values->vl_cofins, 2) != number_format($multiplicacao, 2)) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 "O campo VL_COFINS deve de ser o calculo da multiplicacao " .
                 "da base de calculo do cofins com a aliquota do cofins");
