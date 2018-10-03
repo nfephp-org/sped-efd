@@ -10,7 +10,7 @@ class E313 extends Element implements ElementInterface
 {
     const REG = 'E313';
     const LEVEL = 5;
-    const PARENT = 'E111';
+    const PARENT = 'E311';
 
     protected $parameters = [
         'COD_PART' => [
@@ -43,16 +43,9 @@ class E313 extends Element implements ElementInterface
         ],
         'NUM_DOC' => [
             'type'     => 'integer',
-            'regex'    => '^\d{1,9}+$',
+            'regex'    => '^([1-9])([0-9]{1,8}|)$',
             'required' => true,
             'info'     => 'Número do documento fiscal',
-            'format'   => ''
-        ],
-        'CHV_DOCE' => [ // CHV_DOCe
-            'type'     => 'string',
-            'regex'    => '^\d{44}+$',
-            'required' => false,
-            'info'     => 'Chave do Documento Eletrônico',
             'format'   => ''
         ],
         'DT_DOC' => [
@@ -70,10 +63,17 @@ class E313 extends Element implements ElementInterface
             'format'   => ''
         ],
         'VL_AJ_ITEM' => [
-            'type'     => 'integer',
-            'regex'    => '^\d+$',
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info'     => 'Valor do ajuste para a operação/item',
+            'format'   => '15v2'
+        ],
+        'CHV_DOCE' => [
+            'type'     => 'string',
+            'regex'    => '^\d{44}+$',
+            'required' => false,
+            'info'     => 'Chave do Documento Eletrônico',
             'format'   => ''
         ]
     ];
@@ -86,5 +86,17 @@ class E313 extends Element implements ElementInterface
     {
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
+    }
+
+    public function postValidation()
+    {
+        /*
+         * Campo 10 (VL_AJ_ITEM) Validação: o valor informado no campo deve ser maior que “0” (zero).
+         */
+        if ($this->values->vl_aj_item <= 0) {
+            throw new \InvalidArgumentException("[" . self::REG . "] O valor informado no campo deve "
+            ."ser maior que “0” (zero).");
+        }
     }
 }

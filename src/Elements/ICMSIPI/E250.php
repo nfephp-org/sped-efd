@@ -10,7 +10,7 @@ class E250 extends Element implements ElementInterface
 {
     const REG = 'E250';
     const LEVEL = 4;
-    const PARENT = 'E110';
+    const PARENT = 'E210';
 
     protected $parameters = [
         'COD_OR' => [
@@ -76,7 +76,7 @@ class E250 extends Element implements ElementInterface
         ],
         'MES_REF' => [
             'type'     => 'integer',
-            'regex'    => '^((?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
+            'regex'    => '^((?!(13^))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
             'required' => true,
             'info'     => 'Informe o mês de referência no formato “mmaaaa”',
             'format'   => ''
@@ -91,5 +91,23 @@ class E250 extends Element implements ElementInterface
     {
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
+    }
+
+    public function postValidation()
+    {
+        /*
+         * Campo 06 (NUM_PROC) Validação: se este campo estiver preenchido, os campos IND_PROC e PROC deverão
+         * estar preenchidos. Se este campo não estiver preenchido, os campos IND_PROC e PROC não deverão estar
+         * preenchidos.
+         */
+        if (!empty($this->std->num_proc) && (empty($this->std->ind_proc) || empty($this->std->proc))) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Se o campo NUM_PROC estiver preenchido, "
+            ."os campos IND_PROC e PROC deverão estar preenchidos.");
+        }
+        if (empty($this->std->num_proc) && (!empty($this->std->ind_proc) || !empty($this->std->proc))) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Se o campo NUM_PROC não estiver preenchido, "
+            ."os campos IND_PROC e PROC não deverão estar preenchidos.");
+        }
     }
 }

@@ -10,7 +10,7 @@ class E530 extends Element implements ElementInterface
 {
     const REG = 'E530';
     const LEVEL = 4;
-    const PARENT = 'E110';
+    const PARENT = 'E510';
 
     protected $parameters = [
         'IND_AJ' => [

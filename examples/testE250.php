@@ -19,8 +19,7 @@ $std->MES_REF = 102018;
 try {
     $b0 = new E250($std);
     echo "{$b0}".'<br>';
+    echo '|E250|999|293.90|26102018|32842940341|1230983467832|1|Descrição resumida do processo que embasou o lançamento|Descrição complementar das obrigações a recolher|102018|<br>';
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
-
-echo '|E250|999|293.90|26102018|32842940341|1230983467832|1|Descrição resumida do processo que embasou o lançamento|Descrição complementar das obrigações a recolher|102018|<br>';

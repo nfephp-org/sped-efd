@@ -91,9 +91,10 @@ class B510 extends Element implements ElementInterface
     {
         //Cria um array com apenas os digitos numéricos
         $j=0;
+        $num=[];
         for ($i=0; $i<(strlen($cpf)); $i++) {
             if (is_numeric($cpf[$i])) {
-                $num[$j]=$cpf[$i];
+                $num[$j]=(int)$cpf[$i];
                 $j++;
             }
         }
@@ -115,6 +116,7 @@ class B510 extends Element implements ElementInterface
         //Calcula e compara o primeiro dígito verificador
         if (!isset($validaCPF)) {
             $j=10;
+            $multiplica=[];
             for ($i=0; $i<9; $i++) {
                 $multiplica[$i]=$num[$i]*$j;
                 $j--;
@@ -134,6 +136,7 @@ class B510 extends Element implements ElementInterface
         //Calcula e compara o segundo dígito verificador.
         if (!isset($validaCPF)) {
             $j=11;
+            $multiplica=[];
             for ($i=0; $i<10; $i++) {
                 $multiplica[$i]=$num[$i]*$j;
                 $j--;
