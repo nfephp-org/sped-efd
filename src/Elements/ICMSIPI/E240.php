@@ -10,7 +10,7 @@ class E240 extends Element implements ElementInterface
 {
     const REG = 'E240';
     const LEVEL = 5;
-    const PARENT = 'E111';
+    const PARENT = 'E220';
 
     protected $parameters = [
         'COD_PART' => [
@@ -45,7 +45,7 @@ class E240 extends Element implements ElementInterface
         ],
         'NUM_DOC' => [
             'type'     => 'integer',
-            'regex'    => '^.{1,9}$',
+            'regex'    => '^([1-9])([0-9]{1,8}|)$',
             'required' => true,
             'info'     => 'Número do documento fiscal',
             'format'   => ''

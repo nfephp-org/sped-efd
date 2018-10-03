@@ -16,8 +16,7 @@ $std->DESCR_AJ = 'Descrição detalhada do ajuste, com citação dos documen
 try {
     $b0 = new E530($std);
     echo "{$b0}".'<br>';
+    echo '|E530|0|0.80|001|3|23080234632701|Descrição detalhada do ajuste, com citação dos documentos fiscais.|<br>';
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
-
-echo '|E530|0|0.80|001|3|23080234632701|Descrição detalhada do ajuste, com citação dos documentos fiscais.|<br>';

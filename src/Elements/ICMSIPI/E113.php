@@ -45,7 +45,7 @@ class E113 extends Element implements ElementInterface
         ],
         'NUM_DOC' => [
             'type'     => 'integer',
-            'regex'    => '^\d{1,9}+$',
+            'regex'    => '^([1-9])([0-9]{0,8}|)$',
             'required' => true,
             'info'     => 'Número do documento fiscal',
             'format'   => ''

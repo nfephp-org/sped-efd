@@ -11,8 +11,8 @@ $std->IND_MOV = '0';
 try {
     $b0 = new E001($std);
     echo "{$b0}".'<br>';
+    echo '|E001|0|<br>';
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
 
-echo '|E001|0|<br>';
