@@ -45,7 +45,7 @@ class A170 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info' => 'Valor do desconto comercial&nbsp; / exclusão da base de cálculo do PIS/PASEP e da COFINS',
+            'info' => 'Valor do desconto comercial / exclusão da base de cálculo do PIS/PASEP e da COFINS',
             'format' => '15v2'
         ],
         'NAT_BC_CRED' => [

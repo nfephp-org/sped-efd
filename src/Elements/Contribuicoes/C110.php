@@ -6,18 +6,25 @@ use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
 
-class Z0206 extends Element implements ElementInterface
+class C110 extends Element implements ElementInterface
 {
-    const REG = 'Z0206';
+    const REG = 'C110';
     const LEVEL = 4;
-    const PARENT = 'Z0200';
+    const PARENT = 'C100';
 
     protected $parameters = [
-        'COD_COMB' => [
+        'COD_INF' => [
+            'type' => 'string',
+            'regex' => '^.{0,6}$',
+            'required' => false,
+            'info' => 'Código da informação complementar do documento fiscal (campo 02 do Registro 0450)',
+            'format' => ''
+        ],
+        'TXT_COMPL' => [
             'type' => 'string',
             'regex' => '^(.*)$',
             'required' => false,
-            'info' => 'Código do combustível, conforme tabela publicada pela ANP',
+            'info' => 'Descrição complementar do código de referência.',
             'format' => ''
         ],
 

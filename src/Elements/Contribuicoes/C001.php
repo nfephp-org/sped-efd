@@ -6,18 +6,18 @@ use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
 
-class Z0206 extends Element implements ElementInterface
+class C001 extends Element implements ElementInterface
 {
-    const REG = 'Z0206';
-    const LEVEL = 4;
-    const PARENT = 'Z0200';
+    const REG = 'C001';
+    const LEVEL = 0;
+    const PARENT = '1';
 
     protected $parameters = [
-        'COD_COMB' => [
+        'IND_MOV' => [
             'type' => 'string',
-            'regex' => '^(.*)$',
+            'regex' => '^(0|1)$',
             'required' => false,
-            'info' => 'Código do combustível, conforme tabela publicada pela ANP',
+            'info' => 'Indicador de movimento: 0 - Bloco com dados informados; 1 - Bloco sem dados informados',
             'format' => ''
         ],
 

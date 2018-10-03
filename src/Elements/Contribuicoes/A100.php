@@ -177,5 +177,6 @@ class A100 extends Element implements ElementInterface
                 " Dígito verificador incorreto no campo campo chave da " .
                 "nota fiscal de serviço eletronica (CHAVE_NFSE)");
         }
+
     }
 }
