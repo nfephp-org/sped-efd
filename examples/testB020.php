@@ -6,7 +6,7 @@ require_once '../bootstrap.php';
 use NFePHP\EFD\Elements\ICMSIPI\B020;
 
 $std = new stdClass();
-$std->IND_OPER = '1';
+$std->IND_OPER = '0';
 $std->IND_EMIT = '1';
 $std->COD_PART = '12039350584309853249086';
 $std->COD_MOD = '3B';

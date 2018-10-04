@@ -187,52 +187,35 @@ class E310 extends Element implements ElementInterface
     public function postValidation()
     {
         /*
-         * Campo 10 (VL_SLD_DEV_ANT_DIFAL) Validação: Se (VL_TOT_DEBITOS_DIFAL + VL_OUT_DEB_DIFAL+ VL_TOT_DEB_FCP)
-         * menos (VL_SLD_CRED_ANT_DIFAL + VL_TOT_CREDITOS_DIFAL + VL_OUT_CRED_DIFAL + VL_TOT_CRED_FCP) for maior
-         * ou igual a ZERO, então o resultado deverá ser igual ao VL_SLD_DEV_ANT_DIFAL; senão VL_SLD_DEV_ANT_DIFAL
-         * deve ser igual a ZERO.
+         * Campo 08 (VL_SLD_DEV_ANT_DIFAL) Validação: Se (VL_TOT_DEBITOS_DIFAL + VL_OUT_DEB_DIFAL) menos
+         * (VL_SLD_CRED_ANT_DIFAL + VL_TOT_CREDITOS_DIFAL + VL_OUT_CRED_DIFAL) for maior ou igual a ZERO,
+         * então o resultado deverá ser igual ao VL_SLD_DEV_ANT_DIFAL; senão VL_SLD_DEV_ANT_DIFAL deve
+         * ser igual a ZERO.
          */
         $somatorio = $this->values->vl_tot_debitos_difal
                     + $this->values->vl_out_deb_difal
-                    + $this->values->vl_tot_deb_fcp
                     - $this->values->vl_sld_cred_ant_difal
                     - $this->values->vl_tot_creditos_difal
-                    - $this->values->vl_out_cred_difal
-                    - $this->values->vl_tot_cred_fcp;
-        if ($somatorio >= 0) {
-            $this->values->vl_sld_dev_ant_difal = $somatorio;
-        } else {
-            $this->values->vl_sld_dev_ant_difal = 0;
+                    - $this->values->vl_out_cred_difal;
+        
+        if (($somatorio > 0 && $this->values->vl_sld_dev_ant_difal == 0)
+        || ($somatorio < 0 && $this->values->vl_sld_dev_ant_difal != 0)) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Se (VL_TOT_DEBITOS_DIFAL + VL_OUT_DEB_DIFAL) "
+            ."menos (VL_SLD_CRED_ANT_DIFAL + VL_TOT_CREDITOS_DIFAL + VL_OUT_CRED_DIFAL) for maior ou igual a "
+            ."ZERO, então o resultado deverá ser igual ao VL_SLD_DEV_ANT_DIFAL; senão VL_SLD_DEV_ANT_DIFAL deve "
+            ."ser igual a ZERO.");
         }
 
         /*
-         * Campo 12 (VL_RECOL) Validação: Se (VL_SLD_DEV_ANT_DIFAL menos VL_DEDUCOES_DIFAL) for maior ou igual a ZERO,
-         * então VL_RECOL é igual ao resultado da equação; senão o VL_RECOL deverá ser igual a ZERO.
+         * Campo 10 (VL_RECOL_DIFAL) Validação: Se (VL_SLD_DEV_ANT_DIFAL menos VL_DEDUCOES_DIFAL) for maior ou igual
+         * a ZERO, então VL_RECOL_DIFAL é igual ao resultado da equação; senão o VL_RECOL_DIFAL deverá ser igual a ZERO.
          */
         $diferenca = $this->values->vl_sld_dev_ant_difal - $this->values->vl_deducoes_difal;
-        if ($diferenca >= 0) {
-            $this->values->vl_recol = $diferenca;
-        } else {
-            $this->values->vl_recol = 0;
-        }
-
-        /*
-         * Campo 13 (VL_SLD_CRED_TRANSPORTAR) Validação: Se (VL_SLD_CRED_ANT_DIFAL + VL_TOT_CREDITOS_DIFAL +
-         * VL_OUT_CRED_DIFAL+ VL_TOT_CRED_FCP) menos (VL_TOT_DEBITOS_DIFAL+ VL_OUT_DEB_DIFAL+ VL_TOT_DEB_FCP) for
-         * maior que ZERO, então VL_SLD_CRED_TRANSPORTAR deve ser igual ao resultado da equação; senão
-         * VL_SLD_CRED_TRANSPORTAR será ZERO.
-         */
-        $somatorio = $this->values->vl_sld_cred_ant_difal
-                    + $this->values->vl_tot_creditos_difal
-                    + $this->values->vl_out_cred_difal
-                    + $this->values->vl_tot_cred_fcp;
-                    - $this->values->vl_tot_debitos_difal;
-                    - $this->values->vl_out_deb_difal;
-                    - $this->values->vl_tot_deb_fcp;
-        if ($somatorio >= 0) {
-            $this->values->vl_sld_cred_transportar = $somatorio;
-        } else {
-            $this->values->vl_sld_cred_transportar = 0;
+        
+        if (($diferenca > 0 && $this->values->vl_recol_difal == 0)
+        || ($diferenca < 0 && $this->values->vl_recol_difal != 0)) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Se (VL_SLD_DEV_ANT_DIFAL menos VL_DEDUCOES_DIFAL) for maior ou igual a ZERO, "
+            ."então VL_RECOL é igual ao resultado da equação; senão o VL_RECOL deverá ser igual a ZERO.");
         }
 
          /*
@@ -242,25 +225,29 @@ class E310 extends Element implements ElementInterface
          */
         $somatorio = $this->values->vl_tot_deb_fcp
                     + $this->values->vl_out_deb_fcp
-                    - $this->values->vl_sld_cred_ant_fcp;
-                    - $this->values->vl_tot_cred_fcp;
+                    - $this->values->vl_sld_cred_ant_fcp
+                    - $this->values->vl_tot_cred_fcp
                     - $this->values->vl_out_cred_fcp;
-        if ($somatorio >= 0) {
-            $this->values->vl_sld_dev_ant_fcp = $somatorio;
-        } else {
-            $this->values->vl_sld_dev_ant_fcp = 0;
+        
+        if (($somatorio > 0 && $this->values->vl_sld_dev_ant_fcp == 0)
+        || ($somatorio < 0 && $this->values->vl_sld_dev_ant_fcp != 0)) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Se (VL_TOT_DEB_FCP + VL_OUT_DEB_FCP) menos (VL_SLD_CRED_ANT_FCP "
+            ."+ VL_TOT_CRED_FCP + VL_OUT_CRED_FCP) for maior ou igual a ZERO, então o resultado deverá ser igual ao "
+            ."VL_SLD_DEV_ANT_FCP; senão VL_SLD_DEV_ANT_FCP deve ser igual a ZERO.");
         }
 
         /*
-         * Campo 20 (VL_RECOL_FCP) Validação: Se (VL_SLD_DEV_ANT_FCP menos VL_DEDUCOES_FCP) for maior
-         * ou igual a ZERO, então VL_RECOL_FCP é igual ao resultado da equação; senão o VL_RECOL_FCP
-         * deverá ser igual a ZERO.
-         */
+        * Campo 20 (VL_RECOL_FCP) Validação: Se (VL_SLD_DEV_ANT_FCP menos VL_DEDUCOES_FCP) for maior
+        * ou igual a ZERO, então VL_RECOL_FCP é igual ao resultado da equação; senão o VL_RECOL_FCP
+        * deverá ser igual a ZERO.
+        */
         $diferenca = $this->values->vl_sld_dev_ant_fcp - $this->values->vl_deducoes_fcp;
-        if ($diferenca >= 0) {
-            $this->values->vl_recol_fcp = $diferenca;
-        } else {
-            $this->values->vl_recol_fcp = 0;
+        
+        if (($diferenca > 0 && $this->values->vl_recol_fcp == 0)
+        || ($diferenca < 0 && $this->values->vl_recol_fcp != 0)) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Se (VL_SLD_DEV_ANT_FCP menos VL_DEDUCOES_FCP) for maior "
+            ."ou igual a ZERO, então VL_RECOL_FCP é igual ao resultado da equação; senão o VL_RECOL_FCP "
+            ."deverá ser igual a ZERO.");
         }
 
         /*
@@ -271,14 +258,17 @@ class E310 extends Element implements ElementInterface
          */
         $somatorio = $this->values->vl_sld_cred_ant_fcp
                     + $this->values->vl_tot_cred_fcp
-                    + $this->values->vl_out_cred_fcp;
-                    + $this->values->vl_deducoes_fcp;
-                    - $this->values->vl_tot_deb_fcp;
+                    + $this->values->vl_out_cred_fcp
+                    + $this->values->vl_deducoes_fcp
+                    - $this->values->vl_tot_deb_fcp
                     - $this->values->vl_out_deb_fcp;
-        if ($somatorio >= 0) {
-            $this->values->vl_sld_cred_transportar_fcp = $somatorio;
-        } else {
-            $this->values->vl_sld_cred_transportar_fcp = 0;
+        
+        if (($somatorio > 0 && $this->values->vl_sld_cred_transportar_fcp == 0)
+        || ($somatorio < 0 && $this->values->vl_sld_cred_transportar_fcp != 0)) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Se (VL_SLD_CRED_ANT_FCP + VL_TOT_CRED_FCP "
+            ."+ VL_OUT_CRED_FCP + VL_DEDUÇÕES_FCP) menos (VL_TOT_DEB_FCP + VL_OUT_DEB_FCP) for maior que ZERO, "
+            ."então VL_SLD_CRED_TRANSPORTAR_FCP deve ser igual ao resultado da equação; senão "
+            ."VL_SLD_CRED_TRANSPORTAR_FCP será ZERO.");
         }
     }
 }
