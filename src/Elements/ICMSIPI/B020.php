@@ -69,8 +69,8 @@ class B020 extends Element implements ElementInterface
             'format'   => ''
         ],
         'CHV_NFE' => [
-            'type'     => 'string',
-            'regex'    => '^\d{44}$',
+            'type'     => 'numeric',
+            'regex'    => '^([0-9]{44})?$',
             'required' => false,
             'info'     => 'Chave da Nota Fiscal Eletrônica',
             'format'   => ''
@@ -178,8 +178,9 @@ class B020 extends Element implements ElementInterface
          * Campo 03 (IND_EMIT) Validação: se este campo tiver valor igual a “1” (um),
          * o campo IND_OPER deve ser igual a “0” (zero).
          */
-        if ($this->std->ind_emit == '1') {
-            $this->std->ind_oper = 0;
+        if ($this->std->ind_emit == '1' && $this->std->ind_oper != 0) {
+            throw new \InvalidArgumentException("[" . self::REG . "] Se o campo IND_EMIT tiver valor igual a “1” (um), "
+            ."o campo IND_OPER deve ser igual a “0” (zero).");
         }
 
         /*

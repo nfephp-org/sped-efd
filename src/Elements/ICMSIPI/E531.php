@@ -72,8 +72,8 @@ class E531 extends Element implements ElementInterface
             'format'   => '15v2'
         ],
         'CHV_NFE' => [
-            'type'     => 'string',
-            'regex'    => '^.{44}$',
+            'type'     => 'numeric',
+            'regex'    => '^([0-9]{44})?$',
             'required' => false,
             'info'     => 'Chave da Nota Fiscal Eletrônica (modelo 55)',
             'format'   => ''
@@ -96,8 +96,8 @@ class E531 extends Element implements ElementInterface
         /*
          * Campo 10 (CHV_NFE) Validação: A informação da chave é obrigatória quando o COD_MOD = “55”.
          */
-        if (empty($this->std->chv_nfe) && $this->std->cod_mod == '55') {
-            $this->std->ind_oper = 0;
+        if ($this->std->cod_mod == '55' && empty($this->std->chv_nfe)) {
+            throw new \InvalidArgumentException("[" . self::REG . "] A informação da chave é obrigatória quando o COD_MOD = “55”.");
         }
     }
 }
