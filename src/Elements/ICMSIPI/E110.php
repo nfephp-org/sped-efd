@@ -133,8 +133,8 @@ class E110 extends Element implements ElementInterface
          */
         $diferenca = $this->values->vl_sld_apurado - $this->values->vl_tot_ded;
         if ($diferenca < 0 && ($this->values->vl_icms_recolher != 0 || $this->values->vl_sld_credor_transportar == 0)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] O valor informado deve corresponder à diferença entre o "
-            ."campo VL_SLD_APURADO e o campo VL_TOT_DED. Se o resultado dessa operação for negativo, informe"
+            throw new \InvalidArgumentException("[" . self::REG . "] O valor informado deve corresponder à diferença "
+            ."entre o campo VL_SLD_APURADO e o campo VL_TOT_DED. Se o resultado dessa operação for negativo, informe "
             ."o valor zero neste campo, e o valor absoluto correspondente no campo VL_SLD_CREDOR_TRANSPORTAR.");
         }
 
@@ -172,7 +172,7 @@ class E110 extends Element implements ElementInterface
             ."ou igual a “0” (zero), então este valor deve ser informado neste campo e o campo 14 "
             ."(VL_SLD_CREDOR_TRANSPORTAR) deve ser igual a “0” (zero). Se o valor da expressão for menor que "
             ."“0” (zero), então este campo deve ser preenchido com “0” (zero) e o valor absoluto da expressão deve "
-            ."ser informado no campo VL_SLD_CREDOR_TRANSPORTAR, adicionado ao valor total das deduções (VL_TOT_DED)"); 
+            ."ser informado no campo VL_SLD_CREDOR_TRANSPORTAR, adicionado ao valor total das deduções (VL_TOT_DED)");
         }
     }
 }
