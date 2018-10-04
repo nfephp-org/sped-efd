@@ -8,9 +8,9 @@ use \stdClass;
 
 class Z0400 extends Element implements ElementInterface
 {
-    const REG = 'Z0400';
+    const REG = '0400';
     const LEVEL = 3;
-    const PARENT = 'Z0100';
+    const PARENT = '0100';
 
     protected $parameters = [
         'COD_NAT' => [

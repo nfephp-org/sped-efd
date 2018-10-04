@@ -17,4 +17,4 @@ echo "{$z0035}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0035|63402238000163|Desricao teste|Informacao|<br>';
+echo '|0035|63402238000163|Desricao teste|Informacao|<br>';

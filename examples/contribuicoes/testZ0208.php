@@ -17,4 +17,4 @@ echo "{$z0208}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0208|04|PV|Marca comercial|<br>';
+echo '|0208|04|PV|Marca comercial|<br>';

@@ -8,7 +8,7 @@ use \stdClass;
 
 class Z0000 extends Element implements ElementInterface
 {
-    const REG = 'Z0000';
+    const REG = '0000';
     const LEVEL = 0;
     const PARENT = '';
 

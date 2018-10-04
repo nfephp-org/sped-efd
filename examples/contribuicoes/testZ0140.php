@@ -22,4 +22,4 @@ echo "{$z0140}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0140|RRE43|Nome Estabelecimento|40814340000170|11|246018000|2938437|1H18RU|904385925|<br>';
+echo '|0140|RRE43|Nome Estabelecimento|40814340000170|11|246018000|2938437|1H18RU|904385925|<br>';
