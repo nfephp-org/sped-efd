@@ -27,4 +27,4 @@ echo "{$z0100}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0100|Nome de teste|52543658629|739W1MS3XAR0YFQ|40814340000170|26370963|Endereco de teste|2038|apt 202|Nome do bairro|11998444444|1133334444|teste@teste,com|1134564|<br>';
+echo '|0100|Nome de teste|52543658629|739W1MS3XAR0YFQ|40814340000170|26370963|Endereco de teste|2038|apt 202|Nome do bairro|11998444444|1133334444|teste@teste,com|1134564|<br>';

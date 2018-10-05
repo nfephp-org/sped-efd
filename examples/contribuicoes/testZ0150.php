@@ -26,4 +26,4 @@ echo "{$z0150}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0150|3323443|Nome completo|01058|40814340000170|52543658629|246018000|2700102|RT84YVEKX|Endereco|3029|Complemento|Bairro|<br>';
+echo '|0150|3323443|Nome completo|01058|40814340000170|52543658629|246018000|2700102|RT84YVEKX|Endereco|3029|Complemento|Bairro|<br>';

@@ -16,4 +16,4 @@ echo "{$z0400}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0400|2223275|Descricao|<br>';
+echo '|0400|2223275|Descricao|<br>';

@@ -8,9 +8,9 @@ use \stdClass;
 
 class Z0205 extends Element implements ElementInterface
 {
-    const REG = 'Z0205';
+    const REG = '0205';
     const LEVEL = 4;
-    const PARENT = 'Z0200';
+    const PARENT = '0200';
 
     protected $parameters = [
         'DESCR_ANT_ITEM' => [

@@ -18,4 +18,4 @@ echo "{$z0110}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|Z0110|3|1|2|1|<br>';
+echo '|0110|3|1|2|1|<br>';
