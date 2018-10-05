@@ -207,15 +207,17 @@ class E310 extends Element implements ElementInterface
         }
 
         /*
-         * Campo 10 (VL_RECOL_DIFAL) Validação: Se (VL_SLD_DEV_ANT_DIFAL menos VL_DEDUCOES_DIFAL) for maior ou igual
-         * a ZERO, então VL_RECOL_DIFAL é igual ao resultado da equação; senão o VL_RECOL_DIFAL deverá ser igual a ZERO.
+         * Campo 10 (VL_RECOL_DIFAL) Validação: Se (VL_SLD_DEV_ANT_DIFAL menos VL_DEDUCOES_DIFAL) for maior
+         * ou igual a ZERO, então VL_RECOL_DIFAL é igual ao resultado da equação; senão o VL_RECOL_DIFAL
+         * deverá ser igual a ZERO.
          */
         $diferenca = $this->values->vl_sld_dev_ant_difal - $this->values->vl_deducoes_difal;
         
         if (($diferenca > 0 && $this->values->vl_recol_difal == 0)
         || ($diferenca < 0 && $this->values->vl_recol_difal != 0)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Se (VL_SLD_DEV_ANT_DIFAL menos VL_DEDUCOES_DIFAL) for maior ou igual a ZERO, "
-            ."então VL_RECOL é igual ao resultado da equação; senão o VL_RECOL deverá ser igual a ZERO.");
+            throw new \InvalidArgumentException("[" . self::REG . "] Se (VL_SLD_DEV_ANT_DIFAL menos VL_DEDUCOES_DIFAL) "
+            ."for maior ou igual a ZERO, então VL_RECOL é igual ao resultado da equação; senão o VL_RECOL deverá "
+            ."ser igual a ZERO.");
         }
 
          /*
@@ -231,9 +233,9 @@ class E310 extends Element implements ElementInterface
         
         if (($somatorio > 0 && $this->values->vl_sld_dev_ant_fcp == 0)
         || ($somatorio < 0 && $this->values->vl_sld_dev_ant_fcp != 0)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Se (VL_TOT_DEB_FCP + VL_OUT_DEB_FCP) menos (VL_SLD_CRED_ANT_FCP "
-            ."+ VL_TOT_CRED_FCP + VL_OUT_CRED_FCP) for maior ou igual a ZERO, então o resultado deverá ser igual ao "
-            ."VL_SLD_DEV_ANT_FCP; senão VL_SLD_DEV_ANT_FCP deve ser igual a ZERO.");
+            throw new \InvalidArgumentException("[" . self::REG . "] Se (VL_TOT_DEB_FCP + VL_OUT_DEB_FCP) menos "
+            ."(VL_SLD_CRED_ANT_FCP + VL_TOT_CRED_FCP + VL_OUT_CRED_FCP) for maior ou igual a ZERO, então o "
+            ."resultado deverá ser igual ao VL_SLD_DEV_ANT_FCP; senão VL_SLD_DEV_ANT_FCP deve ser igual a ZERO.");
         }
 
         /*
@@ -245,8 +247,8 @@ class E310 extends Element implements ElementInterface
         
         if (($diferenca > 0 && $this->values->vl_recol_fcp == 0)
         || ($diferenca < 0 && $this->values->vl_recol_fcp != 0)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Se (VL_SLD_DEV_ANT_FCP menos VL_DEDUCOES_FCP) for maior "
-            ."ou igual a ZERO, então VL_RECOL_FCP é igual ao resultado da equação; senão o VL_RECOL_FCP "
+            throw new \InvalidArgumentException("[" . self::REG . "] Se (VL_SLD_DEV_ANT_FCP menos VL_DEDUCOES_FCP) "
+            ."for maior ou igual a ZERO, então VL_RECOL_FCP é igual ao resultado da equação; senão o VL_RECOL_FCP "
             ."deverá ser igual a ZERO.");
         }
 
