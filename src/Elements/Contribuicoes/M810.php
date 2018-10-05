@@ -1,0 +1,69 @@
+<?php
+
+namespace NFePHP\EFD\Elements\Contribuicoes;
+
+use NFePHP\EFD\Common\Element;
+use NFePHP\EFD\Common\ElementInterface;
+use \stdClass;
+
+class M810 extends Element implements ElementInterface
+{
+    const REG = 'M810';
+    const LEVEL = 3;
+    const PARENT = 'M800';
+
+    protected $parameters = [
+        'NAT_REC' => [
+            'type' => 'string',
+            'regex' => '^(4|4|5)$',
+            'required' => false,
+            'info' => 'Natureza da Receita, conforme relação constante nas Tabelas de Detalhamento da Natureza ' .
+                'da Receita por Situação Tributária abaixo ' .
+                ' - Tabela 4.3.10 ' .
+                ' Produtos Sujeitos à Incidência Monofásica da Contribuição Social – Alíquotas ' .
+                'Diferenciadas (CST 04 - Revenda) ' .
+                ' - Tabela 4.3.11 ' .
+                ' Produtos Sujeitos à Incidência Monofásica da Contribuição Social – Alíquotas por ' .
+                'Unidade de Medida de Produto (CST 04 - Revenda) ' .
+                ' - Tabela 4.3.12 ' .
+                ' Produtos Sujeitos à Substituição Tributária da Contribuição Social (CST 05 - ' .
+                'Revenda) ' .
+                ' - Tabela 4.3.13 ' .
+                ' Produtos Sujeitos à Alíquota Zero da Contribuição Social (CST 06) ' .
+                ' ',
+            'format' => ''
+        ],
+        'VL_REC' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Valor da receita bruta no período, relativo a natureza da receita (NAT_REC) ',
+            'format' => '15v2'
+        ],
+        'COD_CTA' => [
+            'type' => 'string',
+            'regex' => '^(.*)$',
+            'required' => false,
+            'info' => 'Código da debitada/creditada. ',
+            'format' => ''
+        ],
+        'DESC_COMPL' => [
+            'type' => 'string',
+            'regex' => '^(.*)$',
+            'required' => false,
+            'info' => 'Descrição Complementar da Natureza da Receita. ',
+            'format' => ''
+        ],
+
+    ];
+
+    /**
+     * Constructor
+     * @param \stdClass $std
+     */
+    public function __construct(\stdClass $std)
+    {
+        parent::__construct(self::REG);
+        $this->std = $this->standarize($std);
+    }
+}
