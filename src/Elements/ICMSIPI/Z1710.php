@@ -10,9 +10,24 @@ class Z1710 extends Element implements ElementInterface
 {
     const REG = '1710';
     const LEVEL = 3;
-    const PARENT = '';
+    const PARENT = '1700';
 
-    protected $parameters = [];
+    protected $parameters = [
+        'NUM_DOC_INI' => [
+            'type'     => 'integer',
+            'regex'    => '^\d{1,12}$',
+            'required' => true,
+            'info'     => 'Número do dispositivo autorizado (inutilizado) inicial',
+            'format'   => ''
+        ],
+        'NUM_DOC_FIN' => [
+            'type'     => 'integer',
+            'regex'    => '^\d{1,12}$',
+            'required' => true,
+            'info'     => 'Número do dispositivo autorizado (inutilizado) final',
+            'format'   => ''
+        ]
+    ];
 
     /**
      * Constructor

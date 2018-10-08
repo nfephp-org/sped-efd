@@ -15,7 +15,7 @@ class E316 extends Element implements ElementInterface
     protected $parameters = [
         'COD_OR' => [
             'type'     => 'string',
-            'regex'    => '^\d{1,3}$',
+            'regex'    => '^00([3-6]|0)|090$',
             'required' => true,
             'info'     => 'Código da obrigação recolhida ou a recolher, conforme a Tabela 5.4',
             'format'   => ''
@@ -76,7 +76,7 @@ class E316 extends Element implements ElementInterface
         ],
         'MES_REF' => [
             'type'     => 'integer',
-            'regex'    => '^((?!(13^))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
+            'regex'    => '^(\d{6})$',
             'required' => true,
             'info'     => 'Informe o mês de referência no formato “mmaaaa”',
             'format'   => ''

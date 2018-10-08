@@ -10,9 +10,31 @@ class Z1925 extends Element implements ElementInterface
 {
     const REG = '1925';
     const LEVEL = 5;
-    const PARENT = '';
+    const PARENT = '1920';
 
-    protected $parameters = [];
+    protected $parameters = [
+        'COD_INF_ADIC' => [
+            'type'     => 'string',
+            'regex'    => '^.{8}$',
+            'required' => true,
+            'info'     => 'Código da informação adicional conforme tabela a ser definida pelas SEFAZ, conforme tabela definida no item 5.2.',
+            'format'   => ''
+        ],
+        'VL_INF_ADIC' => [
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'required' => true,
+            'info'     => 'Valor referente à informação adicional',
+            'format'   => '15v2'
+        ],
+        'DESCR_COMPL_AJ' => [
+            'type'     => 'string',
+            'regex'    => '^.*$',
+            'required' => false,
+            'info'     => 'Descrição complementar do ajuste',
+            'format'   => ''
+        ]
+    ];
 
     /**
      * Constructor

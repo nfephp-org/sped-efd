@@ -10,9 +10,31 @@ class Z1370 extends Element implements ElementInterface
 {
     const REG = '1370';
     const LEVEL = 3;
-    const PARENT = '';
+    const PARENT = '1350';
 
-    protected $parameters = [];
+    protected $parameters = [
+        'NUM_BICO' => [
+            'type'     => 'integer',
+            'regex'    => '^\d{1,3}$',
+            'required' => true,
+            'info'     => 'Número sequencial do bico ligado a bomba',
+            'format'   => ''
+        ],
+        'COD_ITEM' => [
+            'type'     => 'string',
+            'regex'    => '^.{1,60}$',
+            'required' => true,
+            'info'     => 'Código do Produto, constante do registro 0200',
+            'format'   => ''
+        ],
+        'NUM_TANQUE' => [
+            'type'     => 'string',
+            'regex'    => '^.{1,3}$',
+            'required' => true,
+            'info'     => 'Tanque que armazena o combustível.',
+            'format'   => ''
+        ]
+    ];
 
     /**
      * Constructor
