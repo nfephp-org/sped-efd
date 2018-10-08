@@ -134,7 +134,8 @@ class Z1100 extends Element implements ElementInterface
          * Campo 06 (NRO_RE) Preenchimento: este campo deve ser preenchido se o campo IND_DOC for “0” (zero).
          */
         if ($this->std->ind_doc == 0 && empty($this->std->nro_re)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Este campo deve ser preenchido se o campo IND_DOC for “0” (zero).");
+            throw new \InvalidArgumentException("[" . self::REG . "] Este campo deve ser preenchido se o "
+            ."campo IND_DOC for “0” (zero).");
         }
     }
 }

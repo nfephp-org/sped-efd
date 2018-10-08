@@ -17,7 +17,9 @@ class Z1923 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^.{1,60}$',
             'required' => true,
-            'info'     => 'Código do participante (campo 02 do Registro 0150): - do emitente do documento ou do remetente das mercadorias, no caso de entradas; - do adquirente, no caso de saídas',
+            'info'     => 'Código do participante (campo 02 do Registro 0150): '
+            .'- do emitente do documento ou do remetente das mercadorias, no caso de entradas; '
+            .'- do adquirente, no caso de saídas',
             'format'   => ''
         ],
         'COD_MOD' => [

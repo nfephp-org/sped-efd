@@ -17,7 +17,8 @@ class Z1110 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^.{1,60}$',
             'required' => true,
-            'info'     => 'Código do participante-Fornecedor da Mercadoria destinada à exportação (campo 02 do Registro 0150)',
+            'info'     => 'Código do participante-Fornecedor da Mercadoria destinada '
+            .'à exportação (campo 02 do Registro 0150)',
             'format'   => ''
         ],
         'COD_MOD' => [

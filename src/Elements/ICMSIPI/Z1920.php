@@ -28,7 +28,7 @@ class Z1920 extends Element implements ElementInterface
             'format'   => '15v2'
         ],
         'VL_ESTORNOS_CRED_OA' => [
-            'type'     => 'numeric',        
+            'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info'     => 'V alor total de Ajustes “Estornos de créditos”',

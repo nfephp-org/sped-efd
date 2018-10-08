@@ -73,7 +73,8 @@ class Z1960 extends Element implements ElementInterface
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Saldo devedor relativo à faixa incentivada de PI após o crédito presumido nas saídas para fora do Nordeste',
+            'info'     => 'Saldo devedor relativo à faixa incentivada de PI após o '
+            .'crédito presumido nas saídas para fora do Nordeste',
             'format'   => '15v2'
         ],
         'G1_09' => [

@@ -17,7 +17,8 @@ class Z1925 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^.{8}$',
             'required' => true,
-            'info'     => 'Código da informação adicional conforme tabela a ser definida pelas SEFAZ, conforme tabela definida no item 5.2.',
+            'info'     => 'Código da informação adicional conforme tabela a ser '
+            .'definida pelas SEFAZ, conforme tabela definida no item 5.2.',
             'format'   => ''
         ],
         'VL_INF_ADIC' => [

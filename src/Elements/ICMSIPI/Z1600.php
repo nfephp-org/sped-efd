@@ -17,7 +17,8 @@ class Z1600 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^.{1,60}$',
             'required' => true,
-            'info'     => 'Código do participante (campo 02 do Registro 0150): identificação da instituição financeira e/ou de pagamento',
+            'info'     => 'Código do participante (campo 02 do Registro 0150): identificação "
+            ."da instituição financeira e/ou de pagamento',
             'format'   => ''
         ],
         'TOT_CREDITO' => [

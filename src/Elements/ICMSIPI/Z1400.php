@@ -16,10 +16,10 @@ class Z1400 extends Element implements ElementInterface
         'COD_ITEM_IPM' => [
             'type'     => 'string',
             'regex'    => '^.{1,60}$',
-            'required' => true,        
+            'required' => true,
             'info'     => 'Código do item (Tabela própria da unidade da federação '
             .'(Tabela de Itens UF Índice de Participação dos Municípios) '
-            .'ou campo 02 do Registro 0200',        
+            .'ou campo 02 do Registro 0200',
             'format'   => ''
         ],
         'MUN' => [
@@ -56,7 +56,8 @@ class Z1400 extends Element implements ElementInterface
          * Se o valor for negativo ou zero, o contribuinte não deve prestar a informação no mês.
          */
         if ($this->values->valor <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Se o valor for negativo ou zero, o contribuinte não deve prestar a informação no mês.");
+            throw new \InvalidArgumentException("[" . self::REG . "] Se o valor for negativo ou "
+            ."zero, o contribuinte não deve prestar a informação no mês.");
         }
     }
 }

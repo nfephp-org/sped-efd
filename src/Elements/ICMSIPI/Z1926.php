@@ -38,7 +38,8 @@ class Z1926 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^.*$',
             'required' => true,
-            'info'     => 'Código de receita referente à obrigação, próprio da unidade da federação, conforme legislação estadual,',
+            'info'     => 'Código de receita referente à obrigação, próprio da unidade da federação, '
+            .'conforme legislação estadual,',
             'format'   => ''
         ],
         'NUM_PROC' => [

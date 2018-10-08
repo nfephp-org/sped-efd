@@ -23,7 +23,7 @@ class Z1391 extends Element implements ElementInterface
         'QTD_MOID' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
-            'required' => false,        
+            'required' => false,
             'info'     => 'Quantidade de cana esmagada (toneladas)',
             'format'   => '15v2'
         ],
@@ -45,8 +45,9 @@ class Z1391 extends Element implements ElementInterface
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info'     => 'Entrada de álcool anidro decorrente da transformação do álcool hidratado ou Entrada de álcool '
-            .'hidratado decorrente da transformação do álcool anidro (litros)',
+            'info'     => 'Entrada de álcool anidro decorrente da transformação '
+            .'do álcool hidratado ou Entrada de álcool hidratado decorrente da '
+            .'transformação do álcool anidro (litros)',
             'format'   => '15v2'
         ],
         'OUTR_ENTR' => [

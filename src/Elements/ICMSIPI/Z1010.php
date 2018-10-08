@@ -26,7 +26,8 @@ class Z1010 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^[S|N]$',
             'required' => true,
-            'info'     => 'Reg 1200 – Existem informações acerca de créditos de ICMS a serem controlados, definidos pela Sefaz: '
+            'info'     => 'Reg 1200 – Existem informações acerca de créditos de ICMS a serem '
+            .'controlados, definidos pela Sefaz: '
             .'S– Sim '
             .'N - Não',
             'format'   => ''
@@ -35,7 +36,8 @@ class Z1010 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^[S|N]$',
             'required' => true,
-            'info'     => 'Reg. 1300 – É comércio varejista de combustíveis com movimentação e/ou estoque no período: '
+            'info'     => 'Reg. 1300 – É comércio varejista de combustíveis com movimentação 
+            '.'e/ou estoque no período: '
             .'S– Sim '
             .'N - Não',
             'format'   => ''
@@ -44,8 +46,8 @@ class Z1010 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^[S|N]$',
             'required' => true,
-            'info'     => 'Reg. 1390 – Usinas de açúcar e/álcool – O estabelecimento é produtor de açúcar e/ou álcool '
-            .'carburante com movimentação e/ou estoque no período: '
+            'info'     => 'Reg. 1390 – Usinas de açúcar e/álcool – O estabelecimento é produtor 
+            '.'de açúcar e/ou álcool carburante com movimentação e/ou estoque no período: '
             .'S – Sim '
             .'N - Não',
             'format'   => ''
@@ -54,8 +56,8 @@ class Z1010 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^[S|N]$',
             'required' => true,
-            'info'     => 'Reg 1400 – Sendo o registro obrigatório em sua Unidade de Federação, existem informações a serem '
-            .'prestadas neste registro: '
+            'info'     => 'Reg 1400 – Sendo o registro obrigatório em sua Unidade de Federação, 
+            '.'existem informações a serem prestadas neste registro: '
             .'S – Sim; '
             .'N - Não',
             'format'   => ''
@@ -64,8 +66,8 @@ class Z1010 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^[S|N]$',
             'required' => true,
-            'info'     => 'Reg 1500 - A empresa é distribuidora de energia e ocorreu fornecimento de energia elétrica para '
-            .'consumidores de outra UF: '
+            'info'     => 'Reg 1500 - A empresa é distribuidora de energia e ocorreu fornecimento 
+            '.'de energia elétrica para consumidores de outra UF: '
             .'S – Sim; '
             .'N - Não',
             'format'   => ''
@@ -83,8 +85,8 @@ class Z1010 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^[S|N]$',
             'required' => true,
-            'info'     => 'Reg. 1700 – Foram emitidos documentos fiscais em papel no período em unidade da federação que '
-            .'exija o controle de utilização de documentos fiscais: '
+            'info'     => 'Reg. 1700 – Foram emitidos documentos fiscais em papel no período em '
+            .'unidade da federação que exija o controle de utilização de documentos fiscais: '
             .'S – Sim '
             .'N - Não',
             'format'   => ''
@@ -93,7 +95,8 @@ class Z1010 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^[S|N]$',
             'required' => true,
-            'info'     => 'Reg 1800 – A empresa prestou serviços de transporte aéreo de cargas e de passageiros: '
+            'info'     => 'Reg 1800 – A empresa prestou serviços de transporte aéreo de cargas e '
+            .'de passageiros: '
             .'S– Sim '
             .'N - Não',
             'format'   => ''

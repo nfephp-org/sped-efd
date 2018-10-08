@@ -99,22 +99,25 @@ class Z1300 extends Element implements ElementInterface
     public function postValidation()
     {
         /*
-         * Campo 06 (VOL_DISP) Preenchimento: informar o volume disponível, que corresponde à soma dos campos ESTQ_ABERT e VOL_ENTR.
+         * Campo 06 (VOL_DISP) Preenchimento: informar o volume disponível, que corresponde
+         * à soma dos campos ESTQ_ABERT e VOL_ENTR.
          */
         $somatorio = $this->values->estq_abert + $this->values->vol_entr;
         if ($this->std->vol_disp != number_format($somatorio, 3, ',', '')) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Informar o volume disponível, que corresponde à soma dos campos "
-            ."ESTQ_ABERT e VOL_ENTR.");
+            throw new \InvalidArgumentException("[" . self::REG . "] Informar o volume "
+            ."disponível, que corresponde à soma dos campos ESTQ_ABERT e VOL_ENTR.");
         }
 
         /*
-         * Campo 08 (ESTQ_ESCR) Preenchimento: informar o estoque escritural, que corresponde ao valor constante no campo VOL_DISP
+         * Campo 08 (ESTQ_ESCR) Preenchimento: informar o estoque escritural, que corresponde
+         * ao valor constante no campo VOL_DISP
          * menos o valor constante no campo VOL_SAIDAS.
          */
         $diferenca = $this->values->vol_disp - $this->values->vol_saidas;
         if ($this->std->estq_escr != number_format($diferenca, 3, ',', '')) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Informar o estoque escritural, que corresponde ao valor "
-            ."constante no campo VOL_DISP menos o valor constante no campo VOL_SAIDAS.");
+            throw new \InvalidArgumentException("[" . self::REG . "] Informar o estoque "
+            ."escritural, que corresponde ao valor constante no campo VOL_DISP menos o "
+            ."valor constante no campo VOL_SAIDAS.");
         }
     }
 }
