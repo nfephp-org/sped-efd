@@ -26,8 +26,8 @@ class Z0206 extends Element implements ElementInterface
     protected $parameters = [
         'COD_COMB' => [
             'type'     => 'string',
-            'regex'    => '^.{3,255}$',
-            'required' => false,
+            'regex'    => '^[0-9]{9}$',
+            'required' => true,
             'info'     => 'Código do produto, conforme tabela publicada pela ANP',
             'format'   => ''
         ]
