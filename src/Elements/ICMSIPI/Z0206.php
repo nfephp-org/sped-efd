@@ -9,11 +9,11 @@ use \stdClass;
 /**
  * Elemento 0206 do Bloco 0
  * REGISTRO 0206: CÓDIGO DE PRODUTO CONFORME TABELA PUBLICADA PELA ANP
- * Este  registro  tem  por  objetivo  informar  o  código  correspondente  
+ * Este  registro  tem  por  objetivo  informar  o  código  correspondente
  * ao  produto  constante  na  Tabela  da  Agência Nacional de Petróleo (ANP).
  * Deve ser apresentado apenas pelos contribuintes produtores, importadores,
  * distribuidores e postos de combustíveis.
- * 
+ *
  * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente
  * numeréricos e também para não confundir os com elementos do bloco B
  */
