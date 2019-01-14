@@ -28,7 +28,7 @@ class C190 extends Element implements ElementInterface
         ],
         'CFOP' => [
             'type' => 'numeric',
-            'regex' => '^(\d{3})$',
+            'regex' => '^(\d{4})$',
             'required' => true,
             'info' => 'Código Fiscal de Operação e Prestação do agrupamento de itens',
             'format' => ''

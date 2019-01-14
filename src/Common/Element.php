@@ -72,6 +72,7 @@ abstract class Element
                     $newstd->$key = null;
                     continue;
                 }
+
                 //se o valor para o parametro foi passado, então validar
                 $resp = $this->isFieldInError(
                     $std->$key,

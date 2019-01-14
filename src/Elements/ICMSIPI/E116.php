@@ -28,7 +28,7 @@ class E116 extends Element implements ElementInterface
             'format'   => '15v2'
         ],
         'DT_VCTO' => [
-            'type'     => 'integer',
+            'type'     => 'numeric',
             'regex'    => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
             'required' => true,
             'info'     => 'Data de vencimento da obrigação',
@@ -75,7 +75,7 @@ class E116 extends Element implements ElementInterface
             'format'   => ''
         ],
         'MES_REF' => [
-            'type'     => 'integer',
+            'type'     => 'numeric',
             'regex'    => '^((?!(13^))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
             'required' => true,
             'info'     => 'Informe o mês de referência no formato “mmaaaa”',
