@@ -75,15 +75,13 @@ class Z0200 extends Element implements ElementInterface
             'info'     => 'Representação alfanumérico do código de barra do produto, se houver',
             'format'   => ''
         ],
-        /*
-         * Se existir, indicar em 0205
         'COD_ANT_ITEM' => [
             'type'     => 'string',
             'regex'    => '^.{1,6}$',
             'required' => false,
             'info'     => 'Código anterior do item com relação à última informação anterior',
             'format'   => ''
-        ],*/
+        ],
         'UNID_INV' => [
             'type'     => 'string',
             'regex'    => '^.{1,6}$',
