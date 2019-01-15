@@ -57,6 +57,10 @@ abstract class EFD
                 }
             }
         }
+
+        //Inicializa o bloco 9
+        $tot .= "|9001|0|\n";
+
         $n = 0;
         foreach ($keys as $key => $value) {
             if (!empty($key)) {
@@ -65,8 +69,14 @@ abstract class EFD
             }
         }
         $n++;
-        $tot .= "|9900|9900|$n|\n" . "|9990|". ($n+2) ."|\n";
+
+        $tot .= "|9900|9001|1|\n";
+        $tot .= "|9900|9900|". ($n+3)."|\n";
+        $tot .= "|9900|9990|1|\n";
+        $tot .= "|9900|9999|1|\n";
+        $tot .= "|9990|". ($n+6) ."|\n";
         $efd .= $tot;
+
         $n = count(explode("\n", $efd));
         $tot .= "|9999|$n|\n";
         return $tot;
