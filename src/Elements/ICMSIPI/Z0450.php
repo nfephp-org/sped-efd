@@ -10,15 +10,15 @@ use \stdClass;
  * Elemento 0450 do Bloco 0
  *
  * Este registro tem por objetivo codificar todas as informações complementares
- * dos documentos fiscais exigidas pela legislação fiscal. Estas informações 
+ * dos documentos fiscais exigidas pela legislação fiscal. Estas informações
  * constam no campo “Dados Adicionais” dos documentos fiscais.
- *  
- * Esta codificação e suas descrições são livremente criadas e mantidas pelo 
- * contribuinte e não podem ser informados dois ou mais registros com o mesmo 
+ *
+ * Esta codificação e suas descrições são livremente criadas e mantidas pelo
+ * contribuinte e não podem ser informados dois ou mais registros com o mesmo
  * conteúdo no campo COD_INF.
- *  
- * Deverão constar todas as informações complementares de interesse do fisco 
- * existentes nos documentos fiscais. Exemplo: nos casos de documentos fiscais 
+ *
+ * Deverão constar todas as informações complementares de interesse do fisco
+ * existentes nos documentos fiscais. Exemplo: nos casos de documentos fiscais
  * de entradas de devolução, informar o documento fiscal referenciado.
  *
  * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente
