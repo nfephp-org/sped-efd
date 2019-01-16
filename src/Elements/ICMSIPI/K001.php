@@ -19,7 +19,7 @@ class K001 extends Element implements ElementInterface
 
     protected $parameters = [
         'ind_mov' => [
-            'type'     => 'integer',
+            'type'     => 'numeric',
             'regex'    => '^[0-1]{1}$',
             'required' => true,
             'info'     => 'Indicador de movimento: 0- Bloco com dados informados; 1- Bloco sem dados informados.',

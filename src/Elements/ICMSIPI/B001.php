@@ -14,7 +14,7 @@ class B001 extends Element implements ElementInterface
 
     protected $parameters = [
         'IND_DAD' => [
-            'type'     => 'string',
+            'type'     => 'numeric',
             'regex'    => '^[0|1]$',
             'required' => true,
             'info'     => 'Indicador de movimento: '

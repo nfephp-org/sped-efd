@@ -41,14 +41,14 @@ class Z0150 extends Element implements ElementInterface
     protected $parameters = [
         'COD_PART' => [
             'type'     => 'string',
-            'regex'    => '^.{3,60}$',
+            'regex'    => '^.{1,60}$',
             'required' => true,
             'info'     => 'Código de identificação do participante no arquivo.',
             'format'   => ''
         ],
         'NOME' => [
             'type'     => 'string',
-            'regex'    => '^.{3,100}$',
+            'regex'    => '^.{1,100}$',
             'required' => true,
             'info'     => 'Nome pessoal ou empresarial do participante.',
             'format'   => ''
@@ -98,7 +98,7 @@ class Z0150 extends Element implements ElementInterface
         ],
         'END' => [
             'type'     => 'string',
-            'regex'    => '^.{3,60}$',
+            'regex'    => '^.{1,60}$',
             'required' => true,
             'info'     => 'Logradouro e endereço do imóvel',
             'format'   => ''
@@ -112,14 +112,14 @@ class Z0150 extends Element implements ElementInterface
         ],
         'COMPL' => [
             'type'     => 'string',
-            'regex'    => '^.{3,60}$',
+            'regex'    => '^.{1,60}$',
             'required' => false,
             'info'     => 'Dados complementares do endereço',
             'format'   => ''
         ],
         'BAIRRO' => [
             'type'     => 'string',
-            'regex'    => '^.{3,60}$',
+            'regex'    => '^.{1,60}$',
             'required' => false,
             'info'     => 'Bairro em que o imóvel está situado',
             'format'   => ''

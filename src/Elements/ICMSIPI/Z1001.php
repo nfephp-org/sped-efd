@@ -14,7 +14,7 @@ class Z1001 extends Element implements ElementInterface
 
     protected $parameters = [
         'IND_MOV' => [
-            'type'     => 'integer',
+            'type'     => 'numeric',
             'regex'    => '^[0|1]$',
             'required' => true,
             'info'     => 'Indicador de movimento: '

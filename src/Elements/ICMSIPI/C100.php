@@ -94,7 +94,7 @@ class C100 extends Element implements ElementInterface
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Valor total do documento fiscal',
-            'format' => ''
+            'format' => '15v2'
         ],
         'IND_PGTO' => [
             'type' => 'string',
@@ -108,21 +108,21 @@ class C100 extends Element implements ElementInterface
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor total do desconto',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_ABAT_NT' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Abatimento não tributado e não comercial Ex. desconto ICMS nas remessas para ZFM.',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_MERC' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor total das mercadorias e serviços',
-            'format' => ''
+            'format' => '15v2'
         ],
         'IND_FRT' => [
             'type' => 'string',
