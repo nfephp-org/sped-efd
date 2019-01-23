@@ -1,8 +1,20 @@
 # sped-efd
 
-## EM DESENVOLVIMENTO !!! não util ...
+## EM DESENVOLVIMENTO 
 
 Classes para a geração do SPED EFD (fiscal ICMS IPI) e para o SPED EFD contribuições
+
+### EFD ICMS IPI v3.0.1 Leiaute 13 - válido a partir de 01 de janeiro de 2019.
+### EFD Contribuições v3.1.0 Leiaute 5 - válido a partir de 01 de janeiro de 2019.
+
+## Controle de Versões 
+
+O controle de versão SEMPRE será relativo ao layout adotado a cada ANO Fiscal.
+Por exemplo:
+v1.0 da API ==> EFD ICMS 2019 (layout 13) e EFD Contribuições 2019 (leyout 5)
+v2.0 da API ==> EFD ICMS 2020 (layout 14) e EFD Contribuições 2020 (leyout 6)
+
+E assim por diante.
 
 ## IMPORTANTE
 
