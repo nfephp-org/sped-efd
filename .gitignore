@@ -1,5 +1,6 @@
 .idea
 .~lock*
+.vscode
 limpaTAB.php
 local
 vendor
