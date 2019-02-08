@@ -11,7 +11,6 @@ $std->IND_EMIT = '0';
 $std->COD_PART = str_repeat('1234567890',6);
 $std->COD_SIT = '07';
 $std->SER = '000';
-$std->SUB = '000';
 $std->NUM_DOC = '123456789';
 $std->CHV_NFE = '43171207364617000135550000000120141000120146';
 $std->DT_DOC = date('dmY');
