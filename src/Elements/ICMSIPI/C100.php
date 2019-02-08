@@ -63,7 +63,7 @@ class C100 extends Element implements ElementInterface
         ],
         'NUM_DOC' => [
             'type' => 'numeric',
-            'regex' => '^([0-1]{1})([0-9]{1,8})?$',
+            'regex' => '^[0-9]{1,9}$',
             'required' => true,
             'info' => 'Número do documento fiscal',
             'format' => ''
