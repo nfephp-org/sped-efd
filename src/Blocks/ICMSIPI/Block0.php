@@ -37,6 +37,32 @@ use NFePHP\EFD\Common\BlockInterface;
 final class Block0 extends Block implements BlockInterface
 {
     const TOTAL = '0990';
+
+    private $regversion;
+    
+    public $fieldorder = [
+        '0000' => [0 => [1 => 'REG',2=>'COD_VER',3=>'COD_FIN',4=>'DT_INI',5=>'DT_FIN',6=>'NOME',7=>'CNPJ',8=>'CPF',9=>'UF',10=>'IE',11=>'COD_MUN',12=>'IM',13=>'SUFRAMA',14=>'IND_PERFIL',15=>'IND_ATIV']]
+        '0001' => [0 => [1 => 'REG',2=>'IND_MOV']]
+        '0005' => [0 => [1 => 'REG',2=>'FANTASIA',3=>'CEP',4=>'END',5=>'NUM',6=>'COMPL',7=>'BAIRRO',8=>'FONE',9=>'FAX',10=>'EMAIL']]
+        '0015' => [0 => [1 => 'REG',2=>'UF_ST',3=>'IE_ST']]
+        '0100' => [0 => [1 => 'REG',2=>'NOME',3=>'CPF',4=>'CRC',5=>'CNPJ',6=>'CEP',7=>'END',8=>'NUM',9=>'COMPL',10=>'BAIRRO',11=>'FONE',12=>'FAX',13=>'EMAIL',14=>'COD_MUN']]
+        '0150' => [0 => [1 => 'REG',2=>'COD_PART',3=>'NOME',4=>'COD_PAIS',5=>'CNPJ',6=>'CPF',7=>'IE',8=>'COD_MUN',9=>'SUFRAMA',10=>'END',11=>'NUM',12=>'COMPL',13=>'BAIRRO']]
+        '0175' => [0 => [1 => 'REG',2=>'DT_ALT',3=>'NR_CAMPO',4=>'CONT_ANT']]
+        '0190' => [0 => [1 => 'REG',2=>'UNID',3=>'DESCR']]
+        '0200' => [0 => [1 => 'REG',2=>'COD_ITEM',3=>'DESCR_ITEM',4=>'COD_BARRA',5=>'COD_ANT_ITEM',6=>'UNID_INV',7=>'TIPO_ITEM',8=>'COD_NCM',9=>'EX_IPI',10=>'COD_GEN',11=>'COD_LST',12=>'ALIQ_ICMS',13=>'CEST']]
+        '0205' => [0 => [1 => 'REG',2=>'DESCR_ANT_ITEM',3=>'DT_INI',4=>'DT_FIM',5=>'COD_ANT_ITEM']]
+        '0206' => [0 => [1 => 'REG',2=>'COD_COMB']]
+        '0210' => [0 => [1 => 'REG',2=>'COD_ITEM_COMP',3=>'QTD_COMP',4=>'PERDA']]
+        '0220' => [0 => [1 => 'REG',2=>'UNID_CONV',3=>'FAT_CONV']]
+        '0300' => [0 => [1 => 'REG',2=>'COD_IND_BEM',3=>'IDENT_MERC',4=>'DESCR_ITEM',5=>'COD_PRNC',6=>'COD_CTA',7=>'NR_PARC']]
+        '0305' => [0 => [1 => 'REG',2=>'COD_CCUS',3=>'FUNC',4=>'VIDA_UTIL']]
+        '0400' => [0 => [1 => 'REG',2=>'COD_NAT',3=>'DESCR_NAT']]
+        '0450' => [0 => [1 => 'REG',2=>'COD_INF',3=>'TXT']]
+        '0460' => [0 => [1 => 'REG',2=>'COD_OBS',3=>'TXT']]
+        '0500' => [0 => [1 => 'REG',2=>'DT_ALT',3=>'COD_NAT_CC',4=>'IND_CTA',5=>'NIVEL',6=>'COD_CTA',7=>'NOME_CTA']]
+        '0600' => [0 => [1 => 'REG',2=>'DT_ALT',3=>'COD_CCUS',4=>'CCUS']]
+        '0990' => [0 => [1 => 'REG',2=>'QTD_LIN_0']]
+    ];
     
     public $elements = [
         'z0000' => ['class' => Elements\Z0000::class, 'level' => 0, 'type' => 'single'],
@@ -61,8 +87,17 @@ final class Block0 extends Block implements BlockInterface
         'z0600' => ['class' => Elements\Z0600::class, 'level' => 2, 'type' => 'multiple']
     ];
     
-    public function __construct()
+    public function __construct($versao='')
     {
         parent::__construct(self::TOTAL);
+        
+        if ($version!='') {
+            switch ($version) {
+               case '013': $this->regversion = ['0000'=>0,'0001'=>0,'0005'=>0,'0015'=>0,'0100'=>0,'0150'=>0,'0175'=>0,'0190'=>0,'0200'=>0,'0205'=>0,'0206'=>0,'0210'=>0,'0220'=>0,'0300'=>0,'0305'=>0,'0400'=>0,'0450'=>0,'0460'=>0,'0500'=>0,'0600'=>0,'0990'=>0]
+                   break;
+               default: $this->regversion = ['0000'=>0,'0001'=>0,'0005'=>0,'0015'=>0,'0100'=>0,'0150'=>0,'0175'=>0,'0190'=>0,'0200'=>0,'0205'=>0,'0206'=>0,'0210'=>0,'0220'=>0,'0300'=>0,'0305'=>0,'0400'=>0,'0450'=>0,'0460'=>0,'0500'=>0,'0600'=>0,'0990'=>0]
+                   break;
+           }
+        }
     }
 }
