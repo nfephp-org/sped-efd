@@ -83,7 +83,7 @@ class Z0150 extends Element implements ElementInterface
             'format'   => ''
         ],
         'COD_MUN' => [
-            'type'     => 'string',
+            'type'     => 'integer',
             'regex'    => '^[0-9]{7}$',
             'required' => false,
             'info'     => 'Código do município, conforme a tabela IBGE',
