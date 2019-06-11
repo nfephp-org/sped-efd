@@ -294,7 +294,7 @@ class C170 extends Element implements ElementInterface
 
     public function postValidation()
     {
-        if (((float)$this->std->qtd) <= 0) {
+        if (((float)  str_replace('.', '', str_replace(',', '.', $this->std->qtd))) <= 0) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " O valor do campo  Quantidade do item (QTD) deve ser maior do que zero ");
         }

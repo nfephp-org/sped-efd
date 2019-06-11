@@ -71,7 +71,7 @@ class H010 extends Element implements ElementInterface
         ],
         'COD_PART' => [
             'type'     => 'string',
-            'regex'    => '^[0-9]{11,14}',
+            'regex'    => '^.{1,60}$',
             'required' => false,
             'info'     => 'Código do participante (campo 02 do Registro 0150): '
             . '- proprietário/possuidor que não seja o informante do arquivo',
