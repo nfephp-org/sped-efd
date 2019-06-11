@@ -11,6 +11,19 @@ use NFePHP\EFD\Common\BlockInterface;
  *
  * Esta classe irá usar um recurso para invocar as classes de cada um dos elementos
  * constituintes listados
+ * @method Elements\B001 b001(\stdClass $std) Constructor element B001
+ * @method Elements\B020 b020(\stdClass $std) Constructor element B020
+ * @method Elements\B025 b025(\stdClass $std) Constructor element B025
+ * @method Elements\B030 b030(\stdClass $std) Constructor element B030
+ * @method Elements\B035 b035(\stdClass $std) Constructor element B035
+ * @method Elements\B350 b350(\stdClass $std) Constructor element B350
+ * @method Elements\B420 b420(\stdClass $std) Constructor element B420
+ * @method Elements\B440 b440(\stdClass $std) Constructor element B440
+ * @method Elements\B460 b460(\stdClass $std) Constructor element B460
+ * @method Elements\B470 b470(\stdClass $std) Constructor element B470
+ * @method Elements\B500 b500(\stdClass $std) Constructor element B500
+ * @method Elements\B510 b510(\stdClass $std) Constructor element B510
+ *
  */
 final class BlockB extends Block implements BlockInterface
 {
