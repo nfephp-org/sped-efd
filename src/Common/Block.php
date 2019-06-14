@@ -1,5 +1,6 @@
 <?php
 namespace NFePHP\EFD\Common;
+
 /**
  * Classe abstrata basica de onde cada bloco é cunstruido
  */

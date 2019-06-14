@@ -38,7 +38,8 @@ class K235 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^.{1,60}$',
             'required' => false,
-            'info'     => 'Código do insumo que foi substituído, caso ocorra a substituição (campo 02 do Registro 0210)',
+            'info'     => 'Código do insumo que foi substituído, '
+            . 'caso ocorra a substituição (campo 02 do Registro 0210)',
             'format'   => ''
         ],
     ];

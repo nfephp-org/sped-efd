@@ -1,0 +1,3142 @@
+{
+    "ALIQ_COFINS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ALIQ_COFINSV": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ALIQ_ICMS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ALIQ_ICMS_ULT_E": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ALIQ_IMP_BASE": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ALIQ_IPI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ALIQ_ISS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ALIQ_ISSQN": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ALIQ_PIS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ALIQ_PISV": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ALIQ_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ALIQ_ST_ULT_E": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "BAIRRO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "BC_ICMS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "BC_RET": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "BC_ST_ORIG_DEST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CCUS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CEP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CEST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CFOP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CHASSI_VEIC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CHAVE_NFE_RET": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CHAVE_NFE_ULT_E": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CHC_EMB": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CHV_CFE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CHV_COD_DIG": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CHV_CTE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CHV_CTE_REF": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CHV_DOCE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CHV_NFE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CHV_NFE_CTE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CL_ENQ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CNPJ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CNPJ_COL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CNPJ_CPF": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CNPJ_CPF_COL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CNPJ_CPF_DEST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CNPJ_CPF_EMIT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CNPJ_CPF_ENTG": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CNPJ_CPF_REM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CNPJ_CPF_TOM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CNPJ_ENTG": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CNPJ_INTERV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_AJ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_AJ_APUR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_ANT_ITEM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_AREA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_AUT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_BARRA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_CCUS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_CLASS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_COMB": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_CONS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_CTA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_CTD": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_DA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_DISP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_DOC_IMP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_DOC_OP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_DOC_OS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_ENQ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_FIN": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_GEN": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_GRUPO_TENSAO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_IND_BEM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_INF": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_INF_ADIC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_INF_ITEM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_INF_OBS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_INS_SUBST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_ITEM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_ITEM_COMP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_ITEM_DES": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_ITEM_DEST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_ITEM_IP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_ITEM_ORI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_LST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_MOD": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_MOD_ULT_E": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_MOT_RES": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_MUN": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_MUN_COL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_MUN_DEST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_MUN_ENTG": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_MUN_ORI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_MUN_ORIG": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_MUN_SERV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_NAT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_NAT_CC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_NCM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_OBS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_OP_OS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_OR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_PAIS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_PART": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_PART_CONSG": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_PART_NFE_RET": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_PART_RED": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_PART_ULT_E": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_PRNC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_PROD": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_REC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_RESP_RET": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_SERV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_SIT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_TOT_PAR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COD_VER": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COFINS_IMP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "COMPL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CONS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CONT_ANT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CPF": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CPF_CNPJ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CPF_COL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CPF_ENTG": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CPF_INTERV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CRC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CRED_APR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CRED_RECEB": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CRED_UTIL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CRO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CRZ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CST_COFINS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CST_ICMS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CST_IPI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CST_PIS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CTA_COSIF": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "CTA_ISS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DEB_ESP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DEB_ESP_DIFAL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DEB_ESP_FCP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DEB_ESP_OA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DEB_ESP_ST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DESCR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DESCR_AJ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DESCR_ANT_ITEM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DESCR_COMPL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DESCR_COMPL_AJ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DESCR_COMPL_OUT_APUR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DESCR_ITEM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DESCR_NAT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DESCR_NR_TOT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DESC_TIT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DESPACHO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DOC_FIM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DOC_INI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_ALT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_APLICACAO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_AVB": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_A_P": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_CHC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_CONS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_DE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_DOC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_DOC_FIN": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_DOC_INI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_EST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_E_S": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_FAB": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_FECH": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_FIM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_FIN": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_FIN_AP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_FIN_OP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_FIN_OS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_FIN_SERV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_INI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_INI_AP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_INI_OP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_INI_OS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_INI_SERV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_INV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_MOV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_PGTO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_PROD": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_RE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_REGISTRO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_RET": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_SA\u00cdDA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_ULT_E": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_VAL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "DT_VCTO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ECF_CX": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ECF_FAB": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ECF_MOD": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "EMAIL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "END": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ENT_ANID_HID": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ESTQ_ABERT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ESTQ_ESCR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ESTQ_FIN": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ESTQ_INI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ESTQ_INI_MEL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "EX_IPI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "FABRICANTE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "FANTASIA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "FAT_CONV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "FAX": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "FECH_FISICO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "FONE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "FUNC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G1_01": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G1_02": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G1_03": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G1_04": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G1_05": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G1_06": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G1_07": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G1_08": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G1_09": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G1_10": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G1_11": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_01": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_02": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_03": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_04": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_05": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_06": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_07": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_08": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_09": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_10": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_11": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G3_12": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_01": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_02": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_03": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_04": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_05": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_06": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_07": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_08": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_09": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_10": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_11": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "G4_12": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "GT_FIN": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "HORA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ICMS_APROP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ICMS_RET": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ICMS_ST_COMPL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ICMS_ST_REP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IDENT_MERC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IE_COL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IE_DEST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IE_EMIT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IE_ENTG": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IE_REM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IE_ST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IE_TOM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_AER": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_AJ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_AP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_APUR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_APUR_ICMS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_ARM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_ATIV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_CARGA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_CART": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_CCRF": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_COMB": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_CTA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_DAD": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_DED": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_DOC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_EE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_EMIT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_ESC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_EST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_EXP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_FORM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_FRT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_FRT_RED": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_GIAF1": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_GIAF3": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_GIAF4": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_MED": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_MOV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_MOV_FCP_DIFAL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_MOV_ST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_NAT_FRT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_NAV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_OBR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_OPER": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_PERFIL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_PER_SAI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_PGTO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_PROC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_PROF": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_PROP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_RAT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_REC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_SERV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_SOC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_TFA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_TIT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_USINA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_VA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_VEIC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "IND_VEIC_OPER": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ITEM_NFE_RET": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "LOTE_MED": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "MES_REF": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "MODELO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "MOT_INTERV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "MOT_INV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "MUN": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NAT_EXP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NOME": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NOME_CTA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NOM_ADQ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NOM_INTERV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NOM_MEST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NOM_MOT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NRO_DE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NRO_ORD_FIN": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NRO_ORD_INI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NRO_RE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NR_CAMPO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NR_DOC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NR_INTERV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NR_MEMO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NR_PARC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NR_PASSE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NR_SAT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NR_TOT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_ACDRAW": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_ARM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_AUT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_BICO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_CCF": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_CFE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_COO_FIN": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_DA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_DOC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_DOC_CANC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_DOC_FIN": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_DOC_IMP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_DOC_INI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_DOC_ULT_E": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_ITEM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_ITEM_ULT_E": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_LACRE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_NFE_RET": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_PARC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_PROC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_SEQ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_TANQUE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "NUM_TIT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "N\u00cdVEL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "OBS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "OPER": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "ORIGEM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "OTM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "OUTR_ENTR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "PAIS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "PERDA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "PER_FISCAL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "PESO_BRT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "PESO_LIQ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "PIS_IMP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "PROC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "PROD_ALC_MEL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "PROD_DIA_MEL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTDE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_BILH": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_CANC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_COMP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_CONS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_COR_NEG": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_COR_POS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_DES": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_DEST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_ENC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_ITEM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_MOID": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_OCOR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_ORI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_PARC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_PRODUZ": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_PROF": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_RET": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_SA\u00cdDA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QTD_VOL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QUANT_BC_COFINS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QUANT_BC_PIS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QUANT_PAD": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "QUANT_ULT_E": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SAIDAS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SAI_ANI_HID": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SALDO_IN_ICMS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SER": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SERIE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SER_NFE_RET": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SER_ULT_E": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SLD_CRED": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SLD_CRED_FIM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SOM_ICMS_OC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SOM_PARC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SUB": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SUB_SER": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "SUFRAMA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TEMPER": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TERMINAL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TIPO_ITEM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TIPO_MEDICAO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TIPO_MOV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TIPO_UTI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TOT_CREDITO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TOT_DEBITO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TPLIGACAO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TP_ASSINANTE": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TP_CHC": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TP_CT-E": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TP_LIGACAO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TP_PROD": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TXT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "TXT_COMPL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "UF": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "UF_EMIT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "UF_ID": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "UF_ST": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "UF_TOM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "UNID": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "UNID_CONV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "UNID_INV": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "UTIL_MEL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VALOR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VAL_ABERT": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VAL_AJ_GANHO": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VAL_AJ_PERDA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VAL_FECHA": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VEIC_ID": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VIAGEM": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VIDA_UTIL": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VLR_ACUM_TOT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ABAT_NT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ACMO": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_AJ": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_AJ_APUR": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_AJ_CREDITOS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_AJ_CREDITOS_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_AJ_DEBITOS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_AJ_DEBITOS_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_AJ_ITEM": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_COFINS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_ICMS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_ICMS_APUR": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_ICMS_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_ICMS_UF": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_IPI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_IRRF": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_ISS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_ISSQN": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_ISS_P": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_ISS_RT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_PIS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BC_PREV": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_BRT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_CANC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_CARGA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_CFE": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_COFINS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_COFINS_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_CONT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_CONT_IPI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_CONT_P": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_CONT_RT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_CRED_IPI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_CRED_UTIL": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DEB_IPI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DED": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DEDUCOES_FCP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DEDU\u00c7\u00d5ES_DIFAL": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DEDU\u00c7\u00d5ES_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DED_BC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DESC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DESP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DESP_CAR_DESC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DESP_PORT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DEVOL_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DIF": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_DOC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ESTORNOS_CRED": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ESTORNOS_CRED_OA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ESTORNOS_DEB": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ESTORNOS_DEB_OA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_FAT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_FCP_OP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_FCP_RET": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_FCP_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_FCP_UF_DEST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_FORN": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_FRT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_FRT_BRT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_FRT_LIQ": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_FRT_MM": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_GRIS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ICMS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ICMS_ANT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ICMS_APUR": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ICMS_RECOLHER": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ICMS_RECOLHER_OA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ICMS_RECOL_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ICMS_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ICMS_UF": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ICMS_UF_DEST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ICMS_UF_REM": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_IMOB_ICMS_DIF": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_IMOB_ICMS_FRT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_IMOB_ICMS_OP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_IMOB_ICMS_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_INF_ADIC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_INV": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_IPI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_IRRF": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ISEN": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ISNT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ISNT_ISS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ISNT_ISS_P": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ISS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ISSQN": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ISS_P": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ISS_REC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ISS_REC_UNI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ISS_RT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ISS_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ITEM": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_ITEM_IR": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_LIQ_FRT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_MAT_PROP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_MAT_TERC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_MERC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_NT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OC_IPI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OD_IPI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OPR": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OR": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OUT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OUTDESP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OUTROS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OUT_CRED_DIFAL": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OUT_CRED_FCP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OUT_CRED_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OUT_DA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OUT_DEB_DIFAL": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OUT_DEB_FCP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_OUT_DEB_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_PARC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_PARC_APROP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_PARC_PASS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_PASS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_PDG": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_PEDG": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_PESO_TX": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_PIS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_PIS_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_PREV": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_REC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_RECOL_DIFAL": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_RECOL_FCP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_RED_BC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_RESSARC_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_RETEN\u00c7AO_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SC_IPI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SD_ANT_IPI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SD_IPI": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SEC_CAT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SEG": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SERV": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SERV_NT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_APURADO": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_APURADO_OA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_CREDOR_ANT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_CREDOR_ANT_OA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_CREDOR_TRANSPORTAR": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_CREDOR_TRANSP_OA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_CRED_ANT_DIFAL": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_CRED_ANT_FCP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_CRED_ANT_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_CRED_ST_TRANSPORTAR": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_CRED_TRANSPORTAR_DIFAL": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_CRED_TRANSPORTAR_FCP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_DEV_ANT_DIFAL": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_DEV_ANT_FCP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SLD_DEV_ANT_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_SUB": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TAB_MAX": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TERC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TIT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOTAL": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_AJ_CREDITOS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_AJ_CREDITOS_OA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_AJ_DEBITOS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_AJ_DEBITOS_OA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_CREDITOS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_CREDITOS_DIFAL": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_CRED_FCP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_DEBITOS": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_DEBITOS_DIFAL": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_DEB_FCP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_DED": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_TRANSF_CREDITOS_OA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TOT_TRANSF_DEBITOS_OA": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TRIB_EXP": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TRIB_OC": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TX_ADV": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TX_RED": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_TX_TERR": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_UNID": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_UNIT": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_UNIT_BC_ICMS_ULT_E": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_UNIT_BC_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_UNIT_ICMS_ULT_E": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_UNIT_LIMITE_BC_ICMS_ULT_E": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_UNIT_RES": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_UNIT_RES_FCP_ST": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VL_UNIT_ULT_E": {
+        "type": "numeric",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VOL_AFERI": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VOL_DISP": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VOL_ENTR": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VOL_SAIDAS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    },
+    "VOL_VENDAS": {
+        "type": "{type}",
+        "regex": "{regex}",
+        "format": "{numeric format}"
+    }
+}
