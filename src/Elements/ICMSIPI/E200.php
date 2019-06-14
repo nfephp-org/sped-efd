@@ -21,14 +21,14 @@ class E200 extends Element implements ElementInterface
             'format'   => ''
         ],
         'DT_INI' => [
-            'type'     => 'integer',
+            'type'     => 'string',
             'regex'    => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
             'required' => true,
             'info'     => 'Data inicial a que a apuração se refere',
             'format'   => ''
         ],
         'DT_FIN' => [
-            'type'     => 'integer',
+            'type'     => 'string',
             'regex'    => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
             'required' => true,
             'info'     => 'Data final a que a apuração se refere',

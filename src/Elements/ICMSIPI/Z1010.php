@@ -100,7 +100,34 @@ class Z1010 extends Element implements ElementInterface
             .'S– Sim '
             .'N - Não',
             'format'   => ''
-        ]
+        ],
+        'IND_GIAF1' => [
+            'type'     => 'string',
+            'regex'    => '^[S|N]$',
+            'required' => true,
+            'info'     => 'Reg. 1960 - Possui informações GIAF1?'
+                .'S– Sim '
+                .'N - Não',
+            'format'   => ''
+        ],
+        'IND_GIAF3' => [
+            'type'     => 'string',
+            'regex'    => '^[S|N]$',
+            'required' => true,
+            'info'     => 'Reg. 1960 - Possui informações GIAF3?'
+                .'S– Sim '
+                .'N - Não',
+            'format'   => ''
+        ],
+        'IND_GIAF4' => [
+            'type'     => 'string',
+            'regex'    => '^[S|N]$',
+            'required' => true,
+            'info'     => 'Reg. 1960 - Possui informações GIAF4?'
+                .'S– Sim '
+                .'N - Não',
+            'format'   => ''
+        ],
     ];
 
     /**

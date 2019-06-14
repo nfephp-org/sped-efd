@@ -11,6 +11,70 @@ use NFePHP\EFD\Common\BlockInterface;
  *
  * Esta classe irá usar um recurso para invocar as classes de cada um dos elementos
  * constituintes listados
+ *
+ * @method Elements\C001 c001(\stdClass $std) Constructor element C001
+ * @method Elements\C100 c100(\stdClass $std) Constructor element C100
+ * @method Elements\C101 c101(\stdClass $std) Constructor element C101
+ * @method Elements\C105 c105(\stdClass $std) Constructor element C105
+ * @method Elements\C110 c110(\stdClass $std) Constructor element C110
+ * @method Elements\C111 c111(\stdClass $std) Constructor element C111
+ * @method Elements\C112 c112(\stdClass $std) Constructor element C112
+ * @method Elements\C113 c113(\stdClass $std) Constructor element C113
+ * @method Elements\C114 c114(\stdClass $std) Constructor element C114
+ * @method Elements\C115 c115(\stdClass $std) Constructor element C115
+ * @method Elements\C116 c116(\stdClass $std) Constructor element C116
+ * @method Elements\C120 c120(\stdClass $std) Constructor element C120
+ * @method Elements\C130 c130(\stdClass $std) Constructor element C130
+ * @method Elements\C140 c140(\stdClass $std) Constructor element C140
+ * @method Elements\C141 c141(\stdClass $std) Constructor element C141
+ * @method Elements\C160 c160(\stdClass $std) Constructor element C160
+ * @method Elements\C165 c165(\stdClass $std) Constructor element C165
+ * @method Elements\C170 c170(\stdClass $std) Constructor element C170
+ * @method Elements\C171 c171(\stdClass $std) Constructor element C171
+ * @method Elements\C172 c172(\stdClass $std) Constructor element C172
+ * @method Elements\C173 c173(\stdClass $std) Constructor element C173
+ * @method Elements\C174 c174(\stdClass $std) Constructor element C174
+ * @method Elements\C175 c175(\stdClass $std) Constructor element C175
+ * @method Elements\C176 c176(\stdClass $std) Constructor element C176
+ * @method Elements\C177 c177(\stdClass $std) Constructor element C177
+ * @method Elements\C178 c178(\stdClass $std) Constructor element C178
+ * @method Elements\C179 c179(\stdClass $std) Constructor element C179
+ * @method Elements\C190 c190(\stdClass $std) Constructor element C190
+ * @method Elements\C191 c191(\stdClass $std) Constructor element C191
+ * @method Elements\C195 c195(\stdClass $std) Constructor element C195
+ * @method Elements\C197 c197(\stdClass $std) Constructor element C197
+ * @method Elements\C300 c300(\stdClass $std) Constructor element C300
+ * @method Elements\C310 c310(\stdClass $std) Constructor element C310
+ * @method Elements\C320 c320(\stdClass $std) Constructor element C320
+ * @method Elements\C321 c321(\stdClass $std) Constructor element C321
+ * @method Elements\C350 c350(\stdClass $std) Constructor element C350
+ * @method Elements\C370 c370(\stdClass $std) Constructor element C370
+ * @method Elements\C390 c390(\stdClass $std) Constructor element C390
+ * @method Elements\C400 c400(\stdClass $std) Constructor element C400
+ * @method Elements\C405 c405(\stdClass $std) Constructor element C405
+ * @method Elements\C410 c410(\stdClass $std) Constructor element C410
+ * @method Elements\C420 c420(\stdClass $std) Constructor element C420
+ * @method Elements\C425 c425(\stdClass $std) Constructor element C425
+ * @method Elements\C460 c460(\stdClass $std) Constructor element C460
+ * @method Elements\C465 c465(\stdClass $std) Constructor element C465
+ * @method Elements\C470 c470(\stdClass $std) Constructor element C470
+ * @method Elements\C490 c490(\stdClass $std) Constructor element C490
+ * @method Elements\C495 c495(\stdClass $std) Constructor element C495
+ * @method Elements\C500 c500(\stdClass $std) Constructor element C500
+ * @method Elements\C510 c510(\stdClass $std) Constructor element C510
+ * @method Elements\C590 c590(\stdClass $std) Constructor element C590
+ * @method Elements\C600 c600(\stdClass $std) Constructor element C600
+ * @method Elements\C601 c601(\stdClass $std) Constructor element C601
+ * @method Elements\C610 c610(\stdClass $std) Constructor element C610
+ * @method Elements\C690 c690(\stdClass $std) Constructor element C690
+ * @method Elements\C700 c700(\stdClass $std) Constructor element C700
+ * @method Elements\C790 c790(\stdClass $std) Constructor element C790
+ * @method Elements\C791 c791(\stdClass $std) Constructor element C791
+ * @method Elements\C800 c800(\stdClass $std) Constructor element C800
+ * @method Elements\C850 c850(\stdClass $std) Constructor element C850
+ * @method Elements\C860 c860(\stdClass $std) Constructor element C860
+ * @method Elements\C890 c890(\stdClass $std) Constructor element C890
+ *
  */
 final class BlockC extends Block implements BlockInterface
 {

@@ -108,7 +108,7 @@ class Z0100 extends Element implements ElementInterface
             'format'   => ''
         ],
         'COD_MUN' => [
-            'type'     => 'string',
+            'type'     => 'integer',
             'regex'    => '^[0-9]{7}$',
             'required' => true,
             'info'     => 'Código do município, conforme tabela IBGE.',

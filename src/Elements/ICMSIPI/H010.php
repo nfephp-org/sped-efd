@@ -26,7 +26,7 @@ class H010 extends Element implements ElementInterface
     protected $parameters = [
         'COD_ITEM' => [
             'type'     => 'string',
-            'regex'    => '^.{3,60}',
+            'regex'    => '^.{1,60}',
             'required' => true,
             'info'     => 'Código do item (campo 02 do Registro 0200)',
             'format'   => ''
@@ -71,7 +71,7 @@ class H010 extends Element implements ElementInterface
         ],
         'COD_PART' => [
             'type'     => 'string',
-            'regex'    => '^[0-9]{11,14}',
+            'regex'    => '^.{1,60}$',
             'required' => false,
             'info'     => 'Código do participante (campo 02 do Registro 0150): '
             . '- proprietário/possuidor que não seja o informante do arquivo',
@@ -86,7 +86,7 @@ class H010 extends Element implements ElementInterface
         ],
         'COD_CTA' => [
             'type'     => 'string',
-            'regex'    => '^.{3,255}',
+            'regex'    => '^.{1,255}',
             'required' => false,
             'info'     => 'Código da conta analítica contábil debitada/creditada',
             'format'   => ''
