@@ -52,7 +52,7 @@ final class BlockE extends Block implements BlockInterface
         'e115' => ['class' => Elements\E115::class, 'level' => 4, 'type' => 'multiple'],
         'e116' => ['class' => Elements\E116::class, 'level' => 4, 'type' => 'multiple'],
         'e200' => ['class' => Elements\E200::class, 'level' => 2, 'type' => 'multiple'],
-        'e210' => ['class' => Elements\E200::class, 'level' => 3, 'type' => 'single'],
+        'e210' => ['class' => Elements\E210::class, 'level' => 3, 'type' => 'single'],
         'e220' => ['class' => Elements\E220::class, 'level' => 4, 'type' => 'multiple'],
         'e230' => ['class' => Elements\E230::class, 'level' => 5, 'type' => 'multiple'],
         'e240' => ['class' => Elements\E240::class, 'level' => 5, 'type' => 'multiple'],
