@@ -2,7 +2,8 @@
 
 namespace NFePHP\EFD\Common;
 
-use \NFePHP\Common\Strings;
+use ForceUTF8\Encoding;
+use NFePHP\Common\Strings;
 
 class Parser
 {
@@ -37,7 +38,9 @@ class Parser
         $contentfile = str_replace(['- ', ' -'], '-', $contentfile);
         $contentfile = str_replace('\r', '', $contentfile);
         $contentfile = strtoupper($contentfile);
-
+        $contentfile = Encoding::fixUTF8($contentfile);
+        $contentfile = Strings::squashCharacters($contentfile);
+        
         $datas = $this->block($contentfile);
         foreach ($datas as $data) {
             foreach ($data as $key => $d) {
@@ -51,7 +54,9 @@ class Parser
                 }
                 foreach ($d as $n => $value) {
                     $name = $node[$n];
-                    $value = str_replace(',', '.', Strings::toASCII($value));
+                    $value = str_replace(',', '.', $value);
+                    $value = str_replace(["\r","\t","\n"], "", $value);
+                    $value = preg_replace('/(?:\s\s+)/', ' ', $value);
                     $value = preg_replace("/[^a-zA-Z0-9 @,-_.;:\/]/", "", $value);
                     $vars[$name] = trim($value);
                 }
