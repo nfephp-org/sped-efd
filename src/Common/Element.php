@@ -81,7 +81,8 @@ abstract class Element
                     $std->$key,
                     $stdParam->$key,
                     strtoupper($key),
-                    $this->reg
+                    $this->reg,
+                    $stdParam->$key->required
                 );
                 if ($resp) {
                     $errors[] = $resp;
@@ -109,11 +110,14 @@ abstract class Element
      * @param string $fieldname
      * @return string|boolean
      */
-    protected function isFieldInError($input, $param, $fieldname, $element)
+    protected function isFieldInError($input, $param, $fieldname, $element, $required)
     {
         $type = $param->type;
         $regex = $param->regex;
         if (empty($regex)) {
+            return false;
+        }
+        if ($input === '' && !$required) {
             return false;
         }
         switch ($type) {

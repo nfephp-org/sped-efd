@@ -1,308 +1,308 @@
 {
     "ALIQ_COFINS": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "8v4"
     },
-    "ALIQ_COFINSV": {
+    "ALIQ_COFINS_R": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "15v4"
     },
     "ALIQ_ICMS": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "6v2"
     },
     "ALIQ_ICMS_ULT_E": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "6v2"
     },
     "ALIQ_IMP_BASE": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "8v2"
     },
     "ALIQ_IPI": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "6v2"
     },
     "ALIQ_ISS": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "8v2"
     },
     "ALIQ_ISSQN": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "6v2"
     },
     "ALIQ_PIS": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "8v4"
     },
-    "ALIQ_PISV": {
+    "ALIQ_PIS_R": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "15v4"
     },
     "ALIQ_ST": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "8v2"
     },
     "ALIQ_ST_ULT_E": {
         "type": "numeric",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "8v2"
     },
     "BAIRRO": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{3,60}$",
+        "format": ""
     },
     "BC_ICMS": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "numeric",
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "8v2"
     },
     "BC_RET": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "numeric",
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "15v2"
     },
     "BC_ST_ORIG_DEST": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "numeric",
+        "regex": "\\d+(\\.\\d*)?|\\.\\d+$",
+        "format": "15v2"
     },
     "CCUS": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "format": ""
     },
     "CEP": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^(\\d{8})$",
+        "format": ""
     },
     "CEST": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{7}$",
+        "format": ""
     },
     "CFOP": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "numeric",
+        "regex": "^(\\d{4})$",
+        "format": ""
     },
     "CHASSI_VEIC": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,17}$",
+        "format": ""
     },
     "CHAVE_NFE_RET": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^(\\d{44})$",
+        "format": ""
     },
     "CHAVE_NFE_ULT_E": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^(\\d{44})$",
+        "format": ""
     },
     "CHC_EMB": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,18}$",
+        "format": ""
     },
     "CHV_CFE": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^(\\d{44})$",
+        "format": ""
     },
     "CHV_COD_DIG": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,32}$",
+        "format": ""
     },
     "CHV_CTE": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^(\\d{44})$",
+        "format": ""
     },
     "CHV_CTE_REF": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^(\\d{44})$",
+        "format": ""
     },
     "CHV_DOCE": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^(\\d{44})$",
+        "format": ""
     },
     "CHV_NFE": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^(\\d{44})$",
+        "format": ""
     },
     "CHV_NFE_CTE": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^(\\d{44})$",
+        "format": ""
     },
     "CL_ENQ": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,5}$",
+        "format": ""
     },
     "CNPJ": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "format": ""
     },
     "CNPJ_COL": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "format": ""
     },
     "CNPJ_CPF": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{11,14}$",
+        "format": ""
     },
     "CNPJ_CPF_COL": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{11,14}$",
+        "format": ""
     },
     "CNPJ_CPF_DEST": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{11,14}$",
+        "format": ""
     },
     "CNPJ_CPF_EMIT": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{11,14}$",
+        "format": ""
     },
     "CNPJ_CPF_ENTG": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{11,14}$",
+        "format": ""
     },
     "CNPJ_CPF_REM": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{11,14}$",
+        "format": ""
     },
     "CNPJ_CPF_TOM": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{11,14}$",
+        "format": ""
     },
     "CNPJ_ENTG": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "format": ""
     },
     "CNPJ_INTERV": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "format": ""
     },
     "COD_AJ": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,10}$",
+        "format": ""
     },
     "COD_AJ_APUR": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,8}$",
+        "format": ""
     },
     "COD_ANT_ITEM": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "format": ""
     },
     "COD_AREA": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,200}$",
+        "format": ""
     },
     "COD_AUT": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,200}$",
+        "format": ""
     },
     "COD_BARRA": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,14}",
+        "format": ""
     },
     "COD_CCUS": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,60}",
+        "format": ""
     },
     "COD_CLASS": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^(\\d{4})$",
+        "format": ""
     },
     "COD_COMB": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^[0-9]{9}$",
+        "format": ""
     },
     "COD_CONS": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^\\d{2}$",
+        "format": ""
     },
     "COD_CTA": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,60}",
+        "format": ""
     },
     "COD_CTD": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,60}",
+        "format": ""
     },
     "COD_DA": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^0|1$",
+        "format": ""
     },
     "COD_DISP": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^\\d{2}$",
+        "format": ""
     },
     "COD_DOC_IMP": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^0|1$",
+        "format": ""
     },
     "COD_DOC_OP": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,30}$",
+        "format": ""
     },
     "COD_DOC_OS": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,30}$",
+        "format": ""
     },
     "COD_ENQ": {
-        "type": "{type}",
-        "regex": "{regex}",
-        "format": "{numeric format}"
+        "type": "string",
+        "regex": "^.{1,3}$",
+        "format": ""
     },
     "COD_FIN": {
         "type": "{type}",

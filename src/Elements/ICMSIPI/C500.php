@@ -64,7 +64,7 @@ class C500 extends Element implements ElementInterface
         ],
         'COD_CONS' => [
             'type' => 'string',
-            'regex' => '^.{2}$',
+            'regex' => '^[0-9]{2}$',
             'required' => false,
             'info' => 'Código de classe de consumo de energia elétrica ou gás',
             'format' => ''
