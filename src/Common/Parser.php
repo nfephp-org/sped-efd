@@ -7,6 +7,7 @@ use \NFePHP\Common\Strings;
 class Parser
 {
 
+    public $error = [];
     protected $blocks;
     protected $info = [];
     
@@ -46,7 +47,7 @@ class Parser
                     continue;
                 }
                 if (count($node) !== count($d)) {
-                    throw new Exception("Erro de conteúdo da chave $key");
+                    $this->error[] = "Erro de conteúdo da chave $key";
                 }
                 foreach ($d as $n => $value) {
                     $name = $node[$n];
