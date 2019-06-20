@@ -35,6 +35,20 @@ class C175 extends Element implements ElementInterface
             'info' => 'CNPJ da Concessionária',
             'format' => ''
         ],
+        'UF' => [
+            'type' => 'string',
+            'regex' => '^AC|AL|AM|AP|BA|CE|DF|ES|GO|MA|MG|MS|MT|PA|PB|PE|PI|PR|RJ|RN|RO|RR|RS|SC|SE|SP|TO$',
+            'required' => false,
+            'info' => 'Sigla da unidade da federação da Concessionária',
+            'format' => ''
+        ],
+        'CHASSI_VEIC' => [
+            'type' => 'string',
+            'regex' => '^.{17}$',
+            'required' => false,
+            'info' => 'Chassi do veículo',
+            'format' => ''
+        ]
     ];
 
     /**
