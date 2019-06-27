@@ -42,6 +42,7 @@ class Parser
         $contentfile = Strings::squashCharacters($contentfile);
         
         $datas = $this->block($contentfile);
+        $i = 1;
         foreach ($datas as $data) {
             foreach ($data as $key => $d) {
                 $node = $this->blocks[$key];
@@ -61,7 +62,12 @@ class Parser
                     $vars[$name] = trim($value);
                 }
             }
-            $this->info[] = [$key => $vars];
+            if (substr($key, 1, 2) === '99') {
+                $i++;
+                continue;
+            }
+            $this->info[$i] = [$key => $vars];
+            $i++;
         }
         return $this->info;
     }
@@ -78,8 +84,7 @@ class Parser
             $n = count($arr);
             $fields = array_slice($arr, 1, $n - 2);
             $key = (string) $fields[0];
-            if (substr($key, 1, 3) === '990' || substr($key, 0, 1) === '9'
-            ) {
+            if (substr($key, 0, 1) === '9') {
                 continue;
             }
             array_splice($fields, 0, 1);

@@ -16,10 +16,25 @@ use \stdClass;
 class Z0460 extends Element implements ElementInterface
 {
     const REG = '0460';
-    const LEVEL = 0;
+    const LEVEL = 3;
     const PARENT = '';
     
-    protected $parameters = [];
+    protected $parameters = [
+        'COD_OBS' => [
+            'type'     => 'string',
+            'regex'    => '^.{1,6}$',
+            'required' => true,
+            'info'     => 'Código da Observação do lançamento fiscal',
+            'format'   => ''
+        ],
+        'TXT' => [
+            'type'     => 'string',
+            'regex'    => '^.{1,255}$',
+            'required' => true,
+            'info'     => 'Descrição da observação vinculada ao lançamento fiscal',
+            'format'   => ''
+        ],
+    ];
     
     /**
      * Constructor

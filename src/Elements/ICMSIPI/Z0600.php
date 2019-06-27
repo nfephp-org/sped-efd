@@ -16,10 +16,32 @@ use \stdClass;
 class Z0600 extends Element implements ElementInterface
 {
     const REG = '0600';
-    const LEVEL = 0;
+    const LEVEL = 2;
     const PARENT = '';
     
-    protected $parameters = [];
+    protected $parameters = [
+        'DT_ALT' => [
+            'type'     => 'string',
+            'regex'    => '^[0-9]{8}$',
+            'required' => true,
+            'info'     => 'Data da inclusão/alteração',
+            'format'   => ''
+        ],
+        'COD_CCUS' => [
+            'type'     => 'string',
+            'regex'    => '^.{1,60}$',
+            'required' => true,
+            'info'     => 'Código do centro de custo',
+            'format'   => ''
+        ],
+        'CCUS' => [
+            'type'     => 'string',
+            'regex'    => '^.{1,60}$',
+            'required' => true,
+            'info'     => 'Nome do centro de custo',
+            'format'   => ''
+        ],
+    ];
     
     /**
      * Constructor

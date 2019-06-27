@@ -43,8 +43,8 @@ class D100 extends Element implements ElementInterface
             'format' => ''
         ],
         'COD_PART' => [
-            'type' => 'numeric',
-            'regex' => '^([0-9a-z]{1,66})?$',
+            'type' => 'string',
+            'regex' => '^.{1,60}$',
             'required' => true,
             'info' => 'Código do participante (campo 02 do Registro 0150):',
             'format' => ''
@@ -65,14 +65,14 @@ class D100 extends Element implements ElementInterface
         ],
         'SER' => [
             'type' => 'string',
-            'regex' => '^([0-9a-z]{3,4})?$',
+            'regex' => '^.{1,4}$',
             'required' => false,
             'info' => 'Série do documento fiscal',
             'format' => ''
         ],
         'SUB' => [
             'type' => 'string',
-            'regex' => '^([0-9a-z]{3})?$',
+            'regex' => '^.{1,3})?$',
             'required' => false,
             'info' => 'Subsérie do documento fiscal ',
             'format' => ''
@@ -224,7 +224,7 @@ class D100 extends Element implements ElementInterface
          * iguais a “57” e “67”, respectivamente, de emissão própria ou de terceiros.
          * Se não existir Série para CT-e e CT-e OS, informar 000.
          */
-        if ($this->std->cod_mod == '57' or $this->std->cod_mod == '67') {
+        if ($this->std->cod_mod == '57' || $this->std->cod_mod == '67') {
             if (strlen($this->std->ser) != 3) {
                 throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
                     . "informado 3 numeros para a Série do documento fiscal(SER) " .
@@ -234,12 +234,12 @@ class D100 extends Element implements ElementInterface
         }
 
 
-        if ($this->std->cod_mod == '57' or $this->std->cod_mod == '63' or $this->std->cod_mod == '67') {
+        if ($this->std->cod_mod == '57' || $this->std->cod_mod == '63' || $this->std->cod_mod == '67') {
             /*
              * Campo 13 (TP_CT-e) Preenchimento: informar o tipo de CT-e, BP-e ou CT-e OS,
              * quando o modelo do documento for “57”, “63” ou “67”, respectivamente.
              */
-            if (empty($this->std->tp_ct_e) and (int)$this->std->tp_ct_e!==0) {
+            if (empty($this->std->tp_ct_e) && (int)$this->std->tp_ct_e!==0) {
                 throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
                     . "informado o tipo de CT-e, BP-e ou CT-e OS, quando o modelo do documento for 
                     “57”, “63” ou “67”, respectivamente.");
@@ -259,7 +259,7 @@ class D100 extends Element implements ElementInterface
             if (empty($this->std->cod_mun_dest)) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
                     "Deve ser informado o c[odigo do municiopio de destino (COD_MUN_DEST) quando" .
-                    "códihp do modelo for igual a “57”, “63” ou “67” ");
+                    "código do modelo for igual a “57”, “63” ou “67” ");
             }
         }
 

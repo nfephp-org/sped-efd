@@ -105,7 +105,7 @@ abstract class Element
 
     /**
      * Verifica os campos comrelação ao tipo e seu regex
-     * @param string|integer|float $input
+     * @param string|integer|float|null $input
      * @param stdClass $param
      * @param string $fieldname
      * @return string|boolean
@@ -117,12 +117,12 @@ abstract class Element
         if (empty($regex)) {
             return false;
         }
-        if ($input === '' && !$required) {
+        if (($input === null || $input === '') && !$required) {
             return false;
         }
         switch ($type) {
             case 'integer':
-                if (!is_integer($input)) {
+                if (!is_numeric($input)) {
                     return "[$this->reg] $element campo: $fieldname deve ser um valor numérico inteiro.";
                 }
                 break;
@@ -172,8 +172,10 @@ abstract class Element
         }
         //gravar os valores numericos para possivel posterior validação complexa
         $name = strtolower($fieldname);
+        if ($value === '') {
+            $value = 0;
+        }
         $this->values->$name = (float) $value;
-        
         return $this->numberFormat(floatval($value), $format, $fieldname);
     }
     

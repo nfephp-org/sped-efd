@@ -122,7 +122,8 @@ class E210 extends Element implements ElementInterface
     {
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
-        $this->postValidation();
+        //TODO: essa validação posterior está incorreta
+        //$this->postValidation();
     }
 
     public function postValidation()
