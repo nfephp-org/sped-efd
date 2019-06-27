@@ -28,8 +28,8 @@ class D500 extends Element implements ElementInterface
             'format' => ''
         ],
         'COD_PART' => [
-            'type' => 'numeric',
-            'regex' => '^([0-9a-z]{1,66})?$',
+            'type' => 'string',
+            'regex' => '^.{1,60}$',
             'required' => true,
             'info' => 'Código do participante (campo 02 do Registro 0150):',
             'format' => ''
@@ -50,7 +50,7 @@ class D500 extends Element implements ElementInterface
         ],
         'SER' => [
             'type' => 'string',
-            'regex' => '^([0-9a-z]{3,4})?$',
+            'regex' => '^.{1,4}$',
             'required' => false,
             'info' => 'Série do documento fiscal',
             'format' => ''

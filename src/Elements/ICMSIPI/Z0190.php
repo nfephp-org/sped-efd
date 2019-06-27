@@ -34,7 +34,7 @@ class Z0190 extends Element implements ElementInterface
         ],
         'DESCR' => [
             'type'     => 'string',
-            'regex'    => '^.{3,255}$',
+            'regex'    => '^.{1,255}$',
             'required' => true,
             'info'     => 'Descrição da unidade de medida.',
             'format'   => ''
