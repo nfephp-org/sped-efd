@@ -36,7 +36,6 @@ abstract class Block
 
         $elclass = new $className($arguments[0]);
 
-
         //aqui deve ser feita a construção do bloco
         //para fazer a montagem verificar o elemento pai
         //se não existir elemento pai no bloco disparar um exception
@@ -49,7 +48,7 @@ abstract class Block
 
         $this->bloco .= "{$elclass}\n";
     }
-
+    
     /**
      * Totalizes the elements of the block and returns the complete block
      * in a string adding element 0990

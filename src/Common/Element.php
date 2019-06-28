@@ -26,7 +26,7 @@ abstract class Element
         $this->reg = $reg;
         $this->values = new stdClass();
     }
-
+    
     public function postValidation()
     {
         return true;

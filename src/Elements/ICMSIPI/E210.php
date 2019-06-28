@@ -15,7 +15,7 @@ class E210 extends Element implements ElementInterface
     protected $parameters = [
         'IND_MOV_ST' => [
             'type'     => 'integer',
-            'regex'    => '^[0|1]$',
+            'regex'    => '^[0-1]{1}$',
             'required' => true,
             'info'     => 'Indicador de movimento: 0 – Sem operações com ST 1 – Com operações de ST',
             'format'   => ''
