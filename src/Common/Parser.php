@@ -57,7 +57,7 @@ class Parser
                     $name = $node[$n];
                     $value = str_replace(',', '.', $value);
                     $value = str_replace(["\r","\t","\n"], "", $value);
-                    $value = preg_replace('/(?:\s\s+)/', ' ', $value);
+                    //$value = preg_replace('/(?:\s\s+)/', ' ', $value);
                     $value = preg_replace("/[^a-zA-Z0-9 @,-_.;:\/]/", "", $value);
                     $vars[$name] = trim($value);
                 }

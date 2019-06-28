@@ -34,29 +34,29 @@ class C100 extends Element implements ElementInterface
             'format' => ''
         ],
         'COD_PART' => [
-            'type' => 'numeric',
-            'regex' => '^([0-9a-z]{1,66})?$',
-            'required' => true,
+            'type' => 'string',
+            'regex' => '^.{1,60}$',
+            'required' => false,
             'info' => 'Código do participante (campo 02 do Registro 0150):',
             'format' => ''
         ],
         'COD_MOD' => [
             'type' => 'string',
-            'regex' => '^(01|1B|04|55|65)+$',
+            'regex' => '^(01|1B|04|55|65)$',
             'required' => true,
             'info' => 'Código do modelo do documento fiscalValor total do estoque',
             'format' => ''
         ],
         'COD_SIT' => [
             'type' => 'numeric',
-            'regex' => '^(0)([0-9]{1})?$',
+            'regex' => '^(00|01|02|03|04|05|06|07|08)$',
             'required' => true,
             'info' => 'Código da situação do documento fiscal',
             'format' => ''
         ],
         'SER' => [
             'type' => 'string',
-            'regex' => '^([0-9a-z]{3,4})?$',
+            'regex' => '^.{1,3}$',
             'required' => false,
             'info' => 'Série do documento fiscal',
             'format' => ''
@@ -70,7 +70,7 @@ class C100 extends Element implements ElementInterface
         ],
         'CHV_NFE' => [
             'type' => 'numeric',
-            'regex' => '^([0-9]{44})?$',
+            'regex' => '^[0-9]{44}$',
             'required' => false,
             'info' => 'Chave da Nota Fiscal Eletrônica',
             'format' => ''
@@ -78,27 +78,27 @@ class C100 extends Element implements ElementInterface
         'DT_DOC' => [
             'type' => 'string',
             'regex' => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
-            'required' => true,
+            'required' => false,
             'info' => 'Data da emissão do documento fiscal',
             'format' => ''
         ],
         'DT_E_S' => [
             'type' => 'string',
             'regex' => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
-            'required' => true,
+            'required' => false,
             'info' => 'Data da entrada ou da saída',
             'format' => ''
         ],
         'VL_DOC' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
-            'required' => true,
+            'required' => false,
             'info' => 'Valor total do documento fiscal',
             'format' => '15v2'
         ],
         'IND_PGTO' => [
             'type' => 'string',
-            'regex' => '^(0|1|2)',
+            'regex' => '^(0|1|2)$',
             'required' => false,
             'info' => 'Indicador do tipo de pagamento',
             'format' => ''
@@ -113,7 +113,7 @@ class C100 extends Element implements ElementInterface
         'VL_ABAT_NT' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
-            'required' => true,
+            'required' => false,
             'info' => 'Abatimento não tributado e não comercial Ex. desconto ICMS nas remessas para ZFM.',
             'format' => '15v2'
         ],
@@ -126,7 +126,7 @@ class C100 extends Element implements ElementInterface
         ],
         'IND_FRT' => [
             'type' => 'string',
-            'regex' => '^(0|1|2|9)$',
+            'regex' => '^(0|1|2|3|4|9)$',
             'required' => false,
             'info' => 'Indicador do tipo do frete',
             'format' => ''

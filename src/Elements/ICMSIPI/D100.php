@@ -72,7 +72,7 @@ class D100 extends Element implements ElementInterface
         ],
         'SUB' => [
             'type' => 'string',
-            'regex' => '^.{1,3})?$',
+            'regex' => '^.{1,3})$',
             'required' => false,
             'info' => 'Subsérie do documento fiscal ',
             'format' => ''
@@ -86,7 +86,7 @@ class D100 extends Element implements ElementInterface
         ],
         'CHV_CTE' => [
             'type' => 'numeric',
-            'regex' => '^([0-9]{44})?$',
+            'regex' => '^[0-9]{44}$',
             'required' => false,
             'info' => 'Chave do Conhecimento de Transporte Eletrônico ou do Bilhete de Passagem Eletrônico',
             'format' => ''
@@ -114,7 +114,7 @@ class D100 extends Element implements ElementInterface
         ],
         'CHV_CTE_REF' => [
             'type' => 'numeric',
-            'regex' => '^([0-1]{44})$',
+            'regex' => '^[0-9]{44}$',
             'required' => false,
             'info' => 'Chave do CT-e de referência',
             'format' => ''
@@ -177,7 +177,7 @@ class D100 extends Element implements ElementInterface
         ],
         'COD_CTA' => [
             'type' => 'string',
-            'regex' => '(.*)',
+            'regex' => '^.{1,255}$',
             'required' => false,
             'info' => 'Código da conta analítica contábil debitada/creditada',
             'format' => ''
@@ -226,14 +226,13 @@ class D100 extends Element implements ElementInterface
          */
         if ($this->std->cod_mod == '57' || $this->std->cod_mod == '67') {
             if (strlen($this->std->ser) != 3) {
+                $this->std->ser = str_pad($this->std->ser, 3, '0', STR_PAD_LEFT);
                 throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
                     . "informado 3 numeros para a Série do documento fiscal(SER) " .
                     "quanto o Código do modelo do documento fiscal(COD_MOD) for CT-e e CT-e OS (57 e 67)" .
                     "Se não existir Série para CT-e e CT-e OS, informar 000");
             }
         }
-
-
         if ($this->std->cod_mod == '57' || $this->std->cod_mod == '63' || $this->std->cod_mod == '67') {
             /*
              * Campo 13 (TP_CT-e) Preenchimento: informar o tipo de CT-e, BP-e ou CT-e OS,
