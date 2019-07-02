@@ -6,20 +6,21 @@ require_once '../../bootstrap.php';
 use NFePHP\EFD\Elements\ICMSIPI\C590;
 
 $std = new stdClass();
-$std->CST_ICMS = '997';
-$std->CFOP = '3140';
-$std->ALIQ_ICMS = 907.4;
-$std->VL_OPR = 21.30;
-$std->VL_BC_ICMS = 98.56;
-$std->VL_ICMS = 7.55;
-$std->VL_BC_ICMS_ST = 74.39;
-$std->VL_RED_BC = 20.11;
-$std->COD_OBS = 'NV0FCF';
+$std->CST_ICMS = '000';
+$std->CFOP = '1252';
+$std->ALIQ_ICMS = 18.0;
+$std->VL_OPR = 78280.54;
+$std->VL_BC_ICMS = 76714.93;
+$std->VL_ICMS = 3808.69;
+$std->VL_BC_ICMS_ST = 0.00;
+$std->VL_ICMS_ST = 0.00;
+$std->VL_RED_BC = 0.00;
+$std->COD_OBS = '';
 
 try {
     $c590 = new C590($std);
     echo "{$c590}".'<br>';
-    echo '|C590|997|3140|907,40|21,30|98,56|7,55|74,39|20,11|NV0FCF|<br>';
+    echo '|C590|000|1252|18,00|78280,54|76714,93|3808,69|0,00|0,00||<br>';
 } catch (\Exception $e) {
     echo $e->getMessage();
 }

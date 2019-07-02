@@ -66,6 +66,15 @@ class C590 extends Element implements ElementInterface
             tributária referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.',
             'format' => '15v2'
         ],
+        'VL_ICMS_ST'  => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Parcela correspondente ao valor creditado/debitado do ICMS '
+            . 'da substituição tributária, referente à combinação de CST_ICMS, '
+            . 'CFOP, e alíquota do ICMS',
+            'format' => '15v2'
+        ],
         'VL_RED_BC' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',

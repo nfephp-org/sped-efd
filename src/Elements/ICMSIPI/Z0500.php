@@ -27,7 +27,7 @@ class Z0500 extends Element implements ElementInterface
             'info'     => 'Data da inclusão/alteração',
             'format'   => ''
         ],
-        'COD_ NAT_CC' => [
+        'COD_NAT_CC' => [
             'type'     => 'string',
             'regex'    => '^(01|02|03|04|05|09)$',
             'required' => true,
@@ -49,14 +49,14 @@ class Z0500 extends Element implements ElementInterface
             'format'   => ''
         ],
         'COD_CTA' => [
-            'type'     => 'integer',
+            'type'     => 'string',
             'regex'    => '^.{1,60}$',
             'required' => true,
             'info'     => 'Código da conta analítica/grupo de contas.',
             'format'   => ''
         ],
-        'COD_CTA' => [
-            'type'     => 'integer',
+        'NOME_CTA' => [
+            'type'     => 'string',
             'regex'    => '^.{1,60}$',
             'required' => true,
             'info'     => 'Nome da conta analítica/grupo de contas',
