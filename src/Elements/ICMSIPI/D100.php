@@ -26,7 +26,6 @@ class D100 extends Element implements ElementInterface
     const REG = 'D100';
     const LEVEL = 2;
     const PARENT = 'D001';
-
     protected $parameters = [
         'IND_OPER' => [
             'type' => 'string',
@@ -105,11 +104,11 @@ class D100 extends Element implements ElementInterface
             'info' => 'Data da aquisição ou da prestação do serviço',
             'format' => ''
         ],
-        'TP_CT_e' => [
+        'TP_CT_E' => [
             'type' => 'numeric',
-            'regex' => '^([0-1]{1})$',
+            'regex' => '^[0-1]{1}$',
             'required' => false,
-            'info' => 'Tipo de Conhecimento de Transporte Eletrônicoe',
+            'info' => 'Tipo de Conhecimento de Transporte Eletrônico',
             'format' => ''
         ],
         'CHV_CTE_REF' => [
