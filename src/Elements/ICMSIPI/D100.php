@@ -51,14 +51,14 @@ class D100 extends Element implements ElementInterface
         ],
         'COD_MOD' => [
             'type' => 'string',
-            'regex' => '^(07|08|8B|09|10|11|26|27|57|63|67)+$',
+            'regex' => '^(07|08|8B|09|10|11|26|27|57|63|67)$',
             'required' => true,
             'info' => 'Código do modelo do documento fiscalValor total do estoque',
             'format' => ''
         ],
         'COD_SIT' => [
             'type' => 'numeric',
-            'regex' => '^(0)([0-9]{1})?$',
+            'regex' => '^(00|01|02|03|04|05|06|07|08)$',
             'required' => true,
             'info' => 'Código da situação do documento fiscal',
             'format' => ''
@@ -72,7 +72,7 @@ class D100 extends Element implements ElementInterface
         ],
         'SUB' => [
             'type' => 'string',
-            'regex' => '^.{1,3})$',
+            'regex' => '^.{1,3}$',
             'required' => false,
             'info' => 'Subsérie do documento fiscal ',
             'format' => ''
@@ -169,8 +169,8 @@ class D100 extends Element implements ElementInterface
             'format' => '15v2'
         ],
         'COD_INF' => [
-            'type' => 'numeric',
-            'regex' => '^([0-1]{1,6})$',
+            'type' => 'string',
+            'regex' => '^.{1,6}$',
             'required' => false,
             'info' => 'Código da informação complementar do documento fiscal',
             'format' => ''
@@ -184,14 +184,14 @@ class D100 extends Element implements ElementInterface
         ],
         'COD_MUN_ORIG' => [
             'type' => 'numeric',
-            'regex' => '^([0-9]{7})$',
+            'regex' => '^[0-9]{7}$',
             'required' => false,
             'info' => 'Código do município de origem do serviço, conforme a tabela IBGE',
             'format' => ''
         ],
         'COD_MUN_DEST' => [
             'type' => 'numeric',
-            'regex' => '^([0-9]{7})$',
+            'regex' => '^[0-9]{7}$',
             'required' => false,
             'info' => 'Código do município de destino, conforme a tabela IBGE',
             'format' => ''
