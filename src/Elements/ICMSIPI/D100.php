@@ -224,11 +224,10 @@ class D100 extends Element implements ElementInterface
          * Se não existir Série para CT-e e CT-e OS, informar 000.
          */
         if ($this->std->cod_mod == '57' || $this->std->cod_mod == '67') {
-            if (strlen($this->std->ser) != 3) {
-                $this->std->ser = str_pad($this->std->ser, 3, '0', STR_PAD_LEFT);
+            if (strlen($this->std->ser) < 3) {
                 throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
                     . "informado 3 numeros para a Série do documento fiscal(SER) " .
-                    "quanto o Código do modelo do documento fiscal(COD_MOD) for CT-e e CT-e OS (57 e 67)" .
+                    "quanto o Código do modelo do documento fiscal(COD_MOD) for CT-e e CT-e OS (57 e 67) " .
                     "Se não existir Série para CT-e e CT-e OS, informar 000");
             }
         }
