@@ -47,7 +47,13 @@ final class BlockK extends Block implements BlockInterface
         'k265' => ['class' => Elements\K265::class, 'level' => 4, 'type' => 'multiple'],
         'k270' => ['class' => Elements\K270::class, 'level' => 3, 'type' => 'multiple'],
         'k275' => ['class' => Elements\K275::class, 'level' => 4, 'type' => 'multiple'],
-        'k280' => ['class' => Elements\K280::class, 'level' => 3, 'type' => 'multiple']
+        'k280' => ['class' => Elements\K280::class, 'level' => 3, 'type' => 'multiple'],
+        'k290' => ['class' => Elements\K290::class, 'level' => 3, 'type' => 'multiple'],
+        'k291' => ['class' => Elements\K291::class, 'level' => 4, 'type' => 'multiple'],
+        'k292' => ['class' => Elements\K292::class, 'level' => 4, 'type' => 'multiple'],
+        'k300' => ['class' => Elements\K300::class, 'level' => 3, 'type' => 'multiple'],
+        'k301' => ['class' => Elements\K301::class, 'level' => 4, 'type' => 'multiple'],
+        'k302' => ['class' => Elements\K302::class, 'level' => 4, 'type' => 'multiple'],
     ];
     
     public function __construct()

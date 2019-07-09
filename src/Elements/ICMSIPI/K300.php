@@ -6,9 +6,9 @@ use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
 
-class K250 extends Element implements ElementInterface
+class K300 extends Element implements ElementInterface
 {
-    const REG = 'K250';
+    const REG = 'K300';
     const LEVEL = 3;
     const PARENT = 'K100';
 
@@ -19,20 +19,6 @@ class K250 extends Element implements ElementInterface
             'required' => true,
             'info'     => 'Data do reconhecimento da produção ocorrida no terceiro',
             'format'   => ''
-        ],
-        'COD_ITEM' => [
-            'type'     => 'string',
-            'regex'    => '^.{1,60}$',
-            'required' => true,
-            'info'     => 'Código do item (campo 02 do Registro 0200)',
-            'format'   => ''
-        ],
-        'QTD' => [
-            'type'     => 'numeric',
-            'regex'    => '^\d+(\.\d*)?|\.\d+$',
-            'required' => true,
-            'info'     => 'Quantidade produzida',
-            'format'   => '15v3'
         ]
     ];
     
