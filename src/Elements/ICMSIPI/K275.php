@@ -9,10 +9,39 @@ use \stdClass;
 class K275 extends Element implements ElementInterface
 {
     const REG = 'K275';
-    const LEVEL = 0;
-    const PARENT = '';
+    const LEVEL = 4;
+    const PARENT = '270';
 
-    protected $parameters = [];
+    protected $parameters = [
+        'COD_ITEM' => [
+            'type'     => 'string',
+            'regex'    => '^.{1,60}$',
+            'required' => true,
+            'info'     => 'Código do item (campo 02 do Registro 0200)',
+            'format'   => ''
+        ],
+        'QTD_COR_POS' => [
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info'     => 'Quantidade de correção positiva de apontamento',
+            'format'   => '15v3'
+        ],
+        'QTD_COR_NEG' => [
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info'     => 'Quantidade de correção negativa de apontamento',
+            'format'   => '15v3'
+        ],
+        'COD_INS_SUBST' => [
+            'type'     => 'string',
+            'regex'    => '^.{1,60}$',
+            'required' => false,
+            'info'     => 'Código do insumo que foi substituído',
+            'format'   => ''
+        ]
+    ];
     
     /**
      * Constructor
