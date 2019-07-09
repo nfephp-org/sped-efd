@@ -13,7 +13,7 @@ class B001 extends Element implements ElementInterface
     const PARENT = '';
 
     protected $parameters = [
-        'IND_DAD' => [
+        'IND_MOV' => [
             'type'     => 'numeric',
             'regex'    => '^[0|1]$',
             'required' => true,
