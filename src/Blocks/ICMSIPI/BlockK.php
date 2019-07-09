@@ -27,6 +27,12 @@ use NFePHP\EFD\Common\BlockInterface;
  * @method Elements\K270 k270(\stdClass $std) Constructor element K270
  * @method Elements\K275 k275(\stdClass $std) Constructor element K275
  * @method Elements\K280 k280(\stdClass $std) Constructor element K280
+ * @method Elements\K290 k290(\stdClass $std) Constructor element K290
+ * @method Elements\K291 k291(\stdClass $std) Constructor element K291
+ * @method Elements\K292 k292(\stdClass $std) Constructor element K292
+ * @method Elements\K300 k300(\stdClass $std) Constructor element K300
+ * @method Elements\K301 k301(\stdClass $std) Constructor element K301
+ * @method Elements\K302 k302(\stdClass $std) Constructor element K302
  */
 final class BlockK extends Block implements BlockInterface
 {
