@@ -6,7 +6,7 @@ require_once '../../bootstrap.php';
 use NFePHP\EFD\Elements\ICMSIPI\B001;
 
 $std = new stdClass();
-$std->IND_DAD = '1';
+$std->IND_MOV = '1';
 
 try {
     $b0 = new B001($std);
