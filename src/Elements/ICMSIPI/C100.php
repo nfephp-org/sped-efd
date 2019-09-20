@@ -42,7 +42,7 @@ class C100 extends Element implements ElementInterface
         ],
         'COD_MOD' => [
             'type' => 'string',
-            'regex' => '^(01|1B|04|55|65)$',
+            'regex' => '^.{2}$',
             'required' => true,
             'info' => 'Código do modelo do documento fiscalValor total do estoque',
             'format' => ''
