@@ -41,7 +41,7 @@ class C130 extends Element implements ElementInterface
             'info' => 'Valor da base de cálculo do Imposto de Renda Retido na Fonte',
             'format' => '15v2'
         ],
-        'VL_ IRRF' => [
+        'VL_IRRF' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
