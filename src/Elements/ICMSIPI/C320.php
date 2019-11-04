@@ -40,11 +40,20 @@ class C320 extends Element implements ElementInterface
             'info' => 'Alíquota do ICMS',
             'format' => '6v2'
         ],
+        'VL_OPR' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Valor total acumulado das operações correspondentes '
+                . 'à combinação de CST_ICMS, CFOP e alíquota do ICMS, incluídas '
+                . 'as despesas acessórias e acréscimos.',
+            'format' => '15v2'
+        ],
         'VL_BC_ICMS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info' => 'Valor acumulado da base de cálculo do ICMS, referente 
+            'info' => 'Valor acumulado da base de cálculo do ICMS, referente
             à combinação de CST_ICMS, CFOP, e alíquota do ICMS.',
             'format' => '15v2'
         ],
@@ -59,7 +68,7 @@ class C320 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info' => 'Valor não tributado em função da redução da base de cálculo do ICMS, 
+            'info' => 'Valor não tributado em função da redução da base de cálculo do ICMS,
             referente à combinação de CST_ICMS, CFOP, e alíquota do ICMS.',
             'format' => '15v2'
         ],
