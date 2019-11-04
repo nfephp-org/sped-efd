@@ -21,18 +21,11 @@ class C177 extends Element implements ElementInterface
     const PARENT = 'C170';
 
     protected $parameters = [
-        'COD_SELO_IPI' => [
+        'COD_INF_ITEM' => [
             'type' => 'string',
-            'regex' => '^.{6}$',
+            'regex' => '^.{8}$',
             'required' => false,
-            'info' => 'Código do selo de controle do IPI, conforme Tabela 4.5.2',
-            'format' => ''
-        ],
-        'QT_SELO_IPI' => [
-            'type' => 'numeric',
-            'regex' => '^(\d{0,12})$',
-            'required' => false,
-            'info' => 'Quantidade de selo de controle do IPI aplicada',
+            'info' => '5.6 – Tabela informações adicionais dos itens do documento fiscal',
             'format' => ''
         ],
     ];
