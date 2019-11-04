@@ -18,13 +18,6 @@ class C370 extends Element implements ElementInterface
     const PARENT = '';
 
     protected $parameters = [
-        'REG' => [
-            'type' => 'string',
-            'regex' => '^.{0,4}$',
-            'required' => false,
-            'info' => 'Texto fixo contendo "C370"',
-            'format' => ''
-        ],
         'NUM_ITEM' => [
             'type' => 'numeric',
             'regex' => '^(\d{0,3})$',
