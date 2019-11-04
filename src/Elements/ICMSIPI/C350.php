@@ -90,6 +90,13 @@ class C350 extends Element implements ElementInterface
             'info' => 'Valor total da COFINS',
             'format' => '15v2'
         ],
+        'COD_CTA' => [
+            'type' => 'string',
+            'regex' => '^.{0,50}$',
+            'required' => false,
+            'info' => 'Código da conta analítica contábil debitada/creditada',
+            'format' => ''
+        ],
     ];
 
     /**
