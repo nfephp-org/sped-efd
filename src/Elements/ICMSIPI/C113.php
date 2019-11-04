@@ -50,18 +50,18 @@ class C113 extends Element implements ElementInterface
             'info' => 'Código do modelo do documento fiscalValor total do estoque',
             'format' => ''
         ],
-        'COD_SIT' => [
-            'type' => 'numeric',
-            'regex' => '^(0)([0-9]{1})?$',
-            'required' => true,
-            'info' => 'Código da situação do documento fiscal',
-            'format' => ''
-        ],
         'SER' => [
             'type' => 'string',
             'regex' => '^([0-9a-z]{3,4})?$',
             'required' => false,
             'info' => 'Série do documento fiscal',
+            'format' => ''
+        ],
+        'SUB' => [
+            'type' => 'numeric',
+            'regex' => '^[0-9]{3}$',
+            'required' => false,
+            'info' => 'Subsérie do documento fiscal',
             'format' => ''
         ],
         'NUM_DOC' => [
@@ -70,6 +70,13 @@ class C113 extends Element implements ElementInterface
             'required' => true,
             'info' => 'Número do documento fiscal',
             'format' => ''
+        ],
+        'DT_DOC' => [
+            'type'     => 'integer',
+            'regex'    => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
+            'required' => false,
+            'info'     => 'Data da emissão do documento fiscal',
+            'format'   => ''
         ],
         'CHV_DOCE' => [
             'type' => 'numeric',
