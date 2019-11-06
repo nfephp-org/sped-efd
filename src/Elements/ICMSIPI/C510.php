@@ -98,6 +98,13 @@ class C510 extends Element implements ElementInterface
             'info' => 'Valor do ICMS creditado/debitado',
             'format' => '15v2'
         ],
+        'VL_BC_ICMS_ST' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Valor da base de cálculo referente à substituição tributária',
+            'format' => '15v2'
+        ],
         'ALIQ_ST' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
@@ -140,7 +147,13 @@ class C510 extends Element implements ElementInterface
             'info' => 'Valor da COFINS',
             'format' => '15v2'
         ],
-
+        'COD_CTA' => [
+            'type'     => 'string',
+            'regex'    => '^.*$',
+            'required' => false,
+            'info'     => 'Código da conta analítica contábil debitada/creditada',
+            'format'   => ''
+        ],
     ];
 
     /**
