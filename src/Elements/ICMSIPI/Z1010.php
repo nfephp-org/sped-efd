@@ -128,6 +128,16 @@ class Z1010 extends Element implements ElementInterface
                 .'N - Não',
             'format'   => ''
         ],
+        'IND_REST_RESSARC_COMPL_ICMS' => [
+            'type'     => 'string',
+            'regex'    => '^[S|N]$',
+            'required' => true,
+            'info'     => 'Reg. 1250 – Possui informações consolidadas de saldos '.
+            'de restituição, ressarcimento e complementação do ICMS?'
+                .'S– Sim '
+                .'N - Não',
+            'format'   => ''
+        ],
     ];
 
     /**
