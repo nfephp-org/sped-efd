@@ -132,7 +132,8 @@ class Z1010 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^[S|N]$',
             'required' => true,
-            'info'     => 'Reg. 1250 – Possui informações consolidadas de saldos de restituição, ressarcimento e complementação do ICMS?'
+            'info'     => 'Reg. 1250 – Possui informações consolidadas de saldos '.
+            'de restituição, ressarcimento e complementação do ICMS?'
                 .'S– Sim '
                 .'N - Não',
             'format'   => ''
