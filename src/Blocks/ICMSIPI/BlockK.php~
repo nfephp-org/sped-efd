@@ -1,0 +1,74 @@
+<?php
+
+namespace NFePHP\EFD\Blocks\ICMSIPI;
+
+use NFePHP\EFD\Elements\ICMSIPI as Elements;
+use NFePHP\EFD\Common\Block;
+use NFePHP\EFD\Common\BlockInterface;
+
+/**
+ * Classe constutora do bloco K
+ *
+ * Esta classe irá usar um recurso para invocar as classes de cada um dos elementos
+ * constituintes listados
+ */
+final class BlockK extends Block implements BlockInterface
+{
+    const TOTAL = 'K990';
+public $regversion;
+public $fieldorder = [
+'K001' => [0 => [1 => 'REG',2=>'IND_MOV']]
+'K100' => [0 => [1 => 'REG',2=>'DT_INI',3=>'DT_FIN']]
+'K200' => [0 => [1 => 'REG',2=>'DT_EST',3=>'COD_ITEM',4=>'QTD',5=>'IND_EST',6=>'COD_PART']]
+'K210' => [0 => [1 => 'REG',2=>'DT_INI_OS',3=>'DT_FIN_OS',4=>'COD_DOC_OS',5=>'COD_ITEM_ORI',6=>'QTD_ORI']]
+'K215' => [0 => [1 => 'REG',2=>'COD_ITEM_DES',3=>'QTD_DES']]
+'K220' => [0 => [1 => 'REG',2=>'DT_MOV',3=>'COD_ITEM_ORI',4=>'COD_ITEM_DEST',5=>'QTD_ORI',6=>'QTD_DEST']]
+'K230' => [0 => [1 => 'REG',2=>'DT_INI_OP',3=>'DT_FIN_OP',4=>'COD_DOC_OP',5=>'COD_ITEM',6=>'QTD_ENC']]
+'K235' => [0 => [1 => 'REG',2=>'DT_SAIDA',3=>'COD_ITEM',4=>'QTD',5=>'COD_INS_SUBST']]
+'K250' => [0 => [1 => 'REG',2=>'DT_PROD',3=>'COD_ITEM',4=>'QTD']]
+'K255' => [0 => [1 => 'REG',2=>'DT_CONS',3=>'COD_ITEM',4=>'QTD',5=>'COD_INS_SUBST']]
+'K260' => [0 => [1 => 'REG',2=>'COD_OP_OS',3=>'COD_ITEM',4=>'DT_SAIDA',5=>'QTD_SAIDA',6=>'DT_RET',7=>'QTD_RET']]
+'K265' => [0 => [1 => 'REG',2=>'COD_ITEM',3=>'QTD_CONS',4=>'QTD_RET']]
+'K270' => [0 => [1 => 'REG',2=>'DT_INI_AP',3=>'DT_FIN_AP',4=>'COD_OP_OS',5=>'COD_ITEM',6=>'QTD_COR_POS',7=>'QTD_COR_NEG',8=>'ORIGEM']]
+'K275' => [0 => [1 => 'REG',2=>'COD_ITEM',3=>'QTD_COR_POS',4=>'QTD_COR_NEG',5=>'COD_INS_SUBST']]
+'K280' => [0 => [1 => 'REG',2=>'DT_EST',3=>'COD_ITEM',4=>'QTD_COR_POS',5=>'QTD_COR_NEG',6=>'IND_EST',7=>'COD_PART']]
+'K290' => [0 => [1 => 'REG',2=>'DT_INI_OP',3=>'DT_FIN_OP',4=>'COD_DOC_OP']]
+'K291' => [0 => [1 => 'REG',2=>'COD_ITEM',3=>'QTD']]
+'K292' => [0 => [1 => 'REG',2=>'COD_ITEM',3=>'QTD']]
+'K300' => [0 => [1 => 'REG',2=>'DT_PROD']]
+'K301' => [0 => [1 => 'REG',2=>'COD_ITEM',3=>'QTD']]
+'K302' => [0 => [1 => 'REG',2=>'COD_ITEM',3=>'QTD']]
+'K990' => [0 => [1 => 'REG',2=>'QTD_LIN_K']]
+];
+    
+    public $elements = [
+        'k001' => ['class' => Elements\K001::class, 'level' => 1, 'type' => 'single'],
+        'k100' => ['class' => Elements\K100::class, 'level' => 2, 'type' => 'multiple'],
+        'k200' => ['class' => Elements\K200::class, 'level' => 3, 'type' => 'multiple'],
+        'k210' => ['class' => Elements\K210::class, 'level' => 3, 'type' => 'multiple'],
+        'k215' => ['class' => Elements\K215::class, 'level' => 4, 'type' => 'multiple'],
+        'k220' => ['class' => Elements\K220::class, 'level' => 3, 'type' => 'multiple'],
+        'k230' => ['class' => Elements\K230::class, 'level' => 3, 'type' => 'multiple'],
+        'k235' => ['class' => Elements\K235::class, 'level' => 4, 'type' => 'multiple'],
+        'k250' => ['class' => Elements\K250::class, 'level' => 3, 'type' => 'multiple'],
+        'k255' => ['class' => Elements\K255::class, 'level' => 4, 'type' => 'multiple'],
+        'k260' => ['class' => Elements\K260::class, 'level' => 3, 'type' => 'multiple'],
+        'k265' => ['class' => Elements\K265::class, 'level' => 4, 'type' => 'multiple'],
+        'k270' => ['class' => Elements\K270::class, 'level' => 3, 'type' => 'multiple'],
+        'k275' => ['class' => Elements\K275::class, 'level' => 4, 'type' => 'multiple'],
+        'k280' => ['class' => Elements\K280::class, 'level' => 3, 'type' => 'multiple']
+    ];
+    
+    public function __construct($version='')
+    {
+        parent::__construct(self::TOTAL);
+        if ($version!='') {
+            switch ($version) {
+               case '013': $this->regversion = ['K001'=>0,'K100'=>0,'K200'=>0,'K210'=>0,'K215'=>0,'K220'=>0,'K230'=>0,'K235'=>0,'K250'=>0,'K255'=>0,'K260'=>0,'K265'=>0,'K270'=>0,'K275'=>0,'K280'=>0,'K290'=>0,'K291'=>0,'K292'=>0,'K300'=>0,'K301'=>0,'K302'=>0,'K990'=>0];
+                   break;
+               default: $this->regversion = ['K001'=>0,'K100'=>0,'K200'=>0,'K210'=>0,'K215'=>0,'K220'=>0,'K230'=>0,'K235'=>0,'K250'=>0,'K255'=>0,'K260'=>0,'K265'=>0,'K270'=>0,'K275'=>0,'K280'=>0,'K290'=>0,'K291'=>0,'K292'=>0,'K300'=>0,'K301'=>0,'K302'=>0,'K990'=>0];
+                   break;
+           }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+<?php
+
+namespace NFePHP\EFD\Blocks\ICMSIPI;
+
+use NFePHP\EFD\Elements\ICMSIPI as Elements;
+use NFePHP\EFD\Common\Block;
+use NFePHP\EFD\Common\BlockInterface;
+
+/**
+ * Classe constutora do bloco 1
+ *
+ * Esta classe irá usar um recurso para invocar as classes de cada um dos elementos
+ * constituintes listados
+ */
+final class Block1 extends Block implements BlockInterface
+{
+    const TOTAL = '1990';
+public $regversion;
+
+public $fieldorder = [
+'1001' => [0 => [1 => 'REG',2=>'IND_MOV']]
+'1010' => [0 => [1 => 'REG',2=>'IND_EXP',3=>'IND_CCRF',4=>'IND_COMB',5=>'IND_USINA',6=>'IND_VA',7=>'IND_EE',8=>'IND_CART',9=>'IND_FORM',10=>'IND_AER',11=>'IND_GIAF1',12=>'IND_GIAF3',13=>'IND_GIAF4']]
+'1100' => [0 => [1 => 'REG',2=>'IND_DOC',3=>'NRO_DE',4=>'DT_DE',5=>'NAT_EXP',6=>'NRO_RE',7=>'DT_RE',8=>'CHC_EMB',9=>'DT_CHC',10=>'DT_AVB',11=>'TP_CHC',12=>'PAIS']]
+'1105' => [0 => [1 => 'REG',2=>'COD_MOD',3=>'SERIE',4=>'NUM_DOC',5=>'CHV_NFE',6=>'DT_DOC',7=>'COD_ITEM']]
+'1110' => [0 => [1 => 'REG',2=>'COD_PART',3=>'COD_MOD',4=>'SER',5=>'NUM_DOC',6=>'DT_DOC',7=>'CHV_NFE',8=>'NR_MEMO',9=>'QTD',10=>'UNID']]
+'1200' => [0 => [1 => 'REG',2=>'COD_AJ_APUR',3=>'SLD_CRED',4=>'CRED_APR',5=>'CRED_RECEB',6=>'CRED_UTIL',7=>'SLD_CRED_FIM']]
+'1210' => [0 => [1 => 'REG',2=>'TIPO_UTIL',3=>'NR_DOC',4=>'VL_CRED_UTIL',5=>'CHV_DOCe']]
+'1300' => [0 => [1 => 'REG',2=>'COD_ITEM',3=>'DT_FECH',4=>'ESTQ_ABERT',5=>'VOL_ENTR',6=>'VOL_DISP',7=>'VOL_SAIDAS',8=>'ESTQ_ESCR',9=>'VAL_AJ_PERDA',10=>'VAL_AJ_GANHO',11=>'FECH_FISICO']]
+'1310' => [0 => [1 => 'REG',2=>'NUM_TANQUE',3=>'ESTQ_ABERT',4=>'VOL_ENTR',5=>'VOL_DISP',6=>'VOL_SAIDAS',7=>'ESTQ_ESCR',8=>'VAL_AJ_PERDA',9=>'VAL_AJ_GANHO',10=>'FECH_FISICO']]
+'1320' => [0 => [1 => 'REG',2=>'NUM_BICO',3=>'NR_INTERV',4=>'MOT_INTERV',5=>'NOM_INTERV',6=>'CNPJ_INTERV',7=>'CPF_INTERV',8=>'VAL_FECHA',9=>'VAL_ABERT',10=>'VOL_AFERI',11=>'VOL_VENDAS']]
+'1350' => [0 => [1 => 'REG',2=>'SERIE',3=>'FABRICANTE',4=>'MODELO',5=>'TIPO_MEDICAO']]
+'1360' => [0 => [1 => 'REG',2=>'NUM_LACRE',3=>'DT_APLICACAO']]
+'1370' => [0 => [1 => 'REG',2=>'NUM_BICO',3=>'COD_ITEM',4=>'NUM_TANQUE']]
+'1390' => [0 => [1 => 'REG',2=>'COD_PROD']]
+'1391' => [0 => [1 => 'REG',2=>'DT_REGISTRO',3=>'QTD_MOID',4=>'ESTQ_INI',5=>'QTD_PRODUZ',6=>'ENT_ANID_HID',7=>'OUTR_ENTR',8=>'PERDA',9=>'CONS',10=>'SAI_ANI_HID',11=>'SAIDAS',12=>'ESTQ_FIN',13=>'ESTQ_INI_MEL',14=>'PROD_DIA_MEL',15=>'UTIL_MEL',16=>'PROD_ALC_MEL',17=>'OBS']]
+'1400' => [0 => [1 => 'REG',2=>'COD_ITEM_IPM',3=>'MUN',4=>'VALOR']]
+'1500' => [0 => [1 => 'REG',2=>'IND_OPER',3=>'IND_EMIT',4=>'COD_PART',5=>'COD_MOD',6=>'COD_SIT',7=>'SER',8=>'SUB',9=>'COD_CONS',10=>'NUM_DOC',11=>'DT_DOC',12=>'DT_E_S',13=>'VL_DOC',14=>'VL_DESC',15=>'VL_FORN',16=>'VL_SERV_NT',17=>'VL_TERC',18=>'VL_DA',19=>'VL_BC_ICMS',20=>'VL_ICMS',21=>'VL_BC_ICMS_ST',22=>'VL_ICMS_ST',23=>'COD_INF',24=>'VL_PIS',25=>'VL_COFINS',26=>'TP_LIGACAO',27=>'COD_GRUPO_TENSAO']]
+'1510' => [0 => [1 => 'REG',2=>'NUM_ITEM',3=>'COD_ITEM',4=>'COD_CLASS',5=>'QTD',6=>'UNID',7=>'VL_ITEM',8=>'VL_DESC',9=>'CST_ICMS',10=>'CFOP',11=>'VL_BC_ICMS',12=>'ALIQ_ICMS',13=>'VL_ICMS',14=>'VL_BC_ICMS_ST',15=>'ALIQ_ST',16=>'VL_ICMS_ST',17=>'IND_REC',18=>'COD_PART',19=>'VL_PIS',20=>'VL_COFINS',21=>'COD_CTA']]
+'1600' => [0 => [1 => 'REG',2=>'COD_PART',3=>'TOT_CREDITO',4=>'TOT_DEBITO']]
+'1700' => [0 => [1 => 'REG',2=>'COD_DISP',3=>'COD_MOD',4=>'SER',5=>'SUB',6=>'NUM_DOC_INI',7=>'NUM_DOC_FIN',8=>'NUM_AUT']]
+'1710' => [0 => [1 => 'REG',2=>'NUM_DOC_INI',3=>'NUM_DOC_FIN']]
+'1800' => [0 => [1 => 'REG',2=>'VL_CARGA',3=>'VL_PASS',4=>'VL_FAT',5=>'IND_RAT',6=>'VL_ICMS_ANT',7=>'VL_BC_ICMS',8=>'VL_ICMS_APUR',9=>'VL_BC_ICMS_APUR',10=>'VL_DIF']]
+'1900' => [0 => [1 => 'REG',2=>'IND_APUR_ICMS',3=>'DESCR_COMPL_OUT_APUR']]
+'1910' => [0 => [1 => 'REG',2=>'DT_INI',3=>'DT_FIN']]
+'1920' => [0 => [1 => 'REG',2=>'VL_TOT_TRANSF_DEBITOS_OA',3=>'VL_TOT_AJ_DEBITOS_OA',4=>'VL_ESTORNOS_CRED_OA',5=>'VL_TOT_TRANSF_CREDITOS_OA',6=>'VL_TOT_AJ_CREDITOS_OA',7=>'VL_ESTORNOS_DEB_OA',8=>'VL_SLD_CREDOR_ANT_OA',9=>'VL_SLD_APURADO_OA',10=>'VL_TOT_DED',11=>'VL_ICMS_RECOLHER_OA',12=>'VL_SLD_CREDOR_TRANSP_OA',13=>'DEB_ESP_OA']]
+'1921' => [0 => [1 => 'REG',2=>'COD_AJ_APUR',3=>'DESCR_COMPL_AJ',4=>'VL_AJ_APUR']]
+'1922' => [0 => [1 => 'REG',2=>'NUM_DA',3=>'NUM_PROC',4=>'IND_PROC',5=>'PROC',6=>'TXT_COMPL']]
+'1923' => [0 => [1 => 'REG',2=>'COD_PART',3=>'COD_MOD',4=>'SER',5=>'SUB',6=>'NUM_DOC',7=>'DT_DOC',8=>'COD_ITEM',9=>'VL_AJ_ITEM',10=>'CHV_DOCe']]
+'1925' => [0 => [1 => 'REG',2=>'COD_INF_ADIC',3=>'VL_INF_ADIC',4=>'DESCR_COMPL_AJ']]
+'1926' => [0 => [1 => 'REG',2=>'COD_OR',3=>'VL_OR',4=>'DT_VCTO',5=>'COD_REC',6=>'NUM_PROC',7=>'IND_PROC',8=>'PROC',9=>'TXT_COMPL',10=>'MES_REF']]
+'1960' => [0 => [1 => 'REG',2=>'IND_AP',3=>'G1_01',4=>'G1_02',5=>'G1_03',6=>'G1_04',7=>'G1_05',8=>'G1_06',9=>'G1_07',10=>'G1_08',11=>'G1_09',12=>'G1_10',13=>'G1_11']]
+'1970' => [0 => [1 => 'REG',2=>'IND_AP',3=>'G3_01',4=>'G3_02',5=>'G3_03',6=>'G3_04',7=>'G3_05',8=>'G3_06',9=>'G3_07',10=>'G3_T',11=>'G3_08',12=>'G3_09']]
+'1975' => [0 => [1 => 'REG',2=>'ALIQ_IMP_BASE',3=>'G3_10',4=>'G3_11',5=>'G3_12']]
+'1980' => [0 => [1 => 'REG',2=>'IND_AP',3=>'G4_01',4=>'G4_02',5=>'G4_03',6=>'G4_04',7=>'G4_05',8=>'G4_06',9=>'G4_07',10=>'G4_08',11=>'G4_09',12=>'G4_10',13=>'G4_11',14=>'G4_12']]
+'1990' => [0 => [1 => 'REG',2=>'QTD_LIN_1']]
+];
+
+    public $elements = [
+        'z1001' => ['class' => Elements\Z1001::class, 'level' => 1, 'type' => 'single'],
+        'z1010' => ['class' => Elements\Z1010::class, 'level' => 2, 'type' => 'single'],
+        'z1100' => ['class' => Elements\Z1100::class, 'level' => 2, 'type' => 'multiple'],
+        'z1105' => ['class' => Elements\Z1105::class, 'level' => 3, 'type' => 'multiple'],
+        'z1110' => ['class' => Elements\Z1110::class, 'level' => 4, 'type' => 'multiple'],
+        'z1200' => ['class' => Elements\Z1200::class, 'level' => 2, 'type' => 'multiple'],
+        'z1210' => ['class' => Elements\Z1210::class, 'level' => 3, 'type' => 'multiple'],
+        'z1300' => ['class' => Elements\Z1300::class, 'level' => 2, 'type' => 'multiple'],
+        'z1310' => ['class' => Elements\Z1310::class, 'level' => 3, 'type' => 'multiple'],
+        'z1320' => ['class' => Elements\Z1320::class, 'level' => 4, 'type' => 'multiple'],
+        'z1350' => ['class' => Elements\Z1350::class, 'level' => 2, 'type' => 'multiple'],
+        'z1360' => ['class' => Elements\Z1360::class, 'level' => 3, 'type' => 'multiple'],
+        'z1370' => ['class' => Elements\Z1370::class, 'level' => 3, 'type' => 'multiple'],
+        'z1390' => ['class' => Elements\Z1390::class, 'level' => 2, 'type' => 'multiple'],
+        'z1391' => ['class' => Elements\Z1391::class, 'level' => 3, 'type' => 'multiple'],
+        'z1400' => ['class' => Elements\Z1400::class, 'level' => 2, 'type' => 'multiple'],
+        'z1500' => ['class' => Elements\Z1500::class, 'level' => 2, 'type' => 'multiple'],
+        'z1510' => ['class' => Elements\Z1510::class, 'level' => 3, 'type' => 'multiple'],
+        'z1600' => ['class' => Elements\Z1600::class, 'level' => 2, 'type' => 'multiple'],
+        'z1700' => ['class' => Elements\Z1700::class, 'level' => 2, 'type' => 'multiple'],
+        'z1710' => ['class' => Elements\Z1710::class, 'level' => 3, 'type' => 'multiple'],
+        'z1800' => ['class' => Elements\Z1800::class, 'level' => 2, 'type' => 'single'],
+        'z1900' => ['class' => Elements\Z1900::class, 'level' => 2, 'type' => 'multiple'],
+        'z1910' => ['class' => Elements\Z1910::class, 'level' => 3, 'type' => 'multiple'],
+        'z1920' => ['class' => Elements\Z1920::class, 'level' => 4, 'type' => 'single'],
+        'z1921' => ['class' => Elements\Z1921::class, 'level' => 5, 'type' => 'multiple'],
+        'z1922' => ['class' => Elements\Z1922::class, 'level' => 6, 'type' => 'multiple'],
+        'z1923' => ['class' => Elements\Z1923::class, 'level' => 6, 'type' => 'multiple'],
+        'z1925' => ['class' => Elements\Z1925::class, 'level' => 5, 'type' => 'multiple'],
+        'z1926' => ['class' => Elements\Z1926::class, 'level' => 5, 'type' => 'multiple'],
+        'z1960' => ['class' => Elements\Z1960::class, 'level' => 2, 'type' => 'multiple'],
+        'z1970' => ['class' => Elements\Z1970::class, 'level' => 2, 'type' => 'multiple'],
+        'z1975' => ['class' => Elements\Z1975::class, 'level' => 3, 'type' => 'multiple'],
+        'z1980' => ['class' => Elements\Z1980::class, 'level' => 2, 'type' => 'single']
+        
+    ];
+    
+    public function __construct($version='')
+    {
+        parent::__construct(self::TOTAL);
+        if ($version!='') {
+            switch ($version) {
+               case '013': $this->regversion = ['1001'=>0,'1010'=>0,'1100'=>0,'1105'=>0,'1110'=>0,'1200'=>0,'1210'=>0,'1300'=>0,'1310'=>0,'1320'=>0,'1350'=>0,'1360'=>0,'1370'=>0,'1390'=>0,'1391'=>0,'1400'=>0,'1500'=>0,'1510'=>0,'1600'=>0,'1700'=>0,'1710'=>0,'1800'=>0,'1900'=>0,'1910'=>0,'1920'=>0,'1921'=>0,'1922'=>0,'1923'=>0,'1925'=>0,'1926'=>0,'1960'=>0,'1970'=>0,'1975'=>0,'1980'=>0,'1990'=>0];
+                   break;
+               default: $this->regversion = ['1001'=>0,'1010'=>0,'1100'=>0,'1105'=>0,'1110'=>0,'1200'=>0,'1210'=>0,'1300'=>0,'1310'=>0,'1320'=>0,'1350'=>0,'1360'=>0,'1370'=>0,'1390'=>0,'1391'=>0,'1400'=>0,'1500'=>0,'1510'=>0,'1600'=>0,'1700'=>0,'1710'=>0,'1800'=>0,'1900'=>0,'1910'=>0,'1920'=>0,'1921'=>0,'1922'=>0,'1923'=>0,'1925'=>0,'1926'=>0,'1960'=>0,'1970'=>0,'1975'=>0,'1980'=>0,'1990'=>0];
+                   break;
+           }
+        }
+    }
+}

@@ -8,7 +8,7 @@ use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
 
 /**
- * REGISTRO C800:CUPOM FISCAL ELETRÔNICO - SAT (CF-e-SAT) (CÓDIGO 59)
+ * REGISTRO C800:OUTRAS   OBRIGAÇÕES   TRIBUTÁRIAS,   AJUSTES   E   INFORMAÇÕES   DE   VALORES PROVENIENTES DE DOCUMENTO FISCAL
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
 class C800 extends Element implements ElementInterface

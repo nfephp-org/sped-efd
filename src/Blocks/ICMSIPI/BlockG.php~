@@ -1,0 +1,50 @@
+<?php
+
+namespace NFePHP\EFD\Blocks\ICMSIPI;
+
+use NFePHP\EFD\Elements\ICMSIPI as Elements;
+use NFePHP\EFD\Common\Block;
+use NFePHP\EFD\Common\BlockInterface;
+
+/**
+ * Classe constutora do bloco G
+ *
+ * Esta classe irá usar um recurso para invocar as classes de cada um dos elementos
+ * constituintes listados
+ */
+final class BlockG extends Block implements BlockInterface
+{
+    const TOTAL = 'G990';
+public $regversion;
+public $fieldorder = [
+'G001' => [0 => [1 => 'REG',2=>'IND_MOV']]
+'G110' => [0 => [1 => 'REG',2=>'DT_INI',3=>'DT_FIN',4=>'SALDO_IN_ICMS',5=>'SOM_PARC',6=>'VL_TRIB_EXP',7=>'VL_TOTAL',8=>'IND_PER_SAI',9=>'ICMS_APROP',10=>'SOM_ICMS_OC']]
+'G125' => [0 => [1 => 'REG',2=>'COD_IND_BEM',3=>'DT_MOV',4=>'TIPO_MOV',5=>'VL_IMOB_ICMS_OP',6=>'VL_IMOB_ICMS_ST',7=>'VL_IMOB_ICMS_FRT',8=>'VL_IMOB_ICMS_DIF',9=>'NUM_PARC',10=>'VL_PARC_PASS']]
+'G126' => [0 => [1 => 'REG',2=>'DT_INI',3=>'DT_FIM',4=>'NUM_PARC',5=>'VL_PARC_PASS',6=>'VL_TRIB_OC',7=>'VL_TOTAL',8=>'IND_PER_SAI',9=>'VL_PARC_APROP']]
+'G130' => [0 => [1 => 'REG',2=>'IND_EMIT',3=>'COD_PART',4=>'COD_MOD',5=>'SERIE',6=>'NUM_DOC',7=>'CHV_NFE_CTE',8=>'DT_DOC']]
+'G140' => [0 => [1 => 'REG',2=>'NUM_ITEM',3=>'COD_ITEM']]
+'G990' => [0 => [1 => 'REG',2=>'QTD_LIN_G']]
+];
+
+    public $elements = [
+        'g001' => ['class' => Elements\G001::class, 'level' => 1, 'type' => 'single'],
+        'g110' => ['class' => Elements\G110::class, 'level' => 2, 'type' => 'multiple'],
+        'g125' => ['class' => Elements\G125::class, 'level' => 3, 'type' => 'multiple'],
+        'g126' => ['class' => Elements\G126::class, 'level' => 4, 'type' => 'multiple'],
+        'g130' => ['class' => Elements\G130::class, 'level' => 4, 'type' => 'multiple'],
+        'g140' => ['class' => Elements\G140::class, 'level' => 5, 'type' => 'multiple']
+    ];
+    
+    public function __construct($version='')
+    {
+        parent::__construct(self::TOTAL);
+        if ($version!='') {
+            switch ($version) {
+               case '013': $this->regversion = ['G001'=>0,'G110'=>0,'G125'=>0,'G126'=>0,'G130'=>0,'G140'=>0,'G990'=>0];
+                   break;
+               default: $this->regversion = ['G001'=>0,'G110'=>0,'G125'=>0,'G126'=>0,'G130'=>0,'G140'=>0,'G990'=>0];
+                   break;
+           }
+        }
+    }
+}

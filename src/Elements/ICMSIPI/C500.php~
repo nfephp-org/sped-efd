@@ -238,7 +238,7 @@ class C500 extends Element implements ElementInterface
         ],
         'COD_CTA' => [
             'type'     => 'string',
-            'regex'    => '^.{1,60}$',
+            'regex'    => '^[0-9]{0}$',
             'required' => true,
             'info'     => 'Código da conta analítica contábil debitada/creditada',
             'format'   => ''

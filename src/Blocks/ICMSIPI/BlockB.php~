@@ -1,0 +1,63 @@
+<?php
+
+namespace NFePHP\EFD\Blocks\ICMSIPI;
+
+use NFePHP\EFD\Elements\ICMSIPI as Elements;
+use NFePHP\EFD\Common\Block;
+use NFePHP\EFD\Common\BlockInterface;
+
+/**
+ * Classe constutora do bloco B
+ *
+ * Esta classe irá usar um recurso para invocar as classes de cada um dos elementos
+ * constituintes listados
+ */
+final class BlockB extends Block implements BlockInterface
+{
+    const TOTAL = 'B990';
+public $regversion;
+public $fieldorder = [
+'B001' => [0 => [1 => 'REG',2=>'IND_DAD']]
+'B020' => [0 => [1 => 'REG',2=>'IND_OPER',3=>'IND_EMIT',4=>'COD_PART',5=>'COD_MOD',6=>'COD_SIT',7=>'SER',8=>'NUM_DOC',9=>'CHV_NFE',10=>'DT_DOC',11=>'COD_MUN_SERV',12=>'VL_CONT',13=>'VL_MAT_TERC',14=>'VL_SUB',15=>'VL_ISNT_ISS',16=>'VL_DED_BC',17=>'VL_BC_ISS',18=>'VL_BC_ISS_RT',19=>'VL_ISS_RT',20=>'VL_ISS',21=>'COD_INF_OBS']]
+'B025' => [0 => [1 => 'REG',2=>'VL_CONT_P',3=>'VL_BC_ISS_P',4=>'ALIQ_ISS',5=>'VL_ISS_P',6=>'VL_ISNT_ISS_P',7=>'COD_SERV']]
+'B030' => [0 => [1 => 'REG',2=>'COD_MOD',3=>'SER',4=>'NUM_DOC_INI',5=>'NUM_DOC_FIN',6=>'DT_DOC',7=>'QTD_CANC',8=>'VL_CONT',9=>'VL_ISNT_ISS',10=>'VL_BC_ISS',11=>'VL_ISS',12=>'COD_INF_OBS']]
+'B035' => [0 => [1 => 'REG',2=>'VL_CONT_P',3=>'VL_BC_ISS_P',4=>'ALIQ_ISS',5=>'VL_ISS_P',6=>'VL_ISNT_ISS_P',7=>'COD_SERV']]
+'B350' => [0 => [1 => 'REG',2=>'COD_CTD',3=>'CTA_ISS',4=>'CTA_COSIF',5=>'QTD_OCOR',6=>'COD_SERV',7=>'VL_CONT',8=>'VL_BC_ISS',9=>'ALIQ_ISS',10=>'VL_ISS',11=>'COD_INF_OBS']]
+'B420' => [0 => [1 => 'REG',2=>'VL_CONT',3=>'VL_BC_ISS',4=>'ALIQ_ISS',5=>'VL_ISNT_ISS',6=>'VL_ISS',7=>'COD_SERV']]
+'B440' => [0 => [1 => 'REG',2=>'IND_OPER',3=>'COD_PART',4=>'VL_CONT_RT',5=>'VL_BC_ISS_RT',6=>'VL_ISS_RT']]
+'B460' => [0 => [1 => 'REG',2=>'IND_DED',3=>'VL_DED',4=>'NUM_PROC',5=>'IND_PROC',6=>'PROC',7=>'COD_INF_OBS',8=>'IND_OBR']]
+'B470' => [0 => [1 => 'REG',2=>'VL_CONT',3=>'VL_MAT_TERC',4=>'VL_MAT_PROP',5=>'VL_SUB',6=>'VL_ISNT',7=>'VL_DED_BC',8=>'VL_BC_ISS',9=>'VL_BC_ISS_RT',10=>'VL_ISS',11=>'VL_ISS_RT',12=>'VL_DED',13=>'VL_ISS_REC',14=>'VL_ISS_ST',15=>'VL_ISS_REC_UNI']]
+'B500' => [0 => [1 => 'REG',2=>'VL_REC',3=>'QTD_PROF',4=>'VL_OR']]
+'B510' => [0 => [1 => 'REG',2=>'IND_PROF',3=>'IND_ESC',4=>'IND_SOC',5=>'CPF',6=>'NOME']]
+'B990' => [0 => [1 => 'REG',2=>'QTD_LIN_B']]
+];
+
+    public $elements = [
+        'b001' => ['class' => Elements\B001::class, 'level' => 1, 'type' => 'single'],
+        'b020' => ['class' => Elements\B020::class, 'level' => 2, 'type' => 'multiple'],
+        'b025' => ['class' => Elements\B025::class, 'level' => 3, 'type' => 'multiple'],
+        'b030' => ['class' => Elements\B030::class, 'level' => 2, 'type' => 'multiple'],
+        'b035' => ['class' => Elements\B035::class, 'level' => 3, 'type' => 'multiple'],
+        'b350' => ['class' => Elements\B350::class, 'level' => 2, 'type' => 'multiple'],
+        'b420' => ['class' => Elements\B420::class, 'level' => 2, 'type' => 'multiple'],
+        'b440' => ['class' => Elements\B440::class, 'level' => 2, 'type' => 'multiple'],
+        'b460' => ['class' => Elements\B460::class, 'level' => 2, 'type' => 'multiple'],
+        'b470' => ['class' => Elements\B470::class, 'level' => 2, 'type' => 'single'],
+        'b500' => ['class' => Elements\B500::class, 'level' => 2, 'type' => 'single'],
+        'b510' => ['class' => Elements\B510::class, 'level' => 3, 'type' => 'multiple']
+    ];
+    
+    public function __construct($version='')
+    {
+        parent::__construct(self::TOTAL);
+        if ($version!='') {
+            switch ($version) {
+               case '013': $this->regversion = ['B001'=>0,'B020'=>0,'B025'=>0,'B030'=>0,'B035'=>0,'B350'=>0,'B420'=>0,'B440'=>0,'B460'=>0,'B470'=>0,'B500'=>0,'B510'=>0,'B990'=>0];
+                   break;
+               default: $this->regversion = ['B001'=>0,'B020'=>0,'B025'=>0,'B030'=>0,'B035'=>0,'B350'=>0,'B420'=>0,'B440'=>0,'B460'=>0,'B470'=>0,'B500'=>0,'B510'=>0,'B990'=>0];
+                   break;
+           }
+        }
+        
+    }
+}

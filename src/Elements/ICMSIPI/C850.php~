@@ -7,10 +7,6 @@ use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
 use function Safe\substr;
 
-/**
- * REGISTRO C850: REGISTRO ANALÍTICO DO CF-e-SAT (CODIGO 59)
- * @package NFePHP\EFD\Elements\ICMSIPI
- */
 class C850 extends Element implements ElementInterface
 {
     const REG = 'C850';
