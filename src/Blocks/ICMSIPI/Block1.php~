@@ -60,7 +60,7 @@ final class Block1 extends Block implements BlockInterface
         'z1110' => ['class' => Elements\Z1110::class, 'level' => 4, 'type' => 'multiple'],
         'z1200' => ['class' => Elements\Z1200::class, 'level' => 2, 'type' => 'multiple'],
         'z1210' => ['class' => Elements\Z1210::class, 'level' => 2, 'type' => 'multiple'],
-        'z1250' => ['class' => Elements\Z1255::class, 'level' => 2, 'type' => 'single'],
+        'z1250' => ['class' => Elements\Z1255::class, 'level' => 3, 'type' => 'single'],
         'z1255' => ['class' => Elements\Z1250::class, 'level' => 3, 'type' => 'multiple'],
         'z1300' => ['class' => Elements\Z1300::class, 'level' => 2, 'type' => 'multiple'],
         'z1310' => ['class' => Elements\Z1310::class, 'level' => 3, 'type' => 'multiple'],
