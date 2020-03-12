@@ -1,7 +1,7 @@
 {
     "name": "nfephp-org/sped-efd",
     "type": "library",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "API para geração dos arquivos para SPED EFD",
     "keywords": ["efd", "sped", "nfephp"],
     "homepage": "https://github.com/nfephp-org/sped-efd",
@@ -23,6 +23,12 @@
             "name": "Rauye Rogiski",
             "email": "rauye.rogiski@duobox.com.br",
             "homepage": "https://www.duobox.com.br/novo",
+            "role": "developer"
+        },
+        {
+            "name": "Guilherme Calabria Filho",
+            "email": "suporte@plotag.com.br",
+            "homepage": "https://www.plotag.com.br",
             "role": "developer"
         },
         {

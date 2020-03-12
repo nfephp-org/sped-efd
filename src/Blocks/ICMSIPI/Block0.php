@@ -17,6 +17,7 @@ use NFePHP\EFD\Common\BlockInterface;
  *
  * @method Elements\Z0000 z0000(\stdClass $std) Constructor element 0000
  * @method Elements\Z0001 z0001(\stdClass $std) Constructor element 0001
+ * @method Elements\Z0001 z0001(\stdClass $std) Constructor element 0002
  * @method Elements\Z0005 z0005(\stdClass $std) Constructor element 0005
  * @method Elements\Z0100 z0100(\stdClass $std) Constructor element 0100
  * @method Elements\Z0150 z0150(\stdClass $std) Constructor element 0150
@@ -41,6 +42,7 @@ final class Block0 extends Block implements BlockInterface
     public $elements = [
         'z0000' => ['class' => Elements\Z0000::class, 'level' => 0, 'type' => 'single'],
         'z0001' => ['class' => Elements\Z0001::class, 'level' => 1, 'type' => 'single'],
+        'z0002' => ['class' => Elements\Z0002::class, 'level' => 1, 'type' => 'single'],
         'z0005' => ['class' => Elements\Z0005::class, 'level' => 2, 'type' => 'single'],
         'z0015' => ['class' => Elements\Z0015::class, 'level' => 2, 'type' => 'multiple'],
         'z0100' => ['class' => Elements\Z0100::class, 'level' => 2, 'type' => 'single'],

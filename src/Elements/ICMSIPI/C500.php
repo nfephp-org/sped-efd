@@ -195,7 +195,54 @@ class C500 extends Element implements ElementInterface
             'info' => 'Código de grupo de tensão',
             'format' => ''
         ],
-
+        'CHV_DOCe' => [
+            'type' => 'numeric',
+            'regex' => '^[0-9]{44}$',
+            'required' => false,
+            'info'     => 'Chave da Nota Fiscal de Energia Elétrica Eletrônica',
+            'format'   => ''
+        ],
+        'FIN_DOCe' => [
+            'type' => 'string',
+            'regex' => '^(0|1|3)$',
+            'required' => true,
+            'info'     => 'Finalidade da emissão do documento eletrônico:'
+            . '1 - Normal'
+            . '2 - Substituição'
+            . '3 - Normal com ajuste',
+            'format'   => ''
+        ],
+        'CHV_DOCe_REF' => [
+            'type' => 'numeric',
+            'regex' => '^[0-9]{44}$',
+            'required' => false,
+            'info'     => 'Chave da nota referenciada, substituída.',
+            'format'   => ''
+        ],
+        'IND_DEST' => [
+            'type'     => 'numeric',
+            'regex' => '^(0|1|9)$',
+            'required' => true,
+            'info'     => 'Indicador do Destinatário/Acessante:'
+            . '1 - Contribuinte do ICMS;'
+            . '2 - Contribuinte Isento de Inscrição no Cadastro de Contribuintes do ICMS;'
+            . '9 - Não Contribuinte.',
+            'format'   => ''
+        ],
+        'COD_MUN_DEST' => [
+            'type'     => 'numeric',
+            'regex' => '^[0-9]{7}$',
+            'required' => true,
+            'info'     => 'Código do município do destinatário conforme a tabela do IBGE.',
+            'format'   => ''
+        ],
+        'COD_CTA' => [
+            'type'     => 'string',
+            'regex'    => '^.{1,60}$',
+            'required' => true,
+            'info'     => 'Código da conta analítica contábil debitada/creditada',
+            'format'   => ''
+        ]
     ];
 
     /**

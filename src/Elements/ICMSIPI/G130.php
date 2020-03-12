@@ -67,7 +67,13 @@ class G130 extends Element implements ElementInterface
             'info' => 'Data da emissão do documento fiscal ',
             'format' => ''
         ],
-
+        'NUM_DA' => [
+            'type'     => 'string',
+            'regex'    => '^[0-9]{0}$',
+            'required' => true,
+            'info'     => 'Número do documento de arrecadação estadual, se houver',
+            'format'   => ''
+        ]
     ];
 
     /**

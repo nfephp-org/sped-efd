@@ -18,7 +18,7 @@ use \stdClass;
 class H020 extends Element implements ElementInterface
 {
     const REG = 'H020';
-    const LEVEL = 2;
+    const LEVEL = 4;
     const PARENT = 'H010';
     
     protected $parameters = [

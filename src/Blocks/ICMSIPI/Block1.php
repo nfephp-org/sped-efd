@@ -19,6 +19,7 @@ use NFePHP\EFD\Common\BlockInterface;
  * @method Elements\z1110 z1110(\stdClass $std) Constructor element 1110
  * @method Elements\z1200 z1200(\stdClass $std) Constructor element 1200
  * @method Elements\z1210 z1210(\stdClass $std) Constructor element 1210
+ * @method Elements\z1250 z1250(\stdClass $std) Constructor element 1250
  * @method Elements\z1300 z1300(\stdClass $std) Constructor element 1300
  * @method Elements\z1310 z1310(\stdClass $std) Constructor element 1310
  * @method Elements\z1320 z1320(\stdClass $std) Constructor element 1320
@@ -58,7 +59,9 @@ final class Block1 extends Block implements BlockInterface
         'z1105' => ['class' => Elements\Z1105::class, 'level' => 3, 'type' => 'multiple'],
         'z1110' => ['class' => Elements\Z1110::class, 'level' => 4, 'type' => 'multiple'],
         'z1200' => ['class' => Elements\Z1200::class, 'level' => 2, 'type' => 'multiple'],
-        'z1210' => ['class' => Elements\Z1210::class, 'level' => 3, 'type' => 'multiple'],
+        'z1210' => ['class' => Elements\Z1210::class, 'level' => 2, 'type' => 'multiple'],
+        'z1250' => ['class' => Elements\Z1255::class, 'level' => 2, 'type' => 'single'],
+        'z1255' => ['class' => Elements\Z1250::class, 'level' => 3, 'type' => 'multiple'],
         'z1300' => ['class' => Elements\Z1300::class, 'level' => 2, 'type' => 'multiple'],
         'z1310' => ['class' => Elements\Z1310::class, 'level' => 3, 'type' => 'multiple'],
         'z1320' => ['class' => Elements\Z1320::class, 'level' => 4, 'type' => 'multiple'],

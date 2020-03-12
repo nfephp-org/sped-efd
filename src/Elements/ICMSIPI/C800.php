@@ -7,6 +7,10 @@ use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
 
+/**
+ * REGISTRO C800:CUPOM FISCAL ELETRÔNICO - SAT (CF-e-SAT) (CÓDIGO 59)
+ * @package NFePHP\EFD\Elements\ICMSIPI
+ */
 class C800 extends Element implements ElementInterface
 {
     const REG = 'C800';

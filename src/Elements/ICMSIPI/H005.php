@@ -29,7 +29,7 @@ use \stdClass;
 class H005 extends Element implements ElementInterface
 {
     const REG = 'H005';
-    const LEVEL = 1;
+    const LEVEL = 2;
     const PARENT = 'H001';
     
     protected $parameters = [
@@ -54,8 +54,7 @@ class H005 extends Element implements ElementInterface
             'info'     => 'Informe o motivo do Inventário: '
             . '01 – No final no período; '
             . '02 – Na mudança de forma de tributação da mercadoria (ICMS); '
-            . '03 – Na solicitação da baixa cadastral, paralisação temporária '
-            . 'e outras situações; '
+            . '03 – Na solicitação da baixa cadastral, paralisação temporária e outras situações; '
             . '04 – Na alteração de regime de pagamento – condição do contribuinte; '
             . '05 – Por determinação dos fiscos.',
             'format'   => ''
