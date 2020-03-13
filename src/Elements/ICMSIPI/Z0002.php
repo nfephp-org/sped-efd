@@ -9,8 +9,8 @@ use \stdClass;
 /**
  * Elemento 0002 do Bloco 0
  * REGISTRO 0002: Classificação do Estabelecimento Equiparado a Industrial
- * 
- * 
+ *
+ *
  *
  * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente
  * numeréricos e também para não confundir os com elementos do bloco B

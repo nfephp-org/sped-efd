@@ -7,7 +7,8 @@ use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
 
 /**
- * REGISTRO C597:OUTRAS   OBRIGAÇÕES   TRIBUTÁRIAS,   AJUSTES   E   INFORMAÇÕES   DE   VALORES PROVENIENTES DE DOCUMENTO FISCAL
+ * REGISTRO C597:OUTRAS   OBRIGAÇÕES   TRIBUTÁRIAS,   AJUSTES   E   INFORMAÇÕES   DE   VALORES PROVENIENTES DE
+ * DOCUMENTO FISCAL
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
 class C597 extends Element implements ElementInterface

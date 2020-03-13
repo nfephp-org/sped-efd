@@ -7,7 +7,8 @@ use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
 
 /**
- * REGISTRO H030: Informações complementares do inventário das mercadorias sujeitas ao regime de substituição tributária
+ * REGISTRO H030: Informações complementares do inventário das mercadorias sujeitas ao
+ *0 regime de substituição tributária
  *
  */
 class H030 extends Element implements ElementInterface
@@ -45,7 +46,7 @@ class H030 extends Element implements ElementInterface
             'info'     => 'Valor médio unitário do FCP',
             'format'   => '15v6'
         ],
-    ]]
+    ];
     
     /**
      * Constructor

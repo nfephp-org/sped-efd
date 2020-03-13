@@ -17,28 +17,32 @@ class Z1250 extends Element implements ElementInterface
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Informar o valor total do ICMS operação própria que o informante tem direito ao crédito, na forma prevista na legislação, referente às hipóteses de restituição em que há previsão deste crédito.',
+            'info'     => 'Informar o valor total do ICMS operação própria que o informante tem direito ao crédito, '
+            .'na forma prevista na legislação, referente às hipóteses de restituição em que há previsão deste crédito.',
             'format'   => '15v2'
         ],
         'VL_ICMS_ST_REST' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Informar o valor total do ICMS/ST que o informante tem direito ao crédito, na forma prevista na legislação, referente às hipóteses de restituição em que há previsão deste crédito.',
+            'info'     => 'Informar o valor total do ICMS/ST que o informante tem direito ao crédito, na forma '
+            .'prevista na legislação, referente às hipóteses de restituição em que há previsão deste crédito.',
             'format'   => '15v2'
         ],
         'VL_FCP_ST_REST' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Informar o valor total do FCP_ST agregado ao valor do ICMS/ST informado no campo VL_ICMS_ST_REST.',
+            'info'     => 'Informar o valor total do FCP_ST agregado ao valor do ICMS/ST informado no '
+            .'campo VL_ICMS_ST_REST.',
             'format'   => '15v2'
         ],
         'VL_ICMS_ST_COMPL' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Informar o valor total do débito referente ao complemento do imposto, Nos casos previstos na legislação.',
+            'info'     => 'Informar o valor total do débito referente ao complemento do imposto, Nos casos '
+            .'previstos na legislação.',
             'format'   => '15v2'
         ],
         'VL_FCP_ST_COMPL' => [
@@ -59,5 +63,4 @@ class Z1250 extends Element implements ElementInterface
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
     }
-
 }
