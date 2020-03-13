@@ -7,7 +7,8 @@ use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
 
 /**
- * REGISTRO C180: INFORMAÇÕES COMPLEMENTARES DAS OPERAÇÕES DE ENTRADA DE MERCADORIAS SUJEITAS À SUBSTITUIÇÃO TRIBUTÁRIA (CÓDIGO 01, 1B, 04 e 55).
+ * REGISTRO C180: INFORMAÇÕES COMPLEMENTARES DAS OPERAÇÕES DE ENTRADA DE MERCADORIAS SUJEITAS À SUBSTITUIÇÃO
+ * TRIBUTÁRIA (CÓDIGO 01, 1B, 04 e 55).
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
 class C180 extends Element implements ElementInterface
@@ -44,21 +45,25 @@ class C180 extends Element implements ElementInterface
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Valor unitário do ICMS operação própria que o informante teria direito ao crédito caso a mercadoria estivesse sob o regime comum de tributação, considerando unidade utilizada para informar o campo QUANT_CONV.',
+            'info'     => 'Valor unitário do ICMS operação própria que o informante teria direito ao crédito '
+            .'caso a mercadoria estivesse sob o regime comum de tributação, considerando unidade utilizada para '
+            .'informar o campo QUANT_CONV.',
             'format'   => '15v6'
         ],
         'VL_UNIT_BC_ICMS_ST_CONV' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Valor unitário da base de cálculo do imposto pago ou retido anteriormente por substituição, considerando a unidade utilizada para informar o campo QUANT_CONV, aplicando-se redução, se houver.',
+            'info'     => 'Valor unitário da base de cálculo do imposto pago ou retido anteriormente por substituição,'
+            .' considerando a unidade utilizada para informar o campo QUANT_CONV, aplicando-se redução, se houver.',
             'format'   => '15v6'
         ],
         'VL_UNIT_ICMS_ST_CONV' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Valor unitário do imposto pago ou retido anteriormente por substituição, inclusive FCP se devido, considerando a unidade utilizada para informar o campo QUANT_CONV.',
+            'info'     => 'Valor unitário do imposto pago ou retido anteriormente por substituição, inclusive FCP se'
+            .' devido, considerando a unidade utilizada para informar o campo QUANT_CONV.',
             'format'   => '15v6'
         ],
         'VL_UNIT_FCP_ST_CONV' => [

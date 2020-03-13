@@ -24,28 +24,34 @@ class Z1255 extends Element implements ElementInterface
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Informar o valor total do ICMS operação própria que o informante tem direito ao crédito, na forma prevista na legislação, referente às hipóteses de restituição em que há previsão deste crédito, para o mesmo COD_MOT_REST_COMPL',
+            'info'     => 'Informar o valor total do ICMS operação própria que o informante tem direito ao crédito, '
+            .'na forma prevista na legislação, referente às hipóteses de restituição em que há previsão deste crédito,'
+            .' para o mesmo COD_MOT_REST_COMPL',
             'format'   => '15v2'
         ],
         'VL_ICMS_ST_REST_MOT' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Informar o valor total do ICMS/ST que o informante tem direito ao crédito, na forma prevista na legislação, referente às hipóteses de restituição em que há previsão deste crédito, para o mesmo COD_MOT_REST_COMPL',
+            'info'     => 'Informar o valor total do ICMS/ST que o informante tem direito ao crédito, na forma '
+            .'prevista na legislação, referente às hipóteses de restituição em que há previsão deste crédito, para '
+            .'o mesmo COD_MOT_REST_COMPL',
             'format'   => '15v2'
         ],
         'VL_FCP_ST_REST_MOT' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Informar o valor total do FCP_ST agregado ao valor do ICMS/ST informado no campo VL_ICMS_ST_REST_MOT',
+            'info'     => 'Informar o valor total do FCP_ST agregado ao valor do ICMS/ST informado no campo '
+            .'VL_ICMS_ST_REST_MOT',
             'format'   => '15v2'
         ],
         'VL_ICMS_ST_COMPL_MOT' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Informar o valor total do débito referente ao complemento do imposto, nos casos previstos na legislação, para o mesmo COD_MOT_REST_COMPL',
+            'info'     => 'Informar o valor total do débito referente ao complemento do imposto, nos casos previstos '
+            .'na legislação, para o mesmo COD_MOT_REST_COMPL',
             'format'   => '15v2'
         ],
         'VL_FCP_ST_COMPL_MOT' => [
@@ -66,5 +72,4 @@ class Z1255 extends Element implements ElementInterface
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
     }
-
 }

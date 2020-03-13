@@ -31,7 +31,8 @@ class G140 extends Element implements ElementInterface
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Quantidade, deste item da nota fiscal, que foi aplicada neste bem, expressa na mesma unidade constante no documento fiscal de entrada',
+            'info'     => 'Quantidade, deste item da nota fiscal, que foi aplicada neste bem, expressa na mesma '
+            .'unidade constante no documento fiscal de entrada',
             'format'   => '15v5'
         ],
         'UNID' => [
@@ -45,28 +46,32 @@ class G140 extends Element implements ElementInterface
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Valor do ICMS da Operação Própria na entrada do item, proporcional à quantidade aplicada no bem ou componente.',
+            'info'     => 'Valor do ICMS da Operação Própria na entrada do item, proporcional à quantidade aplicada '
+            .'no bem ou componente.',
             'format'   => '15v2'
         ],
         'VL_ICMS_ST_APLICADO' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Valor do ICMS ST na entrada do item, proporcional à quantidade aplicada no bem ou componente.',
+            'info'     => 'Valor do ICMS ST na entrada do item, proporcional à quantidade aplicada no bem ou '
+            .'componente.',
             'format'   => '15v2'
         ],
         'VL_ICMS_FRT_APLICADO' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Valor do ICMS sobre Frete do Conhecimento de Transporte na entrada do item, proporcional à quantidade aplicada no bem ou componente.',
+            'info'     => 'Valor do ICMS sobre Frete do Conhecimento de Transporte na entrada do item, '
+            .'proporcional à quantidade aplicada no bem ou componente.',
             'format'   => '15v2'
         ],
         'VL_ICMS_DIF_APLICADO' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Valor do ICMS Diferencial de Alíquota, na entrada do item, proporcional à quantidade aplicada no bem ou componente.',
+            'info'     => 'Valor do ICMS Diferencial de Alíquota, na entrada do item, proporcional à quantidade '
+            .'aplicada no bem ou componente.',
             'format'   => '15v2'
         ]
     ];

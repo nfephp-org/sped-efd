@@ -21,14 +21,16 @@ class C591 extends Element implements ElementInterface
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Valor do Fundo de Combate à Pobreza (FCP) vinculado à operação própria, na combinação de CST_ICMS, CFOP e alíquota do ICMS',
+            'info'     => 'Valor do Fundo de Combate à Pobreza (FCP) vinculado à operação própria, na combinação '
+            .'de CST_ICMS, CFOP e alíquota do ICMS',
             'format'   => '15v2'
         ],
         'VL_FCP_ST' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Valor do Fundo de Combate à Pobreza (FCP) vinculado à operação de substituição tributária, na combinação de CST_ICMS, CFOP e alíquota do ICMS.',
+            'info'     => 'Valor do Fundo de Combate à Pobreza (FCP) vinculado à operação de substituição tributária, '
+            .'na combinação de CST_ICMS, CFOP e alíquota do ICMS.',
             'format'   => '15v2'
         ]
     ];
