@@ -16,7 +16,7 @@ class C430 extends Element implements ElementInterface
     const REG = 'C430';
     const LEVEL = 4;
     const PARENT = 'C370';
-    
+
      protected $parameters = [
         'COD_MOT_REST_COMPL' => [
             'type'     => 'string',
@@ -88,7 +88,7 @@ class C430 extends Element implements ElementInterface
             'required' => true,
             'info'     => 'Valor unitário do total do ICMS/ST, incluindo FCP ST, a ser restituído/ressarcido, '
             .'calculado conforme a legislação de cada UF, considerando a unidade utilizada para informar o '
-            'campo QUANT_CONV.',
+            .'campo QUANT_CONV.',
             'format'   => '15v6'
         ],
         'VL_UNIT_FCP_ST_CONV_REST' => [
@@ -113,7 +113,7 @@ class C430 extends Element implements ElementInterface
             'required' => true,
             'info'     => 'Valor unitário correspondente à parcela de ICMS FCP ST que compõe o campo '
             .'VL_UNIT_ICMS_ST_CONV_COMPL, considerando unidade utilizada para informar o '
-            '.campo QUANT_CONV.',
+            .'campo QUANT_CONV.',
             'format'   => '15v6'
         ],
         'CST_ICMS' => [
@@ -131,7 +131,7 @@ class C430 extends Element implements ElementInterface
             'format' => ''
         ],
      ];
-    
+
     /**
      * Constructor
      * @param \stdClass $std
