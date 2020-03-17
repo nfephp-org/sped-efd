@@ -33,11 +33,11 @@ class C185 extends Element implements ElementInterface
             'format'   => ''
         ],
         'CST_ICMS' => [
-            'type'     => 'numeric',
-            'regex'    => '',
+            'type' => 'numeric',
+            'regex' => '^(\d{3})$',
             'required' => true,
-            'info'     => 'Código da Situação Tributária referente ao ICMS',
-            'format'   => ''
+            'info' => 'Código da Situação Tributária',
+            'format' => ''
         ],
         'CFOP' => [
             'type' => 'numeric',

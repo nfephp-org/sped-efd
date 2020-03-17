@@ -49,7 +49,9 @@ class Z0190 extends Element implements ElementInterface
     {
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
-        $this->postValidation();
+        /*Removida  e exigência de que a UNID seja diferente de DESCR Guia Prático EFD-ICMS/IPI –
+          Versão 3.0.2 Atualização: 21 de maio de 2019*/
+        /*$this->postValidation();*/
     }
     
     /**
@@ -60,8 +62,12 @@ class Z0190 extends Element implements ElementInterface
      */
     public function postValidation()
     {
+        /*Removida  e exigência de que a UNID seja diferente de DESCR Guia Prático EFD-ICMS/IPI –
+          Versão 3.0.2 Atualização: 21 de maio de 2019*/
+        /*
         if ($this->std->unid === $this->std->descr) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Os campos UNID e DESCR não podem ser iguais.");
-        }
+            throw new \InvalidArgumentException("[" . self::REG . "] Os campos UNID e DESCR não
+            podem ser iguais.".$this->std->unid.'|'.$this->std->descr);
+        }*/
     }
 }

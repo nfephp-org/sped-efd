@@ -12,7 +12,22 @@ class D195 extends Element implements ElementInterface
     const LEVEL = 3;
     const PARENT = '';
 
-    protected $parameters = [];
+    protected $parameters = [
+        'COD_OBS' => [
+            'type'     => 'string',
+            'regex'    => '^.{1,6}$',
+            'required' => true,
+            'info'     => 'Código da observação do lançamento fiscal (campo 02 do Registro 0460)',
+            'format'   => ''
+        ],
+        'TXT_COMPL' => [
+            'type'     => 'string',
+            'regex'    => '^.{1,255}$',
+            'required' => true,
+            'info'     => 'Descrição complementar do código de observação',
+            'format'   => ''
+        ]
+    ];
 
     /**
      * Constructor

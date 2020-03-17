@@ -44,7 +44,7 @@ class D100 extends Element implements ElementInterface
         'COD_PART' => [
             'type' => 'string',
             'regex' => '^.{1,60}$',
-            'required' => true,
+            'required' => false,
             'info' => 'Código do participante (campo 02 do Registro 0150):',
             'format' => ''
         ],
@@ -64,7 +64,7 @@ class D100 extends Element implements ElementInterface
         ],
         'SER' => [
             'type' => 'string',
-            'regex' => '^.{1,4}$',
+            'regex' => '^.{0,4}$',
             'required' => false,
             'info' => 'Série do documento fiscal',
             'format' => ''
@@ -78,7 +78,7 @@ class D100 extends Element implements ElementInterface
         ],
         'NUM_DOC' => [
             'type' => 'numeric',
-            'regex' => '^([0-1]{1})([0-9]{1,8})?$',
+            'regex' => '^([0-9]{1,9})?$',
             'required' => true,
             'info' => 'Número do documento fiscal',
             'format' => ''
@@ -93,14 +93,14 @@ class D100 extends Element implements ElementInterface
         'DT_DOC' => [
             'type' => 'string',
             'regex' => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
-            'required' => true,
+            'required' => false,
             'info' => 'Data da emissão do documento fiscal',
             'format' => ''
         ],
         'DT_A_P' => [
             'type' => 'string',
             'regex' => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
-            'required' => true,
+            'required' => false,
             'info' => 'Data da aquisição ou da prestação do serviço',
             'format' => ''
         ],
@@ -135,7 +135,7 @@ class D100 extends Element implements ElementInterface
         'IND_FRT' => [
             'type' => 'numeric',
             'regex' => '^(0|1|2|9)$',
-            'required' => true,
+            'required' => false,
             'info' => 'Indicador do tipo do frete',
             'format' => ''
         ],
@@ -224,7 +224,7 @@ class D100 extends Element implements ElementInterface
          * Se não existir Série para CT-e e CT-e OS, informar 000.
          */
         if ($this->std->cod_mod == '57' || $this->std->cod_mod == '67') {
-            if (strlen($this->std->ser) < 3) {
+            if (strlen($this->std->ser) < 1) {
                 throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
                     . "informado 3 numeros para a Série do documento fiscal(SER) " .
                     "quanto o Código do modelo do documento fiscal(COD_MOD) for CT-e e CT-e OS (57 e 67) " .
@@ -247,16 +247,16 @@ class D100 extends Element implements ElementInterface
              */
             if (empty($this->std->cod_mun_orig)) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
-                    "Deve ser informado o c[odigo do município de origem (COD_MUN_ORIG) quando" .
-                    "códihp do modelo for igual a “57”, “63” ou “67” ");
+                    "Deve ser informado o código do município de origem (COD_MUN_ORIG) quando" .
+                    " código do modelo for igual a: 57, 63 ou 67 ");
             }
             /**
              * Campo 25 (COD_MUN_DEST): Campo obrigatório se “COD_MOD” do registro D100 for “57”, “63” ou “67”.
              */
             if (empty($this->std->cod_mun_dest)) {
                 throw new \InvalidArgumentException("[" . self::REG . "] " .
-                    "Deve ser informado o c[odigo do municiopio de destino (COD_MUN_DEST) quando" .
-                    "código do modelo for igual a “57”, “63” ou “67” ");
+                    "Deve ser informado o código do municiopio de destino (COD_MUN_DEST) quando" .
+                    " código do modelo for igual a 57, 63 ou 67 ");
             }
         }
 

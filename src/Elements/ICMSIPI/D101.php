@@ -12,8 +12,30 @@ class D101 extends Element implements ElementInterface
     const LEVEL = 3;
     const PARENT = '';
 
-    protected $parameters = [];
-
+    protected $parameters = [
+        'VL_FCP_UF_DEST' => [
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'required' => true,
+            'info'     => 'Valor total relativo ao Fundo de Combate à Pobreza (FCP) da UF de destino',
+            'format'   => '15v2'
+        ],
+        'VL_ICMS_UF_DEST' => [
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'required' => true,
+            'info'     => 'Valor total do ICMS Interestadual para a UF de destino',
+            'format'   => '15v2'
+        ],
+        'VL_ICMS_UF_REM' => [
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'required' => true,
+            'info'     => 'Valor total do ICMS Interestadual para a UF do remetente',
+            'format'   => '15v2'
+        ]
+    ];
+    
     /**
      * Constructor
      * @param \stdClass $std

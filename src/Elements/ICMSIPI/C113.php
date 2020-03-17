@@ -52,7 +52,7 @@ class C113 extends Element implements ElementInterface
         ],
         'SER' => [
             'type' => 'string',
-            'regex' => '^([0-9a-z]{3,4})?$',
+            'regex' => '^([0-9a-z]{1,4})?$',
             'required' => false,
             'info' => 'Série do documento fiscal',
             'format' => ''
@@ -66,7 +66,7 @@ class C113 extends Element implements ElementInterface
         ],
         'NUM_DOC' => [
             'type' => 'numeric',
-            'regex' => '^([0-1]{1})([0-9]{1,8})?$',
+            'regex' => '^([0-9]{1,9})?$',
             'required' => true,
             'info' => 'Número do documento fiscal',
             'format' => ''

@@ -57,14 +57,29 @@ class D500 extends Element implements ElementInterface
         ],
         'SUB' => [
             'type' => 'string',
-            'regex' => '^([0-9a-z]{3})?$',
+            'regex' => '^([0-9a-z]{0,3})?$',
             'required' => false,
             'info' => 'Subsérie do documento fiscal ',
             'format' => ''
         ],
+        'COD_CONS' => [
+            'type'     => 'string',
+            'regex'    => '^0[1|2|3|4|5|6|7|8]$',
+            'required' => true,
+            'info'     => 'Código de classe de consumo de energia elétrica: '
+            .'01 - Comercial '
+            .'02 - Consumo Próprio '
+            .'03 - Iluminação Pública '
+            .'04 - Industrial '
+            .'05 - Poder Público '
+            .'06 - Residencial '
+            .'07 - Rural '
+            .'08 -Serviço Público',
+            'format'   => ''
+        ],
         'NUM_DOC' => [
             'type' => 'numeric',
-            'regex' => '^([0-1]{1})([0-9]{1,8})?$',
+            'regex' => '^([0-9]{1,9})?$',
             'required' => true,
             'info' => 'Número do documento fiscal',
             'format' => ''

@@ -24,7 +24,7 @@ class Z0002 extends Element implements ElementInterface
     protected $parameters = [
         'CLAS_ESTAB_IND' => [
             'type'     => 'numeric',
-            'regex'    => '^[0-1]{2}$',
+            'regex'    => '^[0-9]{2}$',
             'required' => true,
             'info'     => 'Informar a classificação do estabelecimento conforme tabela 4.5.5',
             'format'   => ''

@@ -12,7 +12,15 @@ class D301 extends Element implements ElementInterface
     const LEVEL = 3;
     const PARENT = '';
 
-    protected $parameters = [];
+    protected $parameters = [
+        'NUM_DOC_CANC' => [
+            'type'     => 'numeric',
+            'regex'    => '^[0-9]{0,9}$',
+            'required' => true,
+            'info'     => 'Número do documento fiscal cancelado',
+            'format'   => ''
+        ]
+    ];
 
     /**
      * Constructor
