@@ -27,7 +27,7 @@ class C110 extends Element implements ElementInterface
         'TXT_COMPL' => [
             'type' => 'string',
             'regex' => '^(.*)$',
-            'required' => true,
+            'required' => false,
             'info' => 'Descrição complementar do código de referência.',
             'format' => ''
         ]

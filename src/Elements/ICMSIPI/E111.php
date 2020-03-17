@@ -15,7 +15,7 @@ class E111 extends Element implements ElementInterface
     protected $parameters = [
         'COD_AJ_APUR' => [
             'type'     => 'string',
-            'regex'    => '^\d{8}$',
+            'regex'    => '^[A-Z]{2}\d{6}$',
             'required' => true,
             'info'     => 'Código do ajuste da apuração e dedução, conforme a Tabela indicada no item 5.1.1.',
             'format'   => ''

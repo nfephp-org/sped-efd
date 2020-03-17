@@ -57,7 +57,7 @@ class C500 extends Element implements ElementInterface
         ],
         'SUB' => [
             'type' => 'numeric',
-            'regex' => '^(\d{0,3})$',
+            'regex' => '^(\d{1,3})$',
             'required' => false,
             'info' => 'Subsérie do documento fiscal',
             'format' => ''
@@ -205,7 +205,7 @@ class C500 extends Element implements ElementInterface
         'FIN_DOCe' => [
             'type' => 'string',
             'regex' => '^(0|1|3)$',
-            'required' => true,
+            'required' => false,
             'info'     => 'Finalidade da emissão do documento eletrônico:'
             . '1 - Normal'
             . '2 - Substituição'
@@ -222,7 +222,7 @@ class C500 extends Element implements ElementInterface
         'IND_DEST' => [
             'type'     => 'numeric',
             'regex' => '^(0|1|9)$',
-            'required' => true,
+            'required' => false,
             'info'     => 'Indicador do Destinatário/Acessante:'
             . '1 - Contribuinte do ICMS;'
             . '2 - Contribuinte Isento de Inscrição no Cadastro de Contribuintes do ICMS;'
@@ -232,14 +232,14 @@ class C500 extends Element implements ElementInterface
         'COD_MUN_DEST' => [
             'type'     => 'numeric',
             'regex' => '^[0-9]{7}$',
-            'required' => true,
+            'required' => false,
             'info'     => 'Código do município do destinatário conforme a tabela do IBGE.',
             'format'   => ''
         ],
         'COD_CTA' => [
             'type'     => 'string',
             'regex'    => '^.{1,60}$',
-            'required' => true,
+            'required' => false,
             'info'     => 'Código da conta analítica contábil debitada/creditada',
             'format'   => ''
         ]

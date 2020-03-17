@@ -34,7 +34,7 @@ class C330 extends Element implements ElementInterface
         ],
         'UNID' => [
             'type'     => 'string',
-            'regex'    => '^[0-9]{0}$',
+            'regex'    => '^[0-9]{6}$',
             'required' => true,
             'info'     => 'Unidade adotada para informar o campo QUANT_CONV.',
             'format'   => ''

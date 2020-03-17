@@ -26,7 +26,7 @@ class C595 extends Element implements ElementInterface
         ],
         'TXT_COMPL' => [
             'type'     => 'string',
-            'regex'    => '^[0-9]{0}$',
+            'regex' => '^(.*)$',
             'required' => true,
             'info'     => 'Descrição complementar do código de observação.',
             'format'   => ''

@@ -75,7 +75,7 @@ class Z1010 extends Element implements ElementInterface
         'IND_CART' => [
             'type'     => 'string',
             'regex'    => '^[S|N]$',
-            'required' => true,
+            'required' => false,
             'info'     => 'Reg 1600 - Realizou vendas com Cartão de Crédito ou de débito: '
             .'S– Sim; '
             .'N - Não',
@@ -84,7 +84,7 @@ class Z1010 extends Element implements ElementInterface
         'IND_FORM' => [
             'type'     => 'string',
             'regex'    => '^[S|N]$',
-            'required' => true,
+            'required' => false,
             'info'     => 'Reg. 1700 – Foram emitidos documentos fiscais em papel no período em '
             .'unidade da federação que exija o controle de utilização de documentos fiscais: '
             .'S – Sim '
@@ -94,7 +94,7 @@ class Z1010 extends Element implements ElementInterface
         'IND_AER' => [
             'type'     => 'string',
             'regex'    => '^[S|N]$',
-            'required' => true,
+            'required' => false,
             'info'     => 'Reg 1800 – A empresa prestou serviços de transporte aéreo de cargas e '
             .'de passageiros: '
             .'S– Sim '
@@ -104,7 +104,7 @@ class Z1010 extends Element implements ElementInterface
         'IND_GIAF1' => [
             'type'     => 'string',
             'regex'    => '^[S|N]$',
-            'required' => true,
+            'required' => false,
             'info'     => 'Reg. 1960 - Possui informações GIAF1?'
                 .'S– Sim '
                 .'N - Não',
@@ -113,7 +113,7 @@ class Z1010 extends Element implements ElementInterface
         'IND_GIAF3' => [
             'type'     => 'string',
             'regex'    => '^[S|N]$',
-            'required' => true,
+            'required' => false,
             'info'     => 'Reg. 1960 - Possui informações GIAF3?'
                 .'S– Sim '
                 .'N - Não',
@@ -122,7 +122,7 @@ class Z1010 extends Element implements ElementInterface
         'IND_GIAF4' => [
             'type'     => 'string',
             'regex'    => '^[S|N]$',
-            'required' => true,
+            'required' => false,
             'info'     => 'Reg. 1960 - Possui informações GIAF4?'
                 .'S– Sim '
                 .'N - Não',
@@ -131,7 +131,7 @@ class Z1010 extends Element implements ElementInterface
         'IND_REST_RESSARC_COMPL_ICMS' => [
             'type'     => 'string',
             'regex'    => '^[S|N]$',
-            'required' => true,
+            'required' => false,
             'info'     => 'Reg. 1250 – Possui informações consolidadas de saldos '.
             'de restituição, ressarcimento e complementação do ICMS?'
                 .'S– Sim '

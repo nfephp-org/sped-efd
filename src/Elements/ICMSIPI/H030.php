@@ -37,7 +37,7 @@ class H030 extends Element implements ElementInterface
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info'     => 'Valor médio unitário do ICMS ST',
-            'format'   => '15v6'
+            'format'   => '15v2'
         ],
         'VL_FCP' => [
             'type'     => 'numeric',

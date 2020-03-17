@@ -12,7 +12,22 @@ class D360 extends Element implements ElementInterface
     const LEVEL = 4;
     const PARENT = '';
 
-    protected $parameters = [];
+    protected $parameters = [
+        'VL_PIS' => [
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'required' => true,
+            'info'     => 'Valor total do PIS',
+            'format'   => '15v2'
+        ],
+        'VL_COFINS' => [
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'required' => true,
+            'info'     => 'Valor total da COFINS',
+            'format'   => '15v2'
+        ]
+    ];
 
     /**
      * Constructor

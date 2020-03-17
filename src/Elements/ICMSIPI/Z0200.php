@@ -70,7 +70,7 @@ class Z0200 extends Element implements ElementInterface
         ],
         'COD_BARRA' => [
             'type'     => 'string',
-            'regex'    => '^[0-9]{8,14}$',
+            'regex'    => '^(SEM GTIN)|([0-9]{8,14}|\-)$',
             'required' => false,
             'info'     => 'Representação alfanumérico do código de barra do produto, se houver',
             'format'   => ''
@@ -110,7 +110,7 @@ class Z0200 extends Element implements ElementInterface
         ],
         'COD_NCM' => [
             'type'     => 'string',
-            'regex'    => '^[0-9]{8}$',
+            'regex'    => '^([0-9]{8})|([0-9]{2})$',
             'required' => false,
             'info'     => 'Código da Nomenclatura Comum do Mercosul',
             'format'   => ''
