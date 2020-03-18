@@ -81,7 +81,7 @@ class D300 extends Element implements ElementInterface
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info'     => 'Valor total acumulado das operações correspondentes à combinação de CST_ICMS, CFOP e '
-            '.alíquota do ICMS, incluídas as despesas acessórias e acréscimos',
+            .'alíquota do ICMS, incluídas as despesas acessórias e acréscimos',
             'format'   => '15v2'
         ],
         'VL_DESC' => [
