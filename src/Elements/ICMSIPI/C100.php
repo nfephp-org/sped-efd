@@ -98,7 +98,7 @@ class C100 extends Element implements ElementInterface
         ],
         'IND_PGTO' => [
             'type' => 'string',
-            'regex' => '^(0|1|2)$',
+            'regex' => '^(0|1|2|9)$',
             'required' => false,
             'info' => 'Indicador do tipo de pagamento',
             'format' => ''
