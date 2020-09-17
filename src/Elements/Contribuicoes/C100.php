@@ -94,7 +94,7 @@ class C100 extends Element implements ElementInterface
         ],
         'IND_PGTO' => [
             'type' => 'string',
-            'regex' => '^(0|1|9)$',
+            'regex' => '^(0|1|2|9)$',
             'required' => false,
             'info' => 'Indicador do tipo de pagamento: 0- À vista; 1- A prazo; 9- Sem pagamento.',
             'format' => ''
@@ -122,7 +122,7 @@ class C100 extends Element implements ElementInterface
         ],
         'IND_FRT' => [
             'type' => 'string',
-            'regex' => '^(0|1|2|9)$',
+            'regex' => '^(0|1|2|3|4|9)$',
             'required' => false,
             'info' => 'Indicador do tipo do frete: 
             0- Por conta de terceiros;
