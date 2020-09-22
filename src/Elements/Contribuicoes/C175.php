@@ -150,9 +150,18 @@ class C175 extends Element implements ElementInterface
 
     public function postValidation()
     {
-        $multiplicacao = $this->values->vl_bc_cofins * $this->values->aliq_cofins;
-        if ($this->values->quant_bc_cofins > 0) {
+        if (empty($this->values->vl_cofins)) {
+            return;
+        }
+        $multiplicacao = null;
+        if (!empty($this->values->vl_bc_cofins) && !empty($this->values->aliq_cofins)) {
+            $multiplicacao = $this->values->vl_bc_cofins * $this->values->aliq_cofins;
+        }
+        if (!empty($this->values->quant_bc_cofins) && !empty($this->values->aliq_cofins_quant)) {
             $multiplicacao = $this->values->quant_bc_cofins * $this->values->aliq_cofins_quant;
+        }
+        if ($multiplicacao == null) {
+            return;
         }
         if (number_format($this->values->vl_cofins, 2) != number_format($multiplicacao, 2)) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .

@@ -15,7 +15,7 @@ class M800 extends Element implements ElementInterface
     protected $parameters = [
         'CST_COFINS' => [
             'type' => 'string',
-            'regex' => '^((5[0-6])|(6[0-6])|(7[0-5])|98|99)$',
+            'regex' => '^0[4-9]{1}$',
             'required' => false,
             'info' => 'Código de Situação Tributária – CST das demais receitas auferidas no período, sem ' .
                 '4.3.4. ' .
