@@ -142,7 +142,7 @@ class C170 extends Element implements ElementInterface
         ],
         'CST_IPI' => [
             'type' => 'string',
-            'regex' => '^.{2}$',
+            'regex' => '^[0-9]{2}$',
             'required' => false,
             'info' => 'Código da Situação Tributária referente ao IPI, conforme a Tabela indicada no item 4.3.2.',
             'format' => ''
@@ -177,7 +177,7 @@ class C170 extends Element implements ElementInterface
         ],
         'CST_PIS' => [
             'type' => 'numeric',
-            'regex' => '^((0[1-9])|49|99)$',
+            'regex' => '^(\d{2})$',
             'required' => false,
             'info' => 'Código da Situação Tributária referente ao PIS.',
             'format' => ''
@@ -282,7 +282,7 @@ class C170 extends Element implements ElementInterface
 
     public function postValidation()
     {
-        $ultimosCaracteres = substr($this->std->cst_icms, 2);
+        $ultimosCaracteres = substr($this->std->cst_icms, -2);
         if (in_array($ultimosCaracteres, ['00', '10', '20', '70']) and $this->values->aliq_icms <= 0) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " nas operações de saídas, se os dois últimos caracteres do CST_ICMS " .

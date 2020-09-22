@@ -16,7 +16,7 @@ abstract class Element
     public $values;
     protected $parameters;
     private $reg;
-    
+
     /**
      * Constructor
      * @param string $reg
@@ -26,12 +26,12 @@ abstract class Element
         $this->reg = $reg;
         $this->values = new stdClass();
     }
-    
+
     public function postValidation()
     {
         return true;
     }
-    
+
     /**
      * Valida e ajusta os dados de entrada para os padões estabelecidos
      * @param \stdClass $std
@@ -104,7 +104,7 @@ abstract class Element
     }
 
     /**
-     * Verifica os campos comrelação ao tipo e seu regex
+     * Verifica os campos com relação ao tipo e seu regex
      * @param string|integer|float|null $input
      * @param stdClass $param
      * @param string $fieldname
@@ -178,7 +178,7 @@ abstract class Element
         $this->values->$name = (float) $value;
         return $this->numberFormat(floatval($value), $format, $fieldname);
     }
-    
+
     /**
      * Format number
      * @param float $value
