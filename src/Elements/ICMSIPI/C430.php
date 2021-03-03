@@ -17,7 +17,7 @@ class C430 extends Element implements ElementInterface
     const LEVEL = 4;
     const PARENT = 'C370';
 
-     protected $parameters = [
+    protected $parameters = [
         'COD_MOT_REST_COMPL' => [
             'type'     => 'string',
             'regex'    => '^[0-9]{5}$',
@@ -136,9 +136,9 @@ class C430 extends Element implements ElementInterface
      * Constructor
      * @param \stdClass $std
      */
-     public function __construct(\stdClass $std)
-     {
-         parent::__construct(self::REG);
-         $this->std = $this->standarize($std);
-     }
+    public function __construct(\stdClass $std)
+    {
+        parent::__construct(self::REG);
+        $this->std = $this->standarize($std);
+    }
 }

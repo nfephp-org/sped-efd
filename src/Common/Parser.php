@@ -11,7 +11,7 @@ class Parser
     public $error = [];
     protected $blocks;
     protected $info = [];
-    
+
     /**
      * Constructor
      * @param string $version
@@ -23,12 +23,12 @@ class Parser
         $structure = file_get_contents($structurefile);
         $this->blocks = $this->block($structure, true);
     }
-    
+
     /**
      * Read EFD content file and return as array
      * @param string $contentfile
      * @return array
-     * @throws Exception
+     * @throws \Exception
      */
     public function read($contentfile)
     {
@@ -40,7 +40,7 @@ class Parser
         $contentfile = strtoupper($contentfile);
         $contentfile = Encoding::fixUTF8($contentfile);
         $contentfile = Strings::squashCharacters($contentfile);
-        
+
         $datas = $this->block($contentfile);
         $i = 1;
         foreach ($datas as $data) {
