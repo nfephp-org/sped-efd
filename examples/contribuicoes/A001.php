@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Exemplo utilizacao Elemento A001
+ */
+
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once '../../bootstrap.php';
