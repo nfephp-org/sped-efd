@@ -5,6 +5,7 @@ require_once '../../bootstrap.php';
 
 use \stdClass;
 use NFePHP\EFD\Blocks\ICMSIPI\Block0;
+use NFePHP\EFD\Blocks\ICMSIPI\BlockH;
 use NFePHP\EFD\EFDICMS;
 
 try {
@@ -99,6 +100,54 @@ try {
     
     //adicionando o bloco 0 ao EFD
     $efd->add($b0);
+    
+    
+    $bH = new BlockH();
+    
+    $std = new stdClass();
+    $std->IND_MOV = 0; 
+    $bH->h001($std);
+    
+    $std = new stdClass();
+    $std->DT_INV = '31102017'; 
+    $std->VL_INV = 3457892.939392882;
+    $std->MOT_INV = '01';
+    $bH->h005($std);
+    
+    $std = new stdClass();
+    $std->COD_ITEM = 'ABC230';
+    $std->UNID = 'KG';
+    $std->QTD = 1234.50;
+    $std->VL_UNIT = 29.33;
+    $std->VL_ITEM = 36207.885;
+    $std->IND_PROP = 0;
+    //$std->COD_PART = '12345678901234';
+    //$std->TXT_COMPL = 'Texto complementar';
+    //$std->COD_CTA = 'código da conta seilá';
+    //$std->VL_ITEM_IR = 12345.987;
+    $bH->h010($std);
+    
+    $std = new stdClass();
+    $std->CST_ICMS = '123';
+    $std->BC_ICMS = 36207.885;
+    $std->VL_ICMS = 6517.4193;
+    $bH->h020($std);
+    
+    $std = new stdClass();
+    $std->COD_ITEM = '230KCC';
+    $std->UNID = 'KG';
+    $std->QTD = 2.50;
+    $std->VL_UNIT = 1009.25;
+    $std->VL_ITEM = 2523.125;
+    $std->IND_PROP = 1;
+    $std->COD_PART = '12345678901234';
+    $std->TXT_COMPL = 'Texto complementar';
+    $std->COD_CTA = 'código da conta seilá';
+    $std->VL_ITEM_IR = 12345.987;
+    $bH->h010($std);
+    
+    //adicionando o bloco 0 ao EFD
+    $efd->add($bH);
     //recuperar os dados em tela
     echo str_replace("\n", "<br>", $efd->get()).'<br>';
 } catch (\Exception $e) {
