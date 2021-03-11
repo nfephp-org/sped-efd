@@ -22,7 +22,7 @@ class C140 extends Element implements ElementInterface
         ],
         'IND_TIT' => [
             'type' => 'string',
-            'regex' => '^(01|02|03|99)$',
+            'regex' => '^(00|01|02|03|99)$',
             'required' => true,
             'info' => 'Indicador do tipo de título de crédito',
             'format' => ''
