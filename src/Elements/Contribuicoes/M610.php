@@ -34,6 +34,27 @@ class M610 extends Element implements ElementInterface
             'info' => 'Valor da Base de Cálculo da Contribuição ',
             'format' => '15v2'
         ],
+        'VL_AJUS_ACRES_BC_COFINS' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Valor do total dos ajustes de acréscimo da base de cálculo da contribuição a que se refere o Campo 04',
+            'format' => '8v2'
+        ],
+        'VL_AJUS_REDUC_BC_COFINS' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Valor do total dos ajustes de redução da base de cálculo da contribuição a que se refere o Campo 04',
+            'format' => '8v2'
+        ],
+        'VL_BC_CONT_AJUS' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Valor da Base de Cálculo da Contribuição, após os ajustes.',
+            'format' => '8v2'
+        ],
         'ALIQ_COFINS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
