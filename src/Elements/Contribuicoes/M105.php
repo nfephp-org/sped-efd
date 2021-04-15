@@ -48,7 +48,7 @@ class M105 extends Element implements ElementInterface
         ],
         'VL_BC_PIS_NC' => [
             'type' => 'numeric',
-            'regex' => '^(4)$',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor Total da Base de Cálculo do Crédito, vinculada a receitas com incidência ' .
                 'não-cumulativa (Campo 04 – Campo 05). ',

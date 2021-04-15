@@ -42,6 +42,7 @@ final class BlockF extends Block implements BlockInterface
         'f800' => ['class' => Elements\F800::class, 'level' => 3, 'type' => 'multiple'],
     ];
 
+
     public function __construct()
     {
         parent::__construct(self::TOTAL);
