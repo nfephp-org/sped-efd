@@ -56,14 +56,14 @@ class D695 extends Element implements ElementInterface
             'format' => ''
         ],
         'NOM_MEST' => [
-            'type' => 'numeric',
+            'type' => 'string',
             'regex' => '^.{1,33}$',
             'required' => true,
             'info' => 'Nome do arquivo Mestre de Documento Fiscal',
             'format' => ''
         ],
         'CHV_COD_DIG' => [
-            'type' => 'numeric',
+            'type' => 'string',
             'regex' => '^.{1,32}$',
             'required' => true,
             'info' => 'Chave de codificação digital do arquivo Mestre de Documento Fiscal',
