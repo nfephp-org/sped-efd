@@ -21,28 +21,28 @@ class D696 extends Element implements ElementInterface
         ],
         'CFOP' => [
             'type' => 'numeric',
-            'regex' => ' ^ (\d{4})$',
+            'regex' => '^(\d{4})$',
             'required' => true,
             'info' => 'Código Fiscal de agrupamento de itens',
             'format' => ''
         ],
         'ALIQ_ICMS' => [
             'type' => 'numeric',
-            'regex' => ' ^ \d + (\.\d *)?|\.\d + $',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Alíquota do ICMS',
             'format' => '6v2'
         ],
         'VL_OPR' => [
             'type' => 'numeric',
-            'regex' => ' ^ \d + (\.\d *)?|\.\d + $',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Valor da operação correspondente à combinação de CST_ICMS, CFOP, e alíquota do ICMS . ',
             'format' => '15v2'
         ],
         'VL_BC_ICMS' => [
             'type' => 'numeric',
-            'regex' => ' ^ \d + (\.\d *)?|\.\d + $',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Parcela correspondente ao "Valor da base de cálculo do ICMS" 
             referente à combinação de CST_ICMS, CFOP e alíquota do ICMS . ',
@@ -50,7 +50,7 @@ class D696 extends Element implements ElementInterface
         ],
         'VL_ICMS' => [
             'type' => 'numeric',
-            'regex' => ' ^ \d + (\.\d *)?|\.\d + $',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Parcela correspondente ao "Valor do ICMS" referente à combinação 
             de CST_ICMS, CFOP e alíquota do ICMS . ',
@@ -58,7 +58,7 @@ class D696 extends Element implements ElementInterface
         ],
         'VL_BC_ICMS_UF' => [
             'type' => 'numeric',
-            'regex' => ' ^ \d + (\.\d *)?|\.\d + $',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Parcela correspondente ao valor da base de cálculo do ICMS de outras UFs, 
             referente à combinação de CST_ICMS, CFOP e alíquota do ICMS . ',
@@ -66,7 +66,7 @@ class D696 extends Element implements ElementInterface
         ],
         'VL_ICMS_UF' => [
             'type' => 'numeric',
-            'regex' => ' ^ \d + (\.\d *)?|\.\d + $',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Parcela correspondente ao valor do ICMS de outras UFs, referente à combinação 
             de CST_ICMS, CFOP, e alíquota do ICMS . ',
@@ -74,7 +74,7 @@ class D696 extends Element implements ElementInterface
         ],
         'VL_RED_BC' => [
             'type' => 'numeric',
-            'regex' => ' ^ \d + (\.\d *)?|\.\d + $',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info' => 'Valor não tributado em função da redução da base de cálculo do ICMS, 
             referente à combinação de CST_ICMS, CFOP e alíquota do ICMS . ',
