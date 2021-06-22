@@ -13,13 +13,6 @@ class Z0120 extends Element implements ElementInterface
     const PARENT = '000';
 
     protected $parameters = [
-        'REG' => [
-            'type' => 'string',
-            'regex' => '^.{4}$',
-            'required' => false,
-            'info' => 'Texto fixo contendo "0120”',
-            'format' => ''
-        ],
         'MES_REFER' => [
             'type' => 'string',
             'regex' => '^.{6}$',
