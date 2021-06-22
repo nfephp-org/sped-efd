@@ -12,7 +12,7 @@ use NFePHP\EFD\Common\BlockInterface;
  */
 final class BlockC extends Block implements BlockInterface
 {
-    const TOTAL = '0990';
+    const TOTAL = 'C990';
 
     public $elements = [
         'c001' => ['class' => Elements\C001::class, 'level' => 1, 'type' => 'single'],
