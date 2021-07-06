@@ -38,7 +38,7 @@ class C113 extends Element implements ElementInterface
         ],
         'COD_PART' => [
             'type' => 'string',
-            'regex' => '^([A-Z0-9]{1,66})?$',
+            'regex' => '^[A-Za-z0-9]{1,60}?$',
             'required' => true,
             'info' => 'Código do participante (campo 02 do Registro 0150):',
             'format' => ''
