@@ -11,11 +11,11 @@ class D140 extends Element implements ElementInterface
     const REG = 'D140';
     const LEVEL = 3;
     const PARENT = '';
-    
+
     protected $parameters = [
         'COD_PART_CONSG' => [
             'type'     => 'string',
-            'regex'    => '^[0-9]{60}$',
+            'regex'    => '^.{1,60}$',
             'required' => true,
             'info'     => 'Código do participante (campo 02 do Registro 0150):'
             . '- consignatário, se houver',

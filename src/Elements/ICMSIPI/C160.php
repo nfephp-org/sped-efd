@@ -15,7 +15,7 @@ class C160 extends Element implements ElementInterface
     protected $parameters = [
         'COD_PART' => [
             'type' => 'string',
-            'regex' => '^[A-z0-9]{1,60}$',
+            'regex' => '^.{1,60}$',
             'required' => false,
             'info' => 'Código do participante',
             'format' => ''

@@ -24,7 +24,7 @@ class B440 extends Element implements ElementInterface
         ],
         'COD_PART' => [
             'type'     => 'string',
-            'regex'    => '^.*$',
+            'regex'    => '^.{1,60}$',
             'required' => true,
             'info'     => 'Código do participante (campo 02 do Registro 0150): '
             .'- do prestador, no caso de aquisição de serviço pelo declarante; '

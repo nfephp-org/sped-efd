@@ -15,7 +15,7 @@ class E113 extends Element implements ElementInterface
     protected $parameters = [
         'COD_PART' => [
             'type'     => 'string',
-            'regex'    => '^\d{1,60}+$',
+            'regex'    => '^.{1,60}$',
             'required' => true,
             'info'     => 'Código do participante (campo 02 do Registro 0150):'
             .'- do emitente do documento ou do remetente das mercadorias, no caso de entradas;'
