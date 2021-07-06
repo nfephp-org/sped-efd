@@ -15,7 +15,7 @@ class D130 extends Element implements ElementInterface
     protected $parameters = [
         'COD_PART_CONSG' => [
             'type'     => 'string',
-            'regex'    => '^[0-9]{60}$',
+            'regex'    => '^.{1,60}$',
             'required' => true,
             'info'     => 'Código do participante (campo 02 do Registro 0150):'
             . '- consignatário, se houver',
@@ -23,7 +23,7 @@ class D130 extends Element implements ElementInterface
         ],
         'COD_PART_RED' => [
             'type'     => 'string',
-            'regex'    => '^[0-9]{60}$',
+            'regex'    => '^.{1,60}$',
             'required' => true,
             'info'     => 'Código do participante (campo 02 do Registro 0150):'
             . '- redespachado, se houver',

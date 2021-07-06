@@ -15,14 +15,14 @@ class D170 extends Element implements ElementInterface
     protected $parameters = [
         'COD_PART_CONSG' => [
             'type'     => 'numeric',
-            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'regex'    => '^.{1,60}$',
             'required' => true,
             'info'     => 'Código do participante (campo 02 do Registro 0150): consignatário, se houver',
             'format'   => '15v60'
         ],
         'COD_PART_RED' => [
             'type'     => 'numeric',
-            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'regex'    => '^.{1,60}$',
             'required' => true,
             'info'     => 'Código do participante (campo 02 do Registro 0150): redespachante, se houver',
             'format'   => '15v60'
