@@ -61,13 +61,13 @@ class A100 extends Element implements ElementInterface
         'NUM_DOC' => [
             'type' => 'string',
             'regex' => '^.{0,60}$',
-            'required' => false,
+            'required' => true,
             'info' => 'Número do documento fiscal ou documento internacional equivalente',
             'format' => ''
         ],
         'CHV_NFSE' => [
-            'type' => 'numeric',
-            'regex' => '^([0-9]{44})?$',
+            'type' => 'string',
+            'regex' => '^.{0,60}$',
             'required' => false,
             'info' => 'Chave/Código de Verificação da nota fiscal de serviço eletrônica',
             'format' => ''
