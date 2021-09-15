@@ -16,7 +16,7 @@ final class BlockA extends Block implements BlockInterface
 
     public $elements = [
         'a001' => ['class' => Elements\A001::class, 'level' => 1, 'type' => 'single'],
-        'a100' => ['class' => Elements\A010::class, 'level' => 2, 'type' => 'single'],
+        'a010' => ['class' => Elements\A010::class, 'level' => 2, 'type' => 'single'],
         'a100' => ['class' => Elements\A100::class, 'level' => 3, 'type' => 'multiple'],
         'a110' => ['class' => Elements\A110::class, 'level' => 4, 'type' => 'multiple'],
         'a111' => ['class' => Elements\A111::class, 'level' => 4, 'type' => 'multiple'],
