@@ -33,7 +33,7 @@ class A100 extends Element implements ElementInterface
             'regex' => '^.{0,60}$',
             'required' => false,
             'info' => 'Código do participante (campo 02 do Registro 0150):
-             - do emitente do documento, no caso de emissão de terceiros; 
+             - do emitente do documento, no caso de emissão de terceiros;
              - do adquirente, no caso de serviços prestados.',
             'format' => ''
         ],
@@ -61,13 +61,13 @@ class A100 extends Element implements ElementInterface
         'NUM_DOC' => [
             'type' => 'string',
             'regex' => '^.{0,60}$',
-            'required' => false,
+            'required' => true,
             'info' => 'Número do documento fiscal ou documento internacional equivalente',
             'format' => ''
         ],
         'CHV_NFSE' => [
-            'type' => 'numeric',
-            'regex' => '^([0-9]{44})?$',
+            'type' => 'string',
+            'regex' => '^.{0,60}$',
             'required' => false,
             'info' => 'Chave/Código de Verificação da nota fiscal de serviço eletrônica',
             'format' => ''
@@ -167,7 +167,11 @@ class A100 extends Element implements ElementInterface
     {
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
-        $this->postValidation();
+
+        /**
+         * O postValidation abaixo nao precisa ser aplicado para as notas de servico
+         */
+        // $this->postValidation();
     }
 
     public function postValidation()
@@ -175,7 +179,7 @@ class A100 extends Element implements ElementInterface
         if ($this->std->chv_nfse and !Keys::isValid($this->std->chv_nfse)) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " Dígito verificador incorreto no campo campo chave da " .
-                "nota fiscal de serviço eletronica (CHAVE_NFSE)");
+                "nota fiscal de serviço eletronica (CHV_NFSE)");
         }
     }
 }
