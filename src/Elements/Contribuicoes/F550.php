@@ -107,7 +107,7 @@ class F550 extends Element implements ElementInterface
         ],
         'COD_CTA' => [
             'type' => 'string',
-            'regex' => '^.{255}$',
+            'regex' => '^.{0,255}$',
             'required' => false,
             'info' => 'Código da conta analítica contábil debitada / creditada.',
             'format' => ''
