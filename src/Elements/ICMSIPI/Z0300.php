@@ -18,7 +18,7 @@ class Z0300 extends Element implements ElementInterface
     const REG = '0300';
     const LEVEL = 2;
     const PARENT = '';
-    
+
     protected $parameters = [
         'COD_IND_BEM' => [
             'type'     => 'string',
@@ -29,7 +29,7 @@ class Z0300 extends Element implements ElementInterface
         ],
         'IDENT_MERC' => [
             'type'     => 'integer',
-            'regex'    => '^[0-1]{1}$',
+            'regex'    => '^[1-2]{1}$',
             'required' => true,
             'info'     => 'Identificação do tipo de mercadoria',
             'format'   => ''
@@ -63,7 +63,7 @@ class Z0300 extends Element implements ElementInterface
             'format'   => ''
         ],
     ];
-    
+
     /**
      * Constructor
      * @param stdClass $std

@@ -110,31 +110,3 @@ class M210 extends Element implements ElementInterface
         $this->std = $this->standarize($std);
     }
 }
-
-/**
- * Os campos abaixo nao aparecem nos manuais: 
- *   versao 1.34 de 24/02/2020 e
- *   versao 1.35 de 18/06/2021
- */
-        // 'VL_AJUS_ACRES_BC_PIS' => [
-        //     'type' => 'numeric',
-        //     'regex' => '^\d+(\.\d*)?|\.\d+$',
-        //     'required' => false,
-        //     'info' => 'Valor do total dos ajustes de acréscimo da base de cálculo da contribuição a que se refere o Campo 04',
-        //     'format' => '8v2'
-        // ],
-        // 'VL_AJUS_REDUC_BC_PIS' => [
-        //     'type' => 'numeric',
-        //     'regex' => '^\d+(\.\d*)?|\.\d+$',
-        //     'required' => false,
-        //     'info' => 'Valor do total dos ajustes de redução da base de cálculo da contribuição a que se refere o Campo 04',
-        //     'format' => '8v2'
-        // ],
-        // 'VL_BC_CONT_AJUS' => [
-        //     'type' => 'numeric',
-        //     'regex' => '^\d+(\.\d*)?|\.\d+$',
-        //     'required' => false,
-        //     'info' => 'Valor da Base de Cálculo da Contribuição, após os ajustes.',
-        //     'format' => '8v2'
-        // ],
-        
