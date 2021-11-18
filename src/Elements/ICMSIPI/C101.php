@@ -24,21 +24,21 @@ class C101 extends Element implements ElementInterface
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor total relativo ao Fundo de Combate à Pobreza (FCP) da UF de destino',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_ICMS_UF_DEST' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor total do ICMS Interestadual para a UF de destino',
-            'format' => ''
+            'format' => '15v2'
         ],
         'VL_ICMS_UF_REM' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
             'info' => 'Valor total do ICMS Interestadual para a UF do remetente',
-            'format' => ''
+            'format' => '15v2'
         ],
     ];
 
