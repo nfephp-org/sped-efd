@@ -27,7 +27,7 @@ class C800 extends Element implements ElementInterface
         ],
         'COD_SIT' => [
             'type' => 'numeric',
-            'regex' => '^(0)[0-3]$',
+            'regex' => '^(00|01|02|03)$',
             'required' => true,
             'info' => 'Código da situação do documento fiscal, conforme a Tabela 4.1.2',
             'format' => ''
