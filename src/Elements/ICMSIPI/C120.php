@@ -29,7 +29,7 @@ class C120 extends Element implements ElementInterface
         ],
         'NUM_DOC_IMP' => [
             'type' => 'string',
-            'regex' => '^([0-9]{10,12})+$',
+            'regex' => '^([0-9]{1,12})+$', // 1-12 (NT 2011/004)
             'required' => true,
             'info' => 'Número do documento de Importação',
             'format' => ''

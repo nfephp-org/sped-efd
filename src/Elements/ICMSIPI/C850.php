@@ -20,14 +20,14 @@ class C850 extends Element implements ElementInterface
     protected $parameters = [
         'CST_ICMS' => [
             'type' => 'numeric',
-            'regex' => '^(\d{1,3})$',
+            'regex' => '^(\d{3})$',
             'required' => true,
             'info' => 'Código da Situação Tributária, conforme a Tabela indicada no item 4.3.1',
             'format' => ''
         ],
         'CFOP' => [
             'type' => 'numeric',
-            'regex' => '^(\d{1,4})$',
+            'regex' => '^(\d{4})$',
             'required' => true,
             'info' => 'Código Fiscal de Operação e Prestação do agrupamento de itens',
             'format' => ''
@@ -43,22 +43,23 @@ class C850 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => '“Valor total do CF-e” na combinação de CST_ICMS, CFOP e alíquota do ICMS, 
+            'info' => '“Valor total do CF-e” na combinação de CST_ICMS, CFOP e alíquota do ICMS,
             correspondente ao somatório do valor líquido dos itens.',
             'format' => '15v2'
         ],
         'VL_BC_ICMS' => [
-            'type' => 'string',
-            'regex' => '^.{1,2}$',
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'N',
+            'info' => 'Valor acumulado da base de cálculo do ICMS,
+            referente à combinação de CST_ICMS, CFOP, e alíquota do ICMS.',
             'format' => '15v2'
         ],
         'VL_ICMS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor do ICMS" referente à 
+            'info' => 'Parcela correspondente ao "Valor do ICMS" referente à
             combinação de CST_ICMS, CFOP e alíquota do ICMS.',
             'format' => '15v2'
         ],
