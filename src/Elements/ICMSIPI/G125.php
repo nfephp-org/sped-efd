@@ -30,7 +30,7 @@ class G125 extends Element implements ElementInterface
         ],
         'TIPO_MOV' => [
             'type' => 'string',
-            'regex' => '^(ST|IM|IA|CI|MC|BA|AT|PE|OT)$',
+            'regex' => '^(SI|ST|IM|IA|CI|MC|BA|AT|PE|OT)$',
             'required' => true,
             'info' => 'Tipo de movimentação do bem ou componente ' .
                 ' SI = Saldo inicial de bens imobilizados ' .

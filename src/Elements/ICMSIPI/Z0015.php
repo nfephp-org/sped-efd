@@ -37,7 +37,7 @@ class Z0015 extends Element implements ElementInterface
         ],
         'IE_ST' => [
             'type'     => 'string',
-            'regex'    => '^[0-9]{11,14}$',
+            'regex'    => '^[0-9]{2,14}$',
             'required' => true,
             'info'     => 'Inscrição Estadual do contribuinte substituto na '
             . 'unidade da  federação  do  contribuinte  substituído ou unidade '
