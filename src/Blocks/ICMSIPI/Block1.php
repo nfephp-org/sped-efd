@@ -32,6 +32,7 @@ use NFePHP\EFD\Common\BlockInterface;
  * @method Elements\z1500 z1500(\stdClass $std) Constructor element 1500
  * @method Elements\z1510 z1510(\stdClass $std) Constructor element 1510
  * @method Elements\z1600 z1600(\stdClass $std) Constructor element 1600
+ * @method Elements\z1601 z1601(\stdClass $std) Constructor element 1601
  * @method Elements\z1700 z1700(\stdClass $std) Constructor element 1700
  * @method Elements\z1710 z1710(\stdClass $std) Constructor element 1710
  * @method Elements\z1800 z1800(\stdClass $std) Constructor element 1800
@@ -51,7 +52,7 @@ use NFePHP\EFD\Common\BlockInterface;
 final class Block1 extends Block implements BlockInterface
 {
     const TOTAL = '1990';
-    
+
     public $elements = [
         'z1001' => ['class' => Elements\Z1001::class, 'level' => 1, 'type' => 'single'],
         'z1010' => ['class' => Elements\Z1010::class, 'level' => 2, 'type' => 'single'],
@@ -74,6 +75,7 @@ final class Block1 extends Block implements BlockInterface
         'z1500' => ['class' => Elements\Z1500::class, 'level' => 2, 'type' => 'multiple'],
         'z1510' => ['class' => Elements\Z1510::class, 'level' => 3, 'type' => 'multiple'],
         'z1600' => ['class' => Elements\Z1600::class, 'level' => 2, 'type' => 'multiple'],
+        'z1601' => ['class' => Elements\Z1601::class, 'level' => 2, 'type' => 'multiple'],
         'z1700' => ['class' => Elements\Z1700::class, 'level' => 2, 'type' => 'multiple'],
         'z1710' => ['class' => Elements\Z1710::class, 'level' => 3, 'type' => 'multiple'],
         'z1800' => ['class' => Elements\Z1800::class, 'level' => 2, 'type' => 'single'],
@@ -89,9 +91,9 @@ final class Block1 extends Block implements BlockInterface
         'z1970' => ['class' => Elements\Z1970::class, 'level' => 2, 'type' => 'multiple'],
         'z1975' => ['class' => Elements\Z1975::class, 'level' => 3, 'type' => 'multiple'],
         'z1980' => ['class' => Elements\Z1980::class, 'level' => 2, 'type' => 'single']
-        
+
     ];
-    
+
     public function __construct()
     {
         parent::__construct(self::TOTAL);

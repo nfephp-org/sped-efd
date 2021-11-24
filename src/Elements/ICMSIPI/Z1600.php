@@ -6,6 +6,9 @@ use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
 
+// REGISTRO 1600: TOTAL DAS OPERAÇÕES COM CARTÃO DE CRÉDITO E/OU DÉBITO,
+// LOJA (PRIVATE LABEL) E DEMAIS INSTRUMENTOS DE PAGAMENTOS ELETRÔNICOS
+// (VÁLIDO ATÉ 31/12/2021)
 class Z1600 extends Element implements ElementInterface
 {
     const REG = '1600';
