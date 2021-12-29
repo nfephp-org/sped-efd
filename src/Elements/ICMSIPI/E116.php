@@ -39,7 +39,7 @@ class E116 extends Element implements ElementInterface
             'regex'    => '^.*$',
             'required' => true,
             'info'     => 'Código de receita referente à obrigação, próprio '
-            .'da unidade da federação, conforme legislação estadual.',
+                . 'da unidade da federação, conforme legislação estadual.',
             'format'   => ''
         ],
         'NUM_PROC' => [
@@ -54,10 +54,10 @@ class E116 extends Element implements ElementInterface
             'regex'    => '^[0|1|2|9]$',
             'required' => false,
             'info'     => 'Indicador da origem do processo: '
-            .'0- SEFAZ;'
-            .'1- Justiça Federal;'
-            .'2- Justiça Estadual;'
-            .'9- Outros',
+                . '0- SEFAZ;'
+                . '1- Justiça Federal;'
+                . '2- Justiça Estadual;'
+                . '9- Outros',
             'format'   => ''
         ],
         'PROC' => [
@@ -100,9 +100,9 @@ class E116 extends Element implements ElementInterface
          * Campo 06 (NUM_PROC) Validação: se este campo estiver preenchido, os campos
          * IND_PROC e PROC também devem estar preenchidos.
          */
-        if (!empty($this->std->num_proc) && (empty($this->std->ind_proc) || empty($this->std->proc))) {
+        if ($this->std->num_proc !== null && ($this->std->ind_proc === null || $this->std->proc === null)) {
             throw new \InvalidArgumentException("[" . self::REG . "] Se o campo NUM_PROC estiver preenchido, "
-            ."os campos IND_PROC e PROC também devem estar preenchidos.");
+                . "os campos IND_PROC e PROC também devem estar preenchidos.");
         }
     }
 }
