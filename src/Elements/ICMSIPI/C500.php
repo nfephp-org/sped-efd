@@ -242,6 +242,56 @@ class C500 extends Element implements ElementInterface
             'required' => false,
             'info'     => 'Código da conta analítica contábil debitada/creditada',
             'format'   => ''
+        ],
+        'COD_MOD_DOC_REF' => [
+            'type' => 'string',
+            'regex' => '^.{2}$',
+            'required' => false,
+            'info' => 'Código do modelo do documento fiscal'
+            . 'referenciado, conforme a Tabela 4.1.1',
+            'format' => ''
+        ],
+        'HASH_DOC_REF' => [
+            'type' => 'string',
+            'regex' => '^(\d{32})$',
+            'required' => false,
+            'info' => 'Código de autenticação digital do registro (Convênio 115/2003).',
+            'format' => ''
+        ],
+        'SER_DOC_REF' => [
+            'type' => 'string',
+            'regex' => '^.{0,4}$',
+            'required' => false,
+            'info' => 'Série do documento fiscal referenciado',
+            'format' => ''
+        ],
+        'NUM_DOC_REF' => [
+            'type' => 'numeric',
+            'regex' => '^(\d{1,9})$',
+            'required' => true,
+            'info' => 'Número do documento fiscal referenciado',
+            'format' => ''
+        ],
+        'MES_DOC_REF' => [
+            'type' => 'string',
+            'regex' => '^(\d{6})$',
+            'required' => false,
+            'info' => 'Mês e ano da emissão do documento fiscal referenciado',
+            'format' => ''
+        ],
+        'ENER_INJET' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Energia injetada',
+            'format' => '15v2'
+        ],
+        'OUTRAS_DED' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Outras deduções',
+            'format' => '15v2'
         ]
     ];
 
