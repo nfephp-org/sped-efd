@@ -17,25 +17,22 @@ class Z0001Test extends TestCase
         $expected = '|0001|1|';
         $this->assertEquals($expected, $resp);
     }
-    
-    /**
-     * @expectedException \InvalidArgumentException
-     */
+
     public function testZ0001FailWithString()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $std = new stdClass();
         $std->ind_mov = 'A';
-        $b1 = new Z0001($std);
+        new Z0001($std);
     }
-    
-    /**
-     * @expectedException \InvalidArgumentException
-     */
+
     public function testZ0001FailWithNotValidNumber()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $std = new stdClass();
         $std->ind_mov = 2;
-        $b1 = new Z0001($std);
+        new Z0001($std);
     }
 }
-
