@@ -8,3 +8,5 @@ nbproject
 build
 composer.lock
 config.json
+
+.phpunit.result.cache
