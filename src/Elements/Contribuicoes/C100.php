@@ -231,13 +231,6 @@ class C100 extends Element implements ElementInterface
 
     public function postValidation()
     {
-        if ($this->std->cod_mod == 55) {
-            if (empty($this->std->chv_nfe)) {
-                throw new \InvalidArgumentException("[" . self::REG . "] " .
-                    " Dígito verificador incorreto no campo campo chave do " .
-                    "conhecimento de transporte eletrônico (CHV_CTE)");
-            }
-        }
         if (!empty($this->std->chv_nfe) and !Keys::isValid($this->std->chv_nfe)) {
             throw new \InvalidArgumentException("[" . self::REG . "] " .
                 " Dígito verificador incorreto no campo campo chave da " .
