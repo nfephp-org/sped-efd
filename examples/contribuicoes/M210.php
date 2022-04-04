@@ -9,6 +9,9 @@ $std = new stdClass();
 $std->COD_CONT = '68';
 $std->VL_REC_BRT = 8.65;
 $std->VL_BC_CONT = 99.75;
+$std->VL_AJUS_ACRES_BC_PIS = 10.00;
+$std->VL_AJUS_REDUC_BC_PIS = 11.00;
+$std->VL_BC_CONT_AJUS = 100.11;
 $std->ALIQ_PIS = 347.3;
 $std->QUANT_BC_PIS = 970.7;
 $std->ALIQ_PIS_QUANT = 457.5;
@@ -26,4 +29,4 @@ echo "{$m210}".'<br>';
 echo $e->getMessage();
 }
 
-echo '|M210|68|8,65|99,75|347,3000|970,700|457,5000|70,80|67,90|23,60|91,99|71,98|62,81|<br>';
+echo '|M210|68|8,65|99,75|10,00|11,00|100,11|347,3000|970,700|457,5000|70,80|67,90|23,60|91,99|71,98|62,81|<br>';
