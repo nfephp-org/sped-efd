@@ -34,6 +34,30 @@ class M210 extends Element implements ElementInterface
             'info' => 'Valor da Base de Cálculo da Contribuição ',
             'format' => '15v2'
         ],
+        'VL_AJUS_ACRES_BC_PIS' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Valor do total dos ajustes de acréscimo da base de cálculo '
+                .'da contribuição a que se refere o Campo 04 ',
+            'format' => '15v2'
+        ],
+        'VL_AJUS_REDUC_BC_PIS' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Valor do total dos ajustes de redução da base de '
+                . 'cálculo da contribuição a que se refere o Campo 04',
+            'format' => '15v2'
+        ],
+        'VL_BC_CONT_AJUS' => [
+            'type' => 'numeric',
+            'regex' => '^\d+(\.\d*)?|\.\d+$',
+            'required' => false,
+            'info' => 'Valor da Base de Cálculo da Contribuição, após os '
+                . 'ajustes. (Campo 07 = Campo 04 + Campo 05 - Campo 06)',
+            'format' => '15v2'
+        ],
         'ALIQ_PIS' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
