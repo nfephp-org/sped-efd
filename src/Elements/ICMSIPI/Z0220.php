@@ -52,7 +52,14 @@ class Z0220 extends Element implements ElementInterface
                 . '(multiplicar) a unidade a ser convertida na unidade adotada '
                 . 'no inventário.',
             'format'   => '15v6'
-        ]
+        ],
+        "COD_BARRA" => [
+            'type'     => 'string',
+            'regex'    => '^([0-9]{8}|[0-9]{12,14})$',
+            'required' => false,
+            'info'     => 'informar o código GTIN-8, GTIN-12, GTIN-13 ou GTIN-14 da unidade comercial',
+            'format'   => ''
+        ],
     ];
     
     /**
