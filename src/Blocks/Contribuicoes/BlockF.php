@@ -17,7 +17,7 @@ final class BlockF extends Block implements BlockInterface
     public $elements = [
         'f001' => ['class' => Elements\F001::class, 'level' => 1, 'type' => 'single'],
         'f010' => ['class' => Elements\F010::class, 'level' => 2, 'type' => 'single'],
-        'f100' => ['class' => Elements\F100::class, 'level' => 3, 'type' => 'single'],
+        'f100' => ['class' => Elements\F100::class, 'level' => 3, 'type' => 'multiple'],
         'f111' => ['class' => Elements\F111::class, 'level' => 4, 'type' => 'multiple'],
         'f120' => ['class' => Elements\F120::class, 'level' => 3, 'type' => 'multiple'],
         'f129' => ['class' => Elements\F129::class, 'level' => 4, 'type' => 'multiple'],
