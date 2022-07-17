@@ -17,9 +17,9 @@ class Z0110 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^([1-3]{1})$',
             'required' => false,
-            'info' => 'Código indicador da incidência tributária no período: 
-            1 – Escrituração de operações com incidência exclusivamente no regime não-cumulativo; 
-            2 – Escrituração de operações com incidência exclusivamente no regime cumulativo; 
+            'info' => 'Código indicador da incidência tributária no período:
+            1 – Escrituração de operações com incidência exclusivamente no regime não-cumulativo;
+            2 – Escrituração de operações com incidência exclusivamente no regime cumulativo;
             3 – Escrituração de operações com incidência nos regimes não-cumulativo e cumulativo.',
             'format' => ''
         ],
@@ -27,8 +27,8 @@ class Z0110 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^([1-2]{1})$',
             'required' => false,
-            'info' => 'Código indicador de método de apropriação de créditos comuns, 
-            no caso de incidência no regime não-cumulativo (COD_INC_TRIB = 1 ou 3): 
+            'info' => 'Código indicador de método de apropriação de créditos comuns,
+            no caso de incidência no regime não-cumulativo (COD_INC_TRIB = 1 ou 3):
             1 – Método de Apropriação Direta; 2 – Método de Rateio Proporcional (Receita Bruta)',
             'format' => ''
         ],
@@ -36,9 +36,9 @@ class Z0110 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^([1-2]{1})$',
             'required' => false,
-            'info' => 'Código indicador do Tipo de Contribuição Apurada no Período 
-            1 – Apuração da Contribuição Exclusivamente a Alíquota Básica 
-            2 – Apuração da Contribuição a Alíquotas Específicas (Diferenciadas e/ou por 
+            'info' => 'Código indicador do Tipo de Contribuição Apurada no Período
+            1 – Apuração da Contribuição Exclusivamente a Alíquota Básica
+            2 – Apuração da Contribuição a Alíquotas Específicas (Diferenciadas e/ou por
             Unidade de Medida de Produto)',
             'format' => ''
         ],
@@ -46,12 +46,12 @@ class Z0110 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^(1|2|9)$',
             'required' => false,
-            'info' => 'Código indicador do critério de escrituração e apuração adotado, 
-            no caso de incidência exclusivamente no regime cumulativo (COD_INC_TRIB = 2), 
-            pela pessoa jurídica submetida ao regime de tributação com base no lucro presumido: 
-            1 – Regime de Caixa – Escrituração consolidada (Registro F500); 
-            2 – Regime de Competência - Escrituração consolidada (Registro F550); 
-            9 – Regime de Competência - Escrituração detalhada, com base 
+            'info' => 'Código indicador do critério de escrituração e apuração adotado,
+            no caso de incidência exclusivamente no regime cumulativo (COD_INC_TRIB = 2),
+            pela pessoa jurídica submetida ao regime de tributação com base no lucro presumido:
+            1 – Regime de Caixa – Escrituração consolidada (Registro F500);
+            2 – Regime de Competência - Escrituração consolidada (Registro F550);
+            9 – Regime de Competência - Escrituração detalhada, com base
             nos registros dos Blocos “A”, “C”, “D” e “F”.',
             'format' => ''
         ],
@@ -66,5 +66,21 @@ class Z0110 extends Element implements ElementInterface
     {
         parent::__construct(self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
+    }
+
+    public function postValidation()
+    {
+        if (($this->std->ind_apro_cred and ($this->std->cod_inc_trib == 2)) or
+            (!$this->std->ind_apro_cred and ($this->std->cod_inc_trib != 2))) {
+            throw new \InvalidArgumentException("[" . self::REG . "] " .
+                "O campo IND_APRO_CRED deve ser informado quando COD_INC_TRIB = 1 ou 3 ");
+        }
+
+        if (($this->std->ind_reg_cum and ($this->std->cod_inc_trib != 2)) or
+            (!$this->std->ind_reg_cum and ($this->std->cod_inc_trib == 2))) {
+            throw new \InvalidArgumentException("[" . self::REG . "] " .
+                "O campo IND_REG_CUM deve ser informado quando COD_INC_TRIB = 2 ");
+        }
     }
 }
