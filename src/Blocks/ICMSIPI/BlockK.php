@@ -13,6 +13,7 @@ use NFePHP\EFD\Common\BlockInterface;
  * constituintes listados
  *
  * @method Elements\K001 k001(\stdClass $std) Constructor element K001
+ * @method Elements\K010 k010(\stdClass $std) Constructor element K010
  * @method Elements\K100 k100(\stdClass $std) Constructor element K100
  * @method Elements\K200 k200(\stdClass $std) Constructor element K200
  * @method Elements\K210 k210(\stdClass $std) Constructor element K210
@@ -40,6 +41,7 @@ final class BlockK extends Block implements BlockInterface
     
     public $elements = [
         'k001' => ['class' => Elements\K001::class, 'level' => 1, 'type' => 'single'],
+        'k010' => ['class' => Elements\K010::class, 'level' => 2, 'type' => 'single'],
         'k100' => ['class' => Elements\K100::class, 'level' => 2, 'type' => 'multiple'],
         'k200' => ['class' => Elements\K200::class, 'level' => 3, 'type' => 'multiple'],
         'k210' => ['class' => Elements\K210::class, 'level' => 3, 'type' => 'multiple'],
