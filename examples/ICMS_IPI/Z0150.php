@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 ini_set('display_errors', 'On');
 require_once '../../bootstrap.php';
 
@@ -9,11 +9,11 @@ use NFePHP\EFD\Elements\ICMSIPI\Z0150;
 $std = new stdClass();
 $std->COD_PART = '000123';
 $std->NOME = 'Fundo de Quintal Ltda';
-$std->COD_PAIS = '01058';
-$std->CNPJ = '12345678901234';
-//$std->CPF = null;
-$std->IE = '12345678901234';
-$std->COD_MUN = '0123456';
+$std->COD_PAIS = '01112';
+$std->CNPJ = '0';
+$std->CPF = null;
+$std->IE = '';
+//$std->COD_MUN = '0123456';
 //$std->SUFRAMA = null;
 $std->END = 'Rua UM';
 $std->NUM = 'N.1';
