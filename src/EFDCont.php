@@ -12,7 +12,7 @@ use NFePHP\EFD\EFD;
  */
 final class EFDCont extends EFD
 {
-    protected $possibles = [
+    public $possibles = [
         'block0' => ['class' => Blocks\Contribuicoes\Block0::class, 'order' => 1],
         'blocka' => ['class' => Blocks\Contribuicoes\BlockA::class, 'order' => 2],
         'blockc' => ['class' => Blocks\Contribuicoes\BlockC::class, 'order' => 3],
