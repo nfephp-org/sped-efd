@@ -155,7 +155,7 @@ class C175 extends Element implements ElementInterface
         }
         $multiplicacao = null;
         if (!empty($this->values->vl_bc_cofins) && !empty($this->values->aliq_cofins)) {
-            $multiplicacao = $this->values->vl_bc_cofins * $this->values->aliq_cofins;
+            $multiplicacao = $this->values->vl_bc_cofins * $this->values->aliq_cofins/100;
         }
         if (!empty($this->values->quant_bc_cofins) && !empty($this->values->aliq_cofins_quant)) {
             $multiplicacao = $this->values->quant_bc_cofins * $this->values->aliq_cofins_quant;
