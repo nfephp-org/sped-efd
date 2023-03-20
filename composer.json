@@ -1,7 +1,7 @@
 {
     "name": "nfephp-org/sped-efd",
     "type": "library",
-    "version": "1.0.3",
+    "version": "1.0",
     "description": "API para geração dos arquivos para SPED EFD",
     "keywords": [
         "efd",
