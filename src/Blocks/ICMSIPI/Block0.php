@@ -66,9 +66,4 @@ final class Block0 extends Block implements BlockInterface
         'z0500' => ['class' => Elements\Z0500::class, 'level' => 2, 'type' => 'multiple'],
         'z0600' => ['class' => Elements\Z0600::class, 'level' => 2, 'type' => 'multiple']
     ];
-
-    public function __construct()
-    {
-        parent::__construct(self::TOTAL);
-    }
 }

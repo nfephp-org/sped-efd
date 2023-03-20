@@ -138,9 +138,9 @@ class P100 extends Element implements ElementInterface
     public function postValidation()
     {
         if ($this->values->vl_rec_ativ_estab > $this->values->vl_rec_total_est) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 "O campo VL_REC_ATIV_ESTAB deve ser MENOR ou " .
-                "IGUAL ao valor do Campo VL_REC_TOT_EST");
+                "IGUAL ao valor do Campo VL_REC_TOT_EST";
         }
     }
 }

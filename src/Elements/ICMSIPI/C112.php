@@ -85,12 +85,12 @@ class C112 extends Element implements ElementInterface
     public function postValidation()
     {
         if (!$this->std->num_da xor $this->std->cod_aut) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "Preencha o número da arrecadação (NUM_DA) ou o Código completo da autenticação bancária (COD_AUT");
+            $this->errors[] = "[" . self::REG . "] " .
+                "Preencha o número da arrecadação (NUM_DA) ou o Código completo da autenticação bancária (COD_AUT";
         }
         if ($this->std->vl_da <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "O valor total da arrecadação (VAL_DA) deve ser maior do que zero '0' ");
+            $this->errors[] = "[" . self::REG . "] " .
+                "O valor total da arrecadação (VAL_DA) deve ser maior do que zero '0'";
         }
     }
 }

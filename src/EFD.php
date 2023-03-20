@@ -6,13 +6,15 @@ use NFePHP\EFD\Common\BlockInterface;
 
 abstract class EFD
 {
+    /**
+     * @var array
+     */
+    public $errors = [];
+    /**
+     * @var array
+     */
     protected $possibles = [];
 
-    public function __construct()
-    {
-        //todo
-    }
-    
     /**
      * Add
      * @param BlockInterface $block
@@ -25,9 +27,12 @@ abstract class EFD
         $name = strtolower((new \ReflectionClass($block))->getShortName());
         if (key_exists($name, $this->possibles)) {
             $this->{$name} = $block->get();
+            foreach ($block->errors as $err) {
+                $this->errors[] = $err;
+            }
         }
     }
-    
+
     /**
      * Create a EFD string
      */
@@ -43,7 +48,7 @@ abstract class EFD
         $efd .= $this->totalize($efd);
         return $efd;
     }
-    
+
     /**
      * Totals blocks contents
      * @param string $efd

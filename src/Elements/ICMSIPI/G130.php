@@ -90,9 +90,9 @@ class G130 extends Element implements ElementInterface
     public function postValidation()
     {
         if (!empty($this->std->chv_nfe_cte) and !Keys::isValid($this->std->chv_nfe_cte)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " Dígito verificador incorreto no campo chave do " .
-                " campo CHV_NFE_CTE");
+            $this->errors[] = "[" . self::REG . "] "
+                . " Dígito verificador incorreto no campo chave do "
+                . " campo CHV_NFE_CTE";
         }
     }
 }

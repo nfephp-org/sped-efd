@@ -143,9 +143,9 @@ class C800 extends Element implements ElementInterface
     public function postValidation()
     {
         if (!empty($this->std->chv_cfe) and !Keys::isValid($this->std->chv_cfe)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 " Dígito verificador incorreto no campo chave do " .
-                "cupom fiscal eletronica (CHV_CFE)");
+                "cupom fiscal eletronica (CHV_CFE)";
         }
     }
 }

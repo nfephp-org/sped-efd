@@ -71,9 +71,9 @@ class Z0111 extends Element implements ElementInterface
         $somatorio += $this->values->rec_bru_cum;
 
         if ($this->values->rec_bru_total != $somatorio) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 " A soma dos valores dos campos 02, 03, 04 e " .
-                "05 deve ser igual ao valor informado no campo REC_BRU_TOTAL.");
+                "05 deve ser igual ao valor informado no campo REC_BRU_TOTAL.";
         }
     }
 }

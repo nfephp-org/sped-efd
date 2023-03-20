@@ -136,8 +136,8 @@ class B470 extends Element implements ElementInterface
                     + $this->values->vl_sub
                     + $this->values->vl_isnt;
         if ($this->values->vl_ded_bc != $somatorio) {
-            throw new \InvalidArgumentException("[" . self::REG . "] O valor informado deve ser igual "
-            ."ao somatório dos valores dos campos VL_MAT_TERC, VL_MAT_PROP, VL_SUB e VL_ISNT.");
+            $this->errors[] = "[" . self::REG . "] O valor informado deve ser igual "
+            ."ao somatório dos valores dos campos VL_MAT_TERC, VL_MAT_PROP, VL_SUB e VL_ISNT.";
         }
     }
 }

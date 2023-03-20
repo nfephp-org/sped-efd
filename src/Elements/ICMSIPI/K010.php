@@ -21,11 +21,12 @@ class K010 extends Element implements ElementInterface
             'type'     => 'numeric',
             'regex'    => '^[0-2]{1}$',
             'required' => true,
-            'info'     => 'Indicador de tipo de leiaute adotado: 0-Leiaute simplificado, 1-Leiaute completo, 2-Leiaute restrito aos saldos de estoque',
+            'info'     => 'Indicador de tipo de leiaute adotado: 0-Leiaute simplificado, '
+                . '1-Leiaute completo, 2-Leiaute restrito aos saldos de estoque',
             'format'   => ''
         ]
     ];
-    
+
     /**
      * Constructor
      * @param \stdClass $std

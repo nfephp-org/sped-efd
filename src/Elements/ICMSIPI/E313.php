@@ -95,8 +95,8 @@ class E313 extends Element implements ElementInterface
          * Campo 10 (VL_AJ_ITEM) Validação: o valor informado no campo deve ser maior que “0” (zero).
          */
         if ($this->values->vl_aj_item <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] O valor informado no campo deve "
-            ."ser maior que “0” (zero).");
+            $this->errors[] = "[" . self::REG . "] O valor informado no campo deve "
+            . "ser maior que “0” (zero).";
         }
     }
 }

@@ -84,9 +84,9 @@ class Z1300 extends Element implements ElementInterface
             $this->values->vl_ret_per-
             $this->values->vl_ret_dcomp;
         if (number_format($this->values->sld_ret, 2)!==number_format($calculo, 2)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "O valor do campo SLD_RET deverá ser igual a 
-                VL_RET_APU - VL_RET_DED - VL_RET_PER - VL_RET_DCOMP. ");
+            $this->errors[] = "[" . self::REG . "] " .
+                "O valor do campo SLD_RET deverá ser igual a
+                VL_RET_APU - VL_RET_DED - VL_RET_PER - VL_RET_DCOMP.";
         }
     }
 }

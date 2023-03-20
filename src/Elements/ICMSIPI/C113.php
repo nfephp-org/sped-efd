@@ -101,13 +101,13 @@ class C113 extends Element implements ElementInterface
     public function postValidation()
     {
         if (in_array($this->std->cod_mod, ['2D', '02', '2E'])) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "O código do documento fiscal (COD_MOD) deve ser diferente de 2D, 02 ou 2E");
+            $this->errors[] = "[" . self::REG . "] " .
+                "O código do documento fiscal (COD_MOD) deve ser diferente de 2D, 02 ou 2E";
         }
         if ($this->std->cod_mod == 57) {
             if (!Keys::isValid($this->std->chv_doce)) {
-                throw new \InvalidArgumentException("[" . self::REG . "] " .
-                    "Chave do cocumento (CHV_DOCe) inválida");
+                $this->errors[] = "[" . self::REG . "] " .
+                    "Chave do cocumento (CHV_DOCe) inválida";
             }
         }
     }

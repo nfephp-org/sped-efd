@@ -136,9 +136,9 @@ class M100 extends Element implements ElementInterface
         $calculo = $this->values->vl_cred+$this->values->vl_ajus_cred;
         $calculo = $calculo-$this->values->vl_ajus_reduc;
         if ($this->values->vl_cred_dif>$calculo) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 "O campo VL_CRED_DIF não deve de ser maior do que  " .
-                "não pode ser maior que VL_CRED + VL_AJUS_ACRES - VL_AJUS_REDUC");
+                "não pode ser maior que VL_CRED + VL_AJUS_ACRES - VL_AJUS_REDUC";
         }
     }
 }

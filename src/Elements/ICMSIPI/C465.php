@@ -48,9 +48,9 @@ class C465 extends Element implements ElementInterface
          * Verifica a chave cfe
          */
         if ($this->std->chv_cfe and !Keys::isValid($this->std->chv_cfe)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " Dígito verificador incorreto no da Chave " .
-                "do Cupom Fiscal Eletrônico (CHV_CFE)");
+            $this->errors[] = "[" . self::REG . "] "
+                . " Dígito verificador incorreto no da Chave "
+                . "do Cupom Fiscal Eletrônico (CHV_CFE)";
         }
     }
 }

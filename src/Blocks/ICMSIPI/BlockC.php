@@ -39,8 +39,8 @@ use NFePHP\EFD\Common\BlockInterface;
  * @method Elements\C177 c177(\stdClass $std) Constructor element C177
  * @method Elements\C178 c178(\stdClass $std) Constructor element C178
  * @method Elements\C179 c179(\stdClass $std) Constructor element C179
- * @method Elements\C179 c179(\stdClass $std) Constructor element C180
- * @method Elements\C179 c179(\stdClass $std) Constructor element C185
+ * @method Elements\C180 c180(\stdClass $std) Constructor element C180
+ * @method Elements\C185 c185(\stdClass $std) Constructor element C185
  * @method Elements\C190 c190(\stdClass $std) Constructor element C190
  * @method Elements\C191 c191(\stdClass $std) Constructor element C191
  * @method Elements\C195 c195(\stdClass $std) Constructor element C195
@@ -49,29 +49,29 @@ use NFePHP\EFD\Common\BlockInterface;
  * @method Elements\C310 c310(\stdClass $std) Constructor element C310
  * @method Elements\C320 c320(\stdClass $std) Constructor element C320
  * @method Elements\C321 c321(\stdClass $std) Constructor element C321
- * @method Elements\C350 c350(\stdClass $std) Constructor element C330
+ * @method Elements\C330 c330(\stdClass $std) Constructor element C330
  * @method Elements\C350 c350(\stdClass $std) Constructor element C350
  * @method Elements\C370 c370(\stdClass $std) Constructor element C370
- * @method Elements\C370 c370(\stdClass $std) Constructor element C380
+ * @method Elements\C380 c380(\stdClass $std) Constructor element C380
  * @method Elements\C390 c390(\stdClass $std) Constructor element C390
  * @method Elements\C400 c400(\stdClass $std) Constructor element C400
  * @method Elements\C405 c405(\stdClass $std) Constructor element C405
  * @method Elements\C410 c410(\stdClass $std) Constructor element C410
  * @method Elements\C420 c420(\stdClass $std) Constructor element C420
  * @method Elements\C425 c425(\stdClass $std) Constructor element C425
- * @method Elements\C420 c420(\stdClass $std) Constructor element C430
+ * @method Elements\C430 c430(\stdClass $std) Constructor element C430
  * @method Elements\C460 c460(\stdClass $std) Constructor element C460
  * @method Elements\C465 c465(\stdClass $std) Constructor element C465
  * @method Elements\C470 c470(\stdClass $std) Constructor element C470
- * @method Elements\C470 c470(\stdClass $std) Constructor element C480
+ * @method Elements\C480 c480(\stdClass $std) Constructor element C480
  * @method Elements\C490 c490(\stdClass $std) Constructor element C490
  * @method Elements\C495 c495(\stdClass $std) Constructor element C495
  * @method Elements\C500 c500(\stdClass $std) Constructor element C500
  * @method Elements\C510 c510(\stdClass $std) Constructor element C510
  * @method Elements\C590 c590(\stdClass $std) Constructor element C590
- * @method Elements\C590 c590(\stdClass $std) Constructor element C591
- * @method Elements\C590 c590(\stdClass $std) Constructor element C595
- * @method Elements\C590 c590(\stdClass $std) Constructor element C597
+ * @method Elements\C591 c591(\stdClass $std) Constructor element C591
+ * @method Elements\C595 c595(\stdClass $std) Constructor element C595
+ * @method Elements\C597 c597(\stdClass $std) Constructor element C597
  * @method Elements\C600 c600(\stdClass $std) Constructor element C600
  * @method Elements\C601 c601(\stdClass $std) Constructor element C601
  * @method Elements\C610 c610(\stdClass $std) Constructor element C610
@@ -80,19 +80,18 @@ use NFePHP\EFD\Common\BlockInterface;
  * @method Elements\C790 c790(\stdClass $std) Constructor element C790
  * @method Elements\C791 c791(\stdClass $std) Constructor element C791
  * @method Elements\C800 c800(\stdClass $std) Constructor element C800
- * @method Elements\C800 c800(\stdClass $std) Constructor element C810
- * @method Elements\C800 c800(\stdClass $std) Constructor element C815
+ * @method Elements\C810 c810(\stdClass $std) Constructor element C810
+ * @method Elements\C815 c815(\stdClass $std) Constructor element C815
  * @method Elements\C850 c850(\stdClass $std) Constructor element C850
  * @method Elements\C860 c860(\stdClass $std) Constructor element C860
- * @method Elements\C850 c850(\stdClass $std) Constructor element C870
- * @method Elements\C850 c850(\stdClass $std) Constructor element C880
+ * @method Elements\C870 c870(\stdClass $std) Constructor element C870
+ * @method Elements\C880 c880(\stdClass $std) Constructor element C880
  * @method Elements\C890 c890(\stdClass $std) Constructor element C890
- *
  */
 final class BlockC extends Block implements BlockInterface
 {
     const TOTAL = 'C990';
-    
+
     public $elements = [
         'c001' => ['class' => Elements\C001::class, 'level' => 1, 'type' => 'single'],
         'c100' => ['class' => Elements\C100::class, 'level' => 2, 'type' => 'multiple'],
@@ -168,9 +167,4 @@ final class BlockC extends Block implements BlockInterface
         'c880' => ['class' => Elements\C880::class, 'level' => 4, 'type' => 'single'],
         'c890' => ['class' => Elements\C890::class, 'level' => 3, 'type' => 'multiple']
     ];
-    
-    public function __construct()
-    {
-        parent::__construct(self::TOTAL);
-    }
 }

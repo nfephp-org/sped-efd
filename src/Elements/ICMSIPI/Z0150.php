@@ -37,7 +37,7 @@ class Z0150 extends Element implements ElementInterface
     const REG = '0150';
     const LEVEL = 2;
     const PARENT = '0100';
-    
+
     protected $parameters = [
         'COD_PART' => [
             'type'     => 'string',
@@ -125,7 +125,7 @@ class Z0150 extends Element implements ElementInterface
             'format'   => ''
         ],
     ];
-    
+
     /**
      * Constructor
      * @param \stdClass $std
@@ -136,7 +136,7 @@ class Z0150 extends Element implements ElementInterface
         $this->std = $this->standarize($std);
         $this->postValidation();
     }
-    
+
     /**
      * Aqui são colocadas validações adicionais que requerem mais logica
      * e processamento
@@ -147,7 +147,7 @@ class Z0150 extends Element implements ElementInterface
     {
         if ($this->std->cod_pais == '1058' || $this->std->cod_pais == '01058') {
             if (!$this->std->cnpj xor $this->std->cpf) {
-                throw new \InvalidArgumentException("[" . self::REG . "] Deve ser informado apenas o CNPJ ou o CPF");
+                $this->errors[] = "[" . self::REG . "] Deve ser informado apenas o CNPJ ou o CPF";
             }
         }
     }

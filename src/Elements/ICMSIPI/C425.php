@@ -71,8 +71,8 @@ class C425 extends Element implements ElementInterface
     public function postValidation()
     {
         if ($this->values->vl_item <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " O Valor acumulado do item (VL_ITEM) deve ser maior que 0");
+            $this->errors[] = "[" . self::REG . "] "
+                . " O Valor acumulado do item (VL_ITEM) deve ser maior que 0";
         }
     }
 }

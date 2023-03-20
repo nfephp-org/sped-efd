@@ -1,0 +1,25 @@
+# 3.1.1 - Tabela Versão do Leiaute - Sped Fiscal
+
+[Vide portal](http://www.sped.fazenda.gov.br/spedtabelas/AppConsulta/publico/aspx/ConsultaTabelasExternas.aspx?CodSistema=SpedFiscal)
+
+- Tabelas Globais
+- 3.1.1 - Tabela Versão do Leiaute - Sped Fiscal
+
+|Código Layout|Versão Layout|Data de Inicio|Data de Fim|
+|:---:|:---:|:---:|:---:|
+002|1.01|01012009|31122009
+003|1.02|01012010|31122010
+004|1.03|01012011|31122011
+005|1.04|01012012|30062012
+006|1.05|01072012|31122012
+007|1.06|01012013|31122013
+008|1.07|01012014|31122014
+009|1.08|01012015|31122015
+010|1.09|01012016|31122016
+011|1.10|01012017|31122017
+012|1.11|01012018|31122018
+013|1.12|01012019|31122019
+014|1.13|01012020|31122020
+015|1.14|01012021|31122021
+016|1.15|01012022|31122022
+017|1.16|01012023|

@@ -69,9 +69,9 @@ class C116 extends Element implements ElementInterface
          * Verifica a chave do cupom fiscal eletronico
          */
         if (!empty($this->std->chv_cfe) and !Keys::isValid($this->std->chv_cfe)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 " Dígito verificador incorreto no campo campo chave do " .
-                "cupom fiscal eletronico (CHV_CFE)");
+                "cupom fiscal eletronico (CHV_CFE)";
         }
 
         return true;

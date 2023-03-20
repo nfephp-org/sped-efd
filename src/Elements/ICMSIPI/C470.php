@@ -99,14 +99,14 @@ class C470 extends Element implements ElementInterface
     public function postValidation()
     {
         if ($this->values->vl_item <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " O Valor total do item" .
-                "(VL_ITEM) deve ser maior que 0");
+            $this->errors[] = "[" . self::REG . "] "
+                . " O Valor total do item"
+                . "(VL_ITEM) deve ser maior que 0";
         }
         if ($this->values->qtd <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " Quantidade total do item" .
-                "(QTD) deve ser maior que 0");
+            $this->errors[] = "[" . self::REG . "] "
+                . " Quantidade total do item"
+                . "(QTD) deve ser maior que 0";
         }
     }
 }

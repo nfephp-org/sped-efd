@@ -105,9 +105,9 @@ class Z1320 extends Element implements ElementInterface
          */
         $diferenca = $this->values->val_fecha - $this->values->val_abert - $this->values->vol_aferi;
         if ($this->std->vol_vendas != number_format($diferenca, 3, ',', '')) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Informar o volume de vendas por bico, "
+            $this->errors[] = "[" . self::REG . "] Informar o volume de vendas por bico, "
             ."ligado ao tanque, que corresponde ao valor fornecido no campo VAL_FECHA menos a soma do campo "
-            ."VAL_ABERT com o campo VOL_AFERI.");
+            ."VAL_ABERT com o campo VOL_AFERI.";
         }
     }
 }

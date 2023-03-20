@@ -85,8 +85,8 @@ class C173 extends Element implements ElementInterface
     public function postValidation()
     {
         if ((float)$this->std->qtd_item <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " O valor do preco tabelado (VL_TAB_MAX) deve ser maior do que zero ");
+            $this->errors[] = "[" . self::REG . "] " .
+                " O valor do preco tabelado (VL_TAB_MAX) deve ser maior do que zero ";
         }
     }
 }

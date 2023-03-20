@@ -5,7 +5,6 @@ namespace NFePHP\EFD\Elements\Contribuicoes;
 use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
-use function Safe\substr;
 
 class C170 extends Element implements ElementInterface
 {
@@ -291,9 +290,9 @@ class C170 extends Element implements ElementInterface
             $message = 'vl_cofins: '.$this->values->vl_cofins.'<br>';
             $message .= 'multiplicacao: '.$multiplicacao.'<br>';
             echo $message;
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 "O campo VL_COFINS deve de ser o calculo da multiplicacao " .
-                "da base de calculo do cofins com a aliquota do cofins");
+                "da base de calculo do cofins com a aliquota do cofins";
         }
     }
 }

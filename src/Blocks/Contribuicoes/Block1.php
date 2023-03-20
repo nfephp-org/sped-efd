@@ -38,9 +38,4 @@ final class Block1 extends Block implements BlockInterface
         'z1809' => ['class' => Elements\Z1809::class, 'level' => 3, 'type' => 'multiple'],
         'z1900' => ['class' => Elements\Z1900::class, 'level' => 2, 'type' => 'multiple'],
     ];
-
-    public function __construct()
-    {
-        parent::__construct(self::TOTAL);
-    }
 }

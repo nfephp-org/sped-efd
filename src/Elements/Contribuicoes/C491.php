@@ -100,8 +100,8 @@ class C491 extends Element implements ElementInterface
     public function postValidation()
     {
         if ($this->values->vl_item <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "O campo VL_ITEM deve ser maior que “0” (zero).");
+            $this->errors[] = "[" . self::REG . "] " .
+                "O campo VL_ITEM deve ser maior que “0” (zero).";
         }
     }
 }

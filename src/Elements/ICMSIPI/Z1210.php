@@ -60,8 +60,8 @@ class Z1210 extends Element implements ElementInterface
          * Campo 04 (VL_CRED_UTIL) Validação: o valor informado no campo deve ser maior que “0” (zero).
          */
         if ($this->values->vl_cred_util <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] O valor informado no campo "
-            ."VL_CRED_UTIL deve ser maior que “0” (zero).");
+            $this->errors[] = "[" . self::REG . "] O valor informado no campo "
+            . "VL_CRED_UTIL deve ser maior que “0” (zero).";
         }
     }
 }

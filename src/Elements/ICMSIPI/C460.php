@@ -91,9 +91,9 @@ class C460 extends Element implements ElementInterface
     public function postValidation()
     {
         if ($this->values->vl_doc <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " O Valor totao do documento fiscal " .
-                "(VL_DOC) deve ser maior que 0");
+            $this->errors[] = "[" . self::REG . "] "
+                . " O Valor totao do documento fiscal "
+                . "(VL_DOC) deve ser maior que 0";
         }
     }
 }

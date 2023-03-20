@@ -52,8 +52,8 @@ class A170 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^.{2}$',
             'required' => false,
-            'info' => 'Código da base de cálculo do crédito, conforme a Tabela indicada no item 4.3.7, 
-            caso seja informado código representativo de crédito no Campo 09 (CST_PIS) 
+            'info' => 'Código da base de cálculo do crédito, conforme a Tabela indicada no item 4.3.7,
+            caso seja informado código representativo de crédito no Campo 09 (CST_PIS)
             ou no Campo 13 (CST_COFINS).',
             'format' => ''
         ],
@@ -162,18 +162,18 @@ class A170 extends Element implements ElementInterface
     {
         if ($this->roundFloat($this->values->vl_pis) !=
             $this->roundFloat(($this->values->vl_bc_pis * $this->values->aliq_pis) / 100)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 "valor do campo “VL_PIS” deve corresponder ao valor da base de cálculo (VL_BC_PIS) multiplicado " .
                 "pela alíquota aplicável ao item (ALIQ_PIS). No caso de aplicação da alíquota " .
-                "do campo 07, o resultado deverá ser dividido pelo valor “100”.");
+                "do campo 07, o resultado deverá ser dividido pelo valor “100”.";
         }
 
         if ($this->roundFloat($this->values->vl_cofins) !=
             $this->roundFloat(($this->values->vl_bc_cofins * $this->values->aliq_cofins) / 100)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 "o valor do campo “VL_COFINS” deve corresponder ao valor da base de cálculo (VL_BC_COFINS) " .
                 "multiplicado pela alíquota aplicável ao item (ALIQ_COFINS). No caso de aplicação da alíquota " .
-                "do campo 07, o resultado deverá ser dividido pelo valor “100”.");
+                "do campo 07, o resultado deverá ser dividido pelo valor “100”.";
         }
     }
 }

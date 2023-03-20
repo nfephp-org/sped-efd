@@ -80,10 +80,10 @@ class B025 extends Element implements ElementInterface
          */
         $vl_iss_p = ($this->values->vl_bc_iss_p/100) * $this->std->aliq_iss;
         $vl_iss_p = (float) number_format((float) $vl_iss_p, 2, '.', '');
-        
+
         if ($this->values->vl_iss_p != $vl_iss_p) {
-            throw new \InvalidArgumentException("[" . self::REG . "] O valor informado no campo “VL_ISS_P” "
-            ."deve ser igual ao produto da base de cálculo “VL_BC_ISS_P” pela alíquota “ALIQ_ISS”.");
+            $this->errors[] = "[" . self::REG . "] O valor informado no campo “VL_ISS_P” "
+            ."deve ser igual ao produto da base de cálculo “VL_BC_ISS_P” pela alíquota “ALIQ_ISS”.";
         }
     }
 }

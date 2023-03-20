@@ -102,12 +102,12 @@ class E316 extends Element implements ElementInterface
          * preenchidos.
          */
         if (!empty($this->std->num_proc) && (empty($this->std->ind_proc) || empty($this->std->proc))) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Se o campo NUM_PROC estiver preenchido, "
-            ."os campos IND_PROC e PROC deverão estar preenchidos.");
+            $this->errors[] = "[" . self::REG . "] Se o campo NUM_PROC estiver preenchido, "
+            . "os campos IND_PROC e PROC deverão estar preenchidos.";
         }
         if (empty($this->std->num_proc) && (!empty($this->std->ind_proc) || !empty($this->std->proc))) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Se o campo NUM_PROC não estiver preenchido, "
-            ."os campos IND_PROC e PROC não deverão estar preenchidos.");
+            $this->errors[] = "[" . self::REG . "] Se o campo NUM_PROC não estiver preenchido, "
+            . "os campos IND_PROC e PROC não deverão estar preenchidos.";
         }
     }
 }

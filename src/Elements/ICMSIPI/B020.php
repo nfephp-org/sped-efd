@@ -179,8 +179,8 @@ class B020 extends Element implements ElementInterface
          * o campo IND_OPER deve ser igual a “0” (zero).
          */
         if ($this->std->ind_emit == '1' && $this->std->ind_oper != 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Se o campo IND_EMIT tiver valor igual a “1” (um), "
-            ."o campo IND_OPER deve ser igual a “0” (zero).");
+            $this->errors[] = "[" . self::REG . "] Se o campo IND_EMIT tiver valor igual a “1” (um), "
+            ."o campo IND_OPER deve ser igual a “0” (zero).";
         }
 
         /*
@@ -188,8 +188,8 @@ class B020 extends Element implements ElementInterface
          * de prestação de serviço, ou seja, campo “IND_OPER” preenchido com “1”.
          */
         if ($this->std->cod_mod == '65' && $this->std->ind_oper != '1') {
-            throw new \InvalidArgumentException("[" . self::REG . "] O modelo “65” só pode ser informado "
-            ."no caso de prestação de serviço.");
+            $this->errors[] = "[" . self::REG . "] O modelo “65” só pode ser informado "
+            ."no caso de prestação de serviço.";
         }
 
         /*
@@ -197,8 +197,8 @@ class B020 extends Element implements ElementInterface
          * para COD_MOD igual a “55” e “65”.
          */
         if (in_array($this->std->cod_mod, array('55', '65')) && empty($this->std->chv_nfe)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Este campo é de preenchimento obrigatório "
-            ."para COD_MOD igual a “55” e “65”.");
+            $this->errors[] = "[" . self::REG . "] Este campo é de preenchimento obrigatório "
+            ."para COD_MOD igual a “55” e “65”.";
         }
     }
 }
