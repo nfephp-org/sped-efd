@@ -157,9 +157,9 @@ class Z1500 extends Element implements ElementInterface
     {
         if ($this->std->vl_cred_per_efd and
             !in_array($this->std->cod_cred, [201, 202, 203, 204, 208, 301, 302, 303, 304, 307,308])) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "O valor do campo VL_CRED_PER_EFD deverá ser informado apenas se o campo 
-                COD_CRED for igual a 201, 202, 203, 204, 208, 301, 302, 303, 304, 307 ou 308");
+            $this->errors[] = "[" . self::REG . "] " .
+                "O valor do campo VL_CRED_PER_EFD deverá ser informado apenas se o campo
+                COD_CRED for igual a 201, 202, 203, 204, 208, 301, 302, 303, 304, 307 ou 308";
         }
     }
 }

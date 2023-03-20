@@ -126,12 +126,12 @@ class C495 extends Element implements ElementInterface
     public function postValidation()
     {
         if ($this->values->qtd <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " O do campo QTD deve ser maior do que 0");
+            $this->errors[] = "[" . self::REG . "] "
+                . " O do campo QTD deve ser maior do que 0";
         }
         if ($this->values->vl_item <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " O do campo VL_ITEM deve ser maior do que 0");
+            $this->errors[] = "[" . self::REG . "] "
+                . " O do campo VL_ITEM deve ser maior do que 0";
         }
     }
 }

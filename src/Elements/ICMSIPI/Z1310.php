@@ -97,9 +97,9 @@ class Z1310 extends Element implements ElementInterface
          */
         $somatorio = $this->values->estq_abert + $this->values->vol_entr;
         if ($this->values->vol_disp != $somatorio) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Informar o volume disponível, "
-            ."que corresponde à soma dos campos ESTQ_ABERT e VOL_ENTR, para o tanque especificado "
-            ."no campo NUM_TANQUE");
+            $this->errors[] = "[" . self::REG . "] Informar o volume disponível, "
+            . "que corresponde à soma dos campos ESTQ_ABERT e VOL_ENTR, para o tanque especificado "
+            . "no campo NUM_TANQUE";
         }
 
         /*
@@ -109,9 +109,9 @@ class Z1310 extends Element implements ElementInterface
          */
         $diferenca = $this->values->vol_disp - $this->values->vol_saidas;
         if ($this->values->estq_escr != $diferenca) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Informar o estoque escritural, "
-            ."que corresponde ao valor constante no campo VOL_DISP menos o valor constante no campo "
-            ."VOL_SAIDAS, para o tanque especificado no campo NUM_TANQUE.");
+            $this->errors[] = "[" . self::REG . "] Informar o estoque escritural, "
+            . "que corresponde ao valor constante no campo VOL_DISP menos o valor constante no campo "
+            . "VOL_SAIDAS, para o tanque especificado no campo NUM_TANQUE.";
         }
     }
 }

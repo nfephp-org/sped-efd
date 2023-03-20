@@ -23,7 +23,7 @@ class Z0190 extends Element implements ElementInterface
     const REG = '0190';
     const LEVEL = 0;
     const PARENT = '';
-    
+
     protected $parameters = [
         'UNID' => [
             'type'     => 'string',
@@ -40,7 +40,7 @@ class Z0190 extends Element implements ElementInterface
             'format'   => ''
         ]
     ];
-    
+
     /**
      * Constructor
      * @param stdClass $std
@@ -53,7 +53,7 @@ class Z0190 extends Element implements ElementInterface
           Versão 3.0.2 Atualização: 21 de maio de 2019*/
         /*$this->postValidation();*/
     }
-    
+
     /**
      * Aqui são colocadas validações adicionais que requerem mais logica
      * e processamento
@@ -66,7 +66,7 @@ class Z0190 extends Element implements ElementInterface
           Versão 3.0.2 Atualização: 21 de maio de 2019*/
         /*
         if ($this->std->unid === $this->std->descr) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Os campos UNID e DESCR não
+            $this->errors[] = "[" . self::REG . "] Os campos UNID e DESCR não
             podem ser iguais.".$this->std->unid.'|'.$this->std->descr);
         }*/
     }

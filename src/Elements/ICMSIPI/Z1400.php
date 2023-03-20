@@ -56,8 +56,8 @@ class Z1400 extends Element implements ElementInterface
          * Se o valor for negativo ou zero, o contribuinte não deve prestar a informação no mês.
          */
         if ($this->values->valor <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Se o valor for negativo ou "
-            ."zero, o contribuinte não deve prestar a informação no mês.");
+            $this->errors[] = "[" . self::REG . "] Se o valor for negativo ou "
+            ."zero, o contribuinte não deve prestar a informação no mês.";
         }
     }
 }

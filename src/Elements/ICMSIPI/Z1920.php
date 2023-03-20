@@ -133,7 +133,7 @@ class Z1920 extends Element implements ElementInterface
 
         if (($somatorio >= 0 && $this->values->vl_sld_credor_transp_oa != 0)
         || ($somatorio < 0 && $this->values->vl_sld_apurado_oa != 0)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 " O valor informado deve ser preenchido com base na expressão: "
                 ."soma do total de débitos transferidos (VL_TOT_TRANSF_DEBITOS_OA) "
                 ."com total de ajustes a débito (VL_TOT_AJ_DEBITOS_OA) com total de "
@@ -146,7 +146,7 @@ class Z1920 extends Element implements ElementInterface
                 ."campo 12 (VL_SLD_CREDOR_TRANSP_OA) deve ser igual a “0” (zero). Se "
                 ."o valor da expressão for menor que “0” (zero), então este campo "
                 ."deve ser preenchido com “0” (zero) e o valor absoluto da expressão "
-                ."deve ser informado no campo VL_SLD_CREDOR_TRANSP_OA.");
+                ."deve ser informado no campo VL_SLD_CREDOR_TRANSP_OA.";
         }
     }
 }

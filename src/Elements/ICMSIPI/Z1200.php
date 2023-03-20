@@ -80,9 +80,9 @@ class Z1200 extends Element implements ElementInterface
                     - $this->values->cred_util;
 
         if ($this->std->sld_cred_fim != number_format($somatorio, 2, ',', '')) {
-            throw new \InvalidArgumentException("[" . self::REG . "] O valor do campo SLD_CRED_FIM "
-            ."deve ser igual à soma dos valores dos campos SLD_CRED, CRED_APR e CRED_RECEB, diminuída "
-            ."do valor do campo CRED_UTIL.");
+            $this->errors[] = "[" . self::REG . "] O valor do campo SLD_CRED_FIM "
+            . "deve ser igual à soma dos valores dos campos SLD_CRED, CRED_APR e CRED_RECEB, diminuída "
+            . "do valor do campo CRED_UTIL.";
         }
     }
 }

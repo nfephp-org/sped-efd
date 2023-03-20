@@ -193,15 +193,15 @@ class D100 extends Element implements ElementInterface
     public function postValidation()
     {
         if (!empty($this->std->chv_cte) and !Keys::isValid($this->std->chv_cte)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 " Dígito verificador incorreto no campo chave do " .
-                " campo CHV_CTE");
+                " campo CHV_CTE";
         }
 
         if (!empty($this->std->chv_cte_ref) and !Keys::isValid($this->std->chv_cte_ref)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 " Dígito verificador incorreto no campo chave do " .
-                " campo CHV_CTE_REF");
+                " campo CHV_CTE_REF";
         }
     }
 }

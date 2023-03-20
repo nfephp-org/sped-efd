@@ -148,9 +148,9 @@ class C800 extends Element implements ElementInterface
     public function postValidation()
     {
         if (!empty($this->std->chv_nfe) and !Keys::isValid($this->std->chv_nfe)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " Dígito verificador incorreto no campo campo chave da " .
-                "nota fiscal eletronica (CHV_NFE)");
+            $this->errors[] = "[" . self::REG . "] "
+                . " Dígito verificador incorreto no campo campo chave da "
+                . "nota fiscal eletronica (CHV_NFE)";
         }
 
         return true;

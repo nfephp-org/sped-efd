@@ -104,8 +104,8 @@ class Z1300 extends Element implements ElementInterface
          */
         $somatorio = $this->values->estq_abert + $this->values->vol_entr;
         if ($this->std->vol_disp != number_format($somatorio, 3, ',', '')) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Informar o volume "
-            ."disponível, que corresponde à soma dos campos ESTQ_ABERT e VOL_ENTR.");
+            $this->errors[] = "[" . self::REG . "] Informar o volume "
+            . "disponível, que corresponde à soma dos campos ESTQ_ABERT e VOL_ENTR.";
         }
 
         /*
@@ -115,9 +115,9 @@ class Z1300 extends Element implements ElementInterface
          */
         $diferenca = $this->values->vol_disp - $this->values->vol_saidas;
         if ($this->std->estq_escr != number_format($diferenca, 3, ',', '')) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Informar o estoque "
-            ."escritural, que corresponde ao valor constante no campo VOL_DISP menos o "
-            ."valor constante no campo VOL_SAIDAS.");
+            $this->errors[] = "[" . self::REG . "] Informar o estoque "
+            . "escritural, que corresponde ao valor constante no campo VOL_DISP menos o "
+            . "valor constante no campo VOL_SAIDAS.";
         }
     }
 }

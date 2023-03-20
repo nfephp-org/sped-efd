@@ -5,7 +5,6 @@ namespace NFePHP\EFD\Elements\ICMSIPI;
 use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
-use function Safe\substr;
 
 /**
  * REGISTRO C870: ITENS DO RESUMO DIÁRIO DOS DOCUMENTOS (CF-E-SAT) (CÓDIGO 59)

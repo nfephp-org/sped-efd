@@ -4,19 +4,21 @@
 
 Classes para a geração do SPED EFD (fiscal ICMS IPI) e para o SPED EFD contribuições
 
-### EFD ICMS IPI v3.0.1 Leiaute 13 - válido a partir de 01 de janeiro de 2019.
-### EFD Contribuições v3.1.0 Leiaute 5 - válido a partir de 01 de janeiro de 2019.
-
-## Controle de Versões 
-
-O controle de versão SEMPRE será relativo ao layout adotado a cada ANO Fiscal.
-Por exemplo:
-v1.0 da API ==> EFD ICMS 2019 (layout 13) e EFD Contribuições 2019 (leyout 5)
-v2.0 da API ==> EFD ICMS 2020 (layout 14) e EFD Contribuições 2020 (leyout 6)
-
-E assim por diante.
+### EFD ICMS IPI v3.1.3 Leiaute 17 - válido a partir de 01 de janeiro de 2022/abril de 2023.
+### EFD Contribuições v1.35 Leiaute 6 - válido a partir de 01 de janeiro de 2019.
 
 ## IMPORTANTE
+
+> **NOTA: Os elementos não mais irão retornar Exceptions, e sim carregar uma propriedade pública errors[], contendo todos os erros identificados em cada elemento.**
+
+> **NOTA: As classes dos blocos e as próprias classes EFD herdarão os errros[] de seus elementos constituintes em propriedade pública errors[] de cada uma dessas classes.**
+
+## Controle de Versões de Layouts do EFD 
+
+A ser estabelecido !
+
+
+## DETALHES
 
 - A finalidade desse projeto é APENAS fornecer os meios para criar os arquivos EFD ICMS/IPI e contribuições a partir de dados formecidos pelo sistema ERP.
 - É necessario que os dados já estejam previamente tratados e consolidados internamente no ERP antes da geração dos arquivos de transmissão.

@@ -104,10 +104,10 @@ class B350 extends Element implements ElementInterface
          */
         $vl_iss = ($this->values->vl_bc_iss/100) * $this->std->aliq_iss;
         $vl_iss = (float) number_format((float) $vl_iss, 2, '.', '');
-        
+
         if ($this->values->vl_iss != $vl_iss) {
-            throw new \InvalidArgumentException("[" . self::REG . "] O valor deve ser igual ao produto "
-            ."da base de cálculo “VL_BC_ISS” pela alíquota “ALIQ_ISS”");
+            $this->errors[] = "[" . self::REG . "] O valor deve ser igual ao produto "
+            ."da base de cálculo “VL_BC_ISS” pela alíquota “ALIQ_ISS”";
         }
     }
 }

@@ -269,14 +269,14 @@ class C170 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^(.*)$',
             'required' => false,
-            'info' => 'Código       da debitada/creditada',
+            'info' => 'Código da debitada/creditada',
             'format' => ''
         ],
         'VL_ABAT_NT' => [
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info' => 'Valor    do    abatimento    não    tributado    e    não comercial',
+            'info' => 'Valor do abatimento não tributado e não comercial',
             'format' => '15v2'
         ],
     ];
@@ -295,8 +295,8 @@ class C170 extends Element implements ElementInterface
     public function postValidation()
     {
         if (((float)  str_replace('.', '', str_replace(',', '.', $this->std->qtd))) < 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " O valor do campo  Quantidade do item (QTD) deve ser positivo ");
+            $this->errors[] = "[" . self::REG . "] " .
+                " O valor do campo  Quantidade do item (QTD) deve ser positivo ";
         }
         return false;
     }

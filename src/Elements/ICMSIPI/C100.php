@@ -232,17 +232,16 @@ class C100 extends Element implements ElementInterface
     {
         if ($this->std->cod_mod == 65 and $this->std->cod_mod == 55) {
             if (empty($this->std->chv_nfe)) {
-                throw new \InvalidArgumentException("[" . self::REG . "] " .
+                $this->errors[] = "[" . self::REG . "] " .
                     " Dígito verificador incorreto no campo campo chave do " .
-                    "conhecimento de transporte eletrônico (CHV_CTE)");
+                    "conhecimento de transporte eletrônico (CHV_CTE)";
             }
         }
         if (!empty($this->std->chv_nfe) and !Keys::isValid($this->std->chv_nfe)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 " Dígito verificador incorreto no campo campo chave da " .
-                "nota fiscal eletronica (CHV_NFE)");
+                "nota fiscal eletronica (CHV_NFE)";
         }
-
         return true;
     }
 }

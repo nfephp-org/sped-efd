@@ -159,8 +159,8 @@ class D600 extends Element implements ElementInterface
     public function postValidation()
     {
         if ($this->values->vl_doc <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "O campo VL_DOC deve ser maior do que 0");
+            $this->errors[] = "[" . self::REG . "] " .
+                "O campo VL_DOC deve ser maior do que 0";
         }
     }
 }

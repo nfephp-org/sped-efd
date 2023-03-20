@@ -177,9 +177,9 @@ class A100 extends Element implements ElementInterface
     public function postValidation()
     {
         if ($this->std->chv_nfse and !Keys::isValid($this->std->chv_nfse)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 " Dígito verificador incorreto no campo campo chave da " .
-                "nota fiscal de serviço eletronica (CHV_NFSE)");
+                "nota fiscal de serviço eletronica (CHV_NFSE)";
         }
     }
 }

@@ -97,8 +97,8 @@ class E531 extends Element implements ElementInterface
          * Campo 10 (CHV_NFE) Validação: A informação da chave é obrigatória quando o COD_MOD = “55”.
          */
         if ($this->std->cod_mod == '55' && empty($this->std->chv_nfe)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] A informação da chave é obrigatória "
-            ."quando o COD_MOD = “55”.");
+            $this->errors[] = "[" . self::REG . "] A informação da chave é obrigatória "
+            . "quando o COD_MOD = “55”.";
         }
     }
 }

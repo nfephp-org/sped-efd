@@ -133,9 +133,9 @@ class G110 extends Element implements ElementInterface
     public function postValidation()
     {
         if ($this->values->vl_trib_exp > $this->values->vl_total) {
-            throw new \InvalidArgumentException("[" . self::REG . "] O valor "
+            $this->errors[] = "[" . self::REG . "] O valor "
                 . "informado no campo VL_TRIB_EXP deve ser menor ou igual ao informado "
-                . "no campo VL_TOTAL.");
+                . "no campo VL_TOTAL.";
         }
     }
 }

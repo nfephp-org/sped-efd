@@ -110,8 +110,8 @@ class B030 extends Element implements ElementInterface
          * valor informado no campo NUM_DOC_INI.
          */
         if ($this->std->num_doc_fin < $this->std->num_doc_ini) {
-            throw new \InvalidArgumentException("[" . self::REG . "] O valor informado no campo NUM_DOC_FIN "
-            ."tem de ser maior ou igual ao valor informado no campo NUM_DOC_INI.");
+            $this->errors[] = "[" . self::REG . "] O valor informado no campo NUM_DOC_FIN "
+            ."tem de ser maior ou igual ao valor informado no campo NUM_DOC_INI.";
         }
     }
 }

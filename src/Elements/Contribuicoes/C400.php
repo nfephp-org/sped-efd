@@ -126,9 +126,9 @@ class C400 extends Element implements ElementInterface
         }
 
         if (number_format($this->values->vl_cofins, 2) != number_format($multiplicacao, 2)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
+            $this->errors[] = "[" . self::REG . "] " .
                 "O campo VL_COFINS deve de ser o calculo da multiplicacao " .
-                "da base de calculo do cofins com a aliquota do cofins");
+                "da base de calculo do cofins com a aliquota do cofins";
         }
     }
 }

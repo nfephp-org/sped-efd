@@ -308,12 +308,12 @@ class C500 extends Element implements ElementInterface
     public function postValidation()
     {
         if ($this->values->vl_doc <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " O do campo VL_DOC deve ser maior do que 0");
+            $this->errors[] = "[" . self::REG . "] "
+                . " O do campo VL_DOC deve ser maior do que 0";
         }
         if ($this->values->vl_forn <= 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " O do campo VL_FORN deve ser maior do que 0");
+            $this->errors[] = "[" . self::REG . "] "
+                . " O do campo VL_FORN deve ser maior do que 0";
         }
     }
 }

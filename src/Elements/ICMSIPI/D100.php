@@ -6,7 +6,6 @@ use NFePHP\Common\Keys;
 use NFePHP\EFD\Common\Element;
 use NFePHP\EFD\Common\ElementInterface;
 use \stdClass;
-use function Safe\substr;
 
 /**
  * Este registro deve ser apresentado por todos os contribuintes adquirentes ou prestadores dos serviços que utilizem os
@@ -225,10 +224,10 @@ class D100 extends Element implements ElementInterface
          */
         if ($this->std->cod_mod == '57' || $this->std->cod_mod == '67') {
             if (strlen($this->std->ser) < 1) {
-                throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
-                    . "informado 3 numeros para a Série do documento fiscal(SER) " .
-                    "quanto o Código do modelo do documento fiscal(COD_MOD) for CT-e e CT-e OS (57 e 67) " .
-                    "Se não existir Série para CT-e e CT-e OS, informar 000");
+                $this->errors[] = "[" . self::REG . "] Deve ser "
+                    . "informado 3 numeros para a Série do documento fiscal(SER) "
+                    . "quanto o Código do modelo do documento fiscal(COD_MOD) for CT-e e CT-e OS (57 e 67) "
+                    . "Se não existir Série para CT-e e CT-e OS, informar 000";
             }
         }
         if ($this->std->cod_mod == '57' || $this->std->cod_mod == '63' || $this->std->cod_mod == '67') {
@@ -237,26 +236,26 @@ class D100 extends Element implements ElementInterface
              * quando o modelo do documento for “57”, “63” ou “67”, respectivamente.
              */
             if (empty($this->std->tp_ct_e) && (int)$this->std->tp_ct_e!==0) {
-                throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
-                    . "informado o tipo de CT-e, BP-e ou CT-e OS, quando o modelo do documento for 
-                    “57”, “63” ou “67”, respectivamente.");
+                $this->errors[] = "[" . self::REG . "] Deve ser "
+                    . "informado o tipo de CT-e, BP-e ou CT-e OS, quando o modelo do documento for "
+                    . "“57”, “63” ou “67”, respectivamente.";
             }
 
             /**
              * Campo 24 (COD_MUN_ORIG): Campo obrigatório se “COD_MOD” do registro D100 for “57”, “63” ou “67”.
              */
             if (empty($this->std->cod_mun_orig)) {
-                throw new \InvalidArgumentException("[" . self::REG . "] " .
-                    "Deve ser informado o código do município de origem (COD_MUN_ORIG) quando" .
-                    " código do modelo for igual a: 57, 63 ou 67 ");
+                $this->errors[] = "[" . self::REG . "] "
+                    . "Deve ser informado o código do município de origem (COD_MUN_ORIG) quando"
+                    . " código do modelo for igual a: 57, 63 ou 67";
             }
             /**
              * Campo 25 (COD_MUN_DEST): Campo obrigatório se “COD_MOD” do registro D100 for “57”, “63” ou “67”.
              */
             if (empty($this->std->cod_mun_dest)) {
-                throw new \InvalidArgumentException("[" . self::REG . "] " .
-                    "Deve ser informado o código do municiopio de destino (COD_MUN_DEST) quando" .
-                    " código do modelo for igual a 57, 63 ou 67 ");
+                $this->errors[] = "[" . self::REG . "] "
+                    . "Deve ser informado o código do municiopio de destino (COD_MUN_DEST) quando"
+                    . " código do modelo for igual a 57, 63 ou 67";
             }
         }
 
@@ -264,9 +263,9 @@ class D100 extends Element implements ElementInterface
          * Faz a verificação do digito verificador do campo
          */
         if (!Keys::isValid($this->std->chv_cte)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                " Dígito verificador incorreto no campo campo chave do " .
-                "conhecimento de transporte eletrônico (CHV_CTE)");
+            $this->errors[] = "[" . self::REG . "] "
+                . " Dígito verificador incorreto no campo campo chave do "
+                . "conhecimento de transporte eletrônico (CHV_CTE)";
         }
 
         /**
@@ -276,10 +275,10 @@ class D100 extends Element implements ElementInterface
         if (in_array($this->std->cod_mod, ['07', '08', '08B', '09', '10', '11', '26', '27'])) {
             $year = (int) substr($this->std->dt_doc, -4);
             if ($year >= 2018) {
-                throw new \InvalidArgumentException("[" . self::REG . "] " .
-                    " Se o Campo Código do modelo do documento fiscal (COD_MOD) " .
-                    "for igual a 07, 08, 08B, 09, 10, 11, 26 ou 27," .
-                    " a Data da emissão do documento fiscal (DT_DOC) informada deverá ser menor que 01/01/2018.");
+                $this->errors[] = "[" . self::REG . "] "
+                    . " Se o Campo Código do modelo do documento fiscal (COD_MOD) "
+                    . "for igual a 07, 08, 08B, 09, 10, 11, 26 ou 27,"
+                    . " a Data da emissão do documento fiscal (DT_DOC) informada deverá ser menor que 01/01/2018.";
             }
         }
     }

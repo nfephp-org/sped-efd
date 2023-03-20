@@ -74,8 +74,8 @@ class B510 extends Element implements ElementInterface
          * habilitado (campo IND_PROF preenchido com “0”)
          */
         if ($this->std->ind_soc == '1' && $this->std->ind_prof != '0') {
-            throw new \InvalidArgumentException("[" . self::REG . "] O profissional sócio necessariamente tem de "
-            ."ser habilitado (campo IND_PROF preenchido com “0”)");
+            $this->errors[] = "[" . self::REG . "] O profissional sócio necessariamente tem de "
+            ."ser habilitado (campo IND_PROF preenchido com “0”)";
         }
 
         /*
@@ -83,7 +83,7 @@ class B510 extends Element implements ElementInterface
          * CPF informado.
          */
         if (!$this->validaCPF($this->std->cpf)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] O CPF informado não é válido.");
+            $this->errors[] = "[" . self::REG . "] O CPF informado não é válido.";
         }
     }
 
@@ -154,7 +154,6 @@ class B510 extends Element implements ElementInterface
                 $validaCPF=true;
             }
         }
-        
         //Retorna o resutado (booleano)
         return $validaCPF;
     }

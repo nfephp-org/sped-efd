@@ -93,9 +93,4 @@ final class Block1 extends Block implements BlockInterface
         'z1980' => ['class' => Elements\Z1980::class, 'level' => 2, 'type' => 'single']
 
     ];
-
-    public function __construct()
-    {
-        parent::__construct(self::TOTAL);
-    }
 }

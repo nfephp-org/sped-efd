@@ -72,23 +72,23 @@ class Z0110 extends Element implements ElementInterface
     public function postValidation()
     {
         if (!$this->std->ind_apro_cred and ($this->std->cod_inc_trib != 2)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "O campo IND_APRO_CRED deve ser informado quando COD_INC_TRIB = 1 ou 3 ");
+            $this->errors[] = "[" . self::REG . "] " .
+                "O campo IND_APRO_CRED deve ser informado quando COD_INC_TRIB = 1 ou 3 ";
         }
 
         if ($this->std->ind_apro_cred and ($this->std->cod_inc_trib == 2)) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "O campo IND_APRO_CRED não deve ser informado quando COD_INC_TRIB = 2 ");
+            $this->errors[] = "[" . self::REG . "] " .
+                "O campo IND_APRO_CRED não deve ser informado quando COD_INC_TRIB = 2 ";
         }
 
         if ((!$this->std->ind_reg_cum and ($this->std->cod_inc_trib == 2))) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "O campo IND_REG_CUM deve ser informado quando COD_INC_TRIB = 2 ");
+            $this->errors[] = "[" . self::REG . "] " .
+                "O campo IND_REG_CUM deve ser informado quando COD_INC_TRIB = 2 ";
         }
 
         if (($this->std->ind_reg_cum and ($this->std->cod_inc_trib != 2))) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "O campo IND_REG_CUM não deve ser informado quando COD_INC_TRIB != 2 ");
+            $this->errors[] = "[" . self::REG . "] " .
+                "O campo IND_REG_CUM não deve ser informado quando COD_INC_TRIB != 2 ";
         }
     }
 }

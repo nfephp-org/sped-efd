@@ -31,7 +31,7 @@ class Z0000 extends Element implements ElementInterface
     const REG = '0000';
     const LEVEL = 0;
     const PARENT = '';
-    
+
     protected $parameters = [
         'cod_ver' => [
             'type'     => 'string',
@@ -138,7 +138,7 @@ class Z0000 extends Element implements ElementInterface
             'format'   => ''
         ]
     ];
-    
+
     /**
      * Constructor
      * @param \stdClass $std
@@ -149,7 +149,7 @@ class Z0000 extends Element implements ElementInterface
         $this->std = $this->standarize($std);
         $this->postValidation();
     }
-    
+
     /**
      * Aqui são colocadas validações adicionais que requerem mais logica
      * e processamento
@@ -159,12 +159,12 @@ class Z0000 extends Element implements ElementInterface
     public function postValidation()
     {
         if (!$this->std->cnpj xor $this->std->cpf) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Deve ser "
-                . "informado apenas o CNPJ ou o CPF nunca os dois.");
+            $this->errors[] = "[" . self::REG . "] Deve ser "
+                . "informado apenas o CNPJ ou o CPF nunca os dois.";
         }
         if (!empty($this->std->cpf) && $this->std->ind_ativ == 0) {
-            throw new \InvalidArgumentException("[" . self::REG . "] Como foi "
-                . "informado o CPF então IND_ATIV deve ser igual a 1.");
+            $this->errors[] = "[" . self::REG . "] Como foi "
+                . "informado o CPF então IND_ATIV deve ser igual a 1.";
         }
     }
 }

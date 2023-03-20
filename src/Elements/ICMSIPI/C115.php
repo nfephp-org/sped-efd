@@ -99,8 +99,8 @@ class C115 extends Element implements ElementInterface
     public function postValidation()
     {
         if (!$this->std->cnpj_entg xor $this->std->cpf_entg) {
-            throw new \InvalidArgumentException("[" . self::REG . "] " .
-                "Deve ser informado apenas o CNPJ (CNPJ_ENTG) ou o CPF (CPF_ENTG)");
+            $this->errors[] = "[" . self::REG . "] " .
+                "Deve ser informado apenas o CNPJ (CNPJ_ENTG) ou o CPF (CPF_ENTG)";
         }
     }
 }
