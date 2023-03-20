@@ -33,7 +33,7 @@ A ser estabelecido !
 ![Actions](https://github.com/nfephp-org/sped-efd/actions/workflows/ci.yml/badge.svg)
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
-[![Code Intelligence Status](https://scrutinizer-ci.com/g/nfephp-org/sped-efd/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+
 
 [![Latest Stable Version][ico-stable]][link-packagist]
 [![Latest Version on Packagist][ico-version]][link-packagist]
