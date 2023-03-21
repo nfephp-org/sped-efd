@@ -29,4 +29,9 @@ final class BlockH extends Block implements BlockInterface
         'h020' => ['class' => Elements\H020::class, 'level' => 4, 'type' => 'multiple'],
         'h030' => ['class' => Elements\H030::class, 'level' => 4, 'type' => 'single'],
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = 'H990';
+    }
 }

@@ -43,4 +43,9 @@ final class BlockB extends Block implements BlockInterface
         'b500' => ['class' => Elements\B500::class, 'level' => 2, 'type' => 'single'],
         'b510' => ['class' => Elements\B510::class, 'level' => 3, 'type' => 'multiple']
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = 'B990';
+    }
 }

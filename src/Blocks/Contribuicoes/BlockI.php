@@ -24,4 +24,9 @@ final class BlockI extends Block implements BlockInterface
         'i300' => ['class' => Elements\I300::class, 'level' => 5, 'type' => 'multiple'],
         'i399' => ['class' => Elements\I399::class, 'level' => 6, 'type' => 'multiple'],
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = 'I990';
+    }
 }

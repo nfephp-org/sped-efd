@@ -167,4 +167,9 @@ final class BlockC extends Block implements BlockInterface
         'c880' => ['class' => Elements\C880::class, 'level' => 4, 'type' => 'single'],
         'c890' => ['class' => Elements\C890::class, 'level' => 3, 'type' => 'multiple']
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = 'C990';
+    }
 }

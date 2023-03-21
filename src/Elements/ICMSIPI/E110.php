@@ -134,8 +134,9 @@ class E110 extends Element implements ElementInterface
         $diferenca = $this->values->vl_sld_apurado - $this->values->vl_tot_ded;
         if ($diferenca < 0 && ($this->values->vl_icms_recolher != 0 || $this->values->vl_sld_credor_transportar == 0)) {
             $this->errors[] = "[" . self::REG . "] O valor informado deve corresponder à diferença "
-            . "entre o campo VL_SLD_APURADO e o campo VL_TOT_DED. Se o resultado dessa operação for negativo, informe "
-            . "o valor zero neste campo, e o valor absoluto correspondente no campo VL_SLD_CREDOR_TRANSPORTAR.";
+            . "entre o campo VL_SLD_APURADO e o campo VL_TOT_DED. Se o resultado dessa operação for negativo, "
+            . "informe o valor zero neste campo, e o valor absoluto correspondente no "
+            . "campo VL_SLD_CREDOR_TRANSPORTAR.";
         }
 
         /*

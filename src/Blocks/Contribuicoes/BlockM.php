@@ -48,4 +48,9 @@ final class BlockM extends Block implements BlockInterface
         'm800' => ['class' => Elements\M800::class, 'level' => 2, 'type' => 'multiple'],
         'm810' => ['class' => Elements\M810::class, 'level' => 3, 'type' => 'single'],
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = 'M990';
+    }
 }
