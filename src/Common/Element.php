@@ -4,15 +4,29 @@ namespace NFePHP\EFD\Common;
 
 use \stdClass;
 use NFePHP\Common\Strings;
-use Exception;
 
 abstract class Element
 {
 
+    /**
+     * @var array
+     */
     public $errors = [];
+    /**
+     * @var stdClass
+     */
     public $std;
+    /**
+     * @var stdClass
+     */
     public $values;
+    /**
+     * @var array
+     */
     protected $parameters;
+    /**
+     * @var string
+     */
     private $reg;
 
     /**
@@ -25,16 +39,21 @@ abstract class Element
         $this->values = new stdClass();
     }
 
+    /**
+     * Validação complexa posterior à analise inicial dos parametros
+     * @return void
+     */
     public function postValidation()
     {
-        return true;
+        //implementation
     }
 
     /**
      * Valida e ajusta os dados de entrada para os padões estabelecidos
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @return stdClass
      */
-    protected function standarize(\stdClass $std)
+    protected function standarize(stdClass $std): stdClass
     {
         if (empty($this->parameters)) {
             throw new \RuntimeException('Parametros não estabelecidos na classe');
@@ -65,9 +84,9 @@ abstract class Element
                 $this->errors[] = "[$this->reg] campo: $key é requerido.";
             }
         }
-        $newstd = new \stdClass();
+        $newstd = new stdClass();
         foreach ($paramKeys as $key) {
-            if (!key_exists($key, $arr)) {
+            if (!array_key_exists($key, $arr)) {
                 $newstd->$key = null;
             } else {
                 if ($std->$key === null) {
@@ -79,7 +98,6 @@ abstract class Element
                     $std->$key,
                     $stdParam->$key,
                     strtoupper($key),
-                    $this->reg,
                     $stdParam->$key->required
                 );
                 if ($resp) {
@@ -98,13 +116,15 @@ abstract class Element
     }
 
     /**
-     * Verifica os campos com relação ao tipo e seu regex
-     * @param string|integer|float|null $input
+     * Verifica os campos com relação ao tipo e regex
+     * @param mixed $input
      * @param stdClass $param
      * @param string $fieldname
-     * @return string|boolean
+     * @param string $element
+     * @param bool $required
+     * @return false|string
      */
-    protected function isFieldInError($input, $param, $fieldname, $element, $required)
+    protected function isFieldInError($input, stdClass $param, string $fieldname, bool $required)
     {
         $type = $param->type;
         $regex = $param->regex;
@@ -170,7 +190,7 @@ abstract class Element
             $value = 0;
         }
         $this->values->$name = (float) $value;
-        return $this->numberFormat(floatval($value), $format, $fieldname);
+        return $this->numberFormat((float)$value, $format, $fieldname);
     }
 
     /**
@@ -220,7 +240,7 @@ abstract class Element
      * Construtor do elemento
      * @return string
      */
-    protected function build()
+    protected function build(): string
     {
         $register = '';
         foreach ($this->parameters as $key => $params) {

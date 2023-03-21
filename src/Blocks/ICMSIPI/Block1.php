@@ -91,6 +91,10 @@ final class Block1 extends Block implements BlockInterface
         'z1970' => ['class' => Elements\Z1970::class, 'level' => 2, 'type' => 'multiple'],
         'z1975' => ['class' => Elements\Z1975::class, 'level' => 3, 'type' => 'multiple'],
         'z1980' => ['class' => Elements\Z1980::class, 'level' => 2, 'type' => 'single']
-
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = '1990';
+    }
 }

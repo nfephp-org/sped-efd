@@ -216,8 +216,8 @@ class E310 extends Element implements ElementInterface
         if (($diferenca > 0 && $this->values->vl_recol_difal == 0)
         || ($diferenca < 0 && $this->values->vl_recol_difal != 0)) {
             $this->errors[] = "[" . self::REG . "] Se (VL_SLD_DEV_ANT_DIFAL menos VL_DEDUCOES_DIFAL) "
-            . "for maior ou igual a ZERO, então VL_RECOL é igual ao resultado da equação; senão o VL_RECOL deverá "
-            . "ser igual a ZERO.";
+            . "for maior ou igual a ZERO, então VL_RECOL é igual ao resultado da equação; "
+            . "senão o VL_RECOL deverá ser igual a ZERO.";
         }
 
          /*
@@ -248,8 +248,8 @@ class E310 extends Element implements ElementInterface
         if (($diferenca > 0 && $this->values->vl_recol_fcp == 0)
         || ($diferenca < 0 && $this->values->vl_recol_fcp != 0)) {
             $this->errors[] = "[" . self::REG . "] Se (VL_SLD_DEV_ANT_FCP menos VL_DEDUCOES_FCP) "
-            . "for maior ou igual a ZERO, então VL_RECOL_FCP é igual ao resultado da equação; senão o VL_RECOL_FCP "
-            . "deverá ser igual a ZERO.";
+            . "for maior ou igual a ZERO, então VL_RECOL_FCP é igual ao resultado da equação; "
+            . "senão o VL_RECOL_FCP deverá ser igual a ZERO.";
         }
 
         /*

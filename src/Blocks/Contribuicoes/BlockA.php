@@ -23,4 +23,9 @@ final class BlockA extends Block implements BlockInterface
         'a120' => ['class' => Elements\A120::class, 'level' => 4, 'type' => 'multiple'],
         'a170' => ['class' => Elements\A170::class, 'level' => 4, 'type' => 'multiple'],
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = 'A990';
+    }
 }

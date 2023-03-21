@@ -213,7 +213,7 @@ class D100 extends Element implements ElementInterface
      * Aqui são colocadas validações adicionais que requerem mais logica
      * e processamento
      * Deve ser usado apenas quando necessário
-     * @throws \InvalidArgumentException
+     * @return void
      */
     public function postValidation()
     {

@@ -69,4 +69,9 @@ final class BlockE extends Block implements BlockInterface
         'e530' => ['class' => Elements\E530::class, 'level' => 4, 'type' => 'multiple'],
         'e531' => ['class' => Elements\E531::class, 'level' => 5, 'type' => 'multiple'],
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = 'E990';
+    }
 }

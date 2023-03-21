@@ -23,4 +23,9 @@ final class BlockP extends Block implements BlockInterface
         'p200' => ['class' => Elements\P200::class, 'level' => 2, 'type' => 'multiple'],
         'p210' => ['class' => Elements\P210::class, 'level' => 3, 'type' => 'single'],
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = 'P990';
+    }
 }

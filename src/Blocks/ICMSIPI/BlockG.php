@@ -31,4 +31,9 @@ final class BlockG extends Block implements BlockInterface
         'g130' => ['class' => Elements\G130::class, 'level' => 4, 'type' => 'multiple'],
         'g140' => ['class' => Elements\G140::class, 'level' => 5, 'type' => 'multiple']
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = 'G990';
+    }
 }

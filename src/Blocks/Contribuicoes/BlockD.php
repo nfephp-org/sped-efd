@@ -38,4 +38,9 @@ final class BlockD extends Block implements BlockInterface
         'd605' => ['class' => Elements\D605::class, 'level' => 4, 'type' => 'multiple'],
         'd609' => ['class' => Elements\D609::class, 'level' => 4, 'type' => 'multiple'],
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = 'D990';
+    }
 }

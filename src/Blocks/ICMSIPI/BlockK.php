@@ -63,4 +63,9 @@ final class BlockK extends Block implements BlockInterface
         'k301' => ['class' => Elements\K301::class, 'level' => 4, 'type' => 'multiple'],
         'k302' => ['class' => Elements\K302::class, 'level' => 4, 'type' => 'multiple'],
     ];
+
+    public function __construct()
+    {
+        $this->elementTotal = 'K990';
+    }
 }

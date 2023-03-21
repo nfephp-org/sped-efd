@@ -83,7 +83,6 @@ class Z1600 extends Element implements ElementInterface
             'info' => 'Data do Recolhimento. ',
             'format' => ''
         ],
-
     ];
 
     /**
