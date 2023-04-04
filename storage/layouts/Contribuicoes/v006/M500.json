@@ -1,0 +1,100 @@
+{
+    "COD_CRED": {
+        "type": "string",
+        "regex": "^.{3}$",
+        "required": false,
+        "info": "C\u00f3digo de Tipo de Cr\u00e9dito apurado no per\u00edodo, conforme a Tabela 4.3.6. ",
+        "format": ""
+    },
+    "IND_CRED_ORI": {
+        "type": "numeric",
+        "regex": "^(0|1)$",
+        "required": false,
+        "info": "Indicador de Cr\u00e9dito Oriundo de  0 \u2013 Opera\u00e7\u00f5es pr\u00f3prias 1 \u2013 Evento de incorpora\u00e7\u00e3o, cis\u00e3o ou fus\u00e3o ",
+        "format": ""
+    },
+    "VL_BC_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Base de C\u00e1lculo do Cr\u00e9dito ",
+        "format": "15v2"
+    },
+    "ALIQ_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota da COFINS (em percentual) ",
+        "format": "8v4"
+    },
+    "QUANT_BC_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Quantidade \u2013 Base de c\u00e1lculo COFINS ",
+        "format": "15v3"
+    },
+    "ALIQ_COFINS_QUANT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota da COFINS (em reais) ",
+        "format": "15v4"
+    },
+    "VL_CRED": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total do cr\u00e9dito apurado no per\u00edodo ",
+        "format": "15v2"
+    },
+    "VL_AJUS_ACRES": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total dos ajustes de acr\u00e9scimo ",
+        "format": "15v2"
+    },
+    "VL_AJUS_REDUC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total dos ajustes de redu\u00e7\u00e3o ",
+        "format": "15v2"
+    },
+    "VL_CRED_DIFER": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total do cr\u00e9dito diferido no per\u00edodo ",
+        "format": "15v2"
+    },
+    "VL_CRED_DISP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total do Cr\u00e9dito Dispon\u00edvel relativo ao Per\u00edodo (08 + 09 \u2013 10 \u2013 11) ",
+        "format": "15v2"
+    },
+    "IND_DESC_CRED": {
+        "type": "string",
+        "regex": "^(0|1)$",
+        "required": false,
+        "info": "Indicador de utiliza\u00e7\u00e3o do cr\u00e9dito dispon\u00edvel no per\u00edodo  0 \u2013 Utiliza\u00e7\u00e3o do valor total para desconto da contribui\u00e7\u00e3o apurada no per\u00edodo, no Registro M600  1 \u2013 Utiliza\u00e7\u00e3o de valor parcial para desconto da contribui\u00e7\u00e3o apurada no per\u00edodo, no Registro M600. ",
+        "format": ""
+    },
+    "VL_CRED_DESC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Cr\u00e9dito dispon\u00edvel, descontado da contribui\u00e7\u00e3o apurada no pr\u00f3prio per\u00edodo. Se IND_DESC_CRED=0, informar o valor total do Campo 12  Se IND_DESC_CRED=1, informar o valor parcial do Campo 12. ",
+        "format": "15v2"
+    },
+    "SLD_CRED": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Saldo de cr\u00e9ditos a utilizar em per\u00edodos futuros (12 \u2013 14) ",
+        "format": "15v2"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "DT_INI_OP": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data de in\u00edcio da ordem de produ\u00e7\u00e3o",
+        "format": ""
+    },
+    "DT_FIN_OP": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data de conclus\u00e3o da ordem de produ\u00e7\u00e3o",
+        "format": ""
+    },
+    "COD_DOC_OP": {
+        "type": "string",
+        "regex": "^.{1,30}$",
+        "required": false,
+        "info": "C\u00f3digo de identifica\u00e7\u00e3o da ordem de produ\u00e7\u00e3o",
+        "format": ""
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "VL_TOT_TRANSF_DEBITOS_OA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos de\u0301bitos por \u201cSai\u0301das e prestac\u0327o\u0303es com de\u0301bito do imposto\u201d",
+        "format": "15v2"
+    },
+    "VL_TOT_AJ_DEBITOS_OA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de \u201cAjustes a de\u0301bito\u201d",
+        "format": "15v2"
+    },
+    "VL_ESTORNOS_CRED_OA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "V alor total de Ajustes \u201cEstornos de cre\u0301ditos\u201d",
+        "format": "15v2"
+    },
+    "VL_TOT_TRANSF_CREDITOS_OA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos cre\u0301ditos por \u201cEntradas e aquisic\u0327o\u0303es com cre\u0301dito do imposto\u201d",
+        "format": "15v2"
+    },
+    "VL_TOT_AJ_CREDITOS_OA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de \u201cAjustes a cre\u0301dito\u201d",
+        "format": "15v2"
+    },
+    "VL_ESTORNOS_DEB_OA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "V alor total de Ajustes \u201cEstornos de De\u0301bitos\u201d",
+        "format": "15v2"
+    },
+    "VL_SLD_CREDOR_ANT_OA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de \u201cSaldo credor do peri\u0301odo anterior\u201d",
+        "format": "15v2"
+    },
+    "VL_SLD_APURADO_OA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do saldo devedor apurado",
+        "format": "15v2"
+    },
+    "VL_TOT_DED": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de \u201cDeduc\u0327o\u0303es\u201d",
+        "format": "15v2"
+    },
+    "VL_ICMS_RECOLHER_OA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de \"ICMS a recolher (09-10)",
+        "format": "15v2"
+    },
+    "VL_SLD_CREDOR_TRANSP_OA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de \u201cSaldo credor a transportar para o peri\u0301odo seguinte\u201d",
+        "format": "15v2"
+    },
+    "DEB_ESP_OA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valores recolhidos ou a recolher, extra- apurac\u0327a\u0303o.",
+        "format": "15v2"
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "COD_PART_CONSG": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo do participante (campo 02 do Registro 0150):- consignat\u00e1rio, se houver",
+        "format": ""
+    },
+    "COD_PART_RED": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo do participante (campo 02 do Registro 0150):- redespachado, se houver",
+        "format": ""
+    },
+    "IND_FRT_RED": {
+        "type": "string",
+        "regex": "^[0-9]{1}$",
+        "required": true,
+        "info": "Indicador do tipo do frete da opera\u00e7\u00e3o de redespacho: 0 - Sem redespacho;1 - Por conta do emitente2 - Por conta do destinat\u00e1rio 9 - Outros.",
+        "format": ""
+    },
+    "COD_MUN_ORIG": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "C\u00f3digo do munic\u00edpio de origem do servi\u00e7o, conforme a tabela IBGE",
+        "format": ""
+    },
+    "COD_MUN_DEST": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "C\u00f3digo do munic\u00edpio de destino, conforme a tabela IBGE",
+        "format": ""
+    },
+    "VEIC_ID": {
+        "type": "string",
+        "regex": "^[0-9]{7}$",
+        "required": true,
+        "info": "Placa de identifica\u00e7\u00e3o do ve\u00edculo",
+        "format": ""
+    },
+    "VL_LIQ_FRT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor l\u00edquido do frete",
+        "format": "15v2"
+    },
+    "VL_SEC_CAT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Soma de valores de Sec\/Cat (servi\u00e7os de coleta\/custo adicional de transporte)",
+        "format": "15v2"
+    },
+    "VL_DESP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Soma de valores de despacho",
+        "format": "15v2"
+    },
+    "VL_PEDG": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Soma dos valores de ped\u00e1gio",
+        "format": "15v2"
+    },
+    "VL_OUT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Outros valores",
+        "format": "15v2"
+    },
+    "VL_FRT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total do frete",
+        "format": "15v2"
+    },
+    "UF_ID": {
+        "type": "string",
+        "regex": "^[0-9]{2}$",
+        "required": true,
+        "info": "Sigla da UF da placa do ve\u00edculo",
+        "format": ""
+    }
+}

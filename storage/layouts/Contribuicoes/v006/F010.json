@@ -1,0 +1,9 @@
+{
+    "CNPJ": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": false,
+        "info": "N\u00famero de inscri\u00e7\u00e3o do estabelecimento no CNPJ.",
+        "format": ""
+    }
+}

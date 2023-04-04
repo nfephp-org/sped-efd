@@ -1,0 +1,23 @@
+{
+    "COD_ITEM_IPM": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "Co\u0301digo do item (Tabela pro\u0301pria da unidade da federac\u0327a\u0303o (Tabela de Itens UF I\u0301ndice de Participac\u0327a\u0303o dos Munici\u0301pios) ou campo 02 do Registro 0200",
+        "format": ""
+    },
+    "MUN": {
+        "type": "integer",
+        "regex": "^\\d{7}$",
+        "required": true,
+        "info": "Co\u0301digo do Munici\u0301pio de origem\/destino",
+        "format": ""
+    },
+    "VALOR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor mensal correspondente ao munici\u0301pio",
+        "format": "15v2"
+    }
+}

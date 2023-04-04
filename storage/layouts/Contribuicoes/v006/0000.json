@@ -1,0 +1,93 @@
+{
+    "COD_VER": {
+        "type": "numeric",
+        "regex": "^(\\d{3})$",
+        "required": false,
+        "info": "C\u00f3digo da vers\u00e3o do leiaute conforme a tabela 3.1.1.",
+        "format": ""
+    },
+    "TIPO_ESCRIT": {
+        "type": "numeric",
+        "regex": "^(0|1)$",
+        "required": false,
+        "info": "Tipo de escritura\u00e7\u00e3o: 0 - Original; 1 \u2013 Retificadora.",
+        "format": ""
+    },
+    "IND_SIT_ESP": {
+        "type": "numeric",
+        "regex": "^([0-4]{1})$",
+        "required": false,
+        "info": "Indicador de situa\u00e7\u00e3o especial: 0 - Abertura 1 - Cis\u00e3o\n            2 - Fus\u00e3o 3 - Incorpora\u00e7\u00e3o 4 \u2013 Encerramento",
+        "format": ""
+    },
+    "NUM_REC_ANTERIOR": {
+        "type": "string",
+        "regex": "^.{41}$",
+        "required": false,
+        "info": "N\u00famero do Recibo da Escritura\u00e7\u00e3o anterior\n            a ser retificada, utilizado quando TIPO_ESCRIT for igual a 1",
+        "format": ""
+    },
+    "DT_INI": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data inicial das informa\u00e7\u00f5es contidas no arquivo.",
+        "format": ""
+    },
+    "DT_FIN": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data final das informa\u00e7\u00f5es contidas no arquivo.",
+        "format": ""
+    },
+    "NOME": {
+        "type": "string",
+        "regex": "^.{0,100}$",
+        "required": false,
+        "info": "Nome empresarial da pessoa jur\u00eddica",
+        "format": ""
+    },
+    "CNPJ": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": false,
+        "info": "N\u00famero de inscri\u00e7\u00e3o do estabelecimento matriz da pessoa jur\u00eddica no CNPJ.",
+        "format": ""
+    },
+    "UF": {
+        "type": "string",
+        "regex": "^.{2}$",
+        "required": false,
+        "info": "Sigla da Unidade da Federa\u00e7\u00e3o da pessoa",
+        "format": ""
+    },
+    "COD_MUN": {
+        "type": "numeric",
+        "regex": "^(\\d{7})$",
+        "required": false,
+        "info": "C\u00f3digo do munic\u00edpio do domic\u00edlio fiscal da pessoa jur\u00eddica, conforme a tabela IBGE",
+        "format": ""
+    },
+    "SUFRAMA": {
+        "type": "string",
+        "regex": "^.{9}$",
+        "required": false,
+        "info": "Inscri\u00e7\u00e3o da pessoa jur\u00eddica na Suframa",
+        "format": ""
+    },
+    "IND_NAT_PJ": {
+        "type": "numeric",
+        "regex": "^(0)([0-5]{1})$",
+        "required": false,
+        "info": "Indicador da natureza da pessoa jur\u00eddica:\n            00 \u2013 Pessoa jur\u00eddica em geral 01 \u2013 Sociedade cooperativa 02 \u2013 Entidade sujeita ao PIS\/Pasep\n            exclusivamente com base na Folha de Sal\u00e1rios",
+        "format": ""
+    },
+    "IND_ATIV": {
+        "type": "numeric",
+        "regex": "^(0|1|2|3|4|9)$",
+        "required": false,
+        "info": "Indicador de tipo de atividade preponderante:\n            0 \u2013 Industrial ou equiparado a industrial; 1 \u2013 Prestador de servi\u00e7os; 2 - Atividade de com\u00e9rcio;\n             3 \u2013 Pessoas jur\u00eddicas referidas nos \u00a7\u00a7 6\u00ba, 8\u00ba e 9\u00ba do art. 3\u00ba da Lei n\u00ba 9.718, de 1998;\n              4 \u2013 Atividade imobili\u00e1ria; 9 \u2013 Outros.",
+        "format": ""
+    }
+}

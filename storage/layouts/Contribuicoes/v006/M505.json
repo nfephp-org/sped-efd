@@ -1,0 +1,65 @@
+{
+    "NAT_BC_CRED": {
+        "type": "string",
+        "regex": "^.{2}$",
+        "required": false,
+        "info": "C\u00f3digo da Base de C\u00e1lculo do Cr\u00e9dito apurado no per\u00edodo, conforme a Tabela 4.3.7. ",
+        "format": ""
+    },
+    "CST_COFINS": {
+        "type": "string",
+        "regex": "^((5[0-6])|(6[0-6])|(7[0-5])|98|99)$",
+        "required": false,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria referente ao cr\u00e9dito de COFINS (Tabela 4.3.4) vinculado ao tipo de cr\u00e9dito escriturado em M500. ",
+        "format": ""
+    },
+    "VL_BC_COFINS_TOT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total da Base de C\u00e1lculo escriturada nos documentos e opera\u00e7\u00f5es (Blocos \u201cA\u201d, \u201cC\u201d, \u201cD\u201d e \u201cF\u201d), referente ao CST_COFINS informado no Campo 03. ",
+        "format": "15v2"
+    },
+    "VL_BC_COFINS_CUM": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Parcela do Valor Total da Base de C\u00e1lculo informada no Campo 04, vinculada a receitas com 0110) ao regime cumulativo e n\u00e3o- cumulativo da contribui\u00e7\u00e3o (COD_INC_TRIB = 3 do Registro incid\u00eancia cumulativa. Campo de preenchimento espec\u00edfico para a pessoa jur\u00eddica sujeita ",
+        "format": "15v2"
+    },
+    "VL_BC_COFINS_NC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total da Base de C\u00e1lculo do Cr\u00e9dito, vinculada a receitas com incid\u00eancia n\u00e3o-cumulativa (Campo 04 \u2013 Campo 05). ",
+        "format": "15v2"
+    },
+    "VL_BC_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Base de C\u00e1lculo do Cr\u00e9dito, vinculada ao tipo de Cr\u00e9dito escriturado em M500. - Para os CST_COFINS = \u201c50\u201d, \u201c51\u201d, \u201c52\u201d, \u201c60\u201d, \u201c61\u201d e \u201c62\u201d  Informar o valor do Campo 06 (VL_BC_COFINS_NC)  - Para os CST_COFINS = \u201c53\u201d, \u201c54\u201d, \u201c55\u201d, \u201c56\u201d, \u201c63\u201d, \u201c64\u201d \u201c65\u201d e \u201c66\u201d (Cr\u00e9dito sobre opera\u00e7\u00f5es vinculadas a mais de um tipo de receita)  Informar a parcela do valor do Campo 06 (VL_BC_COFINS_NC) vinculada especificamente ao tipo de cr\u00e9dito escriturado em M500. ",
+        "format": "15v2"
+    },
+    "QUANT_BC_COFINS_TOT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Quantidade Total da Base de C\u00e1lculo do Cr\u00e9dito apurado em Unidade de Medida de Produto, referente ao CST_COFINS informado no Campo 03 escriturada nos documentos e opera\u00e7\u00f5es (Blocos \u201cA\u201d, \u201cC\u201d, \u201cD\u201d e \u201cF\u201d), ",
+        "format": "15v3"
+    },
+    "QUANT_BC_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Parcela da base de c\u00e1lculo do cr\u00e9dito em quantidade (campo 08) vinculada ao tipo de cr\u00e9dito escriturado em M500. - Para os CST_COFINS = \u201c50\u201d, \u201c51\u201d e \u201c52\u201d  Informar o valor do Campo 08 (QUANT_BC_COFINS)  - Para os CST_COFINS = \u201c53\u201d, \u201c54\u201d, \u201c55\u201d e \u201c56\u201d (cr\u00e9dito vinculado a mais de um tipo de receita)  Informar a parcela do valor do Campo 08 (QUANT_BC_COFINS) vinculada ao tipo de cr\u00e9dito escriturado em M500. ",
+        "format": "15v3"
+    },
+    "DESC_CRED": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "Descri\u00e7\u00e3o do cr\u00e9dito ",
+        "format": ""
+    }
+}

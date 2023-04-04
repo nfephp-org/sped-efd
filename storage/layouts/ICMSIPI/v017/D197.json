@@ -1,0 +1,51 @@
+{
+    "COD_AJ": {
+        "type": "string",
+        "regex": "^.{10}$",
+        "required": true,
+        "info": "C\u00f3digo do ajustes\/benef\u00edcio\/incentivo, conforme tabela indicada no item 5.3",
+        "format": ""
+    },
+    "DESCR_COMPL_AJ": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Descri\u00e7\u00e3o complementar do ajuste do documento fiscal",
+        "format": ""
+    },
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "C\u00f3digo do item (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "VL_BC_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Base de c\u00e1lculo do ICMS ou do ICMS ST",
+        "format": "15v2"
+    },
+    "ALIQ_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do ICMS",
+        "format": ""
+    },
+    "VL_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do ICMS ou do ICMS ST",
+        "format": "15v2"
+    },
+    "VL_OUTROS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Outros valores",
+        "format": "15v2"
+    }
+}

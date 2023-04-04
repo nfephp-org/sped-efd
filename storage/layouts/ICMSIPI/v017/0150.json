@@ -1,0 +1,86 @@
+{
+    "COD_PART": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo de identifica\u00e7\u00e3o do participante no arquivo.",
+        "format": ""
+    },
+    "NOME": {
+        "type": "string",
+        "regex": "^.{1,100}$",
+        "required": true,
+        "info": "Nome pessoal ou empresarial do participante.",
+        "format": ""
+    },
+    "COD_PAIS": {
+        "type": "integer",
+        "regex": "^[0-9]{4,5}$",
+        "required": true,
+        "info": "C\u00f3digo do pa\u00eds do participante, conforme a tabela indicada no item 3.2.1",
+        "format": ""
+    },
+    "CNPJ": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": false,
+        "info": "CNPJ do participante.",
+        "format": ""
+    },
+    "CPF": {
+        "type": "string",
+        "regex": "^[0-9]{11}$",
+        "required": false,
+        "info": "CPF do participante.",
+        "format": ""
+    },
+    "IE": {
+        "type": "string",
+        "regex": "^[0-9]{2,14}$",
+        "required": false,
+        "info": "Inscri\u00e7\u00e3o Estadual do participante.",
+        "format": ""
+    },
+    "COD_MUN": {
+        "type": "integer",
+        "regex": "^[0-9]{7}$",
+        "required": false,
+        "info": "C\u00f3digo do munic\u00edpio, conforme a tabela IBGE",
+        "format": ""
+    },
+    "SUFRAMA": {
+        "type": "string",
+        "regex": "^[0-9]{8,9}$",
+        "required": false,
+        "info": "N\u00famero de inscri\u00e7\u00e3o do participante na SUFRAMA.",
+        "format": ""
+    },
+    "END": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "Logradouro e endere\u00e7o do im\u00f3vel",
+        "format": ""
+    },
+    "NUM": {
+        "type": "string",
+        "regex": "^.{1,10}$",
+        "required": false,
+        "info": "N\u00famero do im\u00f3vel",
+        "format": ""
+    },
+    "COMPL": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": false,
+        "info": "Dados complementares do endere\u00e7o",
+        "format": ""
+    },
+    "BAIRRO": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": false,
+        "info": "Bairro em que o im\u00f3vel est\u00e1 situado",
+        "format": ""
+    }
+}

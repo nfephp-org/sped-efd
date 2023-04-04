@@ -1,0 +1,51 @@
+{
+    "CST_PIS": {
+        "type": "string",
+        "regex": "^((5[0-6])|(6[0-6])|(7[0-5])|98|99)$",
+        "required": false,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria referente ao PIS\/PASEP ",
+        "format": ""
+    },
+    "VL_ITEM": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total dos Itens (Servi\u00e7os) ",
+        "format": "15v2"
+    },
+    "NAT_BC_CRED": {
+        "type": "string",
+        "regex": "^(03|13)$",
+        "required": false,
+        "info": "C\u00f3digo da Base de C\u00e1lculo do Cr\u00e9dito, conforme a Tabela indicada no item 4.3.7. ",
+        "format": ""
+    },
+    "VL_BC_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo do PIS\/PASEP ",
+        "format": "15v2"
+    },
+    "ALIQ_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do PIS\/PASEP (em percentual) ",
+        "format": "8v4"
+    },
+    "VL_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do PIS\/PASEP ",
+        "format": "15v2"
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^.{0,255}$",
+        "required": false,
+        "info": "C\u00f3digo da conta anal\u00edtica cont\u00e1bil debitada\/creditada ",
+        "format": ""
+    }
+}

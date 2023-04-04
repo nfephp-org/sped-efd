@@ -1,0 +1,37 @@
+{
+    "VL_TOT_FOL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total da Folha de Sal\u00e1rios ",
+        "format": "15v2"
+    },
+    "VL_EXC_BC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total das Exclus\u00f5es \u00e0 Base de C\u00e1lculo ",
+        "format": "15v2"
+    },
+    "VL_TOT_BC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total da Base de C\u00e1lculo ",
+        "format": "15v2"
+    },
+    "ALIQ_PIS_FOL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do PIS\/PASEP \u2013 Folha de Sal\u00e1rios ",
+        "format": "6v2"
+    },
+    "VL_TOT_CONT_FOL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total da Contribui\u00e7\u00e3o Social sobre a Folha de Sal\u00e1rios ",
+        "format": "15v2"
+    }
+}

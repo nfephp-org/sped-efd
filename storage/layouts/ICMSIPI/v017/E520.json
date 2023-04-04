@@ -1,0 +1,51 @@
+{
+    "VL_SD_ANT_IPI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo credor do IPI transferido do peri\u0301odo anterior",
+        "format": "15v2"
+    },
+    "VL_DEB_IPI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos de\u0301bitos por \"Sai\u0301das com de\u0301bito do imposto\"",
+        "format": "15v2"
+    },
+    "VL_CRED_IPI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos cre\u0301ditos por \"Entradas e aquisic\u0327o\u0303es com cre\u0301dito do imposto\"",
+        "format": "15v2"
+    },
+    "VL_OD_IPI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor de \"Outros de\u0301bitos\" do IPI (inclusive estornos de cre\u0301dito)",
+        "format": "15v2"
+    },
+    "VL_OC_IPI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor de \"Outros cre\u0301ditos\" do IPI (inclusive estornos de de\u0301bitos)",
+        "format": "15v2"
+    },
+    "VL_SC_IPI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do saldo credor do IPI a transportar para o peri\u0301odo seguinte",
+        "format": "15v2"
+    },
+    "VL_SD_IPI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do saldo devedor do IPI a recolher",
+        "format": "15v2"
+    }
+}

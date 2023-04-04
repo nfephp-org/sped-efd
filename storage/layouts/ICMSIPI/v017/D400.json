@@ -1,0 +1,107 @@
+{
+    "COD_PART": {
+        "type": "string",
+        "regex": "^[0-9]{60}$",
+        "required": true,
+        "info": "C\u00f3digo do participante (campo 02 do Registro 0150):- ag\u00eancia, filial ou posto",
+        "format": ""
+    },
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^[0-9]{2}$",
+        "required": true,
+        "info": "C\u00f3digo do modelo do documento fiscal, conforme a tabela 4.1.1",
+        "format": ""
+    },
+    "COD_SIT": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "C\u00f3digo da situa\u00e7\u00e3o do documento fiscal, conforme a tabela 4.1.2",
+        "format": ""
+    },
+    "SER": {
+        "type": "string",
+        "regex": "^[0-9]{4}$",
+        "required": true,
+        "info": "S\u00e9rie do documento fiscal",
+        "format": ""
+    },
+    "SUB": {
+        "type": "numeric",
+        "regex": "^[0-9]{3}$",
+        "required": true,
+        "info": "Subs\u00e9rie do documento fiscal",
+        "format": ""
+    },
+    "NUM_DOC": {
+        "type": "numeric",
+        "regex": "^[0-9]{6}$",
+        "required": true,
+        "info": "N\u00famero do documento fiscal resumo.",
+        "format": ""
+    },
+    "DT_DOC": {
+        "type": "numeric",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data da emiss\u00e3o do documento fiscal",
+        "format": ""
+    },
+    "VL_DOC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total do documento fiscal",
+        "format": "15v2"
+    },
+    "VL_DESC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor acumulado dos descontos",
+        "format": "15v2"
+    },
+    "VL_SERV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor acumulado da presta\u00e7\u00e3o de servi\u00e7o",
+        "format": "15v2"
+    },
+    "VL_BC_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total da base de c\u00e1lculo do ICMS",
+        "format": "15v2"
+    },
+    "VL_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total do ICMS",
+        "format": "15v2"
+    },
+    "VL_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do PIS",
+        "format": "15v2"
+    },
+    "VL_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da COFINS",
+        "format": "15v2"
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^[0-9]{0}$",
+        "required": true,
+        "info": "C\u00f3digo da conta anal\u00edtica cont\u00e1bil debitada\/creditada",
+        "format": ""
+    }
+}

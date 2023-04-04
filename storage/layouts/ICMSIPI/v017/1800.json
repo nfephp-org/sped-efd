@@ -1,0 +1,65 @@
+{
+    "VL_CARGA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor das prestac\u0327o\u0303es cargas (Tributado)",
+        "format": "15v2"
+    },
+    "VL_PASS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor das prestac\u0327o\u0303es passageiros\/cargas (Na\u0303o Tributado)",
+        "format": "15v2"
+    },
+    "VL_FAT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total do faturamento (2+3)",
+        "format": "15v2"
+    },
+    "IND_RAT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "I\u0301ndice para rateio(2 \/ 4)",
+        "format": "8v6"
+    },
+    "VL_ICMS_ANT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos cre\u0301ditos do ICMS",
+        "format": "15v2"
+    },
+    "VL_BC_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da base de ca\u0301lculo do ICMS",
+        "format": "15v2"
+    },
+    "VL_ICMS_APUR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do ICMS apurado no ca\u0301lculo (5 x 6)",
+        "format": "15v2"
+    },
+    "VL_BC_ICMS_APUR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da base de ca\u0301lculo do ICMS apurada (5 x 7)",
+        "format": "15v2"
+    },
+    "VL_DIF": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da diferenc\u0327a a ser levada a estorno de cre\u0301dito na apurac\u0327a\u0303o (6 - 8)",
+        "format": "15v2"
+    }
+}

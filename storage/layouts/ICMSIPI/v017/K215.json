@@ -1,0 +1,16 @@
+{
+    "COD_ITEM_DES": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo do item de destino (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "QTD_DES": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Quantidade de destino \u2013 entrada em estoque",
+        "format": "15v6"
+    }
+}

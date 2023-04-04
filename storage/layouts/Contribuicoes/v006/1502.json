@@ -1,0 +1,23 @@
+{
+    "VL_CRED_COFINS_TRIB_MI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Parcela do Cr\u00e9dito de COFINS, vinculada a Receita Tributada no Mercado Interno ",
+        "format": "15v2"
+    },
+    "VL_CRED_COFINS_NT_MI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Parcela do Cr\u00e9dito de COFINS, vinculada a Receita N\u00e3o Tributada no Mercado Interno ",
+        "format": "15v2"
+    },
+    "VL_CRED_COFINS_EXP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Parcela do Cr\u00e9dito de COFINS, vinculada a Receita de Exporta\u00e7\u00e3o ",
+        "format": "15v2"
+    }
+}

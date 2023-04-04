@@ -1,0 +1,58 @@
+{
+    "DET_VALOR_AJ": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Detalhamento do valor da contribui\u00e7\u00e3o reduzida ou acrescida, informado no Campo 03 (VL_AJ) do registro M220. ",
+        "format": "15v2"
+    },
+    "CST_PIS": {
+        "type": "string",
+        "regex": "^((0[1-9])|49|99)$",
+        "required": false,
+        "info": "C\u00f3digo de Situa\u00e7\u00e3o Tribut\u00e1ria referente \u00e0 opera\u00e7\u00e3o detalhada neste registro. ",
+        "format": ""
+    },
+    "DET_BC_CRED": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Detalhamento da base de c\u00e1lculo geradora de ajuste de contribui\u00e7\u00e3o ",
+        "format": "15v3"
+    },
+    "DET_ALIQ": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Detalhamento da al\u00edquota a que se refere o ajuste de contribui\u00e7\u00e3o ",
+        "format": "8v4"
+    },
+    "DT_OPER_AJ": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data da opera\u00e7\u00e3o a que se refere o ajuste informado neste registro. ",
+        "format": ""
+    },
+    "DESC_AJ": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Descri\u00e7\u00e3o da(s) opera\u00e7\u00e3o(\u00f5es) a que se refere o valor informado no Campo 02 (DET_VALOR_AJ) ",
+        "format": ""
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^.{0,255}$",
+        "required": false,
+        "info": "C\u00f3digo da conta cont\u00e1bil debitada\/creditada ",
+        "format": ""
+    },
+    "INFO_COMPL": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Informa\u00e7\u00e3o complementar ",
+        "format": ""
+    }
+}

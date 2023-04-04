@@ -1,0 +1,9 @@
+{
+    "COD_COMB": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "C\u00f3digo do combust\u00edvel, conforme tabela publicada pela ANP",
+        "format": ""
+    }
+}

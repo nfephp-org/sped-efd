@@ -1,0 +1,44 @@
+{
+    "PER_REF": {
+        "type": "numeric",
+        "regex": "^(\\d{6})$",
+        "required": false,
+        "info": "Per\u00edodo de referencia da escritura\u00e7\u00e3o (MMAAAA) ",
+        "format": ""
+    },
+    "VL_TOT_CONT_APU": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total apurado da Contribui\u00e7\u00e3o Previdenci\u00e1ria sobre a Receita Bruta (Somat\u00f3rio do Campo 10 \u201cVL_CONT_APU\u201c, do(s) Registro(s) P100) ",
+        "format": "15v2"
+    },
+    "VL_TOT_AJ_REDUC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total de \u201cAjustes de redu\u00e7\u00e3o\u201d (Registro P210, Campo 03, quando Campo 02 = \u201c0\u201d) ",
+        "format": "15v2"
+    },
+    "VL_TOT_AJ_ACRES": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total de \u201cAjustes de acr\u00e9scimo\u201d (Registro P210, Campo 03, quando Campo 02 = \u201c1\u201d) ",
+        "format": "15v2"
+    },
+    "VL_TOT_CONT_DEV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total da Contribui\u00e7\u00e3o Previdenci\u00e1ria sobre a Receita Bruta a recolher (Campo 03 \u2013 Campo 04 + Campo 05) ",
+        "format": "15v2"
+    },
+    "COD_REC": {
+        "type": "string",
+        "regex": "^.{6}$",
+        "required": false,
+        "info": "C\u00f3digo de Receita referente \u00e0 Contribui\u00e7\u00e3o Previdenci\u00e1ria, conforme informado em DCTF ",
+        "format": ""
+    }
+}

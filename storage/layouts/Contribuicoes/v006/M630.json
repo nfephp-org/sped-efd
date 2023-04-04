@@ -1,0 +1,44 @@
+{
+    "CNPJ": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": false,
+        "info": "CNPJ da pessoa jur\u00eddica de direito p\u00fablico, empresa p\u00fablica, sociedade de economia mista ou suas subsidi\u00e1rias. ",
+        "format": ""
+    },
+    "VL_VEND": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total das vendas no per\u00edodo ",
+        "format": "15v2"
+    },
+    "VL_NAO_RECEB": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total n\u00e3o recebido no per\u00edodo ",
+        "format": "15v2"
+    },
+    "VL_CONT_DIF": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Contribui\u00e7\u00e3o diferida no per\u00edodo ",
+        "format": "15v2"
+    },
+    "VL_CRED_DIF": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Cr\u00e9dito diferido no per\u00edodo ",
+        "format": "15v2"
+    },
+    "COD_CRED": {
+        "type": "string",
+        "regex": "^.{3}$",
+        "required": false,
+        "info": "C\u00f3digo de Tipo de Cr\u00e9dito diferido no per\u00edodo, conforme a Tabela 4.3.6. ",
+        "format": ""
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "IND_AJ": {
+        "type": "string",
+        "regex": "^(0|1)$",
+        "required": false,
+        "info": "Indicador do tipo de ajuste  0- Ajuste de redu\u00e7\u00e3o  1- Ajuste de acr\u00e9scimo. ",
+        "format": ""
+    },
+    "VL_AJ": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do ajuste ",
+        "format": "15v2"
+    },
+    "COD_AJ": {
+        "type": "string",
+        "regex": "^.{2}$",
+        "required": false,
+        "info": "C\u00f3digo do ajuste, conforme a Tabela indicada no item 4.3.8. ",
+        "format": ""
+    },
+    "NUM_DOC": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "N\u00famero do processo, documento ou ato concess\u00f3rio ao qual o ajuste est\u00e1 vinculado, se houver. ",
+        "format": ""
+    },
+    "DESCR_AJ": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Descri\u00e7\u00e3o resumida do ajuste. ",
+        "format": ""
+    },
+    "DT_REF": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data de refer\u00eancia do ajuste (ddmmaaaa) ",
+        "format": ""
+    }
+}

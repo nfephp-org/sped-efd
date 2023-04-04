@@ -1,0 +1,30 @@
+{
+    "DT_SAIDA": {
+        "type": "numeric",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data de sa\u00edda do estoque para aloca\u00e7\u00e3o ao produto",
+        "format": ""
+    },
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo do item componente\/insumo (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "QTD": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Quantidade consumida do item",
+        "format": "15v6"
+    },
+    "COD_INS_SUBST": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": false,
+        "info": "C\u00f3digo do insumo que foi substitu\u00eddo, caso ocorra a substitui\u00e7\u00e3o (campo 02 do Registro 0210)",
+        "format": ""
+    }
+}

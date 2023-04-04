@@ -1,0 +1,37 @@
+{
+    "COD_INC_TRIB": {
+        "type": "numeric",
+        "regex": "^(1|2)$",
+        "required": false,
+        "info": "C\u00f3digo indicador da incid\u00eancia tribut\u00e1ria no per\u00edodo:\n            1 \u2013 Contribui\u00e7\u00e3o Previdenci\u00e1ria apurada no per\u00edodo, exclusivamente com base na Receita Bruta;\n            2 \u2013 Contribui\u00e7\u00e3o Previdenci\u00e1ria apurada no per\u00edodo, com base na Receita Bruta e com base nas\n            Remunera\u00e7\u00f5es pagas, na forma dos nos incisos I e III do art. 22 da Lei no 8.212, de 1991.",
+        "format": ""
+    },
+    "VL_REC_TOT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Receita Bruta Total da Pessoa Jur\u00eddica no Per\u00edodo",
+        "format": "15v2"
+    },
+    "VL_REC_ATIV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Receita Bruta da(s) Atividade(s) Sujeita(s) \u00e0\n             Contribui\u00e7\u00e3o Previdenci\u00e1ria sobre a Receita Bruta",
+        "format": "15v2"
+    },
+    "VL_REC_DEMAIS_ATIV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Receita Bruta da(s) Atividade(s) n\u00e3o Sujeita(s) \u00e0\n            Contribui\u00e7\u00e3o Previdenci\u00e1ria sobre a Receita Bruta",
+        "format": "15v2"
+    },
+    "INFO_COMPL": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Informa\u00e7\u00e3o complementar",
+        "format": ""
+    }
+}

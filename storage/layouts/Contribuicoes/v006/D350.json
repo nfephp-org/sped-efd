@@ -1,0 +1,156 @@
+{
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^(2E|13|14|15|16)$",
+        "required": false,
+        "info": "C\u00f3digo do modelo do documento fiscal, conforme a Tabela 4.1.1 ",
+        "format": ""
+    },
+    "ECF_MOD": {
+        "type": "string",
+        "regex": "^.{0,20}$",
+        "required": false,
+        "info": "Modelo do equipamento ",
+        "format": ""
+    },
+    "ECF_FAB": {
+        "type": "string",
+        "regex": "^.{0,21}$",
+        "required": false,
+        "info": "N\u00famero de s\u00e9rie de fabrica\u00e7\u00e3o do ECF ",
+        "format": ""
+    },
+    "DT_DOC": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data do movimento a que se refere a Redu\u00e7\u00e3o Z ",
+        "format": ""
+    },
+    "CRO": {
+        "type": "numeric",
+        "regex": "^([1-9]{1})(\\d{0,2})$",
+        "required": false,
+        "info": "Posi\u00e7\u00e3o do Contador de Rein\u00edcio de Opera\u00e7\u00e3o ",
+        "format": ""
+    },
+    "CRZ": {
+        "type": "numeric",
+        "regex": "^([1-9]{1})(\\d{0,5})$",
+        "required": false,
+        "info": "Posi\u00e7\u00e3o do Contador de Redu\u00e7\u00e3o Z ",
+        "format": ""
+    },
+    "NUM_COO_FIN": {
+        "type": "numeric",
+        "regex": "^([1-9]{1})(\\d{0,5})$",
+        "required": false,
+        "info": "N\u00famero do Contador de Ordem de Opera\u00e7\u00e3o do \u00faltimo documento emitido no dia. (N\u00famero do COO na Redu\u00e7\u00e3o Z) ",
+        "format": ""
+    },
+    "GT_FIN": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Grande Total final ",
+        "format": "15v2"
+    },
+    "VL_BRT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da venda bruta ",
+        "format": "15v2"
+    },
+    "CST_PIS": {
+        "type": "string",
+        "regex": "^((0[1-9])|49|99)$",
+        "required": false,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria referente ao PIS\/PASEP ",
+        "format": ""
+    },
+    "VL_BC_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo do PIS\/PASEP ",
+        "format": "15v2"
+    },
+    "ALIQ_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do PIS\/PASEP (em percentual) ",
+        "format": "8v4"
+    },
+    "QUANT_BC_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Quantidade \u2013 Base de c\u00e1lculo PIS\/PASEP ",
+        "format": "15v3"
+    },
+    "ALIQ_PIS_QUANT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do PIS\/PASEP (em reais) ",
+        "format": "15v4"
+    },
+    "VL_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do PIS\/PASEP ",
+        "format": "15v2"
+    },
+    "CST_COFINS": {
+        "type": "string",
+        "regex": "^((5[0-6])|(6[0-6])|(7[0-5])|98|99)$",
+        "required": false,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria referente a COFINS ",
+        "format": ""
+    },
+    "VL_BC_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo da COFINS ",
+        "format": "15v2"
+    },
+    "ALIQ_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota da COFINS (em percentual) ",
+        "format": "8v4"
+    },
+    "QUANT_BC_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Quantidade \u2013 Base de c\u00e1lculo da COFINS ",
+        "format": "15v3"
+    },
+    "ALIQ_COFINS_QUANT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota da COFINS (em reais) ",
+        "format": "15v4"
+    },
+    "VL_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da COFINS ",
+        "format": "15v2"
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^.{0,255}$",
+        "required": false,
+        "info": "C\u00f3digo da conta anal\u00edtica cont\u00e1bil debitada\/creditada ",
+        "format": ""
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "NUM_TANQUE": {
+        "type": "string",
+        "regex": "^.{1,3}$",
+        "required": true,
+        "info": "Tanque que armazena o combusti\u0301vel.",
+        "format": ""
+    },
+    "ESTQ_ABERT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Estoque no inicio do dia, em litros",
+        "format": "15v3"
+    },
+    "VOL_ENTR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Volume Recebido no dia (em litros)",
+        "format": "15v3"
+    },
+    "VOL_DISP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Volume Disponi\u0301vel (03 + 04), em litros",
+        "format": "15v3"
+    },
+    "VOL_SAIDAS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Volume Total das Sai\u0301das, em litros",
+        "format": "15v3"
+    },
+    "ESTQ_ESCR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Estoque Escritural(05 \u2013 06), litros",
+        "format": "15v3"
+    },
+    "VAL_AJ_PERDA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da Perda, em litros",
+        "format": "15v3"
+    },
+    "VAL_AJ_GANHO": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do ganho, em litros",
+        "format": "15v3"
+    },
+    "FECH_FISICO": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Volume aferido no tanque, em litros. Estoque de fechamento fi\u0301sico do tanque.",
+        "format": "15v3"
+    }
+}

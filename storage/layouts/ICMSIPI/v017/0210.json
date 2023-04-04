@@ -1,0 +1,23 @@
+{
+    "COD_ITEM_COMP": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo  do  item  componente\/insumo  (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "QTD_COMP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Quantidade do item componente\/insumo para se produzir uma unidade do item composto\/resultante",
+        "format": "15v6"
+    },
+    "PERDA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Perda\/quebra normal percentual do insumo\/componente para se produzir uma unidade do item composto\/resultante",
+        "format": "15v4"
+    }
+}

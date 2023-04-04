@@ -1,0 +1,30 @@
+{
+    "SERIE": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": true,
+        "info": "Nu\u0301mero de Se\u0301rie da Bomba",
+        "format": ""
+    },
+    "FABRICANTE": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "Nome do Fabricante da Bomba",
+        "format": ""
+    },
+    "MODELO": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": true,
+        "info": "Modelo da Bomba",
+        "format": ""
+    },
+    "TIPO_MEDICAO": {
+        "type": "string",
+        "regex": "^[0|1]$",
+        "required": true,
+        "info": "Identificador de medic\u0327a\u0303o: 0 - analo\u0301gico; 1 \u2013 digital",
+        "format": ""
+    }
+}

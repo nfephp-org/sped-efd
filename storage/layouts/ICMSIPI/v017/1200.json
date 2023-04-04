@@ -1,0 +1,44 @@
+{
+    "COD_AJ_APUR": {
+        "type": "string",
+        "regex": "^\\d{3}9\\d{4}$",
+        "required": true,
+        "info": "Co\u0301digo de ajuste, conforme informado na Tabela indicada no item 5.1.1.",
+        "format": ""
+    },
+    "SLD_CRED": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo de cre\u0301ditos fiscais de peri\u0301odos anteriores",
+        "format": "15v2"
+    },
+    "CRED_APR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Total de cre\u0301dito apropriado no me\u0302s",
+        "format": "15v2"
+    },
+    "CRED_RECEB": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Total de cre\u0301ditos recebidos por transfere\u0302ncia",
+        "format": "15v2"
+    },
+    "CRED_UTIL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Total de cre\u0301ditos utilizados no peri\u0301odo",
+        "format": "15v2"
+    },
+    "SLD_CRED_FIM": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo de cre\u0301dito fiscal acumulado a transportar para o peri\u0301odo seguinte",
+        "format": "15v2"
+    }
+}

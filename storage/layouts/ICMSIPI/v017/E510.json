@@ -1,0 +1,37 @@
+{
+    "CFOP": {
+        "type": "integer",
+        "regex": "^\\d{4}$",
+        "required": true,
+        "info": "Co\u0301digo Fiscal de Operac\u0327a\u0303o e Prestac\u0327a\u0303o do agrupamento de itens",
+        "format": ""
+    },
+    "CST_IPI": {
+        "type": "string",
+        "regex": "^\\d{2}$",
+        "required": true,
+        "info": "Co\u0301digo da Situac\u0327a\u0303o Tributa\u0301ria referente ao IPI, conforme a Tabela indicada no item 4.3.2.",
+        "format": ""
+    },
+    "VL_CONT_IPI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Parcela correspondente ao \"Valor Conta\u0301bil\" referente ao CFOP e ao Co\u0301digo de Tributac\u0327a\u0303o do IPI",
+        "format": "15v2"
+    },
+    "VL_BC_IPI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Parcela correspondente ao \"Valor da base de ca\u0301lculo do IPI\" referente ao CFOP e ao Co\u0301digo de Tributac\u0327a\u0303o do IPI, para operac\u0327o\u0303es tributadas",
+        "format": "15v2"
+    },
+    "VL_IPI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Parcela correspondente ao \"Valor do IPI\" referente ao CFOP e ao Co\u0301digo de Tributac\u0327a\u0303o do IPI, para operac\u0327o\u0303es tributadas",
+        "format": "15v2"
+    }
+}

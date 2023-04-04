@@ -1,0 +1,37 @@
+{
+    "VL_CREDITO_ICMS_OP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Informar o valor total do ICMS opera\u00e7\u00e3o pr\u00f3pria que o informante tem direito ao cr\u00e9dito, na forma prevista na legisla\u00e7\u00e3o, referente \u00e0s hip\u00f3teses de restitui\u00e7\u00e3o em que h\u00e1 previs\u00e3o deste cr\u00e9dito.",
+        "format": "15v2"
+    },
+    "VL_ICMS_ST_REST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Informar o valor total do ICMS\/ST que o informante tem direito ao cr\u00e9dito, na forma prevista na legisla\u00e7\u00e3o, referente \u00e0s hip\u00f3teses de restitui\u00e7\u00e3o em que h\u00e1 previs\u00e3o deste cr\u00e9dito.",
+        "format": "15v2"
+    },
+    "VL_FCP_ST_REST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Informar o valor total do FCP_ST agregado ao valor do ICMS\/ST informado no campo VL_ICMS_ST_REST.",
+        "format": "15v2"
+    },
+    "VL_ICMS_ST_COMPL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Informar o valor total do d\u00e9bito referente ao complemento do imposto, Nos casos previstos na legisla\u00e7\u00e3o.",
+        "format": "15v2"
+    },
+    "VL_FCP_ST_COMPL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Informar o valor total do FCP_ST agregado ao valor informado no campo VL_ICMS_ST_COMPL",
+        "format": "15v2"
+    }
+}

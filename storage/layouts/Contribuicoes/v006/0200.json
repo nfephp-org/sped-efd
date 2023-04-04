@@ -1,0 +1,79 @@
+{
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "C\u00f3digo do item",
+        "format": ""
+    },
+    "DESCR_ITEM": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Descri\u00e7\u00e3o do item",
+        "format": ""
+    },
+    "COD_BARRA": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Representa\u00e7\u00e3o alfanum\u00e9rico do c\u00f3digo de barra do produto, se houver.",
+        "format": ""
+    },
+    "COD_ANT_ITEM": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "C\u00f3digo anterior do item com rela\u00e7\u00e3o \u00e0 \u00faltima informa\u00e7\u00e3o apresentada.",
+        "format": ""
+    },
+    "UNID_INV": {
+        "type": "string",
+        "regex": "^.{0,6}$",
+        "required": false,
+        "info": "Unidade de medida utilizada na quantifica\u00e7\u00e3o de estoques.",
+        "format": ""
+    },
+    "TIPO_ITEM": {
+        "type": "numeric",
+        "regex": "^(00|01|02|03|04|05|06|07|08|09|10|99)$",
+        "required": false,
+        "info": "Tipo do item \u2013 Atividades Industriais, Comerciais e Servi\u00e7os:",
+        "format": ""
+    },
+    "COD_NCM": {
+        "type": "string",
+        "regex": "^.{0,8}$",
+        "required": false,
+        "info": "C\u00f3digo da Nomenclatura Comum do Mercosul",
+        "format": ""
+    },
+    "EX_IPI": {
+        "type": "string",
+        "regex": "^.{0,3}$",
+        "required": false,
+        "info": "C\u00f3digo EX, conforme a TIPI",
+        "format": ""
+    },
+    "COD_GEN": {
+        "type": "numeric",
+        "regex": "^(\\d{2})$",
+        "required": false,
+        "info": "C\u00f3digo do g\u00eanero do item, conforme a Tabela 4.2.1.",
+        "format": ""
+    },
+    "COD_LST": {
+        "type": "numeric",
+        "regex": "^(\\d{0,4})$",
+        "required": false,
+        "info": "C\u00f3digo do servi\u00e7o conforme lista do Anexo I da Lei Complementar Federal n\u00ba 116\/03.",
+        "format": ""
+    },
+    "ALIQ_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota de ICMS aplic\u00e1vel ao item nas opera\u00e7\u00f5es internas",
+        "format": "6v2"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "CST_PIS": {
+        "type": "string",
+        "regex": "^((0[1-9])|49|99)$",
+        "required": false,
+        "info": "C\u00f3digo de Situa\u00e7\u00e3o Tribut\u00e1ria \u2013 CST das demais receitas auferidas no per\u00edodo, sem 4.3.3. incid\u00eancia da contribui\u00e7\u00e3o, ou sem contribui\u00e7\u00e3o apurada a pagar, conforme a Tabela ",
+        "format": ""
+    },
+    "VL_TOT_REC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total da receita bruta no per\u00edodo. ",
+        "format": "15v2"
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^.{0,255}$",
+        "required": false,
+        "info": "C\u00f3digo da conta anal\u00edtica cont\u00e1bil debitada\/creditada. ",
+        "format": ""
+    },
+    "DESC_COMPL": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Descri\u00e7\u00e3o Complementar da Natureza da Receita. ",
+        "format": ""
+    }
+}

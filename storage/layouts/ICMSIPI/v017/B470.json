@@ -1,0 +1,100 @@
+{
+    "VL_CONT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "A- Valor total referente a\u0300s prestac\u0327o\u0303es de servic\u0327o do peri\u0301odo",
+        "format": "15v2"
+    },
+    "VL_MAT_TERC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "B- Valor total do material fornecido por terceiros na prestac\u0327a\u0303o do servic\u0327o",
+        "format": "15v2"
+    },
+    "VL_MAT_PROP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "C- Valor do material pro\u0301prio utilizado na prestac\u0327a\u0303o do servic\u0327o",
+        "format": "15v2"
+    },
+    "VL_SUB": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "D- Valor total das subempreitadas",
+        "format": "15v2"
+    },
+    "VL_ISNT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "E- Valor total das operac\u0327o\u0303es isentas ou na\u0303o-tributadas pelo ISS",
+        "format": "15v2"
+    },
+    "VL_DED_BC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "F- Valor total das deduc\u0327o\u0303es da base de ca\u0301lculo (B + C + D + E)",
+        "format": "15v2"
+    },
+    "VL_BC_ISS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "G- Valor total da base de ca\u0301lculo do ISS",
+        "format": "15v2"
+    },
+    "VL_BC_ISS_RT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "H- Valor total da base de ca\u0301lculo de retenc\u0327a\u0303o do ISS referentea\u0300s prestac\u0327o\u0303es do declarante.",
+        "format": "15v2"
+    },
+    "VL_ISS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "I- Valor total do ISS destacado",
+        "format": "15v2"
+    },
+    "VL_ISS_RT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "J- Valor total do ISS retido pelo tomador nas prestac\u0327o\u0303es do declarante",
+        "format": "15v2"
+    },
+    "VL_DED": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "K- Valor total das deduc\u0327o\u0303es do ISS pro\u0301prio",
+        "format": "15v2"
+    },
+    "VL_ISS_REC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "L- Valor total apurado do ISS pro\u0301prio a recolher (I - J - K)",
+        "format": "15v2"
+    },
+    "VL_ISS_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "M- Valor total do ISS substituto a recolher pelas aquisic\u0327o\u0303es do declarante (tomador)",
+        "format": "15v2"
+    },
+    "VL_ISS_REC_UNI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "N- Valor do ISS pro\u0301prio a recolher pela Sociedade Uniprofissional",
+        "format": "15v2"
+    }
+}

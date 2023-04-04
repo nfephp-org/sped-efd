@@ -1,0 +1,23 @@
+{
+    "NUM_CAMPO": {
+        "type": "string",
+        "regex": "^.{2}$",
+        "required": false,
+        "info": "Informar o n\u00famero do campo do registro \u201cM200\u201d ",
+        "format": ""
+    },
+    "COD_REC": {
+        "type": "string",
+        "regex": "^.{6}$",
+        "required": false,
+        "info": "Informar o c\u00f3digo da receita referente \u00e0 contribui\u00e7\u00e3o a recolher, detalhada neste registro. ",
+        "format": ""
+    },
+    "VL_DEBITO": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do D\u00e9bito correspondente ao c\u00f3digo do Campo 03, conforme informa\u00e7\u00e3o na DCTF. ",
+        "format": "15v2"
+    }
+}

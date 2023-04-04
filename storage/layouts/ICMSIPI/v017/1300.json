@@ -1,0 +1,72 @@
+{
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "Co\u0301digo do Produto, constante do registro 0200",
+        "format": ""
+    },
+    "DT_FECH": {
+        "type": "integer",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data do fechamento da movimentac\u0327a\u0303o",
+        "format": ""
+    },
+    "ESTQ_ABERT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Estoque no ini\u0301cio do dia, em litros",
+        "format": "15v3"
+    },
+    "VOL_ENTR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Volume Recebido no dia (em litros)",
+        "format": "15v3"
+    },
+    "VOL_DISP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Volume Disponi\u0301vel (04 + 05), em litros",
+        "format": "15v3"
+    },
+    "VOL_SAIDAS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Volume Total das Sai\u0301das, em litros",
+        "format": "15v3"
+    },
+    "ESTQ_ESCR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Estoque Escritural (06 \u2013 07), litros",
+        "format": "15v3"
+    },
+    "VAL_AJ_PERDA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da Perda, em litros",
+        "format": "15v3"
+    },
+    "VAL_AJ_GANHO": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do ganho, em litros",
+        "format": "15v3"
+    },
+    "FECH_FISICO": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Estoque de Fechamento, em litros",
+        "format": "15v3"
+    }
+}

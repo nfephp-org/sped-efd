@@ -1,0 +1,93 @@
+{
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "C\u00f3digo do item (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "VL_ITEM": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total do item (mercadorias ou servi\u00e7os)",
+        "format": "15v2"
+    },
+    "VL_DESC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do desconto comercial do item",
+        "format": "15v2"
+    },
+    "NAT_BC_CRED": {
+        "type": "string",
+        "regex": "^.{2}$",
+        "required": false,
+        "info": "C\u00f3digo da Base de C\u00e1lculo do Cr\u00e9dito, conforme a",
+        "format": ""
+    },
+    "CST_PIS": {
+        "type": "numeric",
+        "regex": "^(\\d{2})$",
+        "required": false,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria referente ao PIS\/PASEP",
+        "format": ""
+    },
+    "VL_BC_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo do cr\u00e9dito de PIS\/PASEP",
+        "format": "15v2"
+    },
+    "ALIQ_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do PIS\/PASEP (em percentual)",
+        "format": "8v4"
+    },
+    "VL_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do cr\u00e9dito de PIS\/PASEP",
+        "format": "15v2"
+    },
+    "CST_COFINS": {
+        "type": "numeric",
+        "regex": "^(\\d{2})$",
+        "required": false,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria referente a COFINS",
+        "format": ""
+    },
+    "VL_BC_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo do cr\u00e9dito de COFINS",
+        "format": "15v2"
+    },
+    "ALIQ_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota da COFINS (em percentual)",
+        "format": "8v4"
+    },
+    "VL_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do cr\u00e9dito de COFINS",
+        "format": "15v2"
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^.{0,255}$",
+        "required": false,
+        "info": "C\u00f3digo da conta anal\u00edtica cont\u00e1bil debitada\/creditada",
+        "format": ""
+    }
+}

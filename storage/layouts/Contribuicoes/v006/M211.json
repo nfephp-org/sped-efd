@@ -1,0 +1,37 @@
+{
+    "IND_TIP_COOP": {
+        "type": "numeric",
+        "regex": "^(1|2|3|4|5|6|9)$",
+        "required": false,
+        "info": "Indicador do Tipo de Sociedade Cooperativa  01 \u2013 Cooperativa de Produ\u00e7\u00e3o Agropecu\u00e1ria  02 \u2013 Cooperativa de Consumo  03 \u2013 Cooperativa de Cr\u00e9dito  04 \u2013 Cooperativa de Eletrifica\u00e7\u00e3o Rural  05 \u2013 Cooperativa de Transporte Rodovi\u00e1rio de Cargas  06 \u2013 Cooperativa de M\u00e9dicos  99 \u2013 Outras. ",
+        "format": ""
+    },
+    "VL_BC_CONT_ANT_EXC_COOP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Base de C\u00e1lculo da Contribui\u00e7\u00e3o, conforme Registros escriturados nos Blocos A, C, D e F, antes das Exclus\u00f5es das Cooperativas. ",
+        "format": "15v2"
+    },
+    "VL_EXC_COOP_GER": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor de Exclus\u00e3o Especifica das Cooperativas em Geral, decorrente das Sobras Apuradas na DRE, destinadas a constitui\u00e7\u00e3o do Fundo de Reserva e do FATES. ",
+        "format": "15v2"
+    },
+    "VL_EXC_ESP_COOP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor das Exclus\u00f5es da Base de C\u00e1lculo Especifica do Tipo da Sociedade Cooperativa, conforme Campo 02 (IND_TIP_COOP). ",
+        "format": "15v2"
+    },
+    "VL_BC_CONT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Base de C\u00e1lculo, Ap\u00f3s as Exclus\u00f5es Especificas da Sociedade Cooperativa (04 \u2013 05 \u2013 06) \u2013 Transportar para M210. ",
+        "format": "15v2"
+    }
+}

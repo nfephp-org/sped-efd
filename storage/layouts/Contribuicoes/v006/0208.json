@@ -1,0 +1,23 @@
+{
+    "COD_TAB": {
+        "type": "string",
+        "regex": "^(0?[1-9]$)|(^1[0-3]$)$",
+        "required": false,
+        "info": "C\u00f3digo indicador da Tabela de Incid\u00eancia, conforme Anexo III do Decreto n\u00ba\n            6.707\/08: 01 \u2013 Tabela I 02 \u2013 Tabela II 03 \u2013 Tabela III 04 \u2013 Tabela IV 05 \u2013\n            Tabela V 06 \u2013 Tabela VI 07 \u2013 Tabela VII 08\u2013 Tabela VIII 09 \u2013 Tabela IX 10 \u2013\n            Tabela X 11 \u2013 Tabela XI 12 \u2013 Tabela XII",
+        "format": ""
+    },
+    "COD_GRU": {
+        "type": "string",
+        "regex": "^.{0,2}$",
+        "required": false,
+        "info": "C\u00f3digo do grupo, conforme Anexo III do Decreto n\u00ba 6.707\/08.",
+        "format": ""
+    },
+    "MARCA_COM": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "Marca Comercial",
+        "format": ""
+    }
+}

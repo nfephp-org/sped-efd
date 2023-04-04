@@ -1,0 +1,79 @@
+{
+    "VL_REC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor Total do Faturamento\/Receita Bruta no Per\u00edodo",
+        "format": "15v2"
+    },
+    "CST_PIS_COFINS": {
+        "type": "string",
+        "regex": "C\u00f3digo de Situa\u00e7\u00e3o Tribut\u00e1ria referente \u00e0 Receita informada no Campo 02 (Tabelas 4.3.3 e 4.3.4)",
+        "required": true,
+        "info": "Identifica\u00e7\u00e3o do processo ou ato concess\u00f3rio",
+        "format": ""
+    },
+    "VL_TOT_DED_GER": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor Total das Dedu\u00e7\u00f5es e Exclus\u00f5es de Car\u00e1ter Geral",
+        "format": "15v2"
+    },
+    "VL_TOT_DED_ESP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor Total das Dedu\u00e7\u00f5es e Exclus\u00f5es de Car\u00e1ter Espec\u00edfico",
+        "format": "15v2"
+    },
+    "VL_BC_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da base de c\u00e1lculo do PIS\/PASEP ",
+        "format": "15v2"
+    },
+    "ALIQ_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Al\u00edquota do PIS\/PASEP (em percentual)",
+        "format": "15v2"
+    },
+    "VL_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do PIS\/PASEP",
+        "format": "15v2"
+    },
+    "VL_BC_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da base de c\u00e1lculo da Cofins",
+        "format": "15v2"
+    },
+    "ALIQ_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Al\u00edquota da COFINS (em percentual)",
+        "format": "15v2"
+    },
+    "VL_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da COFINS",
+        "format": "15v2"
+    },
+    "INFO_COMPL": {
+        "type": "string",
+        "regex": "",
+        "required": false,
+        "info": "Informa\u00e7\u00e3o Complementar dos dados informados no registro",
+        "format": ""
+    }
+}

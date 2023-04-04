@@ -1,0 +1,23 @@
+{
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo do item (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "QTD_CONS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Quantidade consumida \u2013 sa\u00edda do estoque",
+        "format": "15v3"
+    },
+    "QTD_RET": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Quantidade retornada \u2013 entrada em estoque",
+        "format": "15v3"
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "CST_PIS": {
+        "type": "numeric",
+        "regex": "^((0[1-9])|49|99)$",
+        "required": false,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria referente ao PIS\/PASEP",
+        "format": ""
+    },
+    "VL_ITEM": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total dos itens",
+        "format": "15v2"
+    },
+    "VL_BC_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo do PIS\/PASEP",
+        "format": "15v2"
+    },
+    "ALIQ_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do PIS\/PASEP (em percentual)",
+        "format": "8v4"
+    },
+    "QUANT_BC_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Quantidade \u2013 Base de c\u00e1lculo PIS\/PASEP",
+        "format": "15v3"
+    },
+    "ALIQ_PIS_QUANT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do PIS\/PASEP (em reais)",
+        "format": "15v4"
+    },
+    "VL_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do PIS\/PASEP",
+        "format": "15v2"
+    },
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "C\u00f3digo do item (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^.{0,255}$",
+        "required": false,
+        "info": "C\u00f3digo da conta anal\u00edtica cont\u00e1bil debitada\/creditada",
+        "format": ""
+    }
+}

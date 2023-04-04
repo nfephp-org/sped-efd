@@ -1,0 +1,51 @@
+{
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^(55|65)$",
+        "required": false,
+        "info": "Texto fixo contendo \"55\" ou \u201c65\u201d(C\u00f3digo da NF-e ou da NFC-e, conforme a Tabela 4.1.1)",
+        "format": ""
+    },
+    "DT_DOC_INI": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data de Emiss\u00e3o Inicial dos Documentos",
+        "format": ""
+    },
+    "DT_DOC_FIN": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data de Emiss\u00e3o Final dos Documentos",
+        "format": ""
+    },
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "C\u00f3digo do Item (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "COD_NCM": {
+        "type": "string",
+        "regex": "^.{8}$",
+        "required": false,
+        "info": "C\u00f3digo da Nomenclatura Comum do Mercosul",
+        "format": ""
+    },
+    "EX_IPI": {
+        "type": "string",
+        "regex": "^.{0,3}$",
+        "required": false,
+        "info": "C\u00f3digo EX, conforme a TIPI",
+        "format": ""
+    },
+    "VL_TOT_ITEM": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total do Item",
+        "format": "15v2"
+    }
+}
