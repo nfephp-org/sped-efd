@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO K100: PERÍODO DE APURAÇÃO DO ICMS/IPI
@@ -15,7 +14,7 @@ use \stdClass;
  * Os períodos informados neste registro deverão abranger todo o período da escrituração,
  * conforme informado no Registro 0000.
  */
-class K100 extends Element implements ElementInterface
+class K100 extends Element
 {
     const REG = 'K100';
     const LEVEL = 2;
@@ -37,14 +36,17 @@ class K100 extends Element implements ElementInterface
             'format'   => ''
         ]
     ];
-    
+
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

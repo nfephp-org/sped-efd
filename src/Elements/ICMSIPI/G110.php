@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO G110: ICMS – ATIVO PERMANENTE – CIAP
@@ -32,7 +31,7 @@ use \stdClass;
  * conteúdo nos campos DT_INI e DT_FIN e esta combinação deve ser igual à
  * informada em um registro E100.
  */
-class G110 extends Element implements ElementInterface
+class G110 extends Element
 {
     const REG = 'G110';
     const LEVEL = 2;
@@ -115,11 +114,13 @@ class G110 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
         $this->postValidation();
     }

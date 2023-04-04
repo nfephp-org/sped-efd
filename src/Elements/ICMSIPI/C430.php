@@ -3,15 +3,14 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO C430: INFORMAÇÕES  COMPLEMENTARES  DAS  OPERAÇÕES  DE  SAÍDA  DE  MERCADORIAS SUJEITAS À SUBSTITUIÇÃO
  * TRIBUTÁRIA (CÓDIGO 02, 2D e 60)
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
-class C430 extends Element implements ElementInterface
+class C430 extends Element
 {
     const REG = 'C430';
     const LEVEL = 4;
@@ -134,11 +133,14 @@ class C430 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

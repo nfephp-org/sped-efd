@@ -3,16 +3,27 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once '../../bootstrap.php';
 
-use \stdClass;
+use stdClass;
 use NFePHP\EFD\Blocks\ICMSIPI\Block0;
+
+//grava json das propriedades dos elementos dos blocos para a versão 017
+$b = new Block0('017');
+$std = new stdClass();
+foreach ($b->elements as $key => $element) {
+    try {
+        $b->$key($std);
+    } catch (\Exception $e) {
+    }
+}
+
 
 try {
     $b0 = new Block0();
-    
+
      //0000 Obrigatório [1:1]
     //Abertura do Arquivo Digital e Identificação da entidade
     $std = new stdClass();
-    $std->cod_ver = '001'; 
+    $std->cod_ver = '001';
     $std->cod_fin = 0;
     $std->dt_ini = '01062008';
     $std->dt_fin = '30062008';
@@ -27,13 +38,13 @@ try {
     $std->ind_perfil = 'B';
     $std->ind_ativ = 0;
     $b0->z0000($std);
-    
+
     //0001 Obrigatório
     //Abertura do Bloco 0
     $std = new stdClass();
-    $std->ind_mov = 1; 
+    $std->ind_mov = 1;
     $b0->z0001($std);
-    
+
     //0005 Obrigatório
     //Dados Complementares da entidade
     $std = new stdClass();
@@ -47,14 +58,14 @@ try {
     $std->FAX = '1155552222';
     $std->EMAIL = 'ciclano@mail.com';
     $b0->z0005($std);
-    
+
     //0015 Opcional deve ser incluso apenas se existir
     //Dados do Contribuinte Substituto ou Responsável pelo ICMS Destino
     $std = new stdClass();
     $std->uf_st = 'PR';
     $std->ie_st = '12345678901234';
     $b0->z0015($std);
-    
+
     //0100 Obrigatório
     //Dados do Contabilista
     $std = new stdClass();
@@ -72,7 +83,7 @@ try {
     $std->EMAIL = 'ciclano@mail.com.br';
     $std->COD_MUN = '0123456';
     $b0->z0100($std);
-    
+
     //0150 Opcional
     //Tabela de Cadastro do Participante
     $std = new stdClass();
@@ -89,13 +100,13 @@ try {
     $std->COMPL = 'Sala 1';
     $std->BAIRRO = 'Um de Dois';
     $b0->z0150($std);
-    
+
     $std = new stdClass();
     $std->DT_ALT = '12082018';
     $std->NR_CAMPO = '08';
     $std->CONT_ANT = '3514536'; //campo 8 COD_MUN do registro 0150
     $b0->z0175($std);
-    
+
     $std = new stdClass();
     $std->UNID = 'mts';
     $std->DESCR = 'metros';
@@ -108,7 +119,7 @@ try {
     $std->UNID = 'un';
     $std->DESCR = 'unidade';
     $b0->z0190($std);
-    
+
     $std = new stdClass();
     $std->COD_ITEM = '123456';
     $std->DESCR_ITEM = 'Produto descrito na nota fiscal';
@@ -123,14 +134,14 @@ try {
     $std->ALIQ_ICMS = 18;
     $std->CEST = '1234567';
     $b0->z0200($std);
-        
+
     $std = new stdClass();
     $std->DESCR_ANT_ITEM = 'Produto anterior descrito na nota fiscal';
     $std->DT_INI = '01012005';
     $std->DT_FIM = '01052008';
     $std->COD_ANT_ITEM = '654321';
     $b0->z0205($std);
-    
+
     $txt = str_replace("\n", "<br>", $b0->get());
     echo $txt.'<br>';
 } catch (\Exception $e) {

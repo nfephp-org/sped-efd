@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO C191: INFORMAÇÕES DO FUNDO DE COMBATE À POBREZA – FCP – NA NFe (CÓDIGO 55)
@@ -14,7 +13,7 @@ use \stdClass;
  * registro deve ser verificada junto às unidades federativas.
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
-class C191 extends Element implements ElementInterface
+class C191 extends Element
 {
     const REG = 'C191';
     const LEVEL = 4;
@@ -25,7 +24,7 @@ class C191 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info' => 'Valor do Fundo de Combate à Pobreza (FCP) vinculado à operação própria, 
+            'info' => 'Valor do Fundo de Combate à Pobreza (FCP) vinculado à operação própria,
             na combinação de CST_ICMS, CFOP e alíquota do ICMS',
             'format' => '15v2'
         ],
@@ -33,7 +32,7 @@ class C191 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info' => 'Valor do Fundo de Combate à Pobreza (FCP) vinculado à operação de substituição 
+            'info' => 'Valor do Fundo de Combate à Pobreza (FCP) vinculado à operação de substituição
             tributária, na combinação de CST_ICMS, CFOP e alíquota do ICMS.',
             'format' => '15v2'
         ],
@@ -49,11 +48,14 @@ class C191 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

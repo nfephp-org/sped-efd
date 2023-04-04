@@ -3,18 +3,15 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class D530 extends Element implements ElementInterface
+class D530 extends Element
 {
     const REG = 'D530';
     const LEVEL = 3;
     const PARENT = '';
 
     protected $parameters = [
-
-
         'IND_SERV' => [
             'type' => 'string',
             'regex' => '^(0|1|2|3|4|9)$',
@@ -57,16 +54,18 @@ class D530 extends Element implements ElementInterface
             'info'     => 'Identificação do terminal faturado',
             'format'   => ''
         ],
-
     ];
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

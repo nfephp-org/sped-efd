@@ -1,4 +1,9 @@
 # sped-efd
+https://stackoverflow.com/questions/8549496/how-can-i-create-a-function-dynamically
+
+- Contrib/M215
+- Contrib/M615
+- Contrib/Z1601
 
 ## EM DESENVOLVIMENTO 
 
@@ -15,7 +20,21 @@ Classes para a geração do SPED EFD (fiscal ICMS IPI) e para o SPED EFD contrib
 
 ## Controle de Versões de Layouts do EFD 
 
-A ser estabelecido !
+O controle de versões é feito com jsons na pasta storage.
+
+#### storage/layouts/ICMSIPI/vigencias.json
+
+Este json contêm o codigo de leyout, versão, data inicial e a data final de vigência, obtido nas tabelas do Sped (vide portal Sped)
+
+Deve ser passado uma string com o codigo do layaut no construtor de cada bloco, este por sua vez irão passar esse codigo e os demais dados de vigencia para cada elemento que pertença a esse bloco.
+
+As estruturas construtivas de cada elemento e versão, deverão ser salvos como json na pasta denominada pelo codigo da versão. por exemplo:
+
+- storage/layouts/ICMSIPI/v017
+
+Ao ser criado ou editado o elemento internamente ele deve conter a estrutura referente a ultima versão existente.
+
+Caso se necessite de versões anteriores a 017, estas deverão ser criadas como json elemente por elemento na pasta adequada. 
 
 
 ## DETALHES

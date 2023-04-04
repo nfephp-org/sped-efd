@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class C010 extends Element implements ElementInterface
+class C010 extends Element
 {
     const REG = 'C010';
     const LEVEL = 2;
@@ -24,8 +23,8 @@ class C010 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^.{1}$',
             'required' => false,
-            'info' => 'Indicador da apuração das contribuições e créditos, na escrituração das 
-            operações por NF-e e ECF, no período: 1 – Apuração com base nos registros de consolidação 
+            'info' => 'Indicador da apuração das contribuições e créditos, na escrituração das
+            operações por NF-e e ECF, no período: 1 – Apuração com base nos registros de consolidação
             das operações por NF-e (C180 e C190) e por ECF (C490);',
             'format' => ''
         ],
@@ -34,11 +33,14 @@ class C010 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

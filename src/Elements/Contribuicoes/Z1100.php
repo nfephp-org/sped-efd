@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class Z1100 extends Element implements ElementInterface
+class Z1100 extends Element
 {
     const REG = '1100';
     const LEVEL = 2;
@@ -146,11 +145,14 @@ class Z1100 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

@@ -3,19 +3,18 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO C595:INFORMAÇÕES DO FUNDO DE COMBATE À POBREZA – FCP NA NF3e (CÓDIGO 66)
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
-class C595 extends Element implements ElementInterface
+class C595 extends Element
 {
     const REG = 'C595';
     const LEVEL = 3;
     const PARENT = 'C500';
-    
+
     protected $parameters = [
         'COD_OBS' => [
             'type'     => 'string',
@@ -32,14 +31,17 @@ class C595 extends Element implements ElementInterface
             'format'   => ''
         ]
     ];
-    
+
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

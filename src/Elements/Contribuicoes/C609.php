@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class C609 extends Element implements ElementInterface
+class C609 extends Element
 {
     const REG = 'C609';
     const LEVEL = 4;
@@ -24,7 +23,7 @@ class C609 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^(1|3|9)$',
             'required' => false,
-            'info' => 'Indicador da origem do processo: 
+            'info' => 'Indicador da origem do processo:
             1 - Justiça Federal; 3 – Secretaria da Receita Federal do Brasil 9 – Outros.',
             'format' => ''
         ],
@@ -33,11 +32,14 @@ class C609 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

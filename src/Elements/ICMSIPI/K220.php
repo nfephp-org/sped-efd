@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO K220: OUTRAS MOVIMENTAÇÕES INTERNAS ENTRE MERCADORIAS
@@ -41,7 +40,7 @@ use \stdClass;
  * Validação do Registro: A chave deste registro são os campos DT_MOV,
  * COD_ITEM_ORI e COD_ITEM_DEST
  */
-class K220 extends Element implements ElementInterface
+class K220 extends Element
 {
     const REG = 'K220';
     const LEVEL = 3;
@@ -84,14 +83,17 @@ class K220 extends Element implements ElementInterface
             'format'   => '15v6'
         ],
     ];
-    
+
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

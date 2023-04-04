@@ -4,13 +4,12 @@ namespace NFePHP\EFD\Blocks\Contribuicoes;
 
 use NFePHP\EFD\Elements\Contribuicoes as Elements;
 use NFePHP\EFD\Common\Block;
-use NFePHP\EFD\Common\BlockInterface;
 
 /**
  * Classe constutora do bloco F EFD Contribuições
  *
  */
-final class BlockF extends Block implements BlockInterface
+final class BlockF extends Block
 {
     const TOTAL = 'F990';
 
@@ -42,8 +41,10 @@ final class BlockF extends Block implements BlockInterface
         'f800' => ['class' => Elements\F800::class, 'level' => 3, 'type' => 'multiple'],
     ];
 
-    public function __construct()
+    public function __construct(string $layout = null)
     {
+        $this->grupo = 'Contribuicoes';
+        parent::__construct($layout);
         $this->elementTotal = 'F990';
     }
 }

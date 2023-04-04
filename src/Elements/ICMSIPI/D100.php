@@ -4,8 +4,7 @@ namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\Common\Keys;
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * Este registro deve ser apresentado por todos os contribuintes adquirentes ou prestadores dos serviços que utilizem os
@@ -20,7 +19,7 @@ use \stdClass;
  * 2. emissão própria: IND_EMIT+NUM_DOC+COD_MOD+SER+SUB.
  * 3. A partir de 01/01/2014, foi incluído o campo CHV_CTE para compor a chave do registro
  */
-class D100 extends Element implements ElementInterface
+class D100 extends Element
 {
     const REG = 'D100';
     const LEVEL = 2;
@@ -196,18 +195,18 @@ class D100 extends Element implements ElementInterface
         ],
     ];
 
-
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
         $this->postValidation();
     }
-
 
     /**
      * Aqui são colocadas validações adicionais que requerem mais logica

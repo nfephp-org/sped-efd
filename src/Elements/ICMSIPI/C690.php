@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class C690 extends Element implements ElementInterface
+class C690 extends Element
 {
     const REG = 'C690';
     const LEVEL = 3;
@@ -45,7 +44,7 @@ class C690 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor da base de cálculo do ICMS" 
+            'info' => 'Parcela correspondente ao "Valor da base de cálculo do ICMS"
             referente à combinação CST_ICMS, CFOP e alíquota do ICMS',
             'format' => '15v2'
         ],
@@ -53,7 +52,7 @@ class C690 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor do ICMS" referente à 
+            'info' => 'Parcela correspondente ao "Valor do ICMS" referente à
             combinação CST_ICMS, CFOP e alíquota do ICMS',
             'format' => '15v2'
         ],
@@ -61,7 +60,7 @@ class C690 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Valor não tributado em função da redução da base de 
+            'info' => 'Valor não tributado em função da redução da base de
             cálculo do ICMS, referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.',
             'format' => '15v2'
         ],
@@ -91,11 +90,14 @@ class C690 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO C300: RESUMO DIÁRIO DAS NOTAS FISCAIS DE VENDA A CONSUMIDOR (CÓDIGO 02)
@@ -16,7 +15,7 @@ use \stdClass;
  * Os valores de documentos fiscais cancelados não devem ser computados no valor total dos documentos (campo VL_DOC).
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
-class C300 extends Element implements ElementInterface
+class C300 extends Element
 {
     const REG = 'C300';
     const LEVEL = 2;
@@ -97,11 +96,14 @@ class C300 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

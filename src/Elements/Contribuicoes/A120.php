@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class A120 extends Element implements ElementInterface
+class A120 extends Element
 {
     const REG = 'A120';
     const LEVEL = 4;
@@ -66,8 +65,8 @@ class A120 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^.{1}$',
             'required' => false,
-            'info' => 'Local da execução do serviço: 
-            0 – Executado no País; 
+            'info' => 'Local da execução do serviço:
+            0 – Executado no País;
             1 – Executado no Exterior, cujo resultado se verifique no País.',
             'format' => ''
         ],
@@ -76,11 +75,14 @@ class A120 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

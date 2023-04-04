@@ -3,9 +3,9 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
+use stdClass;
 
-class D696 extends Element implements ElementInterface
+class D696 extends Element
 {
     const REG = 'D696';
     const LEVEL = 3;
@@ -44,7 +44,7 @@ class D696 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor da base de cálculo do ICMS" 
+            'info' => 'Parcela correspondente ao "Valor da base de cálculo do ICMS"
             referente à combinação de CST_ICMS, CFOP e alíquota do ICMS . ',
             'format' => '15v2'
         ],
@@ -52,7 +52,7 @@ class D696 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor do ICMS" referente à combinação 
+            'info' => 'Parcela correspondente ao "Valor do ICMS" referente à combinação
             de CST_ICMS, CFOP e alíquota do ICMS . ',
             'format' => '15v2'
         ],
@@ -60,7 +60,7 @@ class D696 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao valor da base de cálculo do ICMS de outras UFs, 
+            'info' => 'Parcela correspondente ao valor da base de cálculo do ICMS de outras UFs,
             referente à combinação de CST_ICMS, CFOP e alíquota do ICMS . ',
             'format' => '15v2'
         ],
@@ -68,7 +68,7 @@ class D696 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao valor do ICMS de outras UFs, referente à combinação 
+            'info' => 'Parcela correspondente ao valor do ICMS de outras UFs, referente à combinação
             de CST_ICMS, CFOP, e alíquota do ICMS . ',
             'format' => '15v2'
         ],
@@ -76,7 +76,7 @@ class D696 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Valor não tributado em função da redução da base de cálculo do ICMS, 
+            'info' => 'Valor não tributado em função da redução da base de cálculo do ICMS,
             referente à combinação de CST_ICMS, CFOP e alíquota do ICMS . ',
             'format' => '15v2'
         ],
@@ -90,13 +90,15 @@ class D696 extends Element implements ElementInterface
     ];
 
     /**
-     * D696 constructor.
-     * @param \stdClass $std
-     * @throws \Exception
+     * Constructor
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

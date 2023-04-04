@@ -3,9 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
+use stdClass;
 
-class D600 extends Element implements ElementInterface
+class D600 extends Element
 {
     const REG = 'D600';
     const LEVEL = 3;
@@ -142,16 +142,17 @@ class D600 extends Element implements ElementInterface
             'info' => 'Valor da COFINS ',
             'format' => '15v2'
         ],
-
     ];
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
         $this->postValidation();
     }

@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO H020: INFORMAÇÃO COMPLEMENTAR DO INVENTÁRIO
@@ -15,12 +14,12 @@ use \stdClass;
  * (MOT_INV=2 do H005), somente deverá ser gerado esse registro para os itens
  * que sofreram alteração da tributação do ICMS.
  */
-class H020 extends Element implements ElementInterface
+class H020 extends Element
 {
     const REG = 'H020';
     const LEVEL = 4;
     const PARENT = 'H010';
-    
+
     protected $parameters = [
         'CST_ICMS' => [
             'type'     => 'string',
@@ -45,14 +44,16 @@ class H020 extends Element implements ElementInterface
             'format'   => '15v2'
         ]
     ];
-    
+
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
     }
 }

@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO C320: REGISTRO ANALÍTICO DO RESUMO DIÁRIO DAS NOTAS FISCAIS DE VENDA A CONSUMIDOR (CÓDIGO 02).
@@ -12,7 +11,7 @@ use \stdClass;
  * não emitidas por ECF, e deve ser apresentado de forma agrupada na combinação CST_ICMS, CFOP e Alíquota de ICMS.
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
-class C320 extends Element implements ElementInterface
+class C320 extends Element
 {
     const REG = 'C320';
     const LEVEL = 3;
@@ -83,11 +82,14 @@ class C320 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

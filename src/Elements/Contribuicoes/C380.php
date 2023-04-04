@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class C380 extends Element implements ElementInterface
+class C380 extends Element
 {
     const REG = 'C380';
     const LEVEL = 3;
@@ -17,7 +16,7 @@ class C380 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^(02)$',
             'required' => false,
-            'info' => 'Código do modelo do documento fiscal, conforme a 
+            'info' => 'Código do modelo do documento fiscal, conforme a
             Tabela 4.1.1 (Código 02 – Nota Fiscal de Venda a Consumidor)',
             'format' => ''
         ],
@@ -68,11 +67,14 @@ class C380 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

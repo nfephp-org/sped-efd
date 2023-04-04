@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO K210: DESMONTAGEM DE MERCADORIAS – ITEM DE ORIGEM
@@ -17,7 +16,7 @@ use \stdClass;
  * 04  –  Produto  Acabado;
  * 05  –  Subproduto
  * e  10  –  Outros Insumos – campo TIPO_ITEM do Registro 0200,
- * no que se refere à saída do estoque do item de origem.
+ * no que se refere à  saída do estoque do item de origem.
  * A quantidade deve ser expressa, obrigatoriamente, na unidade de medida de
  * controle de estoque constante no campo 06 do registro 0200, UNID_INV.
  * Validação do Registro: Quando houver identificação da ordem de serviço,
@@ -25,7 +24,7 @@ use \stdClass;
  * Nos casos em que a ordem de serviço não for identificada, o campo chave
  * passa a ser COD_ITEM_ORI.
  */
-class K210 extends Element implements ElementInterface
+class K210 extends Element
 {
     const REG = 'K210';
     const LEVEL = 3;
@@ -68,14 +67,17 @@ class K210 extends Element implements ElementInterface
             'format'   => '15v6'
         ],
     ];
-    
+
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }
