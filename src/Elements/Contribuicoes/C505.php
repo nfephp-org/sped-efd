@@ -61,7 +61,6 @@ class C505 extends Element
             'info' => 'Código da conta analítica contábil debitada/creditada',
             'format' => ''
         ],
-
     ];
 
     /**

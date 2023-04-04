@@ -119,7 +119,6 @@ class M610 extends Element
             'info' => 'Valor Total da Contribuição do Período (08 + 09 – 10 – 11 +12) ',
             'format' => '15v2'
         ],
-
     ];
 
     /**

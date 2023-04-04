@@ -100,7 +100,6 @@ class M200 extends Element
             'info' => 'Valor Total da Contribuição a Recolher/Pagar no Período (08 + 12) ',
             'format' => '15v2'
         ],
-
     ];
 
     /**
