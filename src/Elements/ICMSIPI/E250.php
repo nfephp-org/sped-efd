@@ -102,13 +102,13 @@ class E250 extends Element
          * estar preenchidos. Se este campo não estiver preenchido, os campos IND_PROC e PROC não deverão estar
          * preenchidos.
          */
-        if (!empty($this->std->num_proc) && (empty($this->std->ind_proc) || empty($this->std->proc))) {
+        if (!empty($this->std->num_proc) && (!isset($this->std->ind_proc) || !isset($this->std->proc))) {
             $this->errors[] = "[" . self::REG . "] Se o campo NUM_PROC estiver preenchido, "
-            . "os campos IND_PROC e PROC deverão estar preenchidos.";
+                . "os campos IND_PROC e PROC deverão estar preenchidos.";
         }
-        if (empty($this->std->num_proc) && (!empty($this->std->ind_proc) || !empty($this->std->proc))) {
+        if (empty($this->std->num_proc) && (isset($this->std->ind_proc) || isset($this->std->proc))) {
             $this->errors[] = "[" . self::REG . "] Se o campo NUM_PROC não estiver preenchido, "
-            . "os campos IND_PROC e PROC não deverão estar preenchidos.";
+                . "os campos IND_PROC e PROC não deverão estar preenchidos.";
         }
     }
 }

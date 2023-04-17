@@ -38,7 +38,7 @@ class E116 extends Element
             'regex'    => '^.*$',
             'required' => true,
             'info'     => 'Código de receita referente à obrigação, próprio '
-            .'da unidade da federação, conforme legislação estadual.',
+                .'da unidade da federação, conforme legislação estadual.',
             'format'   => ''
         ],
         'NUM_PROC' => [
@@ -53,10 +53,10 @@ class E116 extends Element
             'regex'    => '^[0|1|2|9]$',
             'required' => false,
             'info'     => 'Indicador da origem do processo: '
-            .'0- SEFAZ;'
-            .'1- Justiça Federal;'
-            .'2- Justiça Estadual;'
-            .'9- Outros',
+                .'0- SEFAZ;'
+                .'1- Justiça Federal;'
+                .'2- Justiça Estadual;'
+                .'9- Outros',
             'format'   => ''
         ],
         'PROC' => [
@@ -101,9 +101,14 @@ class E116 extends Element
          * Campo 06 (NUM_PROC) Validação: se este campo estiver preenchido, os campos
          * IND_PROC e PROC também devem estar preenchidos.
          */
-        if (!empty($this->std->num_proc) && (empty($this->std->ind_proc) || empty($this->std->proc))) {
+        if (!empty($this->std->num_proc) && (!isset($this->std->ind_proc) || !isset($this->std->proc))) {
             $this->errors[] = "[" . self::REG . "] Se o campo NUM_PROC estiver preenchido, "
-            . "os campos IND_PROC e PROC também devem estar preenchidos.";
+                . "os campos IND_PROC e PROC também devem estar preenchidos.";
+        }
+        if (empty($this->std->num_proc) && (isset($this->std->ind_proc) || isset($this->std->proc))) {
+            $this->errors[] = "[" . self::REG . "] Se o campo NUM_PROC não estiver preenchido, "
+                . "os campos IND_PROC e PROC não deverão estar preenchidos.";
         }
     }
 }
+
