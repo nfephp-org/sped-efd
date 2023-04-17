@@ -15,7 +15,7 @@ class E316 extends Element implements ElementInterface
     protected $parameters = [
         'COD_OR' => [
             'type'     => 'string',
-            'regex'    => '^00([3-6]|0)|090$',
+            'regex'    => '^.[000|003|006|090]+$',
             'required' => true,
             'info'     => 'Código da obrigação recolhida ou a recolher, conforme a Tabela 5.4',
             'format'   => ''
@@ -101,13 +101,13 @@ class E316 extends Element implements ElementInterface
          * estar preenchidos. Se este campo não estiver preenchido, os campos IND_PROC e PROC não deverão estar
          * preenchidos.
          */
-        if (!empty($this->std->num_proc) && (empty($this->std->ind_proc) || empty($this->std->proc))) {
+        if (!empty($this->std->num_proc) && (!isset($this->std->ind_proc) || !isset($this->std->proc))) {
             $this->errors[] = "[" . self::REG . "] Se o campo NUM_PROC estiver preenchido, "
-            . "os campos IND_PROC e PROC deverão estar preenchidos.";
+                . "os campos IND_PROC e PROC deverão estar preenchidos.";
         }
-        if (empty($this->std->num_proc) && (!empty($this->std->ind_proc) || !empty($this->std->proc))) {
+        if (empty($this->std->num_proc) && (isset($this->std->ind_proc) || isset($this->std->proc))) {
             $this->errors[] = "[" . self::REG . "] Se o campo NUM_PROC não estiver preenchido, "
-            . "os campos IND_PROC e PROC não deverão estar preenchidos.";
+                . "os campos IND_PROC e PROC não deverão estar preenchidos.";
         }
     }
 }
