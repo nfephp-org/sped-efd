@@ -40,7 +40,7 @@ class Z0450 extends Element implements ElementInterface
         ],
         'TXT' => [
             'type'     => 'string',
-            'regex'    => '^.{1,1000}$',
+            'regex'    => '^.{1,255}$',
             'required' => true,
             'info'     => 'Texto livre da informação complementar existente no documento fiscal',
             'format'   => ''
