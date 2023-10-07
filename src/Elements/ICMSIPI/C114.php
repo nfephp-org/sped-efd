@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO C114: CUPOM FISCAL REFERENCIADO
@@ -13,7 +12,7 @@ use \stdClass;
  * entradas, somente informar quando o emitente do cupom fiscal for o próprio informante do arquivo.
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
-class C114 extends Element implements ElementInterface
+class C114 extends Element
 {
     const REG = 'C114';
     const LEVEL = 4;
@@ -59,11 +58,14 @@ class C114 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

@@ -1,0 +1,30 @@
+{
+    "COD_COMP": {
+        "type": "string",
+        "regex": "",
+        "required": true,
+        "info": "C\u00f3digo das Tabelas 7.1.3 (Receitas \u2013 Vis\u00e3o Anal\u00edtica\/Referenciada) e\/ou 7.1.4 (Dedu\u00e7\u00f5es e exclus\u00f5es \u2013 Vis\u00e3o Anal\u00edtica\/Referenciada), objeto de complemento neste registro",
+        "format": ""
+    },
+    "DET_VALOR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da receita, dedu\u00e7\u00e3o ou exclus\u00e3o, objeto de complemento\/detalhamento neste registro, conforme c\u00f3digo informado no campo 02 (especificados nas tabelas anal\u00edticas 7.1.3 e 7.1.4) ou no campo 04 (c\u00f3digo da conta cont\u00e1bil)",
+        "format": "15v2"
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "",
+        "required": true,
+        "info": "C\u00f3digo da conta cont\u00e1bil referente ao valor informado no campo 03",
+        "format": ""
+    },
+    "INFO_COMPL": {
+        "type": "string",
+        "regex": "",
+        "required": false,
+        "info": "Informa\u00e7\u00e3o Complementar dos dados informados no registro",
+        "format": ""
+    }
+}

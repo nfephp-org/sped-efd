@@ -1,0 +1,58 @@
+{
+    "INC_IMOB": {
+        "type": "string",
+        "regex": "^.{0,90}$",
+        "required": false,
+        "info": "Empreendimento objeto de Incorpora\u00e7\u00e3o Imobili\u00e1ria, optante pelo RET. ",
+        "format": ""
+    },
+    "REC_RECEB_RET": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Receitas recebidas pela incorporadora na venda das unidades imobili\u00e1rias que comp\u00f5em a incorpora\u00e7\u00e3o. ",
+        "format": "15v2"
+    },
+    "REC_FIN_RET": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Receitas Financeiras e Varia\u00e7\u00f5es Monet\u00e1rias decorrentes das vendas submetidas ao RET. ",
+        "format": "15v2"
+    },
+    "BC_RET": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Base de C\u00e1lculo do Recolhimento Unificado ",
+        "format": "15v2"
+    },
+    "ALIQ_RET": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do Recolhimento Unificado. ",
+        "format": "6v2"
+    },
+    "VL_REC_UNI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Recolhimento Unificado. ",
+        "format": "15v2"
+    },
+    "DT_REC_UNI": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data do recolhimento unificado ",
+        "format": ""
+    },
+    "COD_REC": {
+        "type": "string",
+        "regex": "^.{0,4}$",
+        "required": false,
+        "info": "C\u00f3digo da Receita ",
+        "format": ""
+    }
+}

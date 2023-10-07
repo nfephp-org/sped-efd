@@ -1,0 +1,72 @@
+{
+    "COD_MUN_ORIG": {
+        "type": "numeric",
+        "regex": "^[0-9]{7}$",
+        "required": true,
+        "info": "C\u00f3digo do munic\u00edpio de origem do servi\u00e7o, conforme a tabela IBGE",
+        "format": ""
+    },
+    "COD_MUN_DEST": {
+        "type": "numeric",
+        "regex": "^[0-9]{7}$",
+        "required": true,
+        "info": "C\u00f3digo do munic\u00edpio de destino, conforme a tabela IBGE",
+        "format": ""
+    },
+    "VEIC_ID": {
+        "type": "string",
+        "regex": "^[0-9]{0}$",
+        "required": true,
+        "info": "Identifica\u00e7\u00e3o da aeronave (DAC)",
+        "format": ""
+    },
+    "VIAGEM": {
+        "type": "string",
+        "regex": "",
+        "required": true,
+        "info": "N\u00famero do v\u00f4o",
+        "format": ""
+    },
+    "IND_TFA": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "Indicador do tipo de tarifa aplicada: 0- Exp.1- Enc.2- C.I.9- Outra",
+        "format": ""
+    },
+    "VL_PESO_TX": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Peso taxado",
+        "format": "15v2"
+    },
+    "VL_TX_TERR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da taxa terrestre",
+        "format": "15v2"
+    },
+    "VL_TX_RED": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da taxa de redespacho",
+        "format": "15v2"
+    },
+    "VL_OUT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Outros valores",
+        "format": "15v2"
+    },
+    "VL_TX_ADV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da taxa ad valorem",
+        "format": "15v2"
+    }
+}

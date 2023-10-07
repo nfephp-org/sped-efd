@@ -25,7 +25,7 @@ abstract class EFD
             return;
         }
         $name = strtolower((new \ReflectionClass($block))->getShortName());
-        if (key_exists($name, $this->possibles)) {
+        if (array_key_exists($name, $this->possibles)) {
             $this->{$name} = $block->get();
             foreach ($block->errors as $err) {
                 $this->errors[] = $err;

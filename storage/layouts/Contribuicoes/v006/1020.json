@@ -1,0 +1,23 @@
+{
+    "NUM_PROC": {
+        "type": "string",
+        "regex": "^.{0,20}$",
+        "required": false,
+        "info": "Identifica\u00e7\u00e3o do Processo Administrativo ou da Decis\u00e3o Administrativa ",
+        "format": ""
+    },
+    "IND_NAT_ACAO": {
+        "type": "string",
+        "regex": "^(01|02|03|04|05|06|99)$",
+        "required": false,
+        "info": "Indicador da Natureza da A\u00e7\u00e3o, decorrente de Processo Administrativo na Secretaria da Receita Federal do Brasil  01 \u2013 Processo Administrativo de Consulta 02 \u2013 Despacho Decis\u00f3rio 03 \u2013 Ato Declarat\u00f3rio Executivo 04 \u2013 Ato Declarat\u00f3rio Interpretativo 05 \u2013 Decis\u00e3o Administrativa de DRJ ou do CARF 06 \u2013 Auto de Infra\u00e7\u00e3o 99 \u2013 Outros ",
+        "format": ""
+    },
+    "DT_DEC_ADM": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data do Despacho\/Decis\u00e3o Administrativa ",
+        "format": ""
+    }
+}

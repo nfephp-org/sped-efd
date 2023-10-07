@@ -1,0 +1,16 @@
+{
+    "CNPJ": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": false,
+        "info": "N\u00famero de inscri\u00e7\u00e3o do estabelecimento no CNPJ.",
+        "format": ""
+    },
+    "IND_ESCRI": {
+        "type": "string",
+        "regex": "^.{1}$",
+        "required": false,
+        "info": "Indicador da apura\u00e7\u00e3o das contribui\u00e7\u00f5es e cr\u00e9ditos, na escritura\u00e7\u00e3o das\n            opera\u00e7\u00f5es por NF-e e ECF, no per\u00edodo: 1 \u2013 Apura\u00e7\u00e3o com base nos registros de consolida\u00e7\u00e3o\n            das opera\u00e7\u00f5es por NF-e (C180 e C190) e por ECF (C490);",
+        "format": ""
+    }
+}

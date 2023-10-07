@@ -1,0 +1,16 @@
+{
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo do item produzido (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "QTD": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Quantidade produzida",
+        "format": "15v3"
+    }
+}

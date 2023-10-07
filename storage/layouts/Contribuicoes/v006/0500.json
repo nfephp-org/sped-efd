@@ -1,0 +1,58 @@
+{
+    "DT_ALT": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data da inclus\u00e3o\/altera\u00e7\u00e3o",
+        "format": ""
+    },
+    "COD_NAT_CC": {
+        "type": "string",
+        "regex": "^(01|02|03|04|05|09)$",
+        "required": false,
+        "info": "C\u00f3digo da natureza da conta\/grupo de contas:\n            01 - Contas de ativo 02 - Contas de passivo; 03 - Patrim\u00f4nio l\u00edquido;\n            04 - Contas de resultado; 05 - Contas de compensa\u00e7\u00e3o; 09 - Outras.",
+        "format": ""
+    },
+    "IND_CTA": {
+        "type": "string",
+        "regex": "^(S|A)$",
+        "required": false,
+        "info": "Indicador do tipo de conta: S - Sint\u00e9tica (grupo de contas); A - Anal\u00edtica (conta).",
+        "format": ""
+    },
+    "NIVEL": {
+        "type": "numeric",
+        "regex": "^(\\d{0,5})$",
+        "required": false,
+        "info": "N\u00edvel da conta anal\u00edtica\/grupo de contas.",
+        "format": ""
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^.{0,255}$",
+        "required": false,
+        "info": "C\u00f3digo da conta anal\u00edtica\/grupo de contas.",
+        "format": ""
+    },
+    "NOME_CTA": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "Nome da conta anal\u00edtica\/grupo de contas.",
+        "format": ""
+    },
+    "COD_CTA_REF": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "C\u00f3digo da conta correlacionada no Plano de Contas Referenciado, publicado pela RFB.",
+        "format": ""
+    },
+    "CNPJ_EST": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": false,
+        "info": "CNPJ do estabelecimento, no caso da conta informada no\n            campo COD_CTA ser espec\u00edfica de um estabelecimento.",
+        "format": ""
+    }
+}

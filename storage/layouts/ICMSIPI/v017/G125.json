@@ -1,0 +1,65 @@
+{
+    "COD_IND_BEM": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo individualizado do bem ou componente adotado no controle patrimonial do estabelecimento informante ",
+        "format": ""
+    },
+    "DT_MOV": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data da movimenta\u00e7\u00e3o ou do saldo inicial ",
+        "format": ""
+    },
+    "TIPO_MOV": {
+        "type": "string",
+        "regex": "^(SI|ST|IM|IA|CI|MC|BA|AT|PE|OT)$",
+        "required": true,
+        "info": "Tipo de movimenta\u00e7\u00e3o do bem ou componente  SI = Saldo inicial de bens imobilizados  IM = Imobiliza\u00e7\u00e3o de bem individual  IA = Imobiliza\u00e7\u00e3o em Andamento - Componente  CI = Conclus\u00e3o de Imobiliza\u00e7\u00e3o em Andamento \u2013 Bem Resultante  MC = Imobiliza\u00e7\u00e3o oriunda do Ativo Circulante  BA = Baixa do bem - Fim do per\u00edodo de apropria\u00e7\u00e3o  AT = Aliena\u00e7\u00e3o ou Transfer\u00eancia  PE = Perecimento, Extravio ou Deteriora\u00e7\u00e3o  OT = Outras Sa\u00eddas do Imobilizado ",
+        "format": ""
+    },
+    "VL_IMOB_ICMS_OP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do ICMS da Opera\u00e7\u00e3o Pr\u00f3pria na entrada do bem ou componente ",
+        "format": "15v2"
+    },
+    "VL_IMOB_ICMS_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do ICMS da Oper. por Sub. Tribut\u00e1ria na entrada do bem ou componente ",
+        "format": "15v2"
+    },
+    "VL_IMOB_ICMS_FRT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do ICMS sobre Frete do Conhecimento de Transporte na entrada do bem ou componente ",
+        "format": "15v2"
+    },
+    "VL_IMOB_ICMS_DIF": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do ICMS - Diferencial de Al\u00edquota, conforme Doc. de Arrecada\u00e7\u00e3o, na entrada do bem ou componente ",
+        "format": "15v2"
+    },
+    "NUM_PARC": {
+        "type": "numeric",
+        "regex": "^(\\d{0,3})$",
+        "required": false,
+        "info": "N\u00famero da parcela do ICMS ",
+        "format": ""
+    },
+    "VL_PARC_PASS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da parcela de ICMS pass\u00edvel de apropria\u00e7\u00e3o (antes da aplica\u00e7\u00e3o da totais) participa\u00e7\u00e3o percentual do valor das sa\u00eddas tributadas\/exporta\u00e7\u00e3o sobre as sa\u00eddas ",
+        "format": "15v2"
+    }
+}

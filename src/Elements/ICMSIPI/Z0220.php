@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * Elemento 0220 do Bloco 0
@@ -29,12 +28,12 @@ use \stdClass;
  * NOTA: usada a letra Z no nome da Classe pois os nomes não podem ser exclusivamente
  * numeréricos e também para não confundir os com elementos do bloco B
  */
-class Z0220 extends Element implements ElementInterface
+class Z0220 extends Element
 {
     const REG = '0220';
     const LEVEL = 3;
     const PARENT = '0200';
-    
+
     protected $parameters = [
         'UNID_CONV' => [
             'type'     => 'string',
@@ -61,14 +60,17 @@ class Z0220 extends Element implements ElementInterface
             'format'   => ''
         ],
     ];
-    
+
     /**
      * Constructor
      * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

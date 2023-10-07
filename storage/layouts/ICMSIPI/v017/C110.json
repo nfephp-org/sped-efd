@@ -1,0 +1,16 @@
+{
+    "COD_INF": {
+        "type": "string",
+        "regex": "^[A-z0-9]{1,6}$",
+        "required": true,
+        "info": "C\u00f3digo da informa\u00e7\u00e3o complementar do documento fiscal",
+        "format": ""
+    },
+    "TXT_COMPL": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Descri\u00e7\u00e3o complementar do c\u00f3digo de refer\u00eancia.",
+        "format": ""
+    }
+}

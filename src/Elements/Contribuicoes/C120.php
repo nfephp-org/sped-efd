@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class C120 extends Element implements ElementInterface
+class C120 extends Element
 {
     const REG = 'C120';
     const LEVEL = 3;
@@ -17,7 +16,7 @@ class C120 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^(1|0)$',
             'required' => false,
-            'info' => 'Documento de importação: 
+            'info' => 'Documento de importação:
             0 – Declaração de Importação; 1 – Declaração Simplificada de Importação.',
             'format' => ''
         ],
@@ -54,11 +53,14 @@ class C120 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO H005: TOTAIS DO INVENTÁRIO
@@ -26,12 +25,12 @@ use \stdClass;
  *
  * Atribuir valor Zero ao inventário significa escriturar sem estoque.
  */
-class H005 extends Element implements ElementInterface
+class H005 extends Element
 {
     const REG = 'H005';
     const LEVEL = 2;
     const PARENT = 'H001';
-    
+
     protected $parameters = [
         'DT_INV' => [
             'type'     => 'string',
@@ -60,14 +59,16 @@ class H005 extends Element implements ElementInterface
             'format'   => ''
         ]
     ];
-    
+
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
     }
 }

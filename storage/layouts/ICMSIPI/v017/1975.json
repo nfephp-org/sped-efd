@@ -1,0 +1,30 @@
+{
+    "ALIQ_IMP_BASE": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Ali\u0301quota incidente sobre as importac\u0327o\u0303es-base",
+        "format": "15v2"
+    },
+    "G3_10": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Sai\u0301das incentivadas de PI",
+        "format": "15v2"
+    },
+    "G3_11": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Importac\u0327o\u0303es-base para o cre\u0301dito presumido",
+        "format": "15v2"
+    },
+    "G3_12": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Cre\u0301dito presumido nas sai\u0301das internas",
+        "format": "15v2"
+    }
+}

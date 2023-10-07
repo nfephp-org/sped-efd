@@ -1,0 +1,30 @@
+{
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^[0-9]{2}$",
+        "required": true,
+        "info": "C\u00f3digo do modelo do documento fiscal, conforme a tabela 4.1.1",
+        "format": ""
+    },
+    "ECF_MOD": {
+        "type": "string",
+        "regex": "^[0-9]{20}$",
+        "required": true,
+        "info": "Modelo do equipamento",
+        "format": ""
+    },
+    "ECF_FAB": {
+        "type": "string",
+        "regex": "^[0-9]{21}$",
+        "required": true,
+        "info": "N\u00famero de s\u00e9rie de fabrica\u00e7\u00e3o do ECF",
+        "format": ""
+    },
+    "ECF_CX": {
+        "type": "numeric",
+        "regex": "^[0-9]{3}$",
+        "required": true,
+        "info": "N\u00famero do caixa atribu\u00eddo ao ECF",
+        "format": ""
+    }
+}

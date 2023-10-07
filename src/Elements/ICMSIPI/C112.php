@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO C112: DOCUMENTO DE ARRECADAÇÃO REFERENCIADO
@@ -13,7 +12,7 @@ use \stdClass;
  * fiscal - constar a identificação de um documento de arrecadação.
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
-class C112 extends Element implements ElementInterface
+class C112 extends Element
 {
     const REG = 'C112';
     const LEVEL = 4;
@@ -73,11 +72,13 @@ class C112 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
         $this->postValidation();
     }

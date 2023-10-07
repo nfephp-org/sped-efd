@@ -1,0 +1,72 @@
+{
+    "COD_CTD": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": true,
+        "info": "Co\u0301digo da conta do plano de contas",
+        "format": ""
+    },
+    "CTA_ISS": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": true,
+        "info": "Descric\u0327a\u0303o da conta no plano de contas",
+        "format": ""
+    },
+    "CTA_COSIF": {
+        "type": "integer",
+        "regex": "^\\d{8}$",
+        "required": true,
+        "info": "Co\u0301digo COSIF a que esta\u0301 subordinada a conta do ISS das instituic\u0327o\u0303es financeiras",
+        "format": ""
+    },
+    "QTD_OCOR": {
+        "type": "integer",
+        "regex": "^\\d+$",
+        "required": true,
+        "info": "Quantidade de ocorre\u0302ncias na conta",
+        "format": ""
+    },
+    "COD_SERV": {
+        "type": "integer",
+        "regex": "^\\d{4}$",
+        "required": true,
+        "info": "Item da lista de servic\u0327os, conforme Tabela 4.6.3.",
+        "format": ""
+    },
+    "VL_CONT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor conta\u0301bil",
+        "format": "15v2"
+    },
+    "VL_BC_ISS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da base de ca\u0301lculo do ISS",
+        "format": "15v2"
+    },
+    "ALIQ_ISS": {
+        "type": "integer",
+        "regex": "^[0-5]{1}$",
+        "required": true,
+        "info": "Ali\u0301quota do ISS",
+        "format": ""
+    },
+    "VL_ISS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do ISS",
+        "format": "15v2"
+    },
+    "COD_INF_OBS": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": false,
+        "info": "Co\u0301digo da observac\u0327a\u0303o do lanc\u0327amento fiscal (campo 02 do Registro 0460)",
+        "format": ""
+    }
+}

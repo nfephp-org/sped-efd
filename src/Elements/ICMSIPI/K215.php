@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO K215: DESMONTAGEM DE MERCADORIAS – ITENS DE DESTINO
@@ -30,7 +29,7 @@ use \stdClass;
  * de controle de estoque constante no campo 06 do registro 0200, UNID_INV.
  * Validação do Registro: A chave deste registro é o campo COD_ITEM_DES.
  */
-class K215 extends Element implements ElementInterface
+class K215 extends Element
 {
     const REG = 'K215';
     const LEVEL = 4;
@@ -52,14 +51,17 @@ class K215 extends Element implements ElementInterface
             'format'   => '15v6'
         ],
     ];
-    
+
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

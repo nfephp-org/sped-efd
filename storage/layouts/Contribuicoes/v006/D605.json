@@ -1,0 +1,58 @@
+{
+    "COD_CLASS": {
+        "type": "numeric",
+        "regex": "^(\\d{4})$",
+        "required": false,
+        "info": "C\u00f3digo de classifica\u00e7\u00e3o do item do servi\u00e7o de comunica\u00e7\u00e3o ou de telecomunica\u00e7\u00e3o, conforme a Tabela 4.4.1 ",
+        "format": ""
+    },
+    "VL_ITEM": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado do item ",
+        "format": "15v2"
+    },
+    "VL_DESC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado dos descontos\/exclus\u00f5es da base de c\u00e1lculo ",
+        "format": "15v2"
+    },
+    "CST_COFINS": {
+        "type": "string",
+        "regex": "^((0[1-9])|49|99)$",
+        "required": false,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria referente a COFINS ",
+        "format": ""
+    },
+    "VL_BC_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo da COFINS ",
+        "format": "15v2"
+    },
+    "ALIQ_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota da COFINS (em percentual) ",
+        "format": "8v4"
+    },
+    "VL_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da COFINS ",
+        "format": "15v2"
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^.{0,255}$",
+        "required": false,
+        "info": "C\u00f3digo da conta cont\u00e1bil debitada\/creditada ",
+        "format": ""
+    }
+}

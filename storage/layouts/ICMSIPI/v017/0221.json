@@ -1,0 +1,16 @@
+{
+    "COD_ITEM_ATOMICO": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "Informar o c\u00f3digo do item at\u00f4mico contido no item informado no 0200 Pai.",
+        "format": ""
+    },
+    "QTD_CONTIDA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Informar quantos itens at\u00f4micos est\u00e3o contidos no item informado no 0200 Pai.",
+        "format": "15v6"
+    }
+}

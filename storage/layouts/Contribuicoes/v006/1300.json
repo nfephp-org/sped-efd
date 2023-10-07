@@ -1,0 +1,51 @@
+{
+    "IND_NAT_RET": {
+        "type": "numeric",
+        "regex": "^(1|2|3|4|5|9|1|2|3|4|5|9|1|2|3|4|5|9)$",
+        "required": false,
+        "info": "Indicador de Natureza da Reten\u00e7\u00e3o na Fonte",
+        "format": ""
+    },
+    "PR_REC_RET": {
+        "type": "numeric",
+        "regex": "^(\\d{0,6})$",
+        "required": false,
+        "info": "Per\u00edodo do Recebimento e da Reten\u00e7\u00e3o (MM\/AAAA) ",
+        "format": ""
+    },
+    "VL_RET_APU": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total da Reten\u00e7\u00e3o ",
+        "format": "15v2"
+    },
+    "VL_RET_DED": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Reten\u00e7\u00e3o deduzida da Contribui\u00e7\u00e3o devida no per\u00edodo da escritura\u00e7\u00e3o e em per\u00edodos anteriores. ",
+        "format": "15v2"
+    },
+    "VL_RET_PER": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Reten\u00e7\u00e3o utilizada mediante Pedido de Restitui\u00e7\u00e3o. ",
+        "format": "15v2"
+    },
+    "VL_RET_DCOMP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Reten\u00e7\u00e3o utilizada mediante Declara\u00e7\u00e3o de Compensa\u00e7\u00e3o. ",
+        "format": "15v2"
+    },
+    "SLD_RET": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Saldo de Reten\u00e7\u00e3o a utilizar em per\u00edodos de apura\u00e7\u00e3o futuros (04 \u2013 05 - 06 - 07). ",
+        "format": "15v2"
+    }
+}

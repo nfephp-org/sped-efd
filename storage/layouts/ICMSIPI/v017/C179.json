@@ -1,0 +1,37 @@
+{
+    "BC_ST_ORIG_DEST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo ST na origem\/destino em opera\u00e7\u00f5es interestaduais.",
+        "format": "15v2"
+    },
+    "ICMS_ST_REP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do ICMS-ST a repassar\/deduzir em opera\u00e7\u00f5es interestaduais",
+        "format": "15v2"
+    },
+    "ICMS_ST_COMPL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do ICMS-ST a complementar \u00e0 UF de destino",
+        "format": "15v2"
+    },
+    "BC_RET": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da BC de reten\u00e7\u00e3o em remessa promovida por Substitu\u00eddo intermedi\u00e1rio",
+        "format": "15v2"
+    },
+    "ICMS_RET": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da parcela do imposto retido em remessa promovida por substitu\u00eddo intermedi\u00e1rio",
+        "format": ""
+    }
+}

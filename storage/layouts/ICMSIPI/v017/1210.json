@@ -1,0 +1,30 @@
+{
+    "TIPO_UTIL": {
+        "type": "string",
+        "regex": "^.{4}$",
+        "required": true,
+        "info": "Tipo de utilizac\u0327a\u0303o do cre\u0301dito, conforme tabela indicada no item 5.5.",
+        "format": ""
+    },
+    "NR_DOC": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": false,
+        "info": "Nu\u0301mero do documento utilizado na baixa de cre\u0301ditos",
+        "format": ""
+    },
+    "VL_CRED_UTIL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Total de cre\u0301dito utilizado",
+        "format": "15v2"
+    },
+    "CHV_DOCE": {
+        "type": "string",
+        "regex": "^\\d{44}$",
+        "required": false,
+        "info": "Chave do Documento Eletro\u0302nico",
+        "format": ""
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "VL_TOT_CONT_NC_PER": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total da Contribui\u00e7\u00e3o N\u00e3o Cumulativa do Per\u00edodo (recuperado do campo 13 do Registro M210, quando o campo \u201cCOD_CONT\u201d = 01, 02, 03, 04, 32 e 71) ",
+        "format": "15v2"
+    },
+    "VL_TOT_CRED_DESC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Cr\u00e9dito Descontado, Apurado no Pr\u00f3prio Per\u00edodo da Escritura\u00e7\u00e3o (recuperado do campo 14 do Registro M100) ",
+        "format": "15v2"
+    },
+    "VL_TOT_CRED_DESC_ANT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Cr\u00e9dito Descontado, Apurado em Per\u00edodo de Apura\u00e7\u00e3o Anterior (recuperado do campo 13 do Registro 1100) ",
+        "format": "15v2"
+    },
+    "VL_TOT_CONT_NC_DEV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total da Contribui\u00e7\u00e3o N\u00e3o Cumulativa Devida (02 \u2013 03 - 04) ",
+        "format": "15v2"
+    },
+    "VL_RET_NC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Retido na Fonte Deduzido no Per\u00edodo ",
+        "format": "15v2"
+    },
+    "VL_OUT_DED_NC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Outras Dedu\u00e7\u00f5es no Per\u00edodo ",
+        "format": "15v2"
+    },
+    "VL_CONT_NC_REC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Contribui\u00e7\u00e3o N\u00e3o Cumulativa a Recolher\/Pagar (05 \u2013 06 - 07) ",
+        "format": "15v2"
+    },
+    "VL_TOT_CONT_CUM_PER": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total da Contribui\u00e7\u00e3o Cumulativa do Per\u00edodo (recuperado do campo 13 do Registro M210, quando o campo \u201cCOD_CONT\u201d = 31, 32, 51, 52, 53, 54 e 72) ",
+        "format": "15v2"
+    },
+    "VL_RET_CUM": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Retido na Fonte Deduzido no Per\u00edodo ",
+        "format": "15v2"
+    },
+    "VL_OUT_DED_CUM": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Outras Dedu\u00e7\u00f5es no Per\u00edodo ",
+        "format": "15v2"
+    },
+    "VL_CONT_CUM_REC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Contribui\u00e7\u00e3o Cumulativa a Recolher\/Pagar (09 - 10 \u2013 11) ",
+        "format": "15v2"
+    },
+    "VL_TOT_CONT_REC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total da Contribui\u00e7\u00e3o a Recolher\/Pagar no Per\u00edodo (08 + 12) ",
+        "format": "15v2"
+    }
+}

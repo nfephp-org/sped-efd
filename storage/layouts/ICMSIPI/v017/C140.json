@@ -1,0 +1,44 @@
+{
+    "IND_EMIT": {
+        "type": "string",
+        "regex": "^[0-1]{1}$",
+        "required": true,
+        "info": "Indicador do emitente do documento fiscal",
+        "format": ""
+    },
+    "IND_TIT": {
+        "type": "string",
+        "regex": "^(00|01|02|03|99)$",
+        "required": true,
+        "info": "Indicador do tipo de t\u00edtulo de cr\u00e9dito",
+        "format": ""
+    },
+    "DESC_TIT": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Descri\u00e7\u00e3o complementar do t\u00edtulo de cr\u00e9dito",
+        "format": ""
+    },
+    "NUM_TIT": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": true,
+        "info": "N\u00famero ou c\u00f3digo identificador do t\u00edtulo de cr\u00e9dito",
+        "format": ""
+    },
+    "QTD_PARC": {
+        "type": "integer",
+        "regex": "^([0-9]{1,2})$",
+        "required": true,
+        "info": "Quantidade de parcelas a receber\/pagar",
+        "format": ""
+    },
+    "VL_TIT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos t\u00edtulos de cr\u00e9ditos",
+        "format": "15v2"
+    }
+}

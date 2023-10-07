@@ -1,0 +1,93 @@
+{
+    "NOME": {
+        "type": "string",
+        "regex": "^.{0,100}$",
+        "required": false,
+        "info": "Nome do contabilista.",
+        "format": ""
+    },
+    "CPF": {
+        "type": "string",
+        "regex": "^[0-9]{11}$",
+        "required": false,
+        "info": "N\u00famero de inscri\u00e7\u00e3o do contabilista no CPF.",
+        "format": ""
+    },
+    "CRC": {
+        "type": "string",
+        "regex": "^.{0,15}$",
+        "required": false,
+        "info": "N\u00famero de inscri\u00e7\u00e3o do contabilista no Conselho Regional de Contabilidade.",
+        "format": ""
+    },
+    "CNPJ": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": false,
+        "info": "N\u00famero de inscri\u00e7\u00e3o do escrit\u00f3rio de contabilidade no CNPJ, se houver.",
+        "format": ""
+    },
+    "CEP": {
+        "type": "numeric",
+        "regex": "^(\\d{8})$",
+        "required": false,
+        "info": "C\u00f3digo de Endere\u00e7amento Postal.",
+        "format": ""
+    },
+    "END": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "Logradouro e endere\u00e7o do im\u00f3vel.",
+        "format": ""
+    },
+    "NUM": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "N\u00famero do im\u00f3vel.",
+        "format": ""
+    },
+    "COMPL": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "Dados complementares do endere\u00e7o.",
+        "format": ""
+    },
+    "BAIRRO": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "Bairro em que o im\u00f3vel est\u00e1 situado.",
+        "format": ""
+    },
+    "FONE": {
+        "type": "string",
+        "regex": "^.{0,11}$",
+        "required": false,
+        "info": "N\u00famero do telefone.",
+        "format": ""
+    },
+    "FAX": {
+        "type": "string",
+        "regex": "^.{0,11}$",
+        "required": false,
+        "info": "N\u00famero do fax.",
+        "format": ""
+    },
+    "EMAIL": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Endere\u00e7o do correio eletr\u00f4nico.",
+        "format": ""
+    },
+    "COD_MUN": {
+        "type": "numeric",
+        "regex": "^(\\d{7})$",
+        "required": false,
+        "info": "C\u00f3digo do munic\u00edpio, conforme tabela IBGE.",
+        "format": ""
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "NUM_PROC": {
+        "type": "string",
+        "regex": "^.{0,20}$",
+        "required": false,
+        "info": "Identifica\u00e7\u00e3o do N\u00famero do Processo Judicial ",
+        "format": ""
+    },
+    "ID_SEC_JUD": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Identifica\u00e7\u00e3o da Se\u00e7\u00e3o Judici\u00e1ria ",
+        "format": ""
+    },
+    "ID_VARA": {
+        "type": "string",
+        "regex": "^.{0,2}$",
+        "required": false,
+        "info": "Identifica\u00e7\u00e3o da Vara ",
+        "format": ""
+    },
+    "IND_NAT_ACAO": {
+        "type": "string",
+        "regex": "^(01|02|03|04|05|06|07|08|09|99)$",
+        "required": false,
+        "info": "Indicador da Natureza da A\u00e7\u00e3o Judicial, impetrada na Justi\u00e7a Federal  01 \u2013 Decis\u00e3o judicial transitada em julgado, a favor da pessoa jur\u00eddica. 02 \u2013 Decis\u00e3o judicial n\u00e3o transitada em julgado, a favor da pessoa jur\u00eddica. 03 \u2013 Decis\u00e3o judicial oriunda de liminar em mandado de seguran\u00e7a. 04 \u2013 Decis\u00e3o judicial oriunda de liminar em medida cautelar. 05 \u2013 Decis\u00e3o judicial oriunda de antecipa\u00e7\u00e3o de tutela. 06 - Decis\u00e3o judicial vinculada a dep\u00f3sito ",
+        "format": ""
+    },
+    "DESC_DEC_JUD": {
+        "type": "string",
+        "regex": "^.{0,100}$",
+        "required": false,
+        "info": "Descri\u00e7\u00e3o Resumida dos Efeitos Tribut\u00e1rios abrangidos pela Decis\u00e3o Judicial proferida. ",
+        "format": ""
+    },
+    "DT_SENT_JUD": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data da Senten\u00e7a\/Decis\u00e3o Judicial ",
+        "format": ""
+    }
+}

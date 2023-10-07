@@ -3,20 +3,19 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO C185: INFORMAÇÕES  COMPLEMENTARES  DAS  OPERAÇÕES  DE  SAÍDA  DE  MERCADORIAS SUJEITAS À SUBSTITUIÇÃO
  * TRIBUTÁRIA (CÓDIGO 01, 1B, 04, 55 e 65).
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
-class C185 extends Element implements ElementInterface
+class C185 extends Element
 {
     const REG = 'C185';
     const LEVEL = 3;
     const PARENT = 'C100';
-    
+
     protected $parameters = [
         'NUM_ITEM' => [
             'type'     => 'numeric',
@@ -145,13 +144,17 @@ class C185 extends Element implements ElementInterface
             'format'   => '15v6'
         ],
     ];
+
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

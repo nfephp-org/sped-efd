@@ -1,0 +1,72 @@
+{
+    "CST_ICMS": {
+        "type": "numeric",
+        "regex": "^(\\d{3})$",
+        "required": true,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria, conforme a Tabela indicada no item 4.3.1.",
+        "format": ""
+    },
+    "CFOP": {
+        "type": "numeric",
+        "regex": "^(\\d{4})$",
+        "required": true,
+        "info": "C\u00f3digo Fiscal de agrupamento de itens",
+        "format": ""
+    },
+    "ALIQ_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do ICMS",
+        "format": "6v2"
+    },
+    "VL_OPR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da opera\u00e7\u00e3o correspondente \u00e0 combina\u00e7\u00e3o de CST_ICMS, CFOP, e al\u00edquota do ICMS.",
+        "format": "15v2"
+    },
+    "VL_BC_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Parcela correspondente ao \"Valor da base de c\u00e1lculo do ICMS\"\n            referente \u00e0 combina\u00e7\u00e3o de CST_ICMS, CFOP e al\u00edquota do ICMS.",
+        "format": "15v2"
+    },
+    "VL_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Parcela correspondente ao \"Valor do ICMS\" referente \u00e0 combina\u00e7\u00e3o\n            de CST_ICMS, CFOP e al\u00edquota do ICMS.",
+        "format": "15v2"
+    },
+    "VL_BC_ICMS_UF": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Parcela correspondente ao valor da base de ca\u0301lculo do ICMS de outras UFs,\n            referente a\u0300 combinac\u0327a\u0303o de CST_ICMS, CFOP e ali\u0301quota do ICMS.",
+        "format": "15v2"
+    },
+    "VL_ICMS_UF": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Parcela correspondente ao valor do ICMS de outras UFs, referente a\u0300 combinac\u0327a\u0303o\n            de CST_ICMS, CFOP, e ali\u0301quota do ICMS.",
+        "format": "15v2"
+    },
+    "VL_RED_BC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor n\u00e3o tributado em fun\u00e7\u00e3o da redu\u00e7\u00e3o da base de c\u00e1lculo do ICMS,\n            referente \u00e0 combina\u00e7\u00e3o de CST_ICMS, CFOP e al\u00edquota do ICMS.",
+        "format": "15v2"
+    },
+    "COD_OBS": {
+        "type": "string",
+        "regex": "^.{0,6}$",
+        "required": false,
+        "info": "C\u00f3digo da observa\u00e7\u00e3o do lan\u00e7amento fiscal (campo 02 do Registro 0460)",
+        "format": ""
+    }
+}

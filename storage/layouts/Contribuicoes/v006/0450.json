@@ -1,0 +1,16 @@
+{
+    "COD_INF": {
+        "type": "string",
+        "regex": "^.{0,6}$",
+        "required": false,
+        "info": "C\u00f3digo da informa\u00e7\u00e3o complementar do documento fiscal.",
+        "format": ""
+    },
+    "TXT": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Texto livre da informa\u00e7\u00e3o complementar existente no documento fiscal,\n            inclusive esp\u00e9cie de normas legais, poder normativo, n\u00famero, capitula\u00e7\u00e3o, data e\n            demais refer\u00eancias pertinentes com indica\u00e7\u00e3o referentes ao tributo.",
+        "format": ""
+    }
+}

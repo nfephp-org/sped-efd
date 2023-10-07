@@ -4,7 +4,7 @@ namespace NFePHP\EFD\Common;
 /**
  * Classe abstrata basica de onde cada bloco é cunstruido
  */
-abstract class Block
+abstract class Block implements BlockInterface
 {
     /**
      * @var array
@@ -22,7 +22,28 @@ abstract class Block
      * @var int
      */
     protected $elementTotal;
+    /**
+     * @var string
+     */
+    protected $layout;
+    /**
+     * @var \stdClass
+     */
+    protected $vigencia;
+    /**
+     * @var string
+     */
+    protected $grupo;
 
+    /**
+     * @param string|null $layout
+     */
+    public function __construct(string $layout = null)
+    {
+        $layout = str_pad($layout ?? 0, 3, '0', STR_PAD_LEFT);
+        $this->vigencia = (object) $this->layoutPath($layout);
+        $this->layout = $this->vigencia->layout;
+    }
 
     /**
      * Call classes to build each EFD element
@@ -42,8 +63,7 @@ abstract class Block
         if (empty($arguments[0])) {
             throw new \Exception("Sem dados passados para o método [$name].");
         }
-
-        $elclass = new $className($arguments[0]);
+        $elclass = new $className($arguments[0], $this->vigencia ?? null);
         foreach ($elclass->errors as $err) {
             $this->errors[] = $err;
         }
@@ -61,5 +81,22 @@ abstract class Block
         $n = count(explode("\n", $this->bloco));
         $this->bloco .= "|" . $this->elementTotal . "|$n|\n";
         return $this->bloco;
+    }
+
+    /**
+     * Procura e usa a ultima vigência registrada no json
+     * @param string|null $layout
+     * @return array
+     */
+    protected function layoutPath(string $layout = null): array
+    {
+        $path = dirname(dirname(__DIR__)) . '/storage/layouts/'. $this->grupo;
+        $vigarray = json_decode(file_get_contents($path .  '/vigencias.json'), true);
+        $vigencia = $vigarray[$layout] ?? null;
+        if (empty($vigencia)) {
+            $last = array_key_last($vigarray);
+            return ['path' => $path, 'layout' => (string) $last, 'vigencia' => (object) $vigarray[$last]];
+        }
+        return ['path' => $path, 'layout' => (string) $layout, 'vigencia' => (object) $vigarray[$layout]];
     }
 }

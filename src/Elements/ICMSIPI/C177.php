@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO C177: COMPLEMENTO DE ITEM - OUTRAS INFORMAÇÕES (código 01, 55) -
@@ -14,7 +13,7 @@ use \stdClass;
  * objetivo de agregar informações adicionais ao item, de acordo com tabela a ser publicada pela UF.
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
-class C177 extends Element implements ElementInterface
+class C177 extends Element
 {
     const REG = 'C177';
     const LEVEL = 4;
@@ -32,11 +31,14 @@ class C177 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

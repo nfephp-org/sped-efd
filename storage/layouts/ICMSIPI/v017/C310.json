@@ -1,0 +1,9 @@
+{
+    "NUM_DOC_CANC": {
+        "type": "numeric",
+        "regex": "^([0-9]+)$",
+        "required": false,
+        "info": "N\u00famero do documento fiscal cancelado",
+        "format": ""
+    }
+}

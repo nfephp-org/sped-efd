@@ -1,0 +1,79 @@
+{
+    "IND_DOC": {
+        "type": "integer",
+        "regex": "^[0|1|2]$",
+        "required": true,
+        "info": "Informe o tipo de documento: 0 \u2013 Declarac\u0327a\u0303o de Exportac\u0327a\u0303o; 1 \u2013 Declarac\u0327a\u0303o Simplificada de Exportac\u0327a\u0303o; 2 \u2013 Declarac\u0327a\u0303o U\u0301nica de Exportac\u0327a\u0303o.",
+        "format": ""
+    },
+    "NRO_DE": {
+        "type": "string",
+        "regex": "^.{1,14}$",
+        "required": true,
+        "info": "Nu\u0301mero da declarac\u0327a\u0303o",
+        "format": ""
+    },
+    "DT_DE": {
+        "type": "integer",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data da declarac\u0327a\u0303o (DDMMAAAA)",
+        "format": ""
+    },
+    "NAT_EXP": {
+        "type": "integer",
+        "regex": "^[0|1]$",
+        "required": true,
+        "info": "Preencher com: 0 - Exportac\u0327a\u0303o Direta 1 - Exportac\u0327a\u0303o Indireta",
+        "format": ""
+    },
+    "NRO_RE": {
+        "type": "integer",
+        "regex": "^\\d{1,12}$",
+        "required": false,
+        "info": "No do registro de Exportac\u0327a\u0303o",
+        "format": ""
+    },
+    "DT_RE": {
+        "type": "integer",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data do Registro de Exportac\u0327a\u0303o (DDMMAAAA)",
+        "format": ""
+    },
+    "CHC_EMB": {
+        "type": "string",
+        "regex": "^.{1,18}$",
+        "required": false,
+        "info": "No do conhecimento de embarque",
+        "format": ""
+    },
+    "DT_CHC": {
+        "type": "integer",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data do conhecimento de embarque (DDMMAAAA)",
+        "format": ""
+    },
+    "DT_AVB": {
+        "type": "integer",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data da averbac\u0327a\u0303o da Declarac\u0327a\u0303o de exportac\u0327a\u0303o (ddmmaaaa)",
+        "format": ""
+    },
+    "TP_CHC": {
+        "type": "integer",
+        "regex": "^0[1-9]|1[0-9]|9[1-3]|20|99$",
+        "required": true,
+        "info": "Informac\u0327a\u0303o do tipo de conhecimento de embarque:01 \u2013 AWB; 02 \u2013 MAWB; 03 \u2013 HAWB; 04 \u2013 COMAT; 06 \u2013 R. EXPRESSAS; 07 \u2013 ETIQ. REXPRESSAS; 08 \u2013 HR. EXPRESSAS; 09 \u2013 AV7; 10 \u2013 BL; 11 \u2013 MBL; 12 \u2013 HBL; 13 \u2013 CRT; 14 \u2013 DSIC; 16 \u2013 COMAT BL; 17 \u2013 RWB; 18 \u2013 HRWB; 19 \u2013 TIF\/DTA; 20 \u2013 CP2;91 \u2013 NA\u0302O IATA; 92 \u2013 MNAO IATA; 93 \u2013 HNAO IATA; 99 \u2013 OUTROS.",
+        "format": ""
+    },
+    "PAIS": {
+        "type": "string",
+        "regex": "^\\d{1,3}$",
+        "required": true,
+        "info": "Co\u0301digo do pai\u0301s de destino da mercadoria (Preencher conforme tabela do SISCOMEX)",
+        "format": ""
+    }
+}

@@ -1,0 +1,128 @@
+{
+    "IND_OPER": {
+        "type": "string",
+        "regex": "^(0|1|2)$",
+        "required": true,
+        "info": "Indicador do Tipo da Opera\u00e7\u00e3o:\n            0 \u2013 Opera\u00e7\u00e3o Representativa de Aquisi\u00e7\u00e3o, Custos, Despesa ou Encargos, ou Receitas, Sujeita \u00e0\n                Incid\u00eancia de Cr\u00e9dito de PIS\/Pasep ou Cofins (CST 50 a 66).\n            1 \u2013 Opera\u00e7\u00e3o Representativa de Receita Auferida Sujeita ao Pagamento da Contribui\u00e7\u00e3o para o PIS\/Pasep e\n                da Cofins (CST 01, 02, 03 ou 05).\n            2 - Opera\u00e7\u00e3o Representativa de Receita Auferida N\u00e3o Sujeita ao Pagamento da Contribui\u00e7\u00e3o para o PIS\/Pasep e\n                da Cofins (CST 04, 06, 07, 08, 09, 49 ou 99).",
+        "format": ""
+    },
+    "COD_PART": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "C\u00f3digo do participante (campo 02 do Registro 0150)",
+        "format": ""
+    },
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "C\u00f3digo do item (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "DT_OPER": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data da Opera\u00e7\u00e3o (ddmmaaaa) ",
+        "format": ""
+    },
+    "VL_OPER": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da Opera\u00e7\u00e3o\/Item",
+        "format": "15v2"
+    },
+    "CST_PIS": {
+        "type": "numeric",
+        "regex": "^(\\d{2})$",
+        "required": true,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria referente ao PIS\/PASEP \u2013 Tabela 4.3.3.",
+        "format": ""
+    },
+    "VL_BC_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo do PIS\/PASEP.",
+        "format": "15v4"
+    },
+    "ALIQ_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do PIS\/PASEP (em percentual)",
+        "format": "8v4"
+    },
+    "VL_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do PIS\/PASEP",
+        "format": "15v2"
+    },
+    "CST_COFINS": {
+        "type": "numeric",
+        "regex": "^(\\d{2})$",
+        "required": true,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria referente ao COFINS \u2013 Tabela 4.3.4.",
+        "format": ""
+    },
+    "VL_BC_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo da COFINS",
+        "format": "15v4"
+    },
+    "ALIQ_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do COFINS (em percentual)",
+        "format": "8v4"
+    },
+    "VL_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da COFINS",
+        "format": "15v2"
+    },
+    "NAT_BC_CRED": {
+        "type": "string",
+        "regex": "^.{2}$",
+        "required": false,
+        "info": "C\u00f3digo da base de c\u00e1lculo do cr\u00e9dito, conforme a Tabela indicada no item 4.3.7,\n            caso seja informado c\u00f3digo representativo de cr\u00e9dito nos Campos 07 (CST_PIS)\n            e 11 (CST_COFINS).",
+        "format": ""
+    },
+    "IND_ORIG_CRED": {
+        "type": "string",
+        "regex": "^(0|1)$",
+        "required": false,
+        "info": "Indicador da origem do cr\u00e9dito:\n                0 \u2013 Opera\u00e7\u00e3o no Mercado Interno\n                1 \u2013 Opera\u00e7\u00e3o de Importa\u00e7\u00e3o",
+        "format": ""
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^.{0,255}$",
+        "required": false,
+        "info": "C\u00f3digo da conta anal\u00edtica cont\u00e1bil debitada\/creditada",
+        "format": ""
+    },
+    "COD_CCUS": {
+        "type": "string",
+        "regex": "^.{0,255}$",
+        "required": false,
+        "info": "C\u00f3digo do centro de custos",
+        "format": ""
+    },
+    "DESC_DOC_OPER": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Descri\u00e7\u00e3o do Documento\/Opera\u00e7\u00e3o",
+        "format": ""
+    }
+}

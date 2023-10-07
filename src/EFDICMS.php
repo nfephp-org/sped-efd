@@ -2,8 +2,6 @@
 
 namespace NFePHP\EFD;
 
-use NFePHP\EFD\EFD;
-
 /**
  * Classe construtora do arquivo EFD ICMS/IPI
  *

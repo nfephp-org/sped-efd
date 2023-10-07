@@ -1,0 +1,58 @@
+{
+    "COD_EST": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "C\u00f3digo de identifica\u00e7\u00e3o do estabelecimento",
+        "format": ""
+    },
+    "NOME": {
+        "type": "string",
+        "regex": "^.{0,100}$",
+        "required": false,
+        "info": "Nome empresarial do estabelecimento",
+        "format": ""
+    },
+    "CNPJ": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": false,
+        "info": "N\u00famero de inscri\u00e7\u00e3o do estabelecimento no CNPJ.",
+        "format": ""
+    },
+    "UF": {
+        "type": "string",
+        "regex": "^.{2}$",
+        "required": false,
+        "info": "Sigla da unidade da federa\u00e7\u00e3o do estabelecimento.",
+        "format": ""
+    },
+    "IE": {
+        "type": "string",
+        "regex": "^[0-9]{2,14}$",
+        "required": false,
+        "info": "Inscri\u00e7\u00e3o Estadual do estabelecimento, se contribuinte de ICMS.",
+        "format": ""
+    },
+    "COD_MUN": {
+        "type": "numeric",
+        "regex": "^(\\d{7})$",
+        "required": false,
+        "info": "C\u00f3digo do munic\u00edpio do domic\u00edlio fiscal do estabelecimento, conforme a tabela IBGE",
+        "format": ""
+    },
+    "IM": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Inscri\u00e7\u00e3o Municipal do estabelecimento, se contribuinte do ISS.",
+        "format": ""
+    },
+    "SUFRAMA": {
+        "type": "string",
+        "regex": "^.{9}$",
+        "required": false,
+        "info": "Inscri\u00e7\u00e3o do estabelecimento na Suframa",
+        "format": ""
+    }
+}

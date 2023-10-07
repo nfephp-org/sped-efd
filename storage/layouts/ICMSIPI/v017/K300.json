@@ -1,0 +1,9 @@
+{
+    "DT_PROD": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data do reconhecimento da produ\u00e7\u00e3o ocorrida no terceiro",
+        "format": ""
+    }
+}

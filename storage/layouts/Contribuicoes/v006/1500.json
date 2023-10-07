@@ -1,0 +1,121 @@
+{
+    "PER_APU_CRED": {
+        "type": "numeric",
+        "regex": "^(\\d{0,6})$",
+        "required": false,
+        "info": "Per\u00edodo de Apura\u00e7\u00e3o do Cr\u00e9dito (MM\/AAAA) ",
+        "format": ""
+    },
+    "ORIG_CRED": {
+        "type": "numeric",
+        "regex": "^(01|02)$",
+        "required": false,
+        "info": "Indicador da origem do cr\u00e9dito  01 \u2013 Cr\u00e9dito decorrente de opera\u00e7\u00f5es pr\u00f3prias  02 \u2013 Cr\u00e9dito transferido por pessoa jur\u00eddica sucedida. ",
+        "format": ""
+    },
+    "CNPJ_SUC": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": false,
+        "info": "CNPJ da pessoa jur\u00eddica cedente do cr\u00e9dito (se ORIG_CRED = 02). ",
+        "format": ""
+    },
+    "COD_CRED": {
+        "type": "numeric",
+        "regex": "^(\\d{3})$",
+        "required": false,
+        "info": "C\u00f3digo do Tipo do Cr\u00e9dito, conforme Tabela 4.3.6. ",
+        "format": ""
+    },
+    "VL_CRED_APU": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total do cr\u00e9dito apurado na Escritura\u00e7\u00e3o Fiscal Digital (Registro M500) ou em demonstrativo DACON (Fichas 16A e 16B) de per\u00edodo anterior. ",
+        "format": "15v2"
+    },
+    "VL_CRED_EXT_APU": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor de Cr\u00e9dito Extempor\u00e2neo Apurado (Registro 1501), referente a Per\u00edodo Anterior, Informado no Campo 02 \u2013 PER_APU_CRED ",
+        "format": "15v2"
+    },
+    "VL_TOT_CRED_APU": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor Total do Cr\u00e9dito Apurado (06 + 07) ",
+        "format": "15v2"
+    },
+    "VL_CRED_DESC_PA_ANT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Cr\u00e9dito utilizado mediante Desconto, em Per\u00edodo(s) Anterior(es) ",
+        "format": "15v2"
+    },
+    "VL_CRED_PER_PA_ANT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Cr\u00e9dito utilizado mediante Pedido de Ressarcimento, em Per\u00edodo(s) Anterior(es). ",
+        "format": "15v2"
+    },
+    "VL_CRED_DCOMP_PA_ANT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Cr\u00e9dito utilizado mediante Declara\u00e7\u00e3o de Compensa\u00e7\u00e3o Intermedi\u00e1ria (Cr\u00e9dito de Exporta\u00e7\u00e3o), em Per\u00edodo(s) Anterior(es) ",
+        "format": "15v2"
+    },
+    "SD_CRED_DISP_EFD": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Saldo do Cr\u00e9dito Dispon\u00edvel para Utiliza\u00e7\u00e3o neste Per\u00edodo de Escritura\u00e7\u00e3o (08-09-10-11) ",
+        "format": "15v2"
+    },
+    "VL_CRED_DESC_EFD": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Cr\u00e9dito descontado neste per\u00edodo de escritura\u00e7\u00e3o ",
+        "format": "15v2"
+    },
+    "VL_CRED_PER_EFD": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Cr\u00e9dito objeto de Pedido de Ressarcimento (PER) neste per\u00edodo de escritura\u00e7\u00e3o ",
+        "format": "15v2"
+    },
+    "VL_CRED_DCOMP_EFD": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Cr\u00e9dito utilizado mediante Declara\u00e7\u00e3o de Compensa\u00e7\u00e3o Intermedi\u00e1ria neste per\u00edodo de escritura\u00e7\u00e3o ",
+        "format": "15v2"
+    },
+    "VL_CRED_TRANS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do cr\u00e9dito transferido em evento de cis\u00e3o, fus\u00e3o ou incorpora\u00e7\u00e3o ",
+        "format": "15v2"
+    },
+    "VL_CRED_OUT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do cr\u00e9dito utilizado por outras formas ",
+        "format": "15v2"
+    },
+    "SLD_CRED_FIM": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Saldo de cr\u00e9ditos a utilizar em per\u00edodo de apura\u00e7\u00e3o futuro (12-13-14-15-16-17). ",
+        "format": "15v2"
+    }
+}

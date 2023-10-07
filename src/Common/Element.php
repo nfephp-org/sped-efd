@@ -2,10 +2,10 @@
 
 namespace NFePHP\EFD\Common;
 
-use \stdClass;
+use stdClass;
 use NFePHP\Common\Strings;
 
-abstract class Element
+abstract class Element implements ElementInterface
 {
 
     /**
@@ -28,14 +28,16 @@ abstract class Element
      * @var string
      */
     private $reg;
+    protected $vigencia;
 
     /**
      * Constructor
      * @param string $reg
      */
-    public function __construct($reg)
+    public function __construct(string $reg, stdClass $vigencia = null)
     {
         $this->reg = $reg;
+        $this->vigencia = $vigencia;
         $this->values = new stdClass();
     }
 
@@ -256,5 +258,27 @@ abstract class Element
     public function __toString()
     {
         return '|' . $this->reg . '|' . $this->build();
+    }
+
+    /**
+     * Localiza os parâmetros de acordo com a vigencia passada
+     * e os substitui
+     * Caso a vigencia não seja passada será usada a regra contida na classe
+     * @param string $grupo
+     * @param string $registro
+     * @return void
+     */
+    protected function replaceParams(string $registro)
+    {
+        if (!empty($this->vigencia)) {
+            $file = "{$this->vigencia->path}/v{$this->vigencia->layout}/$registro.json";
+            if (is_file($file)) {
+                $json = file_get_contents($file);
+                $this->parameters = json_decode($json, true);
+            } else {
+                $json = json_encode($this->parameters, JSON_PRETTY_PRINT);
+                file_put_contents($file, $json);
+            }
+        }
     }
 }

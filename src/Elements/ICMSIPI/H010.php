@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO H010: INVENTÁRIO.
@@ -17,12 +16,12 @@ use \stdClass;
  * informar neste registro, além dos itens exigidos pelas legislações do ICMS e
  * do IPI, aqueles bens exigidos pela legislação do Imposto de Renda.
  */
-class H010 extends Element implements ElementInterface
+class H010 extends Element
 {
     const REG = 'H010';
     const LEVEL = 3;
     const PARENT = 'H005';
-    
+
     protected $parameters = [
         'COD_ITEM' => [
             'type'     => 'string',
@@ -99,14 +98,16 @@ class H010 extends Element implements ElementInterface
             'format'   => '15v2'
         ]
     ];
-    
+
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
     }
 }

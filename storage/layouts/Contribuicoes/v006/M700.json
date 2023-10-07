@@ -1,0 +1,58 @@
+{
+    "REG": {
+        "type": "string",
+        "regex": "^.{4}$",
+        "required": false,
+        "info": "Texto fixo contendo \\\"M700\\\" ",
+        "format": ""
+    },
+    "COD_CONT": {
+        "type": "string",
+        "regex": "^.{0,2}$",
+        "required": false,
+        "info": "C\u00f3digo da contribui\u00e7\u00e3o social diferida em per\u00edodos anteriores, conforme a Tabela 4.3.5. ",
+        "format": ""
+    },
+    "VL_CONT_APUR_DIFER": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da Contribui\u00e7\u00e3o Apurada, diferida em per\u00edodos anteriores. ",
+        "format": "15v2"
+    },
+    "NAT_CRED_DESC": {
+        "type": "string",
+        "regex": "^(1|2|3|4)$",
+        "required": false,
+        "info": "Natureza do Cr\u00e9dito Diferido, vinculado \u00e0 receita tributada no mercado interno, a descontar  01 \u2013 Cr\u00e9dito a Al\u00edquota B\u00e1sica  02 \u2013 Cr\u00e9dito a Al\u00edquota Diferenciada  03 \u2013 Cr\u00e9dito a Al\u00edquota por Unidade de Produto  04 \u2013 Cr\u00e9dito Presumido da Agroind\u00fastria. ",
+        "format": ""
+    },
+    "VL_CRED_DESC_DIFER": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Cr\u00e9dito a Descontar vinculado \u00e0 contribui\u00e7\u00e3o diferida. ",
+        "format": "15v2"
+    },
+    "VL_CONT_DIFER_ANT": {
+        "type": "numeric",
+        "regex": "^(3)$",
+        "required": false,
+        "info": "Valor da Contribui\u00e7\u00e3o a Recolher, diferida em per\u00edodos anteriores (Campo 03 \u2013 Campo 05) ",
+        "format": "15v2"
+    },
+    "PER_APUR": {
+        "type": "numeric",
+        "regex": "^(\\d{6})$",
+        "required": false,
+        "info": "Per\u00edodo de apura\u00e7\u00e3o da contribui\u00e7\u00e3o social e dos cr\u00e9ditos diferidos (MMAAAA). ",
+        "format": ""
+    },
+    "DT_RECEB": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data de recebimento da receita, objeto de diferimento. ",
+        "format": ""
+    }
+}

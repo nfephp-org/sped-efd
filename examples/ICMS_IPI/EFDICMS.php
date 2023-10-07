@@ -16,7 +16,7 @@ try {
     //Construção do Bloco 0 - Bloco Inicial
     //IMPORTANTE: a ORDEM afeta o resultado portanto é muito importante
     //carregar os elementos na ordem correta
-    $b0 = new Block0();
+    $b0 = new Block0('017');
 
     //0000 Obrigatório [1:1]
     //Abertura do Arquivo Digital e Identificação da entidade

@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class Z0500 extends Element implements ElementInterface
+class Z0500 extends Element
 {
     const REG = '0500';
     const LEVEL = 2;
@@ -24,8 +23,8 @@ class Z0500 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^(01|02|03|04|05|09)$',
             'required' => false,
-            'info' => 'Código da natureza da conta/grupo de contas: 
-            01 - Contas de ativo 02 - Contas de passivo; 03 - Patrimônio líquido; 
+            'info' => 'Código da natureza da conta/grupo de contas:
+            01 - Contas de ativo 02 - Contas de passivo; 03 - Patrimônio líquido;
             04 - Contas de resultado; 05 - Contas de compensação; 09 - Outras.',
             'format' => ''
         ],
@@ -68,7 +67,7 @@ class Z0500 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^[0-9]{14}$',
             'required' => false,
-            'info' => 'CNPJ do estabelecimento, no caso da conta informada no 
+            'info' => 'CNPJ do estabelecimento, no caso da conta informada no
             campo COD_CTA ser específica de um estabelecimento.',
             'format' => ''
         ],
@@ -77,11 +76,14 @@ class Z0500 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

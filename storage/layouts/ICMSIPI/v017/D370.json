@@ -1,0 +1,37 @@
+{
+    "COD_MUN_ORIG": {
+        "type": "numeric",
+        "regex": "^[0-9]{7}$",
+        "required": true,
+        "info": "C\u00f3digo do munic\u00edpio de origem do servi\u00e7o, conforme a tabela IBGE",
+        "format": ""
+    },
+    "VL_SERV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total da presta\u00e7\u00e3o de servi\u00e7o",
+        "format": "15v2"
+    },
+    "QTD_BILH": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Quantidade de bilhetes emitidos",
+        "format": ""
+    },
+    "VL_BC_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total da base de c\u00e1lculo do ICMS",
+        "format": "15v2"
+    },
+    "VL_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total do ICMS",
+        "format": "15v2"
+    }
+}

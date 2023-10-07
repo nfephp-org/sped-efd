@@ -1,0 +1,16 @@
+{
+    "NUM_PROC": {
+        "type": "string",
+        "regex": "^[A-z0-9]{1,15}$",
+        "required": true,
+        "info": "Identifica\u00e7\u00e3o do processo ou ato concess\u00f3rio",
+        "format": ""
+    },
+    "IND_PROC": {
+        "type": "string",
+        "regex": "^(0|1|2|3|9)$",
+        "required": true,
+        "info": "Indicador da origem do processo",
+        "format": ""
+    }
+}

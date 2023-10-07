@@ -1,0 +1,16 @@
+{
+    "UF_ST": {
+        "type": "string",
+        "regex": "^[A-Z]{2}$",
+        "required": true,
+        "info": "Sigla da unidade da federa\u00e7\u00e3o do contribuinte substitu\u00eddo ou unidade de federa\u00e7\u00e3o do consumidor final n\u00e3o contribuinte - ICMS Destino EC 87\/15.",
+        "format": ""
+    },
+    "IE_ST": {
+        "type": "string",
+        "regex": "^[0-9]{2,14}$",
+        "required": true,
+        "info": "Inscri\u00e7\u00e3o Estadual do contribuinte substituto na unidade da  federa\u00e7\u00e3o  do  contribuinte  substitu\u00eddo ou unidade de federa\u00e7\u00e3o do consumidor final n\u00e3o contribuinte - ICMS Destino EC 87\/15.",
+        "format": ""
+    }
+}

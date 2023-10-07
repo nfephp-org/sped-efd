@@ -1,0 +1,16 @@
+{
+    "COD_INF": {
+        "type": "string",
+        "regex": "^.{0,6}$",
+        "required": false,
+        "info": "C\u00f3digo da informa\u00e7\u00e3o complementar do documento fiscal (Campo 02 do Registro 0450)",
+        "format": ""
+    },
+    "TXT_COMPL": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Informa\u00e7\u00e3o Complementar do Documento Fiscal",
+        "format": ""
+    }
+}

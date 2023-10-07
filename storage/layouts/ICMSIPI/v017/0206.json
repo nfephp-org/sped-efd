@@ -1,0 +1,9 @@
+{
+    "COD_COMB": {
+        "type": "string",
+        "regex": "^[0-9]{9}$",
+        "required": true,
+        "info": "C\u00f3digo do produto, conforme tabela publicada pela ANP",
+        "format": ""
+    }
+}

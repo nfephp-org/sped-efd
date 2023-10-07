@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class M200 extends Element implements ElementInterface
+class M200 extends Element
 {
     const REG = 'M200';
     const LEVEL = 2;
@@ -101,16 +100,18 @@ class M200 extends Element implements ElementInterface
             'info' => 'Valor Total da Contribuição a Recolher/Pagar no Período (08 + 12) ',
             'format' => '15v2'
         ],
-
     ];
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

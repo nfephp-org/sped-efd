@@ -3,9 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
+use stdClass;
 
-class D609 extends Element implements ElementInterface
+class D609 extends Element
 {
     const REG = 'D609';
     const LEVEL = 4;
@@ -26,16 +26,18 @@ class D609 extends Element implements ElementInterface
             'info' => 'Indicador da origem do processo',
             'format' => ''
         ],
-
     ];
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

@@ -3,15 +3,14 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO K001: ABERTURA DO BLOCO K
  * Este registro deve ser gerado para abertura do bloco K, indicando se há
  * registros de informações no bloco.
  */
-class K001 extends Element implements ElementInterface
+class K001 extends Element
 {
     const REG = 'K001';
     const LEVEL = 1;
@@ -26,14 +25,17 @@ class K001 extends Element implements ElementInterface
             'format'   => ''
         ]
     ];
-    
+
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

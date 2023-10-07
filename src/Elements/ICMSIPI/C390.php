@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO C390: REGISTRO ANALÍTICO DAS NOTAS FISCAIS DE VENDA A
@@ -13,7 +12,7 @@ use \stdClass;
  * apresentado de forma agrupada na combinação CST_ICMS, CFOP e Alíquota de ICMS.
  * @package NFePHP\EFD\Elements\ICMSIPI
  */
-class C390 extends Element implements ElementInterface
+class C390 extends Element
 {
     const REG = 'C390';
     const LEVEL = 3;
@@ -45,7 +44,7 @@ class C390 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info' => 'Valor total acumulado das operações correspondentes à combinação de CST_ICMS, 
+            'info' => 'Valor total acumulado das operações correspondentes à combinação de CST_ICMS,
             CFOP e alíquota do ICMS, incluídas as despesas acessórias e acréscimos.',
             'format' => '15v2'
         ],
@@ -53,7 +52,7 @@ class C390 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info' => 'Valor acumulado da base de cálculo do ICMS, referente à combinação de CST_ICMS, 
+            'info' => 'Valor acumulado da base de cálculo do ICMS, referente à combinação de CST_ICMS,
             CFOP, e alíquota do ICMS.',
             'format' => '15v2'
         ],
@@ -68,7 +67,7 @@ class C390 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => false,
-            'info' => 'Valor não tributado em função da redução da base de cálculo do ICMS, referente à 
+            'info' => 'Valor não tributado em função da redução da base de cálculo do ICMS, referente à
             combinação de CST_ICMS, CFOP, e alíquota do ICMS.',
             'format' => '15v2'
         ],
@@ -83,11 +82,14 @@ class C390 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

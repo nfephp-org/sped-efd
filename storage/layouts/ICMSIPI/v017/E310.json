@@ -1,0 +1,149 @@
+{
+    "IND_MOV_FCP_DIFAL": {
+        "type": "string",
+        "regex": "^[0|1]$",
+        "required": true,
+        "info": "Indicador de movimento: 0 \u2013 Sem operac\u0327o\u0303es 1 \u2013 Com operac\u0327o\u0303es",
+        "format": ""
+    },
+    "VL_SLD_CRED_ANT_DIFAL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do \"Saldo credor de peri\u0301odo anterior \u2013 ICMS Diferencial de Ali\u0301quota da UF de Origem\/Destino\"",
+        "format": "15v2"
+    },
+    "VL_TOT_DEBITOS_DIFAL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos de\u0301bitos por \"Sai\u0301das e prestac\u0327o\u0303es com de\u0301bito do ICMS referente ao diferencial de ali\u0301quota devido a\u0300 UF de Origem\/Destino\"",
+        "format": "15v2"
+    },
+    "VL_OUT_DEB_DIFAL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor Total dos ajustes \"Outros de\u0301bitos ICMS Diferencial de Ali\u0301quota da UF de Origem\/Destino\" e \u201cEstorno de cre\u0301ditos ICMS Diferencial de Ali\u0301quota da UF de Origem\/Destino",
+        "format": "15v2"
+    },
+    "VL_TOT_CREDITOS_DIFAL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos cre\u0301ditos do ICMS referente ao diferencial de ali\u0301quota devido a\u0300 UF de Origem\/Destino",
+        "format": "15v2"
+    },
+    "VL_OUT_CRED_DIFAL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de Ajustes \"Outros cre\u0301ditos ICMS Diferencial de Ali\u0301quota da UF de Origem\/Destino\" e \u201cEstorno de de\u0301bitos ICMS Diferencial de Ali\u0301quota da UF de Origem\/Destino\u201d",
+        "format": "15v2"
+    },
+    "VL_SLD_DEV_ANT_DIFAL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de Saldo devedor ICMS Diferencial de Ali\u0301quota da UF de Origem\/Destino antes das deduc\u0327o\u0303es",
+        "format": "15v2"
+    },
+    "VL_DEDUCOES_DIFAL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos ajustes \"Deduc\u0327o\u0303es ICMS Diferencial de Ali\u0301quota da UF de Origem\/Destino\"",
+        "format": "15v2"
+    },
+    "VL_RECOL_DIFAL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor recolhido ou a recolher referente ao ICMS Diferencial de Ali\u0301quota da UF de Origem\/Destino (08-09)",
+        "format": "15v2"
+    },
+    "VL_SLD_CRED_TRANSPORTAR_DIFAL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo credor a transportar para o peri\u0301odo seguinte referente ao ICMS Diferencial de Ali\u0301quota da UF de Origem\/Destino",
+        "format": "15v2"
+    },
+    "DEB_ESP_DIFAL": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valores recolhidos ou a recolher, extra- apurac\u0327a\u0303o - ICMS Diferencial de Ali\u0301quota da UF de Origem\/Destino.",
+        "format": "15v2"
+    },
+    "VL_SLD_CRED_ANT_FCP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do \"Saldo credor de peri\u0301odo anterior \u2013 FCP\"",
+        "format": "15v2"
+    },
+    "VL_TOT_DEB_FCP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos de\u0301bitos FCP por \"Sai\u0301das e prestac\u0327o\u0303es\u201d",
+        "format": "15v2"
+    },
+    "VL_OUT_DEB_FCP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos ajustes \"Outros de\u0301bitos FCP\" e \u201cEstorno de cre\u0301ditos FCP\u201d",
+        "format": "15v2"
+    },
+    "VL_TOT_CRED_FCP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos cre\u0301ditos FCP por Entradas",
+        "format": "15v2"
+    },
+    "VL_OUT_CRED_FCP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de Ajustes \"Outros cre\u0301ditos FCP\" e \u201cEstorno de de\u0301bitos FCP\u201d",
+        "format": "15v2"
+    },
+    "VL_SLD_DEV_ANT_FCP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de Saldo devedor FCP antes das deduc\u0327o\u0303es",
+        "format": "15v2"
+    },
+    "VL_DEDUCOES_FCP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total das deduc\u0327o\u0303es \"FCP\"",
+        "format": "15v2"
+    },
+    "VL_RECOL_FCP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor recolhido ou a recolher referente ao FCP (18\u201319)",
+        "format": "15v2"
+    },
+    "VL_SLD_CRED_TRANSPORTAR_FCP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo credor a transportar para o peri\u0301odo seguinte referente ao FCP",
+        "format": "15v2"
+    },
+    "DEB_ESP_FCP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valores recolhidos ou a recolher, extra- apurac\u0327a\u0303o - FCP",
+        "format": "15v2"
+    }
+}

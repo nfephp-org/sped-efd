@@ -3,9 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
+use stdClass;
 
-class D509 extends Element implements ElementInterface
+class D509 extends Element
 {
     const REG = 'D509';
     const LEVEL = 4;
@@ -28,16 +28,18 @@ class D509 extends Element implements ElementInterface
                 ' 3 – Secretaria da Receita Federal do Brasil 9 – Outros. ',
             'format' => ''
         ],
-
     ];
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

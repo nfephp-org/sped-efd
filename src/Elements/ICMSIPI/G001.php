@@ -3,8 +3,7 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
 /**
  * REGISTRO G001: ABERTURA DO BLOCO G
@@ -16,7 +15,7 @@ use \stdClass;
  * caso apresente o inventário de 31/12 na EFD ICMS IPI de dezembro ou janeiro,
  * deve repetir a informação na escrituração de fevereiro.
  */
-class G001 extends Element implements ElementInterface
+class G001 extends Element
 {
     const REG = 'G001';
     const LEVEL = 1;
@@ -36,11 +35,14 @@ class G001 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

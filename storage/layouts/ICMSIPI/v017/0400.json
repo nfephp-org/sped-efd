@@ -1,0 +1,16 @@
+{
+    "COD_NAT": {
+        "type": "string",
+        "regex": "^.{1,10}$",
+        "required": true,
+        "info": "Co\u0301digo da natureza da operac\u0327a\u0303o\/prestac\u0327a\u0303o",
+        "format": ""
+    },
+    "DESCR_NAT": {
+        "type": "string",
+        "regex": "^.{1,255}$",
+        "required": true,
+        "info": "Descric\u0327a\u0303o da natureza da operac\u0327a\u0303o\/prestac\u0327a\u0303o",
+        "format": ""
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "COD_PART": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": false,
+        "info": "C\u00f3digo do participante",
+        "format": ""
+    },
+    "VEIC_ID": {
+        "type": "string",
+        "regex": "^[A-Z]{3}[\\d]{1}[\\dA-Z]{1}[\\d]{2}$",
+        "required": false,
+        "info": "Placa de identifica\u00e7\u00e3o do ve\u00edculo automotor",
+        "format": ""
+    },
+    "COD_AUT": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "C\u00f3digo da autoriza\u00e7\u00e3o fornecido pela SEFAZ (combust\u00edveis)",
+        "format": ""
+    },
+    "NR_PASSE": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "C\u00f3digo da autoriza\u00e7\u00e3o fornecido pela SEFAZ (combust\u00edveis)",
+        "format": ""
+    },
+    "HORA": {
+        "type": "numeric",
+        "regex": "^(?:[01]\\d|2[0123])(?:[012345]\\d)(?:[012345]\\d)$",
+        "required": false,
+        "info": "C\u00f3digo da autoriza\u00e7\u00e3o fornecido pela SEFAZ (combust\u00edveis)",
+        "format": ""
+    },
+    "TEMPER": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Temperatura em graus Celsius utilizada para quantifica\u00e7\u00e3o do volume de combust\u00edvel",
+        "format": "3v2"
+    },
+    "QTD_VOL": {
+        "type": "numeric",
+        "regex": "^\\d+$",
+        "required": false,
+        "info": "Quantidade de volumes transportados",
+        "format": ""
+    },
+    "PESO_BRT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Peso bruto dos volumes transportados (em Kg)",
+        "format": "10v2"
+    },
+    "PESO_LIQ": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Peso l\u00edquido dos volumes transportados (em Kg)",
+        "format": "10v2"
+    },
+    "NOM_MOT": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": false,
+        "info": "Nome do motorista",
+        "format": ""
+    },
+    "CPF": {
+        "type": "string",
+        "regex": "^[0-9]{11}$",
+        "required": false,
+        "info": "CPF do motorista",
+        "format": ""
+    },
+    "UF_ID": {
+        "type": "string",
+        "regex": "^[A-z]{2}$",
+        "required": false,
+        "info": "Sigla da UF da placa do ve\u00edculo",
+        "format": ""
+    }
+}

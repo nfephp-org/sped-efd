@@ -1,0 +1,37 @@
+{
+    "NUM_CAMPO": {
+        "type": "string",
+        "regex": "",
+        "required": true,
+        "info": "Informar o n\u00famero do campo do registro \u201cI100\u201d (Campos 02, 04 ou 05), objeto de informa\u00e7\u00e3o neste registro.",
+        "format": ""
+    },
+    "COD_DET": {
+        "type": "string",
+        "regex": "",
+        "required": true,
+        "info": "C\u00f3digo do tipo de detalhamento, conforme Tabelas 7.1.1 e\/ou 7.1.2",
+        "format": ""
+    },
+    "DET_VALOR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor detalhado referente ao campo 03 (COD_DET) deste registro",
+        "format": "15v2"
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "",
+        "required": true,
+        "info": "C\u00f3digo da conta cont\u00e1bil referente ao valor informado no campo 04 (DET_VALOR)",
+        "format": ""
+    },
+    "INFO_COMPL": {
+        "type": "string",
+        "regex": "",
+        "required": false,
+        "info": "Informa\u00e7\u00e3o Complementar dos dados informados no registro",
+        "format": ""
+    }
+}

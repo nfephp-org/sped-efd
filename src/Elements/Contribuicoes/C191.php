@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class C191 extends Element implements ElementInterface
+class C191 extends Element
 {
     const REG = 'C191';
     const LEVEL = 4;
@@ -17,7 +16,7 @@ class C191 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^[0-9]{14}$',
             'required' => false,
-            'info' => 'CNPJ/CPF do Participante a que se referem as operações consolidadas neste 
+            'info' => 'CNPJ/CPF do Participante a que se referem as operações consolidadas neste
             registro (pessoa jurídica ou pessoa física vendedora/remetente)',
             'format' => ''
         ],
@@ -96,11 +95,14 @@ class C191 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

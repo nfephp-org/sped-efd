@@ -4,7 +4,6 @@ namespace NFePHP\EFD\Blocks\ICMSIPI;
 
 use NFePHP\EFD\Elements\ICMSIPI as Elements;
 use NFePHP\EFD\Common\Block;
-use NFePHP\EFD\Common\BlockInterface;
 
 /**
  * Classe constutora do bloco 1
@@ -49,7 +48,7 @@ use NFePHP\EFD\Common\BlockInterface;
  * @method Elements\z1975 z1975(\stdClass $std) Constructor element 1975
  * @method Elements\z1980 z1980(\stdClass $std) Constructor element 1980
  */
-final class Block1 extends Block implements BlockInterface
+final class Block1 extends Block
 {
     const TOTAL = '1990';
 
@@ -93,8 +92,10 @@ final class Block1 extends Block implements BlockInterface
         'z1980' => ['class' => Elements\Z1980::class, 'level' => 2, 'type' => 'single']
     ];
 
-    public function __construct()
+    public function __construct(string $layout = null)
     {
+        $this->grupo = 'ICMSIPI';
+        parent::__construct($layout);
         $this->elementTotal = '1990';
     }
 }

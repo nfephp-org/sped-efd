@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\Contribuicoes;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class Z0208 extends Element implements ElementInterface
+class Z0208 extends Element
 {
     const REG = '0208';
     const LEVEL = 4;
@@ -17,9 +16,9 @@ class Z0208 extends Element implements ElementInterface
             'type' => 'string',
             'regex' => '^(0?[1-9]$)|(^1[0-3]$)$',
             'required' => false,
-            'info' => 'Código indicador da Tabela de Incidência, conforme Anexo III do Decreto nº 
-            6.707/08: 01 – Tabela I 02 – Tabela II 03 – Tabela III 04 – Tabela IV 05 – 
-            Tabela V 06 – Tabela VI 07 – Tabela VII 08– Tabela VIII 09 – Tabela IX 10 – 
+            'info' => 'Código indicador da Tabela de Incidência, conforme Anexo III do Decreto nº
+            6.707/08: 01 – Tabela I 02 – Tabela II 03 – Tabela III 04 – Tabela IV 05 –
+            Tabela V 06 – Tabela VI 07 – Tabela VII 08– Tabela VIII 09 – Tabela IX 10 –
             Tabela X 11 – Tabela XI 12 – Tabela XII',
             'format' => ''
         ],
@@ -42,11 +41,14 @@ class Z0208 extends Element implements ElementInterface
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }

@@ -3,10 +3,9 @@
 namespace NFePHP\EFD\Elements\ICMSIPI;
 
 use NFePHP\EFD\Common\Element;
-use NFePHP\EFD\Common\ElementInterface;
-use \stdClass;
+use stdClass;
 
-class C890 extends Element implements ElementInterface
+class C890 extends Element
 {
     const REG = 'C890';
     const LEVEL = 4;
@@ -46,7 +45,7 @@ class C890 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Valor acumulado da base de cálculo do ICMS, 
+            'info' => 'Valor acumulado da base de cálculo do ICMS,
             referente à combinação de CST_ICMS, CFOP e ALÍQUOTA DO ICMS.',
             'format' => '15v2'
         ],
@@ -54,7 +53,7 @@ class C890 extends Element implements ElementInterface
             'type' => 'numeric',
             'regex' => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info' => 'Parcela correspondente ao "Valor do ICMS" 
+            'info' => 'Parcela correspondente ao "Valor do ICMS"
             referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.',
             'format' => '15v2'
         ],
@@ -65,16 +64,18 @@ class C890 extends Element implements ElementInterface
             'info' => 'Código da observação do lançamento fiscal',
             'format' => ''
         ],
-
     ];
 
     /**
      * Constructor
-     * @param \stdClass $std
+     * @param stdClass $std
+     * @param stdClass $vigencia
      */
-    public function __construct(\stdClass $std)
+    public function __construct(stdClass $std, stdClass $vigencia = null)
     {
-        parent::__construct(self::REG);
+        parent::__construct(self::REG, $vigencia);
+        $this->replaceParams( self::REG);
         $this->std = $this->standarize($std);
+        $this->postValidation();
     }
 }
