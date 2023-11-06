@@ -135,7 +135,7 @@ class M100 extends Element
 
     public function postValidation()
     {
-        $calculo = $this->values->vl_cred+$this->values->vl_ajus_cred;
+        $calculo = $this->values->vl_cred+$this->values->vl_ajus_acres;
         $calculo = $calculo-$this->values->vl_ajus_reduc;
         if ($this->values->vl_cred_dif>$calculo) {
             $this->errors[] = "[" . self::REG . "] " .
