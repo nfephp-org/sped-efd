@@ -110,7 +110,7 @@ class C195 extends Element
     {
 
         $multiplicacao = $this->values->vl_bc_cofins * $this->values->aliq_cofins;
-        if ($this->values->quant_bc_cofins > 0) {
+        if (isset($this->values->quant_bc_cofins) && $this->values->quant_bc_cofins > 0) {
             $multiplicacao = $this->values->quant_bc_cofins * $this->values->aliq_cofins_quant;
         }
 
