@@ -40,6 +40,14 @@ class C180 extends Element
             'info'     => 'Unidade adotada para informar o campo QUANT_CONV.',
             'format'   => ''
         ],
+        'VL_UNIT_CONV' => [
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
+            'required' => true,
+            'info'     => 'Valor unitário da mercadoria, considerando a unidade utilizada ' 
+            . 'para informar o campo QUANT_CONV.',
+            'format'   => '15v6'
+        ],
         'VL_UNIT_ICMS_OP_CONV' => [
             'type'     => 'numeric',
             'regex'    => '^\d+(\.\d*)?|\.\d+$',
