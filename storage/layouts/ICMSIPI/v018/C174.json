@@ -1,0 +1,23 @@
+{
+    "IND_ARM": {
+        "type": "string",
+        "regex": "^(0|1)$",
+        "required": false,
+        "info": "Indicador do tipo da arma de fogo",
+        "format": ""
+    },
+    "NUM_ARM": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Numera\u00e7\u00e3o de s\u00e9rie de fabrica\u00e7\u00e3o da arma",
+        "format": ""
+    },
+    "DESCR_COMPL": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "Descri\u00e7\u00e3o  da arma",
+        "format": ""
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "DT_INI_AP": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data inicial do per\u00edodo de apura\u00e7\u00e3o",
+        "format": ""
+    },
+    "DT_FIN_AP": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data final do per\u00edodo de apura\u00e7\u00e3o",
+        "format": ""
+    },
+    "COD_OP_OS": {
+        "type": "string",
+        "regex": "^.{1,30}$",
+        "required": false,
+        "info": "C\u00f3digo de identifica\u00e7\u00e3o da ordem de produ\u00e7\u00e3o",
+        "format": ""
+    },
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo do item (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "QTD_COR_POS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Quantidade de corre\u00e7\u00e3o positiva de apontamento",
+        "format": "15v3"
+    },
+    "QTD_COR_NEG": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Quantidade de corre\u00e7\u00e3o negativa de apontamento",
+        "format": "15v3"
+    },
+    "ORIGEM": {
+        "type": "string",
+        "regex": "^[1-9]{}1$",
+        "required": true,
+        "info": "Codigo de origem",
+        "format": ""
+    }
+}

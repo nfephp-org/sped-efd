@@ -1,0 +1,37 @@
+{
+    "IND_PROF": {
+        "type": "string",
+        "regex": "^[0|1]$",
+        "required": true,
+        "info": "Indicador de habilitac\u0327a\u0303o: 0- Profissional habilitado 1- Profissional na\u0303o habilitado",
+        "format": ""
+    },
+    "IND_ESC": {
+        "type": "string",
+        "regex": "^[0|1]$",
+        "required": true,
+        "info": "Indicador de escolaridade: 0- Ni\u0301vel superior 1- Ni\u0301vel me\u0301dio",
+        "format": ""
+    },
+    "IND_SOC": {
+        "type": "string",
+        "regex": "^[0|1]$",
+        "required": true,
+        "info": "Indicador de participac\u0327a\u0303o societa\u0301ria: 0- So\u0301cio 1- Na\u0303o so\u0301cio",
+        "format": ""
+    },
+    "CPF": {
+        "type": "string",
+        "regex": "^\\d{11}$",
+        "required": true,
+        "info": "Nu\u0301mero de inscric\u0327a\u0303o do profissional no CPF.",
+        "format": ""
+    },
+    "NOME": {
+        "type": "string",
+        "regex": "^.{1,100}$",
+        "required": true,
+        "info": "Nome do profissional",
+        "format": ""
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "IND_MOV_ST": {
+        "type": "integer",
+        "regex": "^[0-1]{1}$",
+        "required": true,
+        "info": "Indicador de movimento: 0 \u2013 Sem operac\u0327o\u0303es com ST 1 \u2013 Com operac\u0327o\u0303es de ST",
+        "format": ""
+    },
+    "VL_SLD_CRED_ANT_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do \"Saldo credor de peri\u0301odo anterior \u2013 Substituic\u0327a\u0303o Tributa\u0301ria\"",
+        "format": "15v2"
+    },
+    "VL_DEVOL_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total do ICMS ST de devoluc\u0327a\u0303o de mercadorias",
+        "format": "15v2"
+    },
+    "VL_RESSARC_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total do ICMS ST de ressarcimentos",
+        "format": "15v2"
+    },
+    "VL_OUT_CRED_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de Ajustes \"Outros cre\u0301ditos ST\" e \u201cEstorno de de\u0301bitos ST\u201d",
+        "format": "15v2"
+    },
+    "VL_AJ_CREDITOS_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos ajustes a cre\u0301dito de ICMS ST, provenientes de ajustes do documento fiscal.",
+        "format": "15v2"
+    },
+    "VL_RETENCAO_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor Total do ICMS retido por Substituic\u0327a\u0303o Tributa\u0301ria",
+        "format": "15v2"
+    },
+    "VL_OUT_DEB_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor Total dos ajustes \"Outros de\u0301bitos ST\" \" e \u201cEstorno de cre\u0301ditos ST\u201d",
+        "format": "15v2"
+    },
+    "VL_AJ_DEBITOS_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos ajustes a de\u0301bito de ICMS ST, provenientes de ajustes do documento fiscal.",
+        "format": "15v2"
+    },
+    "VL_SLD_DEV_ANT_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de Saldo devedor antes das deduc\u0327o\u0303es",
+        "format": "15v2"
+    },
+    "VL_DEDUCOES_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos ajustes \"Deduc\u0327o\u0303es ST\"",
+        "format": "15v2"
+    },
+    "VL_ICMS_RECOL_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Imposto a recolher ST (11-12)",
+        "format": "15v2"
+    },
+    "VL_SLD_CRED_ST_TRANSPORTAR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo credor de ST a transportar para o peri\u0301odo seguinte [(03+04+05+06+07+12)\u2013 (08+09+10)].",
+        "format": "15v2"
+    },
+    "DEB_ESP_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valores recolhidos ou a recolher, extra- apurac\u0327a\u0303o.",
+        "format": "15v2"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "COD_TOT_PAR": {
+        "type": "string",
+        "regex": "^[0-9]{7}$",
+        "required": true,
+        "info": "C\u00f3digo do totalizador, conforme tabela 4.4.6",
+        "format": ""
+    },
+    "VLR_ACUM_TOT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor acumulado no totalizador, relativo \u00e0 respectiva Redu\u00e7\u00e3o Z",
+        "format": "15v2"
+    },
+    "NR_TOT": {
+        "type": "numeric",
+        "regex": "^[0-9]{2}$",
+        "required": true,
+        "info": "N\u00famero do totalizador quando ocorrer mais de uma situa\u00e7\u00e3o com a mesma carga tribut\u00e1ria efetiva",
+        "format": ""
+    },
+    "DESCR_NR_TOT": {
+        "type": "string",
+        "regex": "^[0-9]{0}$",
+        "required": true,
+        "info": "Descri\u00e7\u00e3o da situa\u00e7\u00e3o tribut\u00e1ria relativa ao totalizador parcial, quando houver mais de um com a mesma carga tribut\u00e1ria efetiva",
+        "format": ""
+    }
+}

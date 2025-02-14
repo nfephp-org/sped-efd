@@ -1,0 +1,23 @@
+{
+    "COD_PART": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "Co\u0301digo do participante (campo 02 do Registro 0150): identificac\u0327a\u0303o \"\n            .\"da instituic\u0327a\u0303o financeira e\/ou de pagamento",
+        "format": ""
+    },
+    "TOT_CREDITO": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total das operac\u0327o\u0303es de cre\u0301dito realizadas no peri\u0301odo",
+        "format": "15v2"
+    },
+    "TOT_DEBITO": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total das operac\u0327o\u0303es de de\u0301bito realizadas no peri\u0301odo",
+        "format": "15v2"
+    }
+}

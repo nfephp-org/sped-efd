@@ -1,0 +1,16 @@
+{
+    "NUM_DOC_INI": {
+        "type": "integer",
+        "regex": "^\\d{1,12}$",
+        "required": true,
+        "info": "Nu\u0301mero do dispositivo autorizado (inutilizado) inicial",
+        "format": ""
+    },
+    "NUM_DOC_FIN": {
+        "type": "integer",
+        "regex": "^\\d{1,12}$",
+        "required": true,
+        "info": "Nu\u0301mero do dispositivo autorizado (inutilizado) final",
+        "format": ""
+    }
+}

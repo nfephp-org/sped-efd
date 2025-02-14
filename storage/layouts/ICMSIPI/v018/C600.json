@@ -1,0 +1,149 @@
+{
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^(06|28|29)$",
+        "required": true,
+        "info": "C\u00f3digo do modelo do documento fiscal",
+        "format": ""
+    },
+    "COD_MUN": {
+        "type": "numeric",
+        "regex": "^(\\d{7})$",
+        "required": true,
+        "info": "C\u00f3digo do munic\u00edpio dos pontos de consumo,",
+        "format": ""
+    },
+    "SER": {
+        "type": "string",
+        "regex": "^.{0,4}$",
+        "required": false,
+        "info": "S\u00e9rie do documento fiscal",
+        "format": ""
+    },
+    "SUB": {
+        "type": "numeric",
+        "regex": "^(\\d{0,3})$",
+        "required": false,
+        "info": "Subs\u00e9rie do documento fiscal",
+        "format": ""
+    },
+    "COD_CONS": {
+        "type": "string",
+        "regex": "^.{2}$",
+        "required": true,
+        "info": "C\u00f3digo de classe de consumo de energia el\u00e9trica ou g\u00e1s",
+        "format": ""
+    },
+    "QTD_CONS": {
+        "type": "numeric",
+        "regex": "^([0-9]+)$",
+        "required": true,
+        "info": "Quantidade de documentos consolidados neste registro",
+        "format": ""
+    },
+    "QTD_CANC": {
+        "type": "numeric",
+        "regex": "^([0-9]+)$",
+        "required": false,
+        "info": "Quantidade de documentos cancelados",
+        "format": ""
+    },
+    "DT_DOC": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data dos documentos consolidados",
+        "format": ""
+    },
+    "VL_DOC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos documentos",
+        "format": "15v2"
+    },
+    "VL_DESC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado dos descontos",
+        "format": "15v2"
+    },
+    "CONS": {
+        "type": "numeric",
+        "regex": "^([0-9]+)$",
+        "required": false,
+        "info": "Consumo total acumulado, em kWh (C\u00f3digo 06)",
+        "format": ""
+    },
+    "VL_FORN": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado do fornecimento",
+        "format": "15v2"
+    },
+    "VL_SERV_NT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado dos servi\u00e7os n\u00e3o-tributados pelo ICMS",
+        "format": "15v2"
+    },
+    "VL_TERC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valores cobrados em nome de terceiros",
+        "format": "15v2"
+    },
+    "VL_DA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado das despesas acess\u00f3rias",
+        "format": "15v2"
+    },
+    "VL_BC_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado da base de c\u00e1lculo do ICMS",
+        "format": "15v2"
+    },
+    "VL_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado do ICMS",
+        "format": "15v2"
+    },
+    "VL_BC_ICMS_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado da base de c\u00e1lculo do ICMS substitui\u00e7\u00e3o tribut\u00e1ria",
+        "format": "15v2"
+    },
+    "VL_ICMS_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado do ICMS retido por substitui\u00e7\u00e3o tribut\u00e1ria",
+        "format": "15v2"
+    },
+    "VL_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado do PIS",
+        "format": "15v2"
+    },
+    "VL_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor acumulado COFINS",
+        "format": "15v2"
+    }
+}

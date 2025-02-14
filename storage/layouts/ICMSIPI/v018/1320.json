@@ -1,0 +1,72 @@
+{
+    "NUM_BICO": {
+        "type": "integer",
+        "regex": "^\\d+$",
+        "required": true,
+        "info": "Bico Ligado a\u0300 Bomba",
+        "format": ""
+    },
+    "NR_INTERV": {
+        "type": "integer",
+        "regex": "^\\d+$",
+        "required": false,
+        "info": "Nu\u0301mero da intervenc\u0327a\u0303o",
+        "format": ""
+    },
+    "MOT_INTERV": {
+        "type": "string",
+        "regex": "^.{1,50}$",
+        "required": false,
+        "info": "Motivo da Intervenc\u0327a\u0303o",
+        "format": ""
+    },
+    "NOM_INTERV": {
+        "type": "string",
+        "regex": "^.{1,30}$",
+        "required": false,
+        "info": "Nome do Interventor",
+        "format": ""
+    },
+    "CNPJ_INTERV": {
+        "type": "integer",
+        "regex": "^[0-9]{14}$",
+        "required": false,
+        "info": "CNPJ da empresa responsa\u0301vel pela intervenc\u0327a\u0303o",
+        "format": ""
+    },
+    "CPF_INTERV": {
+        "type": "integer",
+        "regex": "^[0-9]{11}$",
+        "required": false,
+        "info": "CPF do te\u0301cnico responsa\u0301vel pela intervenc\u0327a\u0303o",
+        "format": ""
+    },
+    "VAL_FECHA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da leitura final do contador, no fechamento do bico.",
+        "format": "15v3"
+    },
+    "VAL_ABERT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da leitura inicial do contador, na abertura do bico.",
+        "format": "15v3"
+    },
+    "VOL_AFERI": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Aferic\u0327o\u0303es da Bomba, em litros",
+        "format": "15v3"
+    },
+    "VOL_VENDAS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Vendas (08 \u2013 09 - 10 ) do bico , em litros",
+        "format": "15v3"
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "COD_RESP_RET": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "C\u00f3digo que indica o respons\u00e1vel pela  reten\u00e7\u00e3o do ICMS-ST:1-Remetente Direto 2-Remetente Indireto3-Pr\u00f3prio declarante",
+        "format": ""
+    },
+    "QUANT_CONV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Quantidade do item",
+        "format": "15v6"
+    },
+    "UNID": {
+        "type": "string",
+        "regex": "^[0-9]{0}$",
+        "required": true,
+        "info": "Unidade adotada para informar o campo QUANT_CONV.",
+        "format": ""
+    },
+    "VL_UNIT_CONV":{
+        "type":"numeric",
+        "regex":"^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required":true,
+        "info":"Valor unit\u00e1rio da mercadoria, considerando a unidade utilizada para informar o campo QUANT_CONV.",
+        "format":"15v6"
+    },
+    "VL_UNIT_ICMS_OP_CONV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor unit\u00e1rio do ICMS opera\u00e7\u00e3o pr\u00f3pria que o informante teria direito ao cr\u00e9dito caso a mercadoria estivesse sob o regime comum de tributa\u00e7\u00e3o, considerando unidade utilizada para informar o campo QUANT_CONV.",
+        "format": "15v6"
+    },
+    "VL_UNIT_BC_ICMS_ST_CONV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor unit\u00e1rio da base de c\u00e1lculo do imposto pago ou retido anteriormente por substitui\u00e7\u00e3o, considerando a unidade utilizada para informar o campo QUANT_CONV, aplicando-se redu\u00e7\u00e3o, se houver.",
+        "format": "15v6"
+    },
+    "VL_UNIT_ICMS_ST_CONV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor unit\u00e1rio do imposto pago ou retido anteriormente por substitui\u00e7\u00e3o, inclusive FCP se devido, considerando a unidade utilizada para informar o campo QUANT_CONV.",
+        "format": "15v6"
+    },
+    "VL_UNIT_FCP_ST_CONV": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "Valor unit\u00e1rio do FCP_ST agregado ao valor informado no campo VL_UNIT_ICMS_ST_CONV",
+        "format": ""
+    },
+    "COD_DA": {
+        "type": "string",
+        "regex": "^[0-9]{0}$",
+        "required": true,
+        "info": "C\u00f3digo do modelo do documento de arrecada\u00e7\u00e3o:0 - Documento estadual de arrecada\u00e7\u00e3o1 - GNRE",
+        "format": ""
+    },
+    "NUM_DA": {
+        "type": "string",
+        "regex": "^[0-9]{0}$",
+        "required": true,
+        "info": "N\u00famero do documento de arrecada\u00e7\u00e3o estadual, se houver",
+        "format": ""
+    }
+}

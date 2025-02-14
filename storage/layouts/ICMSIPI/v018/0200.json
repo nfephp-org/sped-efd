@@ -1,0 +1,86 @@
+{
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo do item",
+        "format": ""
+    },
+    "DESCR_ITEM": {
+        "type": "string",
+        "regex": "^.{3,255}$",
+        "required": true,
+        "info": "Descri\u00e7\u00e3o do item",
+        "format": ""
+    },
+    "COD_BARRA": {
+        "type": "string",
+        "regex": "^(SEM GTIN)|([0-9]{8,14}|\\-)$",
+        "required": false,
+        "info": "Representa\u00e7\u00e3o alfanum\u00e9rico do c\u00f3digo de barra do produto, se houver",
+        "format": ""
+    },
+    "COD_ANT_ITEM": {
+        "type": "string",
+        "regex": "^.{1,6}$",
+        "required": false,
+        "info": "C\u00f3digo anterior do item com rela\u00e7\u00e3o \u00e0 \u00faltima informa\u00e7\u00e3o anterior",
+        "format": ""
+    },
+    "UNID_INV": {
+        "type": "string",
+        "regex": "^.{1,6}$",
+        "required": true,
+        "info": "Unidade de medida utilizada na quantifica\u00e7\u00e3o de estoques.",
+        "format": ""
+    },
+    "TIPO_ITEM": {
+        "type": "string",
+        "regex": "^[0-9]{2}$",
+        "required": true,
+        "info": "Tipo do item \u2013 Atividades Industriais, Comerciais e Servi\u00e7os:00 \u2013 Mercadoria para Revenda;01 \u2013 Mat\u00e9ria-prima;02 \u2013 Embalagem;03 \u2013 Produto em Processo;04 \u2013 Produto Acabado;05 \u2013 Subproduto;06 \u2013 Produto Intermedi\u00e1rio;07 \u2013 Material de Uso e Consumo;08 \u2013 Ativo Imobilizado;09 \u2013 Servi\u00e7os;10 \u2013 Outros insumos;99 \u2013 Outras",
+        "format": ""
+    },
+    "COD_NCM": {
+        "type": "string",
+        "regex": "^([0-9]{8})|([0-9]{2})$",
+        "required": false,
+        "info": "C\u00f3digo da Nomenclatura Comum do Mercosul",
+        "format": ""
+    },
+    "EX_IPI": {
+        "type": "string",
+        "regex": "^[0-9]{1,3}$",
+        "required": false,
+        "info": "C\u00f3digo EX, conforme a TIPI",
+        "format": ""
+    },
+    "COD_GEN": {
+        "type": "string",
+        "regex": "^[0-9]{2}$",
+        "required": false,
+        "info": "C\u00f3digo do g\u00eanero do item, conforme a Tabela 4.2.1",
+        "format": ""
+    },
+    "COD_LST": {
+        "type": "string",
+        "regex": "^([0-9]{2}\\.[0-9]{2})$",
+        "required": false,
+        "info": "C\u00f3digo do servi\u00e7o conforme lista do Anexo I da Lei Complementar Federal n\u00ba 116\/03.",
+        "format": ""
+    },
+    "ALIQ_ICMS": {
+        "type": "numeric",
+        "regex": "^(\\d*\\.)?\\d+$",
+        "required": false,
+        "info": "Al\u00edquota de ICMS aplic\u00e1vel ao item nas opera\u00e7\u00f5es internas",
+        "format": "6v2"
+    },
+    "CEST": {
+        "type": "string",
+        "regex": "^[0-9]{7}$",
+        "required": false,
+        "info": "C\u00f3digo Especificador da Substitui\u00e7\u00e3o Tribut\u00e1ria",
+        "format": ""
+    }
+}

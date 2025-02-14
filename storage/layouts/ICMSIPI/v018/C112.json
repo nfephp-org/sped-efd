@@ -1,0 +1,51 @@
+{
+    "COD_DA": {
+        "type": "string",
+        "regex": "^(0|1)$",
+        "required": true,
+        "info": "C\u00f3digo do modelo do documento de arrecada\u00e7\u00e3o",
+        "format": ""
+    },
+    "UF": {
+        "type": "string",
+        "regex": "^[A-z]{2}$",
+        "required": true,
+        "info": "Unidade federada benefici\u00e1ria do recolhimento",
+        "format": ""
+    },
+    "NUM_DA": {
+        "type": "N\u00famero do documento de arrecada\u00e7\u00e3o",
+        "regex": "^(.*)$",
+        "required": false,
+        "info": "N\u00famero do documento de arrecada\u00e7\u00e3o",
+        "format": ""
+    },
+    "COD_AUT": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": true,
+        "info": "C\u00f3digo completo da autentica\u00e7\u00e3o banc\u00e1ria",
+        "format": ""
+    },
+    "VL_DA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do total do documento de arrecada\u00e7\u00e3o",
+        "format": "15v2"
+    },
+    "DT_VCTO": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data de vencimento do documento de arrecada\u00e7\u00e3o",
+        "format": ""
+    },
+    "DT_PGTO": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data de pagamento do documento de arrecada\u00e7\u00e3o, ou data do vencimento",
+        "format": ""
+    }
+}

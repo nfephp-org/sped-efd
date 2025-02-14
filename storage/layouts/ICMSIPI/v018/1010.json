@@ -1,0 +1,93 @@
+{
+    "IND_EXP": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": true,
+        "info": "Reg. 1100 - Ocorreu averbac\u0327a\u0303o (conclusa\u0303o) de exportac\u0327a\u0303o no peri\u0301odo: S\u2013 Sim N - Na\u0303o",
+        "format": ""
+    },
+    "IND_CCRF": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": true,
+        "info": "Reg 1200 \u2013 Existem informac\u0327o\u0303es acerca de cre\u0301ditos de ICMS a serem controlados, definidos pela Sefaz: S\u2013 Sim N - Na\u0303o",
+        "format": ""
+    },
+    "IND_COMB": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": true,
+        "info": "Reg. 1300 \u2013 E\u0301 come\u0301rcio varejista de combusti\u0301veis com movimentac\u0327a\u0303o\n            e\/ou estoque no peri\u0301odo: S\u2013 Sim N - Na\u0303o",
+        "format": ""
+    },
+    "IND_USINA": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": true,
+        "info": "Reg. 1390 \u2013 Usinas de ac\u0327u\u0301car e\/a\u0301lcool \u2013 O estabelecimento e\u0301 produtor\n            de ac\u0327u\u0301car e\/ou a\u0301lcool carburante com movimentac\u0327a\u0303o e\/ou estoque no peri\u0301odo: S \u2013 Sim N - Na\u0303o",
+        "format": ""
+    },
+    "IND_VA": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": true,
+        "info": "Reg 1400 \u2013 Sendo o registro obrigato\u0301rio em sua Unidade de Federac\u0327a\u0303o,\n            existem informac\u0327o\u0303es a serem prestadas neste registro: S \u2013 Sim; N - Na\u0303o",
+        "format": ""
+    },
+    "IND_EE": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": true,
+        "info": "Reg 1500 - A empresa e\u0301 distribuidora de energia e ocorreu fornecimento\n            de energia ele\u0301trica para consumidores de outra UF: S \u2013 Sim; N - Na\u0303o",
+        "format": ""
+    },
+    "IND_CART": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": false,
+        "info": "Reg 1600 - Realizou vendas com Carta\u0303o de Cre\u0301dito ou de de\u0301bito: S\u2013 Sim; N - Na\u0303o",
+        "format": ""
+    },
+    "IND_FORM": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": false,
+        "info": "Reg. 1700 \u2013 Foram emitidos documentos fiscais em papel no peri\u0301odo em unidade da federac\u0327a\u0303o que exija o controle de utilizac\u0327a\u0303o de documentos fiscais: S \u2013 Sim N - Na\u0303o",
+        "format": ""
+    },
+    "IND_AER": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": false,
+        "info": "Reg 1800 \u2013 A empresa prestou servic\u0327os de transporte ae\u0301reo de cargas e de passageiros: S\u2013 Sim N - Na\u0303o",
+        "format": ""
+    },
+    "IND_GIAF1": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": false,
+        "info": "Reg. 1960 - Possui informa\u00e7\u00f5es GIAF1?S\u2013 Sim N - Na\u0303o",
+        "format": ""
+    },
+    "IND_GIAF3": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": false,
+        "info": "Reg. 1960 - Possui informa\u00e7\u00f5es GIAF3?S\u2013 Sim N - Na\u0303o",
+        "format": ""
+    },
+    "IND_GIAF4": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": false,
+        "info": "Reg. 1960 - Possui informa\u00e7\u00f5es GIAF4?S\u2013 Sim N - Na\u0303o",
+        "format": ""
+    },
+    "IND_REST_RESSARC_COMPL_ICMS": {
+        "type": "string",
+        "regex": "^[S|N]$",
+        "required": false,
+        "info": "Reg. 1250 \u2013 Possui informa\u00e7\u00f5es consolidadas de saldos de restitui\u00e7\u00e3o, ressarcimento e complementa\u00e7\u00e3o do ICMS?S\u2013 Sim N - Na\u0303o",
+        "format": ""
+    }
+}

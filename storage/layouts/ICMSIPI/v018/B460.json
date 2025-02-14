@@ -1,0 +1,51 @@
+{
+    "IND_DED": {
+        "type": "string",
+        "regex": "^[0|1|2|9]$",
+        "required": true,
+        "info": "Indicador do tipo de deduc\u0327a\u0303o: 0- Compensac\u0327a\u0303o do ISS calculado a maior; 1- Benefi\u0301cio fiscal por incentivo a\u0300 cultura; 2- Decisa\u0303o administrativa ou judicial; 9- Outros",
+        "format": ""
+    },
+    "VL_DED": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da deduc\u0327a\u0303o",
+        "format": "15v2"
+    },
+    "NUM_PROC": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": false,
+        "info": "Nu\u0301mero do processo ao qual o ajuste esta\u0301 vinculado, se houver",
+        "format": ""
+    },
+    "IND_PROC": {
+        "type": "string",
+        "regex": "^[0|1|2|9]$",
+        "required": false,
+        "info": "Indicador da origem do processo: 0- Sefin; 1- Justic\u0327a Federal; 2- Justic\u0327a Estadual; 9- Outros",
+        "format": ""
+    },
+    "PROC": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": false,
+        "info": "Descric\u0327a\u0303o do processo que embasou o lanc\u0327amento",
+        "format": ""
+    },
+    "COD_INF_OBS": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "Co\u0301digo da observac\u0327a\u0303o do lanc\u0327amento fiscal (campo 02 do Registro 0460)",
+        "format": ""
+    },
+    "IND_OBR": {
+        "type": "string",
+        "regex": "^[0|1|2]$",
+        "required": true,
+        "info": "Indicador da obrigac\u0327a\u0303o onde sera\u0301 aplicada a deduc\u0327a\u0303o:",
+        "format": ""
+    }
+}

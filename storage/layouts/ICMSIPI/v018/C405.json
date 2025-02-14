@@ -1,0 +1,44 @@
+{
+    "DT_DOC": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data do movimento a que se refere a Redu\u00e7\u00e3o Z",
+        "format": ""
+    },
+    "CRO": {
+        "type": "numeric",
+        "regex": "^([1-9]{1})(\\d{1,2})?$",
+        "required": false,
+        "info": "Posi\u00e7\u00e3o do Contador de Rein\u00edcio de Opera\u00e7\u00e3o",
+        "format": ""
+    },
+    "CRZ": {
+        "type": "numeric",
+        "regex": "^([1-9]{1})(\\d{1,5})?$",
+        "required": false,
+        "info": "Posi\u00e7\u00e3o do Contador de Redu\u00e7\u00e3o Z",
+        "format": ""
+    },
+    "NUM_COO_FIN": {
+        "type": "numeric",
+        "regex": "^([1-9]{1})(\\d{1,8})$",
+        "required": false,
+        "info": "N\u00famero do Contador de Ordem de Opera\u00e7\u00e3o do \u00faltimo documento\n            emitido no dia. (N\u00famero do COO na Redu\u00e7\u00e3o Z)",
+        "format": ""
+    },
+    "GT_FIN": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Grande Total final",
+        "format": "15v2"
+    },
+    "VL_BRT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da venda bruta",
+        "format": "15v2"
+    }
+}

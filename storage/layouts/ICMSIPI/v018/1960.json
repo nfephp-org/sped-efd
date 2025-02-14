@@ -1,0 +1,86 @@
+{
+    "IND_AP": {
+        "type": "integer",
+        "regex": "^\\d{2}$",
+        "required": true,
+        "info": "Indicador da sub-apurac\u0327a\u0303o por tipo de benefi\u0301cio (conforme tabela 4.7.1)",
+        "format": ""
+    },
+    "G1_01": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Percentual de cre\u0301dito presumido",
+        "format": "15v2"
+    },
+    "G1_02": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Sai\u0301das na\u0303o incentivadas de PI",
+        "format": "15v2"
+    },
+    "G1_03": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Sai\u0301das incentivadas de PI",
+        "format": "15v2"
+    },
+    "G1_04": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Sai\u0301das incentivadas de PI para fora do Nordeste",
+        "format": "15v2"
+    },
+    "G1_05": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo devedor do ICMS antes das deduc\u0327o\u0303es do incentivo",
+        "format": "15v2"
+    },
+    "G1_06": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo devedor do ICMS relativo a\u0300 faixa incentivada de PI",
+        "format": "15v2"
+    },
+    "G1_07": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Cre\u0301dito presumido nas sai\u0301das incentivadas de PI para fora do Nordeste",
+        "format": "15v2"
+    },
+    "G1_08": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo devedor relativo a\u0300 faixa incentivada de PI apo\u0301s o cre\u0301dito presumido nas sai\u0301das para fora do Nordeste",
+        "format": "15v2"
+    },
+    "G1_09": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Cre\u0301dito presumido",
+        "format": "15v2"
+    },
+    "G1_10": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Deduc\u0327a\u0303o de incentivo da Indu\u0301stria (cre\u0301dito presumido)",
+        "format": "15v2"
+    },
+    "G1_11": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo devedor do ICMS apo\u0301s deduc\u0327o\u0303es",
+        "format": "15v2"
+    }
+}

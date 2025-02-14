@@ -1,0 +1,44 @@
+{
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^[0][1]|[5][5]$",
+        "required": true,
+        "info": "Co\u0301digo do modelo da NF, conforme tabela 4.1.1",
+        "format": ""
+    },
+    "SERIE": {
+        "type": "string",
+        "regex": "^.{1,3}$",
+        "required": false,
+        "info": "Se\u0301rie da Nota Fiscal",
+        "format": ""
+    },
+    "NUM_DOC": {
+        "type": "integer",
+        "regex": "^[1-9]\\d{0,8}$",
+        "required": true,
+        "info": "Nu\u0301mero de Nota Fiscal de Exportac\u0327a\u0303o emitida pelo Exportador",
+        "format": ""
+    },
+    "CHV_NFE": {
+        "type": "numeric",
+        "regex": "^([0-9]{44})?$",
+        "required": false,
+        "info": "Chave da Nota Fiscal Eletro\u0302nica",
+        "format": ""
+    },
+    "DT_DOC": {
+        "type": "integer",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data da emissa\u0303o da NF de exportac\u0327a\u0303o",
+        "format": ""
+    },
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "Co\u0301digo do item (campo 02 do Registro 0200)",
+        "format": ""
+    }
+}

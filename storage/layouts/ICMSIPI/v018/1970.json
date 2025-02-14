@@ -1,0 +1,79 @@
+{
+    "IND_AP": {
+        "type": "integer",
+        "regex": "^\\d{2}$",
+        "required": true,
+        "info": "Indicador da sub-apurac\u0327a\u0303o por tipo de benefi\u0301cio (conforme tabela 4.7.1)",
+        "format": ""
+    },
+    "G3_01": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Importac\u0327o\u0303es com ICMS diferido",
+        "format": "15v2"
+    },
+    "G3_02": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "ICMS diferido nas importac\u0327o\u0303es",
+        "format": "15v2"
+    },
+    "G3_03": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Sai\u0301das na\u0303o incentivadas de PI",
+        "format": "15v2"
+    },
+    "G3_04": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Percentual de incentivo nas sai\u0301das para fora do Estado",
+        "format": "15v2"
+    },
+    "G3_05": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Sai\u0301das incentivadas de PI para fora do Estado",
+        "format": "15v2"
+    },
+    "G3_06": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "ICMS das sai\u0301das incentivadas de PI para fora do Estado",
+        "format": "15v2"
+    },
+    "G3_07": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Cre\u0301dito presumido nas sai\u0301das para fora do Estado.",
+        "format": "15v2"
+    },
+    "G3_T": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Deduc\u0327a\u0303o de incentivo da Importac\u0327a\u0303o (cre\u0301dito presumido)",
+        "format": "15v2"
+    },
+    "G3_08": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo devedor do ICMS antes das deduc\u0327o\u0303es do incentivo",
+        "format": "15v2"
+    },
+    "G3_09": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo devedor do ICMS apo\u0301s deduc\u0327o\u0303es do incentivo",
+        "format": "15v2"
+    }
+}

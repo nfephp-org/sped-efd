@@ -1,0 +1,9 @@
+{
+    "COD_PROD": {
+        "type": "string",
+        "regex": "^0[1|2|3]$",
+        "required": true,
+        "info": "Co\u0301digo do produto: 01 \u2013 A\u0301lcool Eti\u0301lico Hidratado Carburante 02 - A\u0301lcool Eti\u0301lico Anidro Carburante 03 \u2013 Ac\u0327u\u0301car",
+        "format": ""
+    }
+}

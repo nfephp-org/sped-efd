@@ -1,0 +1,44 @@
+{
+    "VL_CONT_P": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Parcela correspondente ao \"Valor Conta\u0301bil\" referente a\u0300 combinac\u0327a\u0303o da ali\u0301quota e item da lista",
+        "format": "15v2"
+    },
+    "VL_BC_ISS_P": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Parcela correspondente ao \"Valor da base de ca\u0301lculo do ISS\" referente a\u0300 combinac\u0327a\u0303o da ali\u0301quota e item da lista",
+        "format": "15v2"
+    },
+    "ALIQ_ISS": {
+        "type": "integer",
+        "regex": "^[0-5]{1}$",
+        "required": true,
+        "info": "Ali\u0301quota do ISS",
+        "format": ""
+    },
+    "VL_ISS_P": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Parcela correspondente ao \"Valor do ISS\" referente a\u0300 combinac\u0327a\u0303o da ali\u0301quota e item da lista",
+        "format": "15v2"
+    },
+    "VL_ISNT_ISS_P": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Parcela correspondente ao \"Valor das operac\u0327o\u0303es isentas ou na\u0303o- tributadas pelo ISS\" referente a\u0300 combinac\u0327a\u0303o da ali\u0301quota e item da lista",
+        "format": "15v2"
+    },
+    "COD_SERV": {
+        "type": "string",
+        "regex": "^.{4}$",
+        "required": true,
+        "info": "Item da lista de servic\u0327os, conforme Tabela 4.6.3",
+        "format": ""
+    }
+}

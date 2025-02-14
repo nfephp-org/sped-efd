@@ -1,0 +1,44 @@
+{
+    "VL_CONT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Totalizac\u0327a\u0303o do Valor Conta\u0301bil das prestac\u0327o\u0303es do declarante referente a\u0300 combinac\u0327a\u0303o da ali\u0301quota e item da lista",
+        "format": "15v2"
+    },
+    "VL_BC_ISS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Totalizac\u0327a\u0303o do Valor da base de ca\u0301lculo do ISS das prestac\u0327o\u0303es do declarante referente a\u0300 combinac\u0327a\u0303o da ali\u0301quota e item da lista",
+        "format": "15v2"
+    },
+    "ALIQ_ISS": {
+        "type": "integer",
+        "regex": "^[0-5]{1}$",
+        "required": true,
+        "info": "Ali\u0301quota do ISS",
+        "format": ""
+    },
+    "VL_ISNT_ISS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Totalizac\u0327a\u0303o do valor das operac\u0327o\u0303es isentas ou na\u0303o-tributadas pelo ISS referente a\u0300 combinac\u0327a\u0303o da ali\u0301quota e item da lista",
+        "format": "15v2"
+    },
+    "VL_ISS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Totalizac\u0327a\u0303o, por combinac\u0327a\u0303o da ali\u0301quota e item da lista, do Valor do ISS",
+        "format": "15v2"
+    },
+    "COD_SERV": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": true,
+        "info": "Item da lista de servic\u0327os, conforme Tabela 4.6.3.",
+        "format": ""
+    }
+}

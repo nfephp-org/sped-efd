@@ -1,0 +1,23 @@
+{
+    "UF": {
+        "type": "string",
+        "regex": "^.{1,2}$",
+        "required": true,
+        "info": "Sigla da unidade da federac\u0327a\u0303o a que se refere a\u0300 apurac\u0327a\u0303o do FCP e do ICMS Diferencial de Ali\u0301quota da UF de Origem\/Destino",
+        "format": ""
+    },
+    "DT_INI": {
+        "type": "integer",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data inicial a que a apurac\u0327a\u0303o se refere",
+        "format": ""
+    },
+    "DT_FIN": {
+        "type": "integer",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data final a que a apurac\u0327a\u0303o se refere",
+        "format": ""
+    }
+}

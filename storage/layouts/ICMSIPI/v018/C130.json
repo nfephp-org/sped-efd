@@ -1,0 +1,51 @@
+{
+    "VL_SERV_NT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor dos servi\u00e7os sob n\u00e3o-incid\u00eancia ou n\u00e3otributados pelo ICMS",
+        "format": "15v2"
+    },
+    "VL_BC_ISSQN": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da base de c\u00e1lculo do ISSQN",
+        "format": "15v2"
+    },
+    "VL_ISSQN": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do ISSQN",
+        "format": "15v2"
+    },
+    "VL_BC_IRRF": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo do Imposto de Renda Retido na Fonte",
+        "format": "15v2"
+    },
+    "VL_IRRF": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do Imposto de Renda - Retido na Fonte",
+        "format": "15v2"
+    },
+    "VL_BC_PREV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo de reten\u00e7\u00e3o da Previd\u00eancia Social",
+        "format": "15v2"
+    },
+    "VL_PREV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor destacado para reten\u00e7\u00e3o da Previd\u00eancia Social",
+        "format": "15v2"
+    }
+}

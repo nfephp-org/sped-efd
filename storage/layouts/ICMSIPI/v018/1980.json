@@ -1,0 +1,93 @@
+{
+    "IND_AP": {
+        "type": "integer",
+        "regex": "^\\d{2}$",
+        "required": true,
+        "info": "Indicador da sub-apurac\u0327a\u0303o por tipo de benefi\u0301cio (conforme Tabela 4.7.1)",
+        "format": ""
+    },
+    "G4_01": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Entradas (percentual de incentivo)",
+        "format": "15v2"
+    },
+    "G4_02": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Entradas na\u0303o incentivadas de PI",
+        "format": "15v2"
+    },
+    "G4_03": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Entradas incentivadas de PI",
+        "format": "15v2"
+    },
+    "G4_04": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Sai\u0301das (percentual de incentivo)",
+        "format": "15v2"
+    },
+    "G4_05": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Sai\u0301das na\u0303o incentivadas de PI",
+        "format": "15v2"
+    },
+    "G4_06": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Sai\u0301das incentivadas de PI",
+        "format": "15v2"
+    },
+    "G4_07": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo devedor do ICMS antes das deduc\u0327o\u0303es do incentivo (PI e itens na\u0303o incentivados)",
+        "format": "15v2"
+    },
+    "G4_08": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Cre\u0301dito presumido nas entradas incentivadas de PI",
+        "format": "15v2"
+    },
+    "G4_09": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Cre\u0301dito presumido nas sai\u0301das incentivadas de PI",
+        "format": "15v2"
+    },
+    "G4_10": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Deduc\u0327a\u0303o de incentivo da Central de Distribuic\u0327a\u0303o (entradas\/sai\u0301das)",
+        "format": "15v2"
+    },
+    "G4_11": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Saldo devedor do ICMS apo\u0301s deduc\u0327o\u0303es do incentivo",
+        "format": "15v2"
+    },
+    "G4_12": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "I\u0301ndice de recolhimento da central de distribuic\u0327a\u0303o",
+        "format": "15v2"
+    }
+}

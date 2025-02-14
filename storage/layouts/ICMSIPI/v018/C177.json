@@ -1,0 +1,9 @@
+{
+    "COD_INF_ITEM": {
+        "type": "string",
+        "regex": "^.{8}$",
+        "required": false,
+        "info": "5.6 \u2013 Tabela informa\u00e7\u00f5es adicionais dos itens do documento fiscal",
+        "format": ""
+    }
+}

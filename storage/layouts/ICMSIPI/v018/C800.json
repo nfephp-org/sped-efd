@@ -1,0 +1,114 @@
+{
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^(59)$",
+        "required": true,
+        "info": "C\u00f3digo do modelo do documento fiscal, conforme a Tabela 4.1.1",
+        "format": ""
+    },
+    "COD_SIT": {
+        "type": "numeric",
+        "regex": "^(00|01|02|03)$",
+        "required": true,
+        "info": "C\u00f3digo da situa\u00e7\u00e3o do documento fiscal, conforme a Tabela 4.1.2",
+        "format": ""
+    },
+    "NUM_CFE": {
+        "type": "numeric",
+        "regex": "^(\\d{1,6})$",
+        "required": true,
+        "info": "N\u00famero do Cupom Fiscal Eletr\u00f4nico",
+        "format": ""
+    },
+    "DT_DOC": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data da emiss\u00e3o do Cupom Fiscal Eletr\u00f4nico",
+        "format": ""
+    },
+    "VL_CFE": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total do Cupom Fiscal Eletr\u00f4nico",
+        "format": "15v2"
+    },
+    "VL_PIS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total do PIS",
+        "format": "15v2"
+    },
+    "VL_COFINS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total da COFINS",
+        "format": "15v2"
+    },
+    "CNPJ_CPF": {
+        "type": "string",
+        "regex": "^([0-9]{11}|[0-9]{14})$",
+        "required": false,
+        "info": "CNPJ ou CPF do destinat\u00e1rio",
+        "format": ""
+    },
+    "NR_SAT": {
+        "type": "numeric",
+        "regex": "^(\\d{1,9})$",
+        "required": true,
+        "info": "N\u00famero de S\u00e9rie do equipamento SAT",
+        "format": ""
+    },
+    "CHV_CFE": {
+        "type": "numeric",
+        "regex": "^([0-9]{44})?$",
+        "required": true,
+        "info": "Chave do Cupom Fiscal Eletr\u00f4nico",
+        "format": ""
+    },
+    "VL_DESC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de descontos",
+        "format": "15v2"
+    },
+    "VL_MERC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total das mercadorias e servi\u00e7os",
+        "format": "15v2"
+    },
+    "VL_OUT_DA": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total de outras despesas acess\u00f3rias e acr\u00e9scimos",
+        "format": "15v2"
+    },
+    "VL_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do ICMS",
+        "format": "15v2"
+    },
+    "VL_PIS_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total do PIS retido por subst. trib.",
+        "format": "15v2"
+    },
+    "VL_COFINS_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total da COFINS retido por subst. trib.",
+        "format": "15v2"
+    }
+}

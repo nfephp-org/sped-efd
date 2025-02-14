@@ -1,0 +1,51 @@
+{
+    "COD_DISP": {
+        "type": "string",
+        "regex": "^0[0-5]$",
+        "required": true,
+        "info": "Co\u0301digo dispositivo autorizado: 00 - Formula\u0301rio de Seguranc\u0327a \u2013 impressor auto\u0302nomo 01 - FS-DA \u2013 Formula\u0301rio de Seguranc\u0327a para Impressa\u0303o de DANFE 02 \u2013 Formula\u0301rio de seguranc\u0327a - NF-e 03 - Formula\u0301rio Conti\u0301nuo 04 \u2013 Blocos 05 - Jogos Soltos",
+        "format": ""
+    },
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^.{2}$",
+        "required": true,
+        "info": "Co\u0301digo do modelo do dispositivo autorizado, conforme a Tabela 4.1.1",
+        "format": ""
+    },
+    "SER": {
+        "type": "string",
+        "regex": "^.{1,4}$",
+        "required": false,
+        "info": "Se\u0301rie do dispositivo autorizado",
+        "format": ""
+    },
+    "SUB": {
+        "type": "string",
+        "regex": "^.{1,3}$",
+        "required": false,
+        "info": "Subse\u0301rie do dispositivo autorizado",
+        "format": ""
+    },
+    "NUM_DOC_INI": {
+        "type": "integer",
+        "regex": "^\\d{1,12}$",
+        "required": true,
+        "info": "Nu\u0301mero do dispositivo autorizado (utilizado) inicial",
+        "format": ""
+    },
+    "NUM_DOC_FIN": {
+        "type": "integer",
+        "regex": "^\\d{1,12}$",
+        "required": true,
+        "info": "Nu\u0301mero do dispositivo autorizado (utilizado) final",
+        "format": ""
+    },
+    "NUM_AUT": {
+        "type": "string",
+        "regex": "^\\d{1,60}$",
+        "required": true,
+        "info": "Nu\u0301mero da autorizac\u0327a\u0303o, conforme dispositivo autorizado",
+        "format": ""
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^(59)+$",
+        "required": true,
+        "info": "C\u00f3digo do modelo do documento fiscalValor total do estoque",
+        "format": ""
+    },
+    "NR_SAT": {
+        "type": "numeric",
+        "regex": "^([0-9]{9})+$",
+        "required": true,
+        "info": "N\u00famero de S\u00e9rie do equipamento SAT",
+        "format": ""
+    },
+    "CHV_CFE": {
+        "type": "numeric",
+        "regex": "^([0-9]{44})?$",
+        "required": false,
+        "info": "Chave do Cupom Fiscal Eletr\u00f4nico",
+        "format": ""
+    },
+    "NUM_CFE": {
+        "type": "numeric",
+        "regex": "^([0-9]{6})?$",
+        "required": false,
+        "info": "N\u00famero do Cupom Fiscal Eletr\u00f4nico",
+        "format": ""
+    },
+    "DT_DOC": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data da emiss\u00e3o do documento fiscal",
+        "format": ""
+    }
+}
