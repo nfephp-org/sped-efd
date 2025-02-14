@@ -1,0 +1,170 @@
+{
+    "IND_OPER": {
+        "type": "string",
+        "regex": "^[0-1]{1}$",
+        "required": true,
+        "info": "Indicador do tipo de opera\u00e7\u00e3o",
+        "format": ""
+    },
+    "IND_EMIT": {
+        "type": "string",
+        "regex": "^[0-1]{1}$",
+        "required": true,
+        "info": "Indicador do emitente do documento fiscal",
+        "format": ""
+    },
+    "COD_PART": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": false,
+        "info": "C\u00f3digo do participante (campo 02 do Registro 0150):",
+        "format": ""
+    },
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^(07|08|8B|09|10|11|26|27|57|63|67)$",
+        "required": true,
+        "info": "C\u00f3digo do modelo do documento fiscalValor total do estoque",
+        "format": ""
+    },
+    "COD_SIT": {
+        "type": "numeric",
+        "regex": "^(00|01|02|03|04|05|06|07|08)$",
+        "required": true,
+        "info": "C\u00f3digo da situa\u00e7\u00e3o do documento fiscal",
+        "format": ""
+    },
+    "SER": {
+        "type": "string",
+        "regex": "^.{0,4}$",
+        "required": false,
+        "info": "S\u00e9rie do documento fiscal",
+        "format": ""
+    },
+    "SUB": {
+        "type": "string",
+        "regex": "^.{1,3}$",
+        "required": false,
+        "info": "Subs\u00e9rie do documento fiscal ",
+        "format": ""
+    },
+    "NUM_DOC": {
+        "type": "numeric",
+        "regex": "^([0-9]{1,9})?$",
+        "required": true,
+        "info": "N\u00famero do documento fiscal",
+        "format": ""
+    },
+    "CHV_CTE": {
+        "type": "numeric",
+        "regex": "^[0-9]{44}$",
+        "required": false,
+        "info": "Chave do Conhecimento de Transporte Eletr\u00f4nico ou do Bilhete de Passagem Eletr\u00f4nico",
+        "format": ""
+    },
+    "DT_DOC": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data da emiss\u00e3o do documento fiscal",
+        "format": ""
+    },
+    "DT_A_P": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data da aquisi\u00e7\u00e3o ou da presta\u00e7\u00e3o do servi\u00e7o",
+        "format": ""
+    },
+    "TP_CT_E": {
+        "type": "numeric",
+        "regex": "^[0-1]{1}$",
+        "required": false,
+        "info": "Tipo de Conhecimento de Transporte Eletr\u00f4nico",
+        "format": ""
+    },
+    "CHV_CTE_REF": {
+        "type": "numeric",
+        "regex": "^[0-9]{44}$",
+        "required": false,
+        "info": "Chave do CT-e de refer\u00eancia",
+        "format": ""
+    },
+    "VL_DOC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total do documento fiscal",
+        "format": "15v2"
+    },
+    "VL_DESC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor total do desconto",
+        "format": "15v2"
+    },
+    "IND_FRT": {
+        "type": "numeric",
+        "regex": "^(0|1|2|9)$",
+        "required": false,
+        "info": "Indicador do tipo do frete",
+        "format": ""
+    },
+    "VL_SERV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total da presta\u00e7\u00e3o de servi\u00e7o",
+        "format": "15v2"
+    },
+    "VL_BC_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo do ICMS",
+        "format": "15v2"
+    },
+    "VL_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do ICMS",
+        "format": "15v2"
+    },
+    "VL_NT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor n\u00e3o-tributado",
+        "format": "15v2"
+    },
+    "COD_INF": {
+        "type": "string",
+        "regex": "^.{1,6}$",
+        "required": false,
+        "info": "C\u00f3digo da informa\u00e7\u00e3o complementar do documento fiscal",
+        "format": ""
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^.{1,255}$",
+        "required": false,
+        "info": "C\u00f3digo da conta anal\u00edtica cont\u00e1bil debitada\/creditada",
+        "format": ""
+    },
+    "COD_MUN_ORIG": {
+        "type": "numeric",
+        "regex": "^[0-9]{7}$",
+        "required": false,
+        "info": "C\u00f3digo do munic\u00edpio de origem do servi\u00e7o, conforme a tabela IBGE",
+        "format": ""
+    },
+    "COD_MUN_DEST": {
+        "type": "numeric",
+        "regex": "^[0-9]{7}$",
+        "required": false,
+        "info": "C\u00f3digo do munic\u00edpio de destino, conforme a tabela IBGE",
+        "format": ""
+    }
+}

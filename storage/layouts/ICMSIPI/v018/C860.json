@@ -1,0 +1,37 @@
+{
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^.{1,2}$",
+        "required": true,
+        "info": "C\u00f3digo do modelo do documento fiscal, conforme a Tabela",
+        "format": ""
+    },
+    "NR_SAT": {
+        "type": "numeric",
+        "regex": "^(\\d{1,9})$",
+        "required": true,
+        "info": "N\u00famero de S\u00e9rie do equipamento SAT",
+        "format": ""
+    },
+    "DT_DOC": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data de emiss\u00e3o dos documentos fiscais",
+        "format": ""
+    },
+    "DOC_INI": {
+        "type": "numeric",
+        "regex": "^(\\d{1,6})$",
+        "required": true,
+        "info": "N\u00famero do documento inicial",
+        "format": ""
+    },
+    "DOC_FIM": {
+        "type": "numeric",
+        "regex": "^(\\d{1,6})$",
+        "required": true,
+        "info": "N\u00famero do documento final",
+        "format": ""
+    }
+}

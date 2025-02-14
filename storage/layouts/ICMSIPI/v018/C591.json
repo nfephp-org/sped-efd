@@ -1,0 +1,16 @@
+{
+    "VL_FCP_OP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do Fundo de Combate \u00e0 Pobreza (FCP) vinculado \u00e0 opera\u00e7\u00e3o pr\u00f3pria, na combina\u00e7\u00e3o de CST_ICMS, CFOP e al\u00edquota do ICMS",
+        "format": "15v2"
+    },
+    "VL_FCP_ST": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do Fundo de Combate \u00e0 Pobreza (FCP) vinculado \u00e0 opera\u00e7\u00e3o de substitui\u00e7\u00e3o tribut\u00e1ria, na combina\u00e7\u00e3o de CST_ICMS, CFOP e al\u00edquota do ICMS.",
+        "format": "15v2"
+    }
+}

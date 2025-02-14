@@ -1,0 +1,65 @@
+{
+    "COD_OR": {
+        "type": "string",
+        "regex": "^.[001|002|006|999]+$",
+        "required": true,
+        "info": "Co\u0301digo da obrigac\u0327a\u0303o a recolher, conforme a Tabela 5.4",
+        "format": ""
+    },
+    "VL_OR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da obrigac\u0327a\u0303o ICMS ST a recolher",
+        "format": "15v2"
+    },
+    "DT_VCTO": {
+        "type": "integer",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data de vencimento da obrigac\u0327a\u0303o",
+        "format": ""
+    },
+    "COD_REC": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": true,
+        "info": "Co\u0301digo de receita referente a\u0300 obrigac\u0327a\u0303o, pro\u0301prio da unidade da federac\u0327a\u0303o do contribuinte substitui\u0301do.",
+        "format": ""
+    },
+    "NUM_PROC": {
+        "type": "string",
+        "regex": "^.{1,15}$",
+        "required": false,
+        "info": "Nu\u0301mero do processo ou auto de infrac\u0327a\u0303o ao qual a obrigac\u0327a\u0303o esta\u0301 vinculada, se houver",
+        "format": ""
+    },
+    "IND_PROC": {
+        "type": "string",
+        "regex": "^[0|1|2|9]$",
+        "required": false,
+        "info": "Indicador da origem do processo: 0- SEFAZ; 1- Justic\u0327a Federal; 2- Justic\u0327a Estadual; 9- Outros",
+        "format": ""
+    },
+    "PROC": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": false,
+        "info": "Descric\u0327a\u0303o resumida do processo que embasou o lanc\u0327amento",
+        "format": ""
+    },
+    "TXT_COMPL": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": false,
+        "info": "Descric\u0327a\u0303o complementar das obrigac\u0327o\u0303es a recolher",
+        "format": ""
+    },
+    "MES_REF": {
+        "type": "integer",
+        "regex": "^((?!(13^))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Informe o me\u0302s de refere\u0302ncia no formato \u201cmmaaaa\u201d",
+        "format": ""
+    }
+}

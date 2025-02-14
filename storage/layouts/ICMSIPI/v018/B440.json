@@ -1,0 +1,37 @@
+{
+    "IND_OPER": {
+        "type": "integer",
+        "regex": "^[0|1]$",
+        "required": true,
+        "info": "Indicador do tipo de operac\u0327a\u0303o: 0- Aquisic\u0327a\u0303o; 1- Prestac\u0327a\u0303o",
+        "format": ""
+    },
+    "COD_PART": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "Co\u0301digo do participante (campo 02 do Registro 0150): - do prestador, no caso de aquisic\u0327a\u0303o de servic\u0327o pelo declarante; - do tomador, no caso de prestac\u0327a\u0303o de servic\u0327o pelo declarante",
+        "format": ""
+    },
+    "VL_CONT_RT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Totalizac\u0327a\u0303o do Valor Conta\u0301bil das prestac\u0327o\u0303es e\/ou aquisic\u0327o\u0303es do declarante pela combinac\u0327a\u0303o de tipo de operac\u0327a\u0303o e participante.",
+        "format": "15v2"
+    },
+    "VL_BC_ISS_RT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Totalizac\u0327a\u0303o do Valor da base de ca\u0301lculo de retenc\u0327a\u0303o do ISS das prestac\u0327o\u0303es e\/ou aquisic\u0327o\u0303es do declarante pela combinac\u0327a\u0303o de tipo de operac\u0327a\u0303o e participante.",
+        "format": "15v2"
+    },
+    "VL_ISS_RT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Totalizac\u0327a\u0303o do Valor do ISS retido pelo tomador das prestac\u0327o\u0303es e\/ou aquisic\u0327o\u0303es do declarante pela combinac\u0327a\u0303o de tipo de operac\u0327a\u0303o e participante.",
+        "format": "15v2"
+    }
+}

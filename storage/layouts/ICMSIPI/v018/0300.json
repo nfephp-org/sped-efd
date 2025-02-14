@@ -1,0 +1,44 @@
+{
+    "COD_IND_BEM": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo individualizado do bem ou componente",
+        "format": ""
+    },
+    "IDENT_MERC": {
+        "type": "integer",
+        "regex": "^[1-2]{1}$",
+        "required": true,
+        "info": "Identifica\u00e7\u00e3o do tipo de mercadoria",
+        "format": ""
+    },
+    "DESCR_ITEM": {
+        "type": "string",
+        "regex": "^.{1,255}$",
+        "required": true,
+        "info": "Descri\u00e7\u00e3o do bem ou componente",
+        "format": ""
+    },
+    "COD_PRNC": {
+        "type": "string",
+        "regex": "^.{0,60}$",
+        "required": false,
+        "info": "C\u00f3digo de cadastro do bem principal",
+        "format": ""
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^.{1,60}$",
+        "required": true,
+        "info": "C\u00f3digo da conta anal\u00edtica de contabiliza\u00e7\u00e3o",
+        "format": ""
+    },
+    "NR_PARC": {
+        "type": "integer",
+        "regex": "^[0-9]{1,3}$",
+        "required": false,
+        "info": "N\u00famero total de parcelas a serem apropriadas",
+        "format": ""
+    }
+}

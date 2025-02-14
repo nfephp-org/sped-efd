@@ -1,0 +1,51 @@
+{
+    "NUM_ITEM": {
+        "type": "numeric",
+        "regex": "^[0-9]{3}$",
+        "required": true,
+        "info": "N\u00famero do item no documento fiscal",
+        "format": ""
+    },
+    "COD_ITEM": {
+        "type": "string",
+        "regex": "^[0-9]{60}$",
+        "required": true,
+        "info": "C\u00f3digo do item (campo 02 do Registro 0200)",
+        "format": ""
+    },
+    "QTD": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Quantidade do item",
+        "format": "15v5"
+    },
+    "UNID": {
+        "type": "string",
+        "regex": "^[0-9]{6}$",
+        "required": true,
+        "info": "Unidade do item (Campo 02 do registro 0190)",
+        "format": ""
+    },
+    "VL_ITEM": {
+        "type": "numeric",
+        "regex": "^[0-9]{2}$",
+        "required": true,
+        "info": "Valor total do item (mercadorias ou servi\u00e7os)",
+        "format": ""
+    },
+    "CST_ICMS": {
+        "type": "string",
+        "regex": "^[0-9]{3}$",
+        "required": true,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria",
+        "format": ""
+    },
+    "CFOP": {
+        "type": "string",
+        "regex": "^[0-9]{4}$",
+        "required": true,
+        "info": "C\u00f3digo Fiscal de Opera\u00e7\u00e3o e Presta\u00e7\u00e3o",
+        "format": ""
+    }
+}

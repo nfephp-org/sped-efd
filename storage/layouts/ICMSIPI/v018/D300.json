@@ -1,0 +1,135 @@
+{
+    "COD_MOD": {
+        "type": "string",
+        "regex": "^[0-9]{2}$",
+        "required": true,
+        "info": "C\u00f3digo do modelo do documento fiscal, conforme a tabela 4.1.1",
+        "format": ""
+    },
+    "SER": {
+        "type": "string",
+        "regex": "^[0-9]{4}$",
+        "required": true,
+        "info": "S\u00e9rie do documento fiscal",
+        "format": ""
+    },
+    "SUB": {
+        "type": "numeric",
+        "regex": "^[0-9]{4}$",
+        "required": true,
+        "info": "Subs\u00e9rie do documento fiscal",
+        "format": ""
+    },
+    "NUM_DOC_INI": {
+        "type": "numeric",
+        "regex": "^[0-9]{6}$",
+        "required": true,
+        "info": "N\u00famero do primeiro documento fiscal emitido (mesmo modelo, s\u00e9rie e subs\u00e9rie)",
+        "format": ""
+    },
+    "NUM_DOC_FIN": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "N\u00famero do \u00faltimo documento fiscal emitido (mesmo modelo, s\u00e9rie e subs\u00e9rie)",
+        "format": ""
+    },
+    "CST_ICMS": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria, conforme a tabela indicada no item 4.3.1",
+        "format": ""
+    },
+    "CFOP": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "C\u00f3digo Fiscal de Opera\u00e7\u00e3o e Presta\u00e7\u00e3o conforme tabela indicada no item 4.2.2",
+        "format": ""
+    },
+    "ALIQ_ICMS": {
+        "type": "numeric",
+        "regex": "^[0-9]{6}$",
+        "required": true,
+        "info": "Al\u00edquota do ICMS",
+        "format": ""
+    },
+    "DT_DOC": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "Data da emiss\u00e3o dos documentos fiscais",
+        "format": ""
+    },
+    "VL_OPR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total acumulado das opera\u00e7\u00f5es correspondentes \u00e0 combina\u00e7\u00e3o de CST_ICMS, CFOP e al\u00edquota do ICMS, inclu\u00eddas as despesas acess\u00f3rias e acr\u00e9scimos",
+        "format": "15v2"
+    },
+    "VL_DESC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total dos descontos",
+        "format": "15v2"
+    },
+    "VL_SERV": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total da presta\u00e7\u00e3o de servi\u00e7o",
+        "format": "15v2"
+    },
+    "VL_SEG": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor de seguro",
+        "format": "15v2"
+    },
+    "VL_OUTDESP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor de outras despesas",
+        "format": "15v2"
+    },
+    "VL_BC_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total da base de c\u00e1lculo do ICMS",
+        "format": "15v2"
+    },
+    "VL_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor total do ICMS",
+        "format": "15v2"
+    },
+    "VL_RED_BC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor n\u00e3o tributado em fun\u00e7\u00e3o da redu\u00e7\u00e3o da base de c\u00e1lculo do ICMS, referente \u00e0 combina\u00e7\u00e3o de CST_ICMS, CFOP e al\u00edquota do ICMS",
+        "format": "15v2"
+    },
+    "COD_OBS": {
+        "type": "string",
+        "regex": "^.{1,6}$",
+        "required": true,
+        "info": "C\u00f3digo da observa\u00e7\u00e3o do lan\u00e7amento fiscal (campo 02 do Registro 0460)",
+        "format": ""
+    },
+    "COD_CTA": {
+        "type": "string",
+        "regex": "^[0-9]{0}$",
+        "required": true,
+        "info": "C\u00f3digo da conta anal\u00edtica cont\u00e1bil debitada\/creditada",
+        "format": ""
+    }
+}

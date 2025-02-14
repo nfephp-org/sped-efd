@@ -1,0 +1,16 @@
+{
+    "COD_INF": {
+        "type": "string",
+        "regex": "^.{1,6}$",
+        "required": true,
+        "info": "Co\u0301digo da informac\u0327a\u0303o complementar do documento fiscal.",
+        "format": ""
+    },
+    "TXT": {
+        "type": "string",
+        "regex": "^.{1,1000}$",
+        "required": true,
+        "info": "Texto livre da informac\u0327a\u0303o complementar existente no documento fiscal",
+        "format": ""
+    }
+}

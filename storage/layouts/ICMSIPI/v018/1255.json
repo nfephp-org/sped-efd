@@ -1,0 +1,44 @@
+{
+    "COD_MOT_REST_COMPL": {
+        "type": "string",
+        "regex": "^[0-9]{5}$",
+        "required": true,
+        "info": "C\u00f3digo do motivo da restitui\u00e7\u00e3o ou complementa\u00e7\u00e3o conforme Tabela 5.7",
+        "format": ""
+    },
+    "VL_CREDITO_ICMS_OP_MOT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Informar o valor total do ICMS opera\u00e7\u00e3o pr\u00f3pria que o informante tem direito ao cr\u00e9dito, na forma prevista na legisla\u00e7\u00e3o, referente \u00e0s hip\u00f3teses de restitui\u00e7\u00e3o em que h\u00e1 previs\u00e3o deste cr\u00e9dito, para o mesmo COD_MOT_REST_COMPL",
+        "format": "15v2"
+    },
+    "VL_ICMS_ST_REST_MOT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Informar o valor total do ICMS\/ST que o informante tem direito ao cr\u00e9dito, na forma prevista na legisla\u00e7\u00e3o, referente \u00e0s hip\u00f3teses de restitui\u00e7\u00e3o em que h\u00e1 previs\u00e3o deste cr\u00e9dito, para o mesmo COD_MOT_REST_COMPL",
+        "format": "15v2"
+    },
+    "VL_FCP_ST_REST_MOT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Informar o valor total do FCP_ST agregado ao valor do ICMS\/ST informado no campo VL_ICMS_ST_REST_MOT",
+        "format": "15v2"
+    },
+    "VL_ICMS_ST_COMPL_MOT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Informar o valor total do d\u00e9bito referente ao complemento do imposto, nos casos previstos na legisla\u00e7\u00e3o, para o mesmo COD_MOT_REST_COMPL",
+        "format": "15v2"
+    },
+    "VL_FCP_ST_COMPL_MOT": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Informar o valor total do FCP_ST agregado ao valor informado no campo VL_ICMS_ST_COMPL_MOT",
+        "format": "15v2"
+    }
+}

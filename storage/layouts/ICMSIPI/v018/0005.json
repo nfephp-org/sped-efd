@@ -1,0 +1,65 @@
+{
+    "FANTASIA": {
+        "type": "string",
+        "regex": "^.{3,60}$",
+        "required": true,
+        "info": "Nome de fantasia associado ao nome empresarial.",
+        "format": ""
+    },
+    "CEP": {
+        "type": "string",
+        "regex": "^[0-9]{8}$",
+        "required": true,
+        "info": "C\u00f3digo de Endere\u00e7amento Postal.",
+        "format": ""
+    },
+    "END": {
+        "type": "string",
+        "regex": "^.{3,60}$",
+        "required": true,
+        "info": "Logradouro e endere\u00e7o do im\u00f3vel.",
+        "format": ""
+    },
+    "NUM": {
+        "type": "string",
+        "regex": "^.{1,10}$",
+        "required": false,
+        "info": "N\u00famero do im\u00f3vel.",
+        "format": ""
+    },
+    "COMPL": {
+        "type": "string",
+        "regex": "^.{3,60}$",
+        "required": false,
+        "info": "Dados complementares do endere\u00e7o.",
+        "format": ""
+    },
+    "BAIRRO": {
+        "type": "string",
+        "regex": "^.{3,60}$",
+        "required": true,
+        "info": "Bairro em que o im\u00f3vel est\u00e1 situado.",
+        "format": ""
+    },
+    "FONE": {
+        "type": "string",
+        "regex": "^[0-9]{8,11}$",
+        "required": false,
+        "info": "N\u00famero do telefone (DDD+FONE).",
+        "format": ""
+    },
+    "FAX": {
+        "type": "string",
+        "regex": "^[0-9]{8,11}$",
+        "required": false,
+        "info": "N\u00famero do fax.",
+        "format": ""
+    },
+    "EMAIL": {
+        "type": "string",
+        "regex": "email",
+        "required": false,
+        "info": "Endere\u00e7o do correio eletr\u00f4nico.",
+        "format": ""
+    }
+}

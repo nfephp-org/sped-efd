@@ -1,0 +1,37 @@
+{
+    "COD_DOC_IMP": {
+        "type": "string",
+        "regex": "^(0|1)+$",
+        "required": true,
+        "info": "Documento de importa\u00e7\u00e3o",
+        "format": ""
+    },
+    "NUM_DOC_IMP": {
+        "type": "string",
+        "regex": "^.{1,15}$",
+        "required": true,
+        "info": "N\u00famero do documento de Importa\u00e7\u00e3o",
+        "format": ""
+    },
+    "PIS_IMP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor pago de PIS na importa\u00e7\u00e3o",
+        "format": "15v2"
+    },
+    "COFINS_IMP": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor pago de COFINS na importa\u00e7\u00e3o",
+        "format": "15v2"
+    },
+    "NUM_ACDRAW": {
+        "type": "string",
+        "regex": "^.{1,20}$",
+        "required": false,
+        "info": "N\u00famero do Ato Concess\u00f3rio do regime Drawback",
+        "format": ""
+    }
+}

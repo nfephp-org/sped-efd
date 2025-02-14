@@ -1,0 +1,16 @@
+{
+    "IND_APUR_ICMS": {
+        "type": "string",
+        "regex": "^[3|4|5|6|7|8]$",
+        "required": true,
+        "info": "Indicador de outra apurac\u0327a\u0303o do ICMS: 3 \u2013 APURAC\u0327A\u0303O 1; 4 \u2013 APURAC\u0327A\u0303O 2; 5 \u2013 APURAC\u0327A\u0303O 3; 6 \u2013 APURAC\u0327A\u0303O 4; 7 \u2013 APURAC\u0327A\u0303O 5; 8 \u2013 APURAC\u0327A\u0303O 6.",
+        "format": ""
+    },
+    "DESCR_COMPL_OUT_APUR": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": true,
+        "info": "Descric\u0327a\u0303o complementar de Outra Apurac\u0327a\u0303o do ICMS",
+        "format": ""
+    }
+}

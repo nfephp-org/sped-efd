@@ -1,0 +1,23 @@
+{
+    "CL_ENQ": {
+        "type": "string",
+        "regex": "^.{0,5}$",
+        "required": false,
+        "info": "C\u00f3digo da classe de enquadramento do IPI, conforme Tabela 4.5.1.",
+        "format": ""
+    },
+    "VL_UNID": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor por unidade padr\u00e3o de tributa\u00e7\u00e3o",
+        "format": "15v2"
+    },
+    "QUANT_PAD": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Quantidade total de produtos na unidade padr\u00e3o de tributa\u00e7\u00e3o",
+        "format": "15v3"
+    }
+}

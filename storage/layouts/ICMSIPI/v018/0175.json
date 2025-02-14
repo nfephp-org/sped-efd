@@ -1,0 +1,23 @@
+{
+    "DT_ALT": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data de altera\u00e7\u00e3o do cadastro",
+        "format": ""
+    },
+    "NR_CAMPO": {
+        "type": "string",
+        "regex": "^[0-9]{2}$",
+        "required": true,
+        "info": "N\u00famero do campo alterado (campos 03 a 13, exceto 07)",
+        "format": ""
+    },
+    "CONT_ANT": {
+        "type": "string",
+        "regex": "^.{3,100}$",
+        "required": true,
+        "info": "Conte\u00fado anterior do campo.",
+        "format": ""
+    }
+}

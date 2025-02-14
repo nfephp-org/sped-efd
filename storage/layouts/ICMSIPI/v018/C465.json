@@ -1,0 +1,16 @@
+{
+    "CHV_CFE": {
+        "type": "numeric",
+        "regex": "^([0-9]{44})?$",
+        "required": true,
+        "info": "Chave do Cupom Fiscal Eletr\u00f4nico",
+        "format": ""
+    },
+    "NUM_CCF": {
+        "type": "numeric",
+        "regex": "^(\\d{1,9})$",
+        "required": true,
+        "info": "N\u00famero do Contador de Cupom Fiscal",
+        "format": ""
+    }
+}

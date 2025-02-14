@@ -1,0 +1,9 @@
+{
+    "CLAS_ESTAB_IND": {
+        "type": "numeric",
+        "regex": "^[0-9]{2}$",
+        "required": true,
+        "info": "Informar a classifica\u00e7\u00e3o do estabelecimento conforme tabela 4.5.5",
+        "format": ""
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "IND_CARGA": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "Indicador do tipo de transporte da carga coletada: 0 - Rodovi\u00e1rio1 - Ferrovi\u00e1rio2 - Rodo-Ferrovi\u00e1rio3 - Aquavi\u00e1rio4 - Dutovi\u00e1rio5 - A\u00e9reo9 - Outros",
+        "format": ""
+    },
+    "CNPJ_CPF_COL": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": true,
+        "info": "N\u00famero do CNPJ ou CPF do local da coleta",
+        "format": ""
+    },
+    "IE_COL": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": true,
+        "info": "Inscri\u00e7\u00e3o Estadual do contribuinte do local de coleta",
+        "format": ""
+    },
+    "COD_MUN_COL": {
+        "type": "numeric",
+        "regex": "",
+        "required": true,
+        "info": "C\u00f3digo do Munic\u00edpio do local de coleta, conforme tabela IBGE",
+        "format": ""
+    },
+    "CNPJ_CPF_ENTG": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": true,
+        "info": "N\u00famero do CNPJ ou CPF do local da entrega",
+        "format": ""
+    },
+    "IE_ENTG": {
+        "type": "string",
+        "regex": "^[0-9]{14}$",
+        "required": true,
+        "info": "Inscri\u00e7\u00e3o Estadual do contribuinte do local de entrega",
+        "format": ""
+    },
+    "COD_MUN_ENTG": {
+        "type": "numeric",
+        "regex": "^[0-9]{7}$",
+        "required": true,
+        "info": "C\u00f3digo do Munic\u00edpio do local de entrega, conforme tabela IBGE",
+        "format": ""
+    }
+}

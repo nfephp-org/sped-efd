@@ -1,0 +1,44 @@
+{
+    "IND_SERV": {
+        "type": "string",
+        "regex": "^(0|1|2|3|4|9)$",
+        "required": true,
+        "info": "Indicador do tipo de servi\u00e7o prestado",
+        "format": ""
+    },
+    "DT_INI_SERV": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data em que se iniciou a presta\u00e7\u00e3o do servi\u00e7o",
+        "format": ""
+    },
+    "DT_FIN_SERV": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": false,
+        "info": "Data em que se encerrou a presta\u00e7\u00e3o do servi\u00e7o",
+        "format": ""
+    },
+    "PER_FISCAL": {
+        "type": "numeric",
+        "regex": "^(\\d{6})$",
+        "required": true,
+        "info": "Peri\u0301odo fiscal da prestac\u0327a\u0303o do servic\u0327o (MMAAAA)",
+        "format": ""
+    },
+    "COD_AREA": {
+        "type": "string",
+        "regex": "^(\\d{255})$",
+        "required": false,
+        "info": "C\u00f3digo de \u00e1rea do terminal faturado",
+        "format": ""
+    },
+    "TERMINAL": {
+        "type": "numeric",
+        "regex": "^(\\d{255})$",
+        "required": false,
+        "info": "Identificac\u0327a\u0303o do terminal faturado",
+        "format": ""
+    }
+}

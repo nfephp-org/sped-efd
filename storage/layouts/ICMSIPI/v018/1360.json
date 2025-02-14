@@ -1,0 +1,16 @@
+{
+    "NUM_LACRE": {
+        "type": "string",
+        "regex": "^.{1,20}$",
+        "required": true,
+        "info": "Nu\u0301mero do Lacre associado na Bomba",
+        "format": ""
+    },
+    "DT_APLICACAO": {
+        "type": "integer",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data de aplicac\u0327a\u0303o do Lacre",
+        "format": ""
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "COD_OBS": {
+        "type": "string",
+        "regex": "^.{1,6}$",
+        "required": true,
+        "info": "C\u00f3digo da observa\u00e7\u00e3o do lan\u00e7amento fiscal (campo 02 do Registro 0460)",
+        "format": ""
+    },
+    "TXT_COMPL": {
+        "type": "string",
+        "regex": "^.{1,255}$",
+        "required": true,
+        "info": "Descri\u00e7\u00e3o complementar do c\u00f3digo de observa\u00e7\u00e3o",
+        "format": ""
+    }
+}

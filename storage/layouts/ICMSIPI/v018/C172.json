@@ -1,0 +1,23 @@
+{
+    "VL_BC_ISSQN": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor da base de c\u00e1lculo do ISSQN",
+        "format": "15v2"
+    },
+    "ALIQ_ISSQN": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do ISSQN",
+        "format": "6v2"
+    },
+    "VL_ISSQN": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Valor do ISSQN",
+        "format": "15v2"
+    }
+}

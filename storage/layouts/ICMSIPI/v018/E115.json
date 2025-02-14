@@ -1,0 +1,23 @@
+{
+    "COD_INF_ADIC": {
+        "type": "string",
+        "regex": "^\\d{8}$",
+        "required": true,
+        "info": "Co\u0301digo da informac\u0327a\u0303o adicional conforme tabela a serdefinida pelas SEFAZ, conforme tabela definida no item 5.2.",
+        "format": ""
+    },
+    "VL_INF_ADIC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor referente a\u0300 informac\u0327a\u0303o adicional",
+        "format": "15v2"
+    },
+    "DESCR_COMPL_AJ": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": false,
+        "info": "Descric\u0327a\u0303o complementar do ajuste",
+        "format": ""
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "COD_AJ_APUR": {
+        "type": "string",
+        "regex": "^.{1,8}$",
+        "required": true,
+        "info": "Co\u0301digo do ajuste da apurac\u0327a\u0303o e deduc\u0327a\u0303o, conforme a Tabela indicada no item 5.1.1",
+        "format": ""
+    },
+    "DESCR_COMPL_AJ": {
+        "type": "string",
+        "regex": "^.*$",
+        "required": false,
+        "info": "Descric\u0327a\u0303o complementar do ajuste da apurac\u0327a\u0303o",
+        "format": ""
+    },
+    "VL_AJ_APUR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do ajuste da apurac\u0327a\u0303o",
+        "format": "15v2"
+    }
+}

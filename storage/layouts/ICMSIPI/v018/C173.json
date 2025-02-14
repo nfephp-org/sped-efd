@@ -1,0 +1,51 @@
+{
+    "LOTE_MED": {
+        "type": "string",
+        "regex": "^(.*)$",
+        "required": true,
+        "info": "N\u00famero do lote de fabrica\u00e7\u00e3o do medicamento",
+        "format": ""
+    },
+    "QTD_ITEM": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Quantidade de item por lote",
+        "format": "15v3"
+    },
+    "DT_FAB": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data de fabrica\u00e7\u00e3o do medicamento",
+        "format": ""
+    },
+    "DT_VAL": {
+        "type": "string",
+        "regex": "^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\\d{3})$",
+        "required": true,
+        "info": "Data de expira\u00e7\u00e3o da validade do medicamento",
+        "format": ""
+    },
+    "IND_MED": {
+        "type": "string",
+        "regex": "^(0|1|2|3|4)$",
+        "required": true,
+        "info": "Indicador de tipo de refer\u00eancia da base de c\u00e1lculo do ICMS",
+        "format": ""
+    },
+    "TP_PROD": {
+        "type": "string",
+        "regex": "^(0|1|2)$",
+        "required": true,
+        "info": "Tipo de produto",
+        "format": ""
+    },
+    "VL_TAB_MAX": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor   do   pre\u00e7o   tabelado   ou   valor   do   pre\u00e7o m\u00e1ximo",
+        "format": "15v2"
+    }
+}

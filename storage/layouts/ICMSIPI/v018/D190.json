@@ -1,0 +1,58 @@
+{
+    "CST_ICMS": {
+        "type": "string",
+        "regex": "^[0-9]{3}$",
+        "required": true,
+        "info": "C\u00f3digo da Situa\u00e7\u00e3o Tribut\u00e1ria",
+        "format": ""
+    },
+    "CFOP": {
+        "type": "string",
+        "regex": "^[0-9]{4}$",
+        "required": true,
+        "info": "C\u00f3digo Fiscal de Opera\u00e7\u00e3o e Presta\u00e7\u00e3o",
+        "format": ""
+    },
+    "ALIQ_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": false,
+        "info": "Al\u00edquota do ICMS",
+        "format": "6v2"
+    },
+    "VL_OPR": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "\u201cValor da Opera\u00e7\u00e3o",
+        "format": "15v2"
+    },
+    "VL_BC_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da base de c\u00e1lculo do ICMS",
+        "format": "15v2"
+    },
+    "VL_ICMS": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor do ICMS",
+        "format": "15v2"
+    },
+    "VL_RED_BC": {
+        "type": "numeric",
+        "regex": "^\\d+(\\.\\d*)?|\\.\\d+$",
+        "required": true,
+        "info": "Valor da redu\u00e7\u00e3o da base de c\u00e1lculo do ICMS",
+        "format": "15v2"
+    },
+    "COD_OBS": {
+        "type": "string",
+        "regex": "^.{1,6}$",
+        "required": false,
+        "info": "C\u00f3digo da observa\u00e7\u00e3o do lan\u00e7amento fiscal",
+        "format": ""
+    }
+}
